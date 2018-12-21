@@ -1,0 +1,4636 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService]
+"FailureActions"=hex:10,0e,00,00,00,00,00,00,00,00,00,00,06,00,00,00,14,00,00,\
+  00,01,00,00,00,60,ea,00,00,01,00,00,00,60,ea,00,00,01,00,00,00,60,ea,00,00,\
+  01,00,00,00,60,ea,00,00,01,00,00,00,60,ea,00,00,00,00,00,00,60,ea,00,00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters]
+"Error Reports Enabled"=dword:00000001
+"Queue Error Reports"=dword:00000001
+"State Directory"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Health Service State"
+"Service Sizing"=dword:00000000
+"Use Background Priority"=dword:00000001
+"Persistence Initial Database Page Count"=dword:00001900
+"Persistence Cache Maximum"=dword:00000400
+"Persistence Maximum Sessions"=dword:00000004
+"Persistence Version Store Maximum"=dword:00000280
+"Persistence Page Hint Cache Size"=dword:00004000
+"Persistence Checkpoint Depth Maximum"=dword:00280000
+"Runtime Use Workstation GC"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MOMConnector\Performance]
+"Open"="OpenPerformanceData"
+"Collect"="CollectPerformanceData"
+"Close"="ClosePerformanceData"
+"Library"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMConnectorPerformance.dll"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Performance]
+"Open"="OpenPerformanceData"
+"Collect"="CollectPerformanceData"
+"Close"="ClosePerformanceData"
+"Library"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\HealthServicePerformance.dll"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\ConnectorManager]
+"EnableADIntegration"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\ConnectorManager\Approved AD Management Groups]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Registered Connectors]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Registered Connectors\{534E71F9-7970-42D6-921F-59CFB873855F}]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\Registered Connectors\{8DE9515F-F20F-4E97-BE09-AD61C8536590}]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\SecureStorageManager]
+@=hex:19,49,a1,6a,5e,d1,3c,42,b7,2d,bc,9e,d7,2f,ee,7a
+"AccountSharedKey"=hex:01,00,00,00,d0,8c,9d,df,01,15,d1,11,8c,7a,00,c0,4f,c2,\
+  97,eb,01,00,00,00,28,57,0b,f2,4e,0f,4f,41,91,ba,00,f1,1d,77,57,26,14,00,00,\
+  00,02,00,00,00,00,00,03,66,00,00,c0,00,00,00,10,00,00,00,17,b5,46,ee,83,16,\
+  f2,38,35,2b,44,1f,68,5f,aa,7c,00,00,00,00,04,80,00,00,a0,00,00,00,10,00,00,\
+  00,e8,89,b4,dd,65,39,17,9d,36,99,00,ef,8b,8f,2c,85,00,01,00,00,56,e7,76,8e,\
+  25,ad,38,5a,13,a1,aa,81,ca,cb,43,5f,8e,53,5d,d3,cb,51,63,f1,81,28,97,d9,99,\
+  49,48,da,0e,4e,b3,16,5e,20,4d,3a,55,1b,ce,99,d6,20,41,8a,11,d4,f5,c5,11,89,\
+  ea,65,78,23,76,20,be,fb,af,3e,96,6d,2a,7b,db,be,d2,f0,60,77,c5,96,92,25,e9,\
+  2d,e7,ce,bb,90,cf,76,85,53,7f,d8,26,30,13,48,49,46,b9,13,6c,f6,f7,b4,29,90,\
+  9d,9f,97,11,b0,b5,40,ec,12,06,b1,53,75,ab,8f,60,2b,41,44,1e,68,32,cb,b5,54,\
+  fb,50,4d,87,68,b0,11,fa,36,87,57,71,ba,04,91,4f,31,b7,0f,9a,ae,92,1b,43,1f,\
+  17,7e,11,0f,43,81,f5,73,fd,3f,78,05,8b,36,a7,0f,50,9a,3f,b1,e2,c6,49,79,a4,\
+  d3,a8,e7,9a,45,bf,26,f6,4f,d2,62,ec,b7,f5,b3,01,4d,8d,a5,45,76,81,4b,53,31,\
+  00,cc,cc,c7,c8,3f,df,1a,f1,95,58,aa,18,e4,75,57,8e,31,2f,24,87,6b,16,49,c4,\
+  62,fc,e7,bb,28,6f,da,c2,e1,53,13,06,94,d7,17,76,27,2c,35,49,9f,80,87,14,84,\
+  ec,b5,14,00,00,00,d5,18,2b,dc,78,77,22,7a,b4,ff,40,97,b2,24,8d,56,06,ab,9f,\
+  ae,cd,7e,72,7c,a7,21,d9,d4,7f,44,2b,0c,8e,28,a6,51,d2,70,68,9f,b0,eb,d4,b4,\
+  96,4d,80,85,09,4c,b3,50,0f,3a,2d,c0,66,a8,6e,4d,52,89,2c,e9,0b,bf,9d,c2,53,\
+  4b,a4,e8,5d,9a,0f,d4,cc,c5,19,cc,4c,e9,3d,17,77,72,b7,9e,79,57,4f,13,d3,c6,\
+  31,f5,ac,5f,d9,dc,c0,a1,41,6f,d8,e6,1e,10,a3,b9,7d,ce,19,de,e0,d9,27,ef,69,\
+  2e,70,dc,fa,30,66,3f,cc,d0,bc,2e,ae,f9,66,1b,a7,4a,4d,ca,ee,a8,0b,11,fa,0a,\
+  07,af,f6,db,bc,73,b0,ca,bc,b0,82,ed,b4,b9,f3,cb,54,38,d8,25,7e,1b,f1,4d,d8,\
+  33,64,96,98,93,b0,55,b6,e9,93,2f,c3,7a,fc,5a,9c,09,62,b4,45,72,b1,5f,29,95,\
+  eb,4b,be,be,20,78,79,bd,57,37,b7,6d,24,c6,cb,4f,c4,cc,b6,d4,4e,47,85,b7,8a,\
+  a2,8e,9d,c5,e4,1e,a5,4a,9d,c9,80,5c,af,a5,ca,84,a3,0b,ce,83,34,2c,41,b3,a8,\
+  5c,9d,67,83,cd,89,72,ae,11,3e,bb,49,4c,52,01,44,4b,b0,6c,ce,ae,e4,0a,7d,c7,\
+  49,1a,6b,cd,08,01,22,39,e7,9d,9f,0e,fa,fd,c8,29,8f,bc,41,74,ba,bb,f5,93,8c,\
+  b6,f5,0d,ea,af,17,10,12,d7,c8,d0,ce,81,c7,28,ce,88,68,69,32,c2,0f,61,73,d4,\
+  f7,74,ce,d3,c2,2c,89,f8,c0,e1,63,71,23,6a,f8,a6,c4,e2,4b,58,b1,7a,7e,60,f7,\
+  69,04,19,0a,47,a0,36,42,12,ea,96,c6,71,40,1c,be,92,6e,98,a0,10,e7,3e,41,70,\
+  a0,6b,ba,02,0a,cd,e7,95,92,46,5f,e0,c2,e0,3a,ef,b5,f5,45,4a,84,0d,96,f3,71,\
+  0f,34,30,49,1c,61,c0,10,28,d4,46,65,cf,c4,83,0b,90,1e,a8,96,e5,72,53,52,4e,\
+  ca,0b,e4,81,64,3c,6d,db,9c,61,31,dc,9c,4c,59,c6,2b,28,6b,5c,db,d5,28,9b,09,\
+  30,86,b5,09,42,fe,6c,bb,98,3e,34,49,62,3b,ee,ba,1b,73,bd,f0,fb,b7,de,48,76,\
+  4e,f6,9b,05,07,8c,02,de,0a,2f,91,7c,63,30,5e,62,a2,ad,dc,5e,ba,6d,6a,2b,c6,\
+  21,63,bb,2b,53,eb,e1,bc,4e,03,01,9f,8d,36,b9,0d,d3,e8,d1,33,31,f4,aa,e3,24,\
+  fb,65,82,1d,b0,2b,ec,9d,85,57,22,9c,e3,ce,0b,07,29,3e,2a,54,3b,eb,85,25,e6,\
+  8e,21,fe,c2,a9,c6,17,c8,51,6d,d5,58,d9,99,d6,b0,94,07,77,8d,f3,3e,86,04,45,\
+  da,62,c8,0c,6d,f6,8c,7b,81,e8,47,a0,9e,60,c0,15,79,23,0e,0e,a3,83,c3,83,a8,\
+  16,48,fb,24,96,d5,a8,10,4c,11,25,b1,74,ee,ed,93,95,24,07,07,b9,a2,82,c5,78,\
+  03,4b,a2,aa,64,ed,e0,81,6e,96,1f,81,ef,96,67,1d,cb,d6,e1,21,77,6e,1c,2b,23,\
+  04,92,93,05,b1,13,61,55,40,99,e9,d5,81,15,31,10,33,71,dd,68,10,9c,b1,1e,88,\
+  be,2e,15,c4,64,03,1a,09,cf,af,02,b5,e6,ba,2c,4a,d6,e8,ec,11,cb,2e,ee,e0,f7,\
+  2f,4b,27,3b,b9,64,a9,f9,3c,b4,bf,69,90,ce,c5,63,00,23,82,34,2d,28,af,bf,f9,\
+  f5,4d,9f,98,e6,fd,27,c1,ec,ca,7d,41,7f,12,82,c3,1b,3b,dc,23,a0,4d,30,0a,31,\
+  86,4e,53,10,2a,0b,89,02,e8,e9,c0,92,2e,4f,5a,38,0d,d3,e7,c5,99,fc,e6,68,0a,\
+  6e,fd,32,6c,1d,24,4a,70,68,80,cf,21,87,af,31,3d,32,2e,2c,95,0d,1d,9e,94,e1,\
+  8f,67,6a,7c,f1,ac,64,2c,f7,d5,62,f0,5e,d1,47,da,db,4f,de,ad,62,a2,a1,c6,26,\
+  89,34,db,a9,77,95,25,02,b2,87,00,a6,9f,61,ad,d4,10,78,7e,34,4b,30,33,33,06,\
+  7c,ab,0d,dc,f5,c1,3c,f7,ee,21,60,cc,1f,fb,1f,e3,d1,0b,ba,ec,b8,93,64,9d,55,\
+  e4,11,15,27,74,34,75,e6,fb,cd,5e,7b,55,73,72,4b,0f,e8,d7,41,d7,df,96,44,89,\
+  41,98,3a,d2,b7,4d,bf,a6,51,78,7f,7a,97,ae,d1,34,65,d2,0e,c6,22,1e,fc,83,bc,\
+  03,bb,26,3f,83,25,9d,48,9a,1b,b4,31,33,71,9d,0a,1e,7e,55,7a,0d,59,2d,e3,b3,\
+  15,fb,c7,6d,77,b1,a4,7c,2e,15,00,7a,69,f7,c6,0c,3f,6b,b0,22,dd,64,c7,7f,5f,\
+  cc,ab,89,90,a0,13,59,de,9d,03,c2,7c,8c,66,12,26,31,25,5a,b4,bd,cc,1e,03,9e,\
+  0f,cc,5c,ac,b1,f3,03,02,30,55,73,c4,4c,94,75,61,d2,f5,8c,95,27,1e,58,af,c7,\
+  16,77,0b,fa,25,20,43,94,ab,31,2f,a2,b5,66,b6,9e,45,72,73,f8,12,76,42,44,8d
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\System Center\2010\Common\Machine Settings]
+"LegacyMode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager]
+"Sources"=hex(7):4f,00,70,00,65,00,72,00,61,00,74,00,69,00,6f,00,6e,00,73,00,\
+  20,00,4d,00,61,00,6e,00,61,00,67,00,65,00,72,00,00,00,53,00,65,00,72,00,76,\
+  00,69,00,63,00,65,00,20,00,43,00,6f,00,6e,00,6e,00,65,00,63,00,74,00,6f,00,\
+  72,00,00,00,48,00,65,00,61,00,6c,00,74,00,68,00,20,00,53,00,65,00,72,00,76,\
+  00,69,00,63,00,65,00,20,00,4d,00,6f,00,64,00,75,00,6c,00,65,00,73,00,00,00,\
+  4f,00,70,00,73,00,4d,00,67,00,72,00,20,00,43,00,6f,00,6e,00,6e,00,65,00,63,\
+  00,74,00,6f,00,72,00,00,00,48,00,65,00,61,00,6c,00,74,00,68,00,53,00,65,00,\
+  72,00,76,00,69,00,63,00,65,00,00,00,48,00,65,00,61,00,6c,00,74,00,68,00,20,\
+  00,53,00,65,00,72,00,76,00,69,00,63,00,65,00,20,00,4d,00,6f,00,64,00,75,00,\
+  6c,00,65,00,73,00,20,00,45,00,78,00,00,00,41,00,64,00,74,00,41,00,67,00,65,\
+  00,6e,00,74,00,00,00,00,00
+"AutoBackupLogFiles"=dword:00000000
+"MaxSize"=dword:00f00000
+"Retention"=dword:00000000
+"CustomSD"="O:BAG:SYD:(D;;0xf0007;;;AN)(D;;0xf0007;;;BG)(A;;0xf0007;;;SY)(A;;0x7;;;BA)(A;;0x7;;;SO)(A;;0x3;;;IU)(A;;0x3;;;SU)(A;;0x3;;;S-1-5-3)"
+"RestrictGuestAccess"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\.NET App Monitoring]
+"CategoryCount"=dword:00000001
+"CategoryMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\MOMAPMMsgs.dll"
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\MOMAPMMsgs.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\AdtAgent]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\AdtAgent\Parameters]
+"EventlogLoggingLevel"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\AdtAgent]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\AcsMsgs.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AdtAgent\Parameters]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AdtAgent\Parameters\Cache]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Advisor]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMAdvisorMsgs.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Agent]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Assembly Inspector]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm ComPlusController]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Connector]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ApmConnector\\ApmConnectorMsg.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Dispatcher]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Instrumentation]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm PerfCounterMonitor]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Scripting]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Starter]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Statistic Counters]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm Stub]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Apm WHController]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Csm Collector]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Csm CScripting]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Csm Injector]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Csm ISAPI Injector]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Csm Scripting]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Csm Statistics]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Health Service ESE Store]
+"EventMessageFile"=hex(2):43,00,3a,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,\
+  00,73,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,65,00,\
+  73,00,65,00,6e,00,74,00,2e,00,64,00,6c,00,6c,00,00,00
+"TypesSupported"=dword:00000007
+"CategoryCount"=dword:00000010
+"CategoryMessageFile"=hex(2):43,00,3a,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,\
+  77,00,73,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,65,\
+  00,73,00,65,00,6e,00,74,00,2e,00,64,00,6c,00,6c,00,00,00
+"ParameterMessageFile"=hex(2):00,00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Health Service Modules]
+"CategoryCount"=dword:00000003
+"CategoryMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\\\MOMModuleMsgs.dll"
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModuleMsgs.dll;C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\NASMMessages.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Health Service Modules Ex]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ModuleMsgsEx.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Health Service Script]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMScriptAPI.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\HealthService]
+"CategoryCount"=dword:0000000b
+"CategoryMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\HealthServiceMessages.dll"
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\HealthServiceMessages.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\OpsMgr Connector]
+"CategoryCount"=dword:00000007
+"CategoryMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomConnectorMessages.dll"
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomConnectorMessages.dll;C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\HealthServiceMessages.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\OpsMgr Network Discovery]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\NASMMessages.dll"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\Service Connector]
+"CategoryCount"=dword:00000003
+"CategoryMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ServiceConnectorMessages.dll"
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ServiceConnectorMessages.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Operations Manager\System Center Management APM]
+"EventMessageFile"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.1.10928.0\\Messages64.dll"
+"TypesSupported"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Setup]
+"InstallDirectory"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Setup]
+"AgentVersion"="8.0.10709.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Tracing]
+"TracingLevel"=dword:00000003
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\System Center Operations Manager\12\Setup]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\System Center Operations Manager\12\Setup\Agent]
+"InstallDirectory"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\"
+"PowerShellConfiguration"="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\PowerShell\\Configuration\\"
+
+[HKEY_CLASSES_ROOT\Advisor.ConnectorBridge]
+@="CConnectorSolution Object"
+
+[HKEY_CLASSES_ROOT\Advisor.ConnectorBridge\CLSID]
+@="{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}"
+
+[HKEY_CLASSES_ROOT\Advisor.ConnectorBridge\CurVer]
+@="Advisor.ConnectorBridge.1"
+
+[HKEY_CLASSES_ROOT\Advisor.ConnectorBridge.1]
+@="CConnectorSolution Object"
+
+[HKEY_CLASSES_ROOT\Advisor.ConnectorBridge.1\CLSID]
+@="{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}"
+
+[HKEY_CLASSES_ROOT\Interface\{14DAE79A-B9E3-4A9E-B055-F014737101C5}]
+@="IManagementGroupCollection"
+
+[HKEY_CLASSES_ROOT\Interface\{14DAE79A-B9E3-4A9E-B055-F014737101C5}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{14DAE79A-B9E3-4A9E-B055-F014737101C5}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{14DAE79A-B9E3-4A9E-B055-F014737101C5}\TypeLib]
+@="{D0F0E165-351A-401E-869C-E1BD2289FC76}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{9BB42CB8-DC3D-4B92-B791-45240E70A82D}]
+@="IOMSWorkspace"
+
+[HKEY_CLASSES_ROOT\Interface\{9BB42CB8-DC3D-4B92-B791-45240E70A82D}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{9BB42CB8-DC3D-4B92-B791-45240E70A82D}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{9BB42CB8-DC3D-4B92-B791-45240E70A82D}\TypeLib]
+@="{D0F0E165-351A-401E-869C-E1BD2289FC76}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\AgentConfigManager.MgmtSvcCfg]
+@="ManagementServiceConfiguration Class"
+
+[HKEY_CLASSES_ROOT\AgentConfigManager.MgmtSvcCfg\CLSID]
+@="{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}"
+
+[HKEY_CLASSES_ROOT\AgentConfigManager.MgmtSvcCfg\CurVer]
+@="AgentConfigManager.MgmtSvcCfg.1"
+
+[HKEY_CLASSES_ROOT\AgentConfigManager.MgmtSvcCfg.1]
+@="ManagementServiceConfiguration Class"
+
+[HKEY_CLASSES_ROOT\AgentConfigManager.MgmtSvcCfg.1\CLSID]
+@="{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}"
+
+[HKEY_CLASSES_ROOT\AppID\AgentConfigManager.DLL]
+"AppID"="{28F5174A-2D3E-45FE-913B-BDD69CF0AA00}"
+
+[HKEY_CLASSES_ROOT\AppID\Dispatcher.DLL]
+"AppID"="{1E9102B9-2CD9-4196-85DD-E90A45DF986F}"
+
+[HKEY_CLASSES_ROOT\AppID\InterceptCounters.DLL]
+"AppID"="{A27071EB-F6BD-4FBC-9FC7-7AE507739D33}"
+
+[HKEY_CLASSES_ROOT\AppID\InterceptScripting.DLL]
+"AppID"="{F0EC90CF-0C9B-4C91-B8AD-5A5DA6264F5E}"
+
+[HKEY_CLASSES_ROOT\AppID\InterceptSvc.EXE]
+"AppID"="{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}"
+
+[HKEY_CLASSES_ROOT\AppID\Messages.DLL]
+"AppID"="{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}"
+
+[HKEY_CLASSES_ROOT\AppID\PerfCounterMonitor.DLL]
+"AppID"="{8CAE0BB3-EDE1-429D-8E89-301CC3B12B0E}"
+
+[HKEY_CLASSES_ROOT\AppID\PerfMon.DLL]
+"AppID"="{F1864C01-1E70-4B6B-BA71-45CBB98D7319}"
+
+[HKEY_CLASSES_ROOT\AppID\SCOMMaintenanceMode.DLL]
+"AppID"="{66DE1BFB-922B-42B6-81AD-1306564B710B}"
+
+[HKEY_CLASSES_ROOT\AppID\ScriptApi.dll]
+"AppID"="{647CEE06-3875-413D-BEB0-84456CEE4965}"
+
+[HKEY_CLASSES_ROOT\AppID\WHController.DLL]
+"AppID"="{9923CF3A-4BC6-458B-87B1-3060C0BCA37A}"
+
+[HKEY_CLASSES_ROOT\AppID\{1543DF6F-C092-4209-85FC-DEAACDFF3881}]
+@="System Center Operations Manager Performance Counter Snapshot Helper"
+"LaunchPermission"=hex:01,00,04,80,70,00,00,00,80,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,5c,00,04,00,00,00,00,00,14,00,0b,00,00,00,01,01,00,00,00,00,00,\
+  02,01,00,00,00,00,00,14,00,0b,00,00,00,01,01,00,00,00,00,00,05,04,00,00,00,\
+  00,00,14,00,1f,00,00,00,01,01,00,00,00,00,00,05,12,00,00,00,00,00,18,00,1f,\
+  00,00,00,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,00,01,02,00,00,00,00,\
+  00,05,20,00,00,00,20,02,00,00,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,\
+  00
+
+[HKEY_CLASSES_ROOT\AppID\{1E9102B9-2CD9-4196-85DD-E90A45DF986F}]
+@="Dispatcher"
+
+[HKEY_CLASSES_ROOT\AppID\{28F5174A-2D3E-45FE-913B-BDD69CF0AA00}]
+@="AgentConfigManager"
+
+[HKEY_CLASSES_ROOT\AppID\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}]
+@="Messages"
+
+[HKEY_CLASSES_ROOT\AppID\{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}]
+@="InterceptSvc"
+"AccessPermission"=hex:01,00,14,80,60,00,00,00,6c,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,4c,00,03,00,00,00,00,03,18,00,1f,00,00,00,01,02,00,00,00,00,00,\
+  05,20,00,00,00,21,02,00,00,00,03,18,00,1f,00,00,00,01,02,00,00,00,00,00,05,\
+  20,00,00,00,20,02,00,00,00,03,14,00,1f,00,00,00,01,01,00,00,00,00,00,01,00,\
+  00,00,00,01,01,00,00,00,00,00,01,00,00,00,00,01,02,00,00,00,00,00,05,20,00,\
+  00,00,20,02,00,00
+"LaunchPermission"=hex:01,00,14,80,48,00,00,00,54,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,34,00,02,00,00,00,00,03,18,00,1f,00,00,00,01,02,00,00,00,00,00,\
+  05,20,00,00,00,21,02,00,00,00,03,14,00,1f,00,00,00,01,01,00,00,00,00,00,01,\
+  00,00,00,00,01,01,00,00,00,00,00,01,00,00,00,00,01,02,00,00,00,00,00,05,20,\
+  00,00,00,20,02,00,00
+"LocalService"="System Center Management APM"
+
+[HKEY_CLASSES_ROOT\AppID\{647CEE06-3875-413D-BEB0-84456CEE4965}]
+@="MOMScriptAPI"
+
+[HKEY_CLASSES_ROOT\AppID\{66DE1BFB-922B-42B6-81AD-1306564B710B}]
+@="SCOMMaintenanceMode"
+
+[HKEY_CLASSES_ROOT\AppID\{8CAE0BB3-EDE1-429D-8E89-301CC3B12B0E}]
+@="PerfCounterMonitor"
+
+[HKEY_CLASSES_ROOT\AppID\{9923CF3A-4BC6-458B-87B1-3060C0BCA37A}]
+@="WHController"
+
+[HKEY_CLASSES_ROOT\AppID\{A27071EB-F6BD-4FBC-9FC7-7AE507739D33}]
+@="InterceptCounters"
+
+[HKEY_CLASSES_ROOT\AppID\{C0E953AF-5448-436c-A146-63B8AE52FD86}]
+@="System Center Health Service Host Process"
+"LaunchPermission"=hex:01,00,04,80,30,00,00,00,4c,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,1c,00,01,00,00,00,00,00,14,00,0b,00,00,00,01,01,00,00,00,00,00,\
+  01,00,00,00,00,01,05,00,00,00,00,00,05,15,00,00,00,a0,5f,84,1f,5e,2e,6b,49,\
+  ce,12,03,03,f4,01,00,00,01,05,00,00,00,00,00,05,15,00,00,00,a0,5f,84,1f,5e,\
+  2e,6b,49,ce,12,03,03,f4,01,00,00
+
+[HKEY_CLASSES_ROOT\AppID\{F0EC90CF-0C9B-4C91-B8AD-5A5DA6264F5E}]
+@="InterceptScripting"
+
+[HKEY_CLASSES_ROOT\AppID\{F1864C01-1E70-4B6B-BA71-45CBB98D7319}]
+@="PerfMon"
+
+[HKEY_CLASSES_ROOT\AppLogDataSource]
+@="AppLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\AppLogDataSource\CLSID]
+@="{B000FD63-FD06-47AC-AC1F-8EE8C42CC479}"
+
+[HKEY_CLASSES_ROOT\AppLogDataSource.1]
+@="AppLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\AppLogDataSource.1\CLSID]
+@="{B000FD63-FD06-47AC-AC1F-8EE8C42CC479}"
+
+[HKEY_CLASSES_ROOT\BaseEventDataType]
+@="BaseEventDataType Class"
+
+[HKEY_CLASSES_ROOT\BaseEventDataType\CLSID]
+@="{15AB4910-9CB9-11D9-9669-0800200C9A66}"
+
+[HKEY_CLASSES_ROOT\BaseEventDataType.1]
+@="BaseEventDataType Class"
+
+[HKEY_CLASSES_ROOT\BaseEventDataType.1\CLSID]
+@="{15AB4910-9CB9-11D9-9669-0800200C9A66}"
+
+[HKEY_CLASSES_ROOT\CLSID\{00672A0F-9FE0-4DB3-87F5-25C95A11D14A}]
+@="RunDiscoveryDataSnapshotMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{00672A0F-9FE0-4DB3-87F5-25C95A11D14A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{00672A0F-9FE0-4DB3-87F5-25C95A11D14A}\ProgID]
+@="RunDiscoveryDataSnapshotMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{00672A0F-9FE0-4DB3-87F5-25C95A11D14A}\VersionIndependentProgID]
+@="RunDiscoveryDataSnapshotMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{009BE441-F1AD-4074-AD46-15F3BABCF0E5}]
+@="RunNTEventLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{009BE441-F1AD-4074-AD46-15F3BABCF0E5}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{009BE441-F1AD-4074-AD46-15F3BABCF0E5}\ProgID]
+@="RunNTEventLogDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{009BE441-F1AD-4074-AD46-15F3BABCF0E5}\VersionIndependentProgID]
+@="RunNTEventLogDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{059D50D5-2321-4CC1-8562-65F0D38C5497}]
+@="WebLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{059D50D5-2321-4CC1-8562-65F0D38C5497}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{059D50D5-2321-4CC1-8562-65F0D38C5497}\ProgID]
+@="WebLogEntryDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{059D50D5-2321-4CC1-8562-65F0D38C5497}\VersionIndependentProgID]
+@="WebLogEntryDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{05C8C114-7D2A-4159-B3AB-52BA3F40439B}]
+@="RunAverageThreshold Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{05C8C114-7D2A-4159-B3AB-52BA3F40439B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{05C8C114-7D2A-4159-B3AB-52BA3F40439B}\ProgID]
+@="RunAverageThreshold.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{05C8C114-7D2A-4159-B3AB-52BA3F40439B}\VersionIndependentProgID]
+@="RunAverageThreshold"
+
+[HKEY_CLASSES_ROOT\CLSID\{06CF61F8-55E9-42E5-A3FF-A89D1A64B6C9}]
+@="ComputationDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{06CF61F8-55E9-42E5-A3FF-A89D1A64B6C9}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{06CF61F8-55E9-42E5-A3FF-A89D1A64B6C9}\ProgID]
+@="ComputationDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{06CF61F8-55E9-42E5-A3FF-A89D1A64B6C9}\VersionIndependentProgID]
+@="ComputationDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{0BFF64A1-4B2B-4DD5-ADB5-62C48074AB82}]
+@="RunLDAPProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{0BFF64A1-4B2B-4DD5-ADB5-62C48074AB82}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{0BFF64A1-4B2B-4DD5-ADB5-62C48074AB82}\ProgID]
+@="RunLDAPProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{0BFF64A1-4B2B-4DD5-ADB5-62C48074AB82}\VersionIndependentProgID]
+@="RunLDAPProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{0D1FB777-4721-4862-A4BE-87138D56207F}]
+@="RunSchedulerCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{0D1FB777-4721-4862-A4BE-87138D56207F}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{0D1FB777-4721-4862-A4BE-87138D56207F}\ProgID]
+@="RunSchedulerCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{0D1FB777-4721-4862-A4BE-87138D56207F}\VersionIndependentProgID]
+@="RunSchedulerCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{0E6AF9F6-754A-42c8-A5D9-0AE71A53F96E}]
+@="RunSnmpDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{0E6AF9F6-754A-42c8-A5D9-0AE71A53F96E}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\SnmpModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{12B8034F-EF22-448F-AA54-C2E805A88AE4}]
+@="MOM2005ResponseContextDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{12B8034F-EF22-448F-AA54-C2E805A88AE4}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{12B8034F-EF22-448F-AA54-C2E805A88AE4}\ProgID]
+@="MOM2005ResponseContextDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{12B8034F-EF22-448F-AA54-C2E805A88AE4}\VersionIndependentProgID]
+@="MOM2005ResponseContextDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{15AB4910-9CB9-11D9-9669-0800200C9A66}]
+@="BaseEventDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{15AB4910-9CB9-11D9-9669-0800200C9A66}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{15AB4910-9CB9-11D9-9669-0800200C9A66}\ProgID]
+@="BaseEventDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{15AB4910-9CB9-11D9-9669-0800200C9A66}\VersionIndependentProgID]
+@="BaseEventDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{16B61683-51F2-4210-B5BB-F89435F0F131}]
+@="MOM2005EventDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{16B61683-51F2-4210-B5BB-F89435F0F131}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{16B61683-51F2-4210-B5BB-F89435F0F131}\ProgID]
+@="MOM2005EventDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{16B61683-51F2-4210-B5BB-F89435F0F131}\VersionIndependentProgID]
+@="MOM2005EventDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{16D53AB0-D822-4a42-B44F-1B4375EEEB4A}]
+@="SoftDisableFilter Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{16D53AB0-D822-4a42-B44F-1B4375EEEB4A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{16D53AB0-D822-4a42-B44F-1B4375EEEB4A}\ProgID]
+@="SoftDisableFilter.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{16D53AB0-D822-4a42-B44F-1B4375EEEB4A}\VersionIndependentProgID]
+@="SoftDisableFilter"
+
+[HKEY_CLASSES_ROOT\CLSID\{193B7F70-1730-419F-9E3A-D06FC08145B2}]
+@="IISSiteStateDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{193B7F70-1730-419F-9E3A-D06FC08145B2}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{193B7F70-1730-419F-9E3A-D06FC08145B2}\ProgID]
+@="IISSiteStateDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{193B7F70-1730-419F-9E3A-D06FC08145B2}\VersionIndependentProgID]
+@="IISSiteStateDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{1D020D8F-6B17-4299-BBAD-64BE1F80901C}]
+@="MOM2005PerfDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{1D020D8F-6B17-4299-BBAD-64BE1F80901C}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{1D020D8F-6B17-4299-BBAD-64BE1F80901C}\ProgID]
+@="MOM2005PerfDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{1D020D8F-6B17-4299-BBAD-64BE1F80901C}\VersionIndependentProgID]
+@="MOM2005PerfDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{1DB91BE4-DAF4-4E49-9AA8-8E14F4985F2C}]
+@="RunDependencyServiceCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{1DB91BE4-DAF4-4E49-9AA8-8E14F4985F2C}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{1DB91BE4-DAF4-4E49-9AA8-8E14F4985F2C}\ProgID]
+@="RunDependencyServiceCheckProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{1DB91BE4-DAF4-4E49-9AA8-8E14F4985F2C}\VersionIndependentProgID]
+@="RunDependencyServiceCheckProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{1E06AAF5-C4E0-4F57-A4F6-2C8A6A5E8E53}]
+@="RunConsolidatorCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{1E06AAF5-C4E0-4F57-A4F6-2C8A6A5E8E53}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{1E06AAF5-C4E0-4F57-A4F6-2C8A6A5E8E53}\ProgID]
+@="RunConsolidatorCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{1E06AAF5-C4E0-4F57-A4F6-2C8A6A5E8E53}\VersionIndependentProgID]
+@="RunConsolidatorCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{1dd52140-33e1-4b39-ac7b-638f21772428}]
+@="ProcessInformationProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{1dd52140-33e1-4b39-ac7b-638f21772428}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{1dd52140-33e1-4b39-ac7b-638f21772428}\ProgID]
+@="ProcessInformationProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{1dd52140-33e1-4b39-ac7b-638f21772428}\VersionIndependentProgID]
+@="ProcessInformationProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{20073FC6-F8BA-466A-BAB8-92DEF165BF6F}]
+@="RunWsManGetPA Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{20073FC6-F8BA-466A-BAB8-92DEF165BF6F}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMWsManModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{20073FC6-F8BA-466A-BAB8-92DEF165BF6F}\ProgID]
+@="RunWsManGetPA.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{20073FC6-F8BA-466A-BAB8-92DEF165BF6F}\VersionIndependentProgID]
+@="RunWsManGetPA"
+
+[HKEY_CLASSES_ROOT\CLSID\{21a13095-6fb0-4629-8152-3f4dfd1649fe}]
+@="RunLearningModule Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{21a13095-6fb0-4629-8152-3f4dfd1649fe}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{21a13095-6fb0-4629-8152-3f4dfd1649fe}\ProgID]
+@="RunLearningModule.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{21a13095-6fb0-4629-8152-3f4dfd1649fe}\VersionIndependentProgID]
+@="RunLearningModule"
+
+[HKEY_CLASSES_ROOT\CLSID\{23BEB21F-D602-4B89-8690-20EF7E641DAF}]
+@="Xml String To DataItem Module"
+
+[HKEY_CLASSES_ROOT\CLSID\{23BEB21F-D602-4B89-8690-20EF7E641DAF}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\XmlStringToDataItemModule.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{24075BB8-759B-492D-B14F-C69C5600A5F3}]
+@="CounterController Class"
+"AppID"="{8CAE0BB3-EDE1-429D-8E89-301CC3B12B0E}"
+
+[HKEY_CLASSES_ROOT\CLSID\{24075BB8-759B-492D-B14F-C69C5600A5F3}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\PerfCounterMonitor.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{24075BB8-759B-492D-B14F-C69C5600A5F3}\ProgID]
+@="PerfCounterMonitor.CounterController.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{24075BB8-759B-492D-B14F-C69C5600A5F3}\TypeLib]
+@="{AC9BEE63-CD0B-45D5-975C-0868716773F7}"
+
+[HKEY_CLASSES_ROOT\CLSID\{24075BB8-759B-492D-B14F-C69C5600A5F3}\VersionIndependentProgID]
+@="PerfCounterMonitor.CounterController"
+
+[HKEY_CLASSES_ROOT\CLSID\{2566BCEB-BF6B-45D6-BA1A-F99E5CACB8B2}]
+@="RunMOMNTPerfMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{2566BCEB-BF6B-45D6-BA1A-F99E5CACB8B2}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{2566BCEB-BF6B-45D6-BA1A-F99E5CACB8B2}\ProgID]
+@="RunMOMNTPerfMapperCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{2566BCEB-BF6B-45D6-BA1A-F99E5CACB8B2}\VersionIndependentProgID]
+@="RunMOMNTPerfMapperCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{28BE3571-7EDD-42B8-98F8-38171F52A29A}]
+@="RunPerfDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{28BE3571-7EDD-42B8-98F8-38171F52A29A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{28BE3571-7EDD-42B8-98F8-38171F52A29A}\ProgID]
+@="RunPerfDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{28BE3571-7EDD-42B8-98F8-38171F52A29A}\VersionIndependentProgID]
+@="RunPerfDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{29A5E631-EE28-44BE-A1F0-301A65381CFC}]
+@="RunOptimizedCollection Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{29A5E631-EE28-44BE-A1F0-301A65381CFC}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{29A5E631-EE28-44BE-A1F0-301A65381CFC}\ProgID]
+@="RunOptimizedCollection.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{29A5E631-EE28-44BE-A1F0-301A65381CFC}\VersionIndependentProgID]
+@="RunOptimizedCollection"
+
+[HKEY_CLASSES_ROOT\CLSID\{29D0D61F-7540-4937-97D9-D991E3E79513}]
+@="RunIISStateProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{29D0D61F-7540-4937-97D9-D991E3E79513}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{29D0D61F-7540-4937-97D9-D991E3E79513}\ProgID]
+@="RunIISStateProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{29D0D61F-7540-4937-97D9-D991E3E79513}\VersionIndependentProgID]
+@="RunIISStateProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B72C326-CDBB-421a-ACC3-A1994DBD52BB}]
+@="RunSnmpAsyncProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B72C326-CDBB-421a-ACC3-A1994DBD52BB}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\SnmpModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B72C327-CDBB-421a-ACC3-A1994DBD52BB}]
+@="RunSnmpDiscoveryModule Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B72C327-CDBB-421a-ACC3-A1994DBD52BB}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\SnmpModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B72C328-CDBB-421a-ACC3-A1994DBD52BB}]
+@="RunSnmpTrapDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{2B72C328-CDBB-421a-ACC3-A1994DBD52BB}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\SnmpModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{2BC378C1-7AB6-46FA-B264-62EE1B794194}]
+@="WsManDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{2BC378C1-7AB6-46FA-B264-62EE1B794194}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMWsManModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{2BC378C1-7AB6-46FA-B264-62EE1B794194}\ProgID]
+@="WsManDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{2BC378C1-7AB6-46FA-B264-62EE1B794194}\VersionIndependentProgID]
+@="WsManDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{32455E3E-D321-40DD-9023-82D4949D6E1B}]
+@="Executor Class"
+"AppID"="{F0EC90CF-0C9B-4C91-B8AD-5A5DA6264F5E}"
+
+[HKEY_CLASSES_ROOT\CLSID\{32455E3E-D321-40DD-9023-82D4949D6E1B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptScripting.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{32455E3E-D321-40DD-9023-82D4949D6E1B}\ProgID]
+@="InterceptScripting.Executor.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{32455E3E-D321-40DD-9023-82D4949D6E1B}\TypeLib]
+@="{C3809409-4B3E-46C3-87E8-5546FF14B558}"
+
+[HKEY_CLASSES_ROOT\CLSID\{32455E3E-D321-40DD-9023-82D4949D6E1B}\VersionIndependentProgID]
+@="InterceptScripting.Executor"
+
+[HKEY_CLASSES_ROOT\CLSID\{37BA5579-8FEF-41BD-A125-76B788E94908}]
+@="RunWebTestProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{37BA5579-8FEF-41BD-A125-76B788E94908}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\WebTestModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{37BA5579-8FEF-41BD-A125-76B788E94908}\ProgID]
+@="RunWebTestProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{37BA5579-8FEF-41BD-A125-76B788E94908}\VersionIndependentProgID]
+@="RunWebTestProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{398113D9-D7B4-45E1-B360-A38A75695096}]
+@="MOMNTPerfDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{398113D9-D7B4-45E1-B360-A38A75695096}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{398113D9-D7B4-45E1-B360-A38A75695096}\ProgID]
+@="MOMNTPerfDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{398113D9-D7B4-45E1-B360-A38A75695096}\VersionIndependentProgID]
+@="MOMNTPerfDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{39C90EFB-6CA7-4198-995E-79447D91DB4D}]
+@="CConnectorSessionCallbackBridge Object"
+"AppID"=""
+
+[HKEY_CLASSES_ROOT\CLSID\{39C90EFB-6CA7-4198-995E-79447D91DB4D}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\ConnectorBridge.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{39C90EFB-6CA7-4198-995E-79447D91DB4D}\ProgID]
+@="OM12Connector.SessionCallbackBridge.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{39C90EFB-6CA7-4198-995E-79447D91DB4D}\Programmable]
+
+[HKEY_CLASSES_ROOT\CLSID\{39C90EFB-6CA7-4198-995E-79447D91DB4D}\TypeLib]
+@="{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}"
+
+[HKEY_CLASSES_ROOT\CLSID\{39C90EFB-6CA7-4198-995E-79447D91DB4D}\VersionIndependentProgID]
+@="OM12Connector.SessionCallbackBridge"
+
+[HKEY_CLASSES_ROOT\CLSID\{3A0D9F65-8CC0-4C53-93DA-7E5E5DDB117E}]
+@="SysLogDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{3A0D9F65-8CC0-4C53-93DA-7E5E5DDB117E}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{3A0D9F65-8CC0-4C53-93DA-7E5E5DDB117E}\ProgID]
+@="SysLogDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{3A0D9F65-8CC0-4C53-93DA-7E5E5DDB117E}\VersionIndependentProgID]
+@="SysLogDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{41E122D5-B2BD-41DE-935A-F4F3451DC492}]
+@="RunScriptGeneratedServiceDiscoveryDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{41E122D5-B2BD-41DE-935A-F4F3451DC492}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{41E122D5-B2BD-41DE-935A-F4F3451DC492}\ProgID]
+@="RunScriptGeneratedServiceDiscoveryDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{41E122D5-B2BD-41DE-935A-F4F3451DC492}\VersionIndependentProgID]
+@="RunScriptGeneratedServiceDiscoveryDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{41EB45CD-BF11-4E2A-8349-07DA48DEA806}]
+@="RunTCPPortCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{41EB45CD-BF11-4E2A-8349-07DA48DEA806}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{41EB45CD-BF11-4E2A-8349-07DA48DEA806}\ProgID]
+@="RunTCPPortCheckProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{41EB45CD-BF11-4E2A-8349-07DA48DEA806}\VersionIndependentProgID]
+@="RunTCPPortCheckProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{4427C733-42AE-4133-84FD-BEE4A3830EC0}]
+@="RunWsManInvokePA Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{4427C733-42AE-4133-84FD-BEE4A3830EC0}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMWsManModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4427C733-42AE-4133-84FD-BEE4A3830EC0}\ProgID]
+@="RunWsManInvokePA.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{4427C733-42AE-4133-84FD-BEE4A3830EC0}\VersionIndependentProgID]
+@="RunWsManInvokePA"
+
+[HKEY_CLASSES_ROOT\CLSID\{44f33133-bc88-49d6-9ac9-c46ede08e63a}]
+@="InstanceIdMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{44f33133-bc88-49d6-9ac9-c46ede08e63a}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{44f33133-bc88-49d6-9ac9-c46ede08e63a}\ProgID]
+@="InstanceIdMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{44f33133-bc88-49d6-9ac9-c46ede08e63a}\VersionIndependentProgID]
+@="InstanceIdMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{465B6F56-D749-4439-8A83-801F46F62B74}]
+@="PSFactoryBuffer"
+
+[HKEY_CLASSES_ROOT\CLSID\{465B6F56-D749-4439-8A83-801F46F62B74}\InProcServer32]
+@="C:\\Program Files\\Common Files\\Microsoft Shared\\Operations Manager\\scommaintenancemode.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{472364F2-A1F0-41C0-9A8F-E00C92C2AB31}]
+@="RunRegistryProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{472364F2-A1F0-41C0-9A8F-E00C92C2AB31}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{472364F2-A1F0-41C0-9A8F-E00C92C2AB31}\ProgID]
+@="RunRegistryProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{472364F2-A1F0-41C0-9A8F-E00C92C2AB31}\VersionIndependentProgID]
+@="RunRegistryProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{47AA3039-7E86-4b81-B295-67187EDFF3D7}]
+@="RunServiceCheckDS Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{47AA3039-7E86-4b81-B295-67187EDFF3D7}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{47AA3039-7E86-4b81-B295-67187EDFF3D7}\ProgID]
+@="RunServiceCheckDS.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{47AA3039-7E86-4b81-B295-67187EDFF3D7}\VersionIndependentProgID]
+@="RunServiceCheckDS"
+
+[HKEY_CLASSES_ROOT\CLSID\{49CF325D-12BE-47eb-91C8-D74AB3479F92}]
+@="IMonitoringHostClient Proxy/Stub"
+
+[HKEY_CLASSES_ROOT\CLSID\{49CF325D-12BE-47eb-91C8-D74AB3479F92}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MonitoringHostProxy.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A441B28-CB75-4E38-B2B6-38FE330CA58D}]
+@="CConnectorManagerForManagementGroupBridge Object"
+"AppID"=""
+
+[HKEY_CLASSES_ROOT\CLSID\{4A441B28-CB75-4E38-B2B6-38FE330CA58D}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\ConnectorBridge.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A441B28-CB75-4E38-B2B6-38FE330CA58D}\ProgID]
+@="OM12Connector.ManagerBridge.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A441B28-CB75-4E38-B2B6-38FE330CA58D}\Programmable]
+
+[HKEY_CLASSES_ROOT\CLSID\{4A441B28-CB75-4E38-B2B6-38FE330CA58D}\TypeLib]
+@="{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A441B28-CB75-4E38-B2B6-38FE330CA58D}\VersionIndependentProgID]
+@="OM12Connector.ManagerBridge"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A8BA0EA-AFE0-46A6-937D-FCE887B455D9}]
+@="IISSiteStateProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A8BA0EA-AFE0-46A6-937D-FCE887B455D9}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A8BA0EA-AFE0-46A6-937D-FCE887B455D9}\ProgID]
+@="IISSiteStateProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{4A8BA0EA-AFE0-46A6-937D-FCE887B455D9}\VersionIndependentProgID]
+@="IISSiteStateProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{4B5C675C-83FB-40F4-87D6-A99F3BB7E019}]
+@="IISLogCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{4B5C675C-83FB-40F4-87D6-A99F3BB7E019}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4B5C675C-83FB-40F4-87D6-A99F3BB7E019}\ProgID]
+@="IISLogCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{4B5C675C-83FB-40F4-87D6-A99F3BB7E019}\VersionIndependentProgID]
+@="IISLogCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{4C1A6886-70CB-4F88-B901-C7830013C5FA}]
+@="Properties Class"
+"AppID"="{F0EC90CF-0C9B-4C91-B8AD-5A5DA6264F5E}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4C1A6886-70CB-4F88-B901-C7830013C5FA}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptScripting.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{4C1A6886-70CB-4F88-B901-C7830013C5FA}\ProgID]
+@="InterceptScripting.Properties.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{4C1A6886-70CB-4F88-B901-C7830013C5FA}\TypeLib]
+@="{C3809409-4B3E-46C3-87E8-5546FF14B558}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4C1A6886-70CB-4F88-B901-C7830013C5FA}\VersionIndependentProgID]
+@="InterceptScripting.Properties"
+
+[HKEY_CLASSES_ROOT\CLSID\{51BB7C80-E68F-489F-BEBD-8BAFE3128CCE}]
+@="WMIEventDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{51BB7C80-E68F-489F-BEBD-8BAFE3128CCE}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{51BB7C80-E68F-489F-BEBD-8BAFE3128CCE}\ProgID]
+@="WMIProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{51BB7C80-E68F-489F-BEBD-8BAFE3128CCE}\VersionIndependentProgID]
+@="WMIProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{52BC4FD4-C20F-4A2E-80E7-1024C57F30ED}]
+@="ComputerVerification Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{52BC4FD4-C20F-4A2E-80E7-1024C57F30ED}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{52BC4FD4-C20F-4A2E-80E7-1024C57F30ED}\ProgID]
+@="ComputerVerification.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{52BC4FD4-C20F-4A2E-80E7-1024C57F30ED}\VersionIndependentProgID]
+@="ComputerVerification"
+
+[HKEY_CLASSES_ROOT\CLSID\{534E71F9-7970-42D6-921F-59CFB873855F}]
+@="ConnectorSolution Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{534E71F9-7970-42D6-921F-59CFB873855F}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMConnector.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{54935827-f4e2-47e8-bb0a-a36d9327c4e7}]
+@="RunWebTestPerfMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{54935827-f4e2-47e8-bb0a-a36d9327c4e7}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\WebTestModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{54935827-f4e2-47e8-bb0a-a36d9327c4e7}\ProgID]
+@="RunWebTestPerfMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{54935827-f4e2-47e8-bb0a-a36d9327c4e7}\VersionIndependentProgID]
+@="RunWebTestPerfMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{57C03BDE-8B68-4C87-902C-BF1F4F166D18}]
+@="CorrelatorDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{57C03BDE-8B68-4C87-902C-BF1F4F166D18}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{57C03BDE-8B68-4C87-902C-BF1F4F166D18}\ProgID]
+@="CorrelatorDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{57C03BDE-8B68-4C87-902C-BF1F4F166D18}\VersionIndependentProgID]
+@="CorrelatorDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{5904DC85-F8C6-48FF-843B-FA2688B82EA2}]
+@="MOMNTEventDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{5904DC85-F8C6-48FF-843B-FA2688B82EA2}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{5904DC85-F8C6-48FF-843B-FA2688B82EA2}\ProgID]
+@="MOMNTEventDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{5904DC85-F8C6-48FF-843B-FA2688B82EA2}\VersionIndependentProgID]
+@="MOMNTEventDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{5A75A2D5-600D-48DA-91CD-2E35D4E9E7B3}]
+@="MOMURLDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{5A75A2D5-600D-48DA-91CD-2E35D4E9E7B3}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{5A75A2D5-600D-48DA-91CD-2E35D4E9E7B3}\ProgID]
+@="MOMURLDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{5A75A2D5-600D-48DA-91CD-2E35D4E9E7B3}\VersionIndependentProgID]
+@="MOMURLDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{5B44DF33-D67D-4500-85AE-7AE29CA11985}]
+@="SignatureDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{5B44DF33-D67D-4500-85AE-7AE29CA11985}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{5B44DF33-D67D-4500-85AE-7AE29CA11985}\ProgID]
+@="SignatureDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{5B44DF33-D67D-4500-85AE-7AE29CA11985}\VersionIndependentProgID]
+@="SignatureDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{647DA0F2-0751-4B27-8E00-C77D120B955B}]
+@="MOMSnmpDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{647DA0F2-0751-4B27-8E00-C77D120B955B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\SnmpModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{64D5DB86-322D-4A18-AAA9-4BFE063624A5}]
+@="RunIISWebSiteDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{64D5DB86-322D-4A18-AAA9-4BFE063624A5}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{64D5DB86-322D-4A18-AAA9-4BFE063624A5}\ProgID]
+@="RunIISWebSiteDiscoveryProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{64D5DB86-322D-4A18-AAA9-4BFE063624A5}\VersionIndependentProgID]
+@="RunIISWebSiteDiscoveryProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}]
+@="PerfCounterMonitor Class"
+"AppID"="{8CAE0BB3-EDE1-429D-8E89-301CC3B12B0E}"
+
+[HKEY_CLASSES_ROOT\CLSID\{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\PerfCounterMonitor.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}\ProgID]
+@="PerfCounterMonitor.PerfCounterMonitor.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}\TypeLib]
+@="{AC9BEE63-CD0B-45D5-975C-0868716773F7}"
+
+[HKEY_CLASSES_ROOT\CLSID\{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}\VersionIndependentProgID]
+@="PerfCounterMonitor.PerfCounterMonitor"
+
+[HKEY_CLASSES_ROOT\CLSID\{68D7C190-7E3C-4573-A528-6AA79070F36B}]
+@="WebHostController Class"
+"AppID"="{9923CF3A-4BC6-458B-87B1-3060C0BCA37A}"
+
+[HKEY_CLASSES_ROOT\CLSID\{68D7C190-7E3C-4573-A528-6AA79070F36B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\WHController.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{68D7C190-7E3C-4573-A528-6AA79070F36B}\ProgID]
+@="WHController.WebHostController.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{68D7C190-7E3C-4573-A528-6AA79070F36B}\TypeLib]
+@="{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}"
+
+[HKEY_CLASSES_ROOT\CLSID\{68D7C190-7E3C-4573-A528-6AA79070F36B}\VersionIndependentProgID]
+@="WHController.WebHostController"
+
+[HKEY_CLASSES_ROOT\CLSID\{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}]
+@="Context Class"
+"AppID"="{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}"
+
+[HKEY_CLASSES_ROOT\CLSID\{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}\LocalServer32]
+@="\"C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptSvc.exe\""
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}\ProgID]
+@="InterceptSvc.Context.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}\TypeLib]
+@="{800ED890-B73D-4831-AB15-E5E3BF99DBE4}"
+
+[HKEY_CLASSES_ROOT\CLSID\{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}\VersionIndependentProgID]
+@="InterceptSvc.Context"
+
+[HKEY_CLASSES_ROOT\CLSID\{6ADE8BCE-E401-49FD-9EB3-CAF88D7E183F}]
+@="RunTimerCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{6ADE8BCE-E401-49FD-9EB3-CAF88D7E183F}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{6ADE8BCE-E401-49FD-9EB3-CAF88D7E183F}\ProgID]
+@="RunTimerCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{6ADE8BCE-E401-49FD-9EB3-CAF88D7E183F}\VersionIndependentProgID]
+@="RunTimerCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{6BB6ADFC-85E3-4D65-9998-2566C3C17F70}]
+@="RunCorrelatorCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{6BB6ADFC-85E3-4D65-9998-2566C3C17F70}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{6BB6ADFC-85E3-4D65-9998-2566C3C17F70}\ProgID]
+@="RunCorrelatorCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{6BB6ADFC-85E3-4D65-9998-2566C3C17F70}\VersionIndependentProgID]
+@="RunCorrelatorCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{6D3D4B56-96BB-445A-8C7F-F7709D8A2CA7}]
+@="RunScriptGeneratedEventDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{6D3D4B56-96BB-445A-8C7F-F7709D8A2CA7}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{6D3D4B56-96BB-445A-8C7F-F7709D8A2CA7}\ProgID]
+@="RunScriptGeneratedEventDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{6D3D4B56-96BB-445A-8C7F-F7709D8A2CA7}\VersionIndependentProgID]
+@="RunScriptGeneratedEventDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{71553f30-e3fb-4772-be22-3c7b3b555c40}]
+@="RunMOMNTSignatureMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{71553f30-e3fb-4772-be22-3c7b3b555c40}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{71553f30-e3fb-4772-be22-3c7b3b555c40}\ProgID]
+@="RunMOMNTSignatureMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{71553f30-e3fb-4772-be22-3c7b3b555c40}\VersionIndependentProgID]
+@="RunMOMNTSignatureMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{72175454-D77A-4548-90A2-7DE023AF6F2C}]
+@="RunLinkedPerfDataMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{72175454-D77A-4548-90A2-7DE023AF6F2C}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{72175454-D77A-4548-90A2-7DE023AF6F2C}\ProgID]
+@="RunLinkedPerfDataMapperCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{72175454-D77A-4548-90A2-7DE023AF6F2C}\VersionIndependentProgID]
+@="RunLinkedPerfDataMapperCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{786842B8-B525-468A-B1D0-20A2E8E6283F}]
+@="SCOMMaintenanceModeControl Class"
+"AppID"="{66DE1BFB-922B-42B6-81AD-1306564B710B}"
+
+[HKEY_CLASSES_ROOT\CLSID\{786842B8-B525-468A-B1D0-20A2E8E6283F}\InprocServer32]
+@="C:\\Program Files\\Common Files\\Microsoft Shared\\Operations Manager\\scommaintenancemode.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{786842B8-B525-468A-B1D0-20A2E8E6283F}\ProgID]
+@="SCOMMaintenanceMode.SCOMMaintenanceMo.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{786842B8-B525-468A-B1D0-20A2E8E6283F}\TypeLib]
+@="{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}"
+
+[HKEY_CLASSES_ROOT\CLSID\{786842B8-B525-468A-B1D0-20A2E8E6283F}\VersionIndependentProgID]
+@="SCOMMaintenanceMode.SCOMMaintenanceMode"
+
+[HKEY_CLASSES_ROOT\CLSID\{79004B60-87D8-4260-BEFA-B885F6B1EA2B}]
+@="OleDbDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{79004B60-87D8-4260-BEFA-B885F6B1EA2B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{79004B60-87D8-4260-BEFA-B885F6B1EA2B}\ProgID]
+@="OleDbDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{79004B60-87D8-4260-BEFA-B885F6B1EA2B}\VersionIndependentProgID]
+@="OleDbDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}]
+@="ManagementServiceConfiguration Class"
+"AppID"="{28F5174A-2D3E-45FE-913B-BDD69CF0AA00}"
+
+[HKEY_CLASSES_ROOT\CLSID\{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\AgentConfigManager.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}\ProgID]
+@="AgentConfigManager.MgmtSvcCfg.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}\Programmable]
+@=""
+
+[HKEY_CLASSES_ROOT\CLSID\{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}\TypeLib]
+@="{D0F0E165-351A-401E-869C-E1BD2289FC76}"
+
+[HKEY_CLASSES_ROOT\CLSID\{7B250F68-BA8C-4353-BC72-8D41A0D4C2C0}\VersionIndependentProgID]
+@="AgentConfigManager.MgmtSvcCfg"
+
+[HKEY_CLASSES_ROOT\CLSID\{7BC84A29-F833-4628-9A39-983E95914AF4}]
+@="MOMWebTestDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{7BC84A29-F833-4628-9A39-983E95914AF4}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\WebTestModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{7BC84A29-F833-4628-9A39-983E95914AF4}\ProgID]
+@="MOMWebTestDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{7BC84A29-F833-4628-9A39-983E95914AF4}\VersionIndependentProgID]
+@="MOMWebTestDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{7E57E3DA-20A9-48E8-9057-68577CD56B37}]
+@="CrimsonEventDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{7E57E3DA-20A9-48E8-9057-68577CD56B37}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules2.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{7E57E3DA-20A9-48E8-9057-68577CD56B37}\ProgID]
+@="CrimsonEventDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{7E57E3DA-20A9-48E8-9057-68577CD56B37}\VersionIndependentProgID]
+@="CrimsonEventDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{7fd22897-9e63-4464-84be-b0b0857dfa64}]
+@="NTSignatureDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{7fd22897-9e63-4464-84be-b0b0857dfa64}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{7fd22897-9e63-4464-84be-b0b0857dfa64}\ProgID]
+@="NTSignatureDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{7fd22897-9e63-4464-84be-b0b0857dfa64}\VersionIndependentProgID]
+@="NTSignatureDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{84CB7BF8-4684-4980-84CF-2C99FD3CEFFA}]
+@="IMonitoringHost Proxy/Stub"
+
+[HKEY_CLASSES_ROOT\CLSID\{84CB7BF8-4684-4980-84CF-2C99FD3CEFFA}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MonitoringHostProxy.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{866FC490-7070-425c-BD55-9C52F9F30238}]
+@="ICMPResponseDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{866FC490-7070-425c-BD55-9C52F9F30238}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8816FFC0-0CE4-4300-99B2-EB480001284B}]
+@="RunScriptGeneratedAlertDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8816FFC0-0CE4-4300-99B2-EB480001284B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8816FFC0-0CE4-4300-99B2-EB480001284B}\ProgID]
+@="RunScriptGeneratedAlertDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{8816FFC0-0CE4-4300-99B2-EB480001284B}\VersionIndependentProgID]
+@="RunScriptGeneratedAlertDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{89CD40BD-EBCA-41E4-B645-DCCD1434361A}]
+@="MOMConolidatorDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{89CD40BD-EBCA-41E4-B645-DCCD1434361A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{89CD40BD-EBCA-41E4-B645-DCCD1434361A}\ProgID]
+@="MOMConolidatorDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{89CD40BD-EBCA-41E4-B645-DCCD1434361A}\VersionIndependentProgID]
+@="MOMConolidatorDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{8BE998E8-B943-4ABB-B3AF-8A3709044576}]
+@="RunMOM2005WMIEventMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8BE998E8-B943-4ABB-B3AF-8A3709044576}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8BE998E8-B943-4ABB-B3AF-8A3709044576}\ProgID]
+@="RunMOM2005WMIEventMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{8BE998E8-B943-4ABB-B3AF-8A3709044576}\VersionIndependentProgID]
+@="RunMOM2005WMIEventMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D17B92F-528D-4DF6-A9FA-55D59AE33AD2}]
+@="TriggerDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D17B92F-528D-4DF6-A9FA-55D59AE33AD2}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D17B92F-528D-4DF6-A9FA-55D59AE33AD2}\ProgID]
+@="TriggerDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D17B92F-528D-4DF6-A9FA-55D59AE33AD2}\VersionIndependentProgID]
+@="TriggerDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D61C900-109A-4320-9F90-B6312DFF59F0}]
+@="RunIISFTPSiteDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D61C900-109A-4320-9F90-B6312DFF59F0}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D61C900-109A-4320-9F90-B6312DFF59F0}\ProgID]
+@="RunIISFTPSiteDiscoveryProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{8D61C900-109A-4320-9F90-B6312DFF59F0}\VersionIndependentProgID]
+@="RunIISFTPSiteDiscoveryProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{8DE9515F-F20F-4E97-BE09-AD61C8536590}]
+@="ConnectorSolution Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8DE9515F-F20F-4E97-BE09-AD61C8536590}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ServiceConnector.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{8F446429-71AC-49e0-B833-671696193552}]
+@="ICMPProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8F446429-71AC-49e0-B833-671696193552}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8b1626e2-7ec1-4cf2-8ecb-8263991e13c4}]
+@="LogDataItemWA Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{8b1626e2-7ec1-4cf2-8ecb-8263991e13c4}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{8b1626e2-7ec1-4cf2-8ecb-8263991e13c4}\ProgID]
+@="LogDataItemWA.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{8b1626e2-7ec1-4cf2-8ecb-8263991e13c4}\VersionIndependentProgID]
+@="LogDataItemWA"
+
+[HKEY_CLASSES_ROOT\CLSID\{91564CE8-81DE-4D52-9AC5-A6FB6B9AB0EB}]
+@="RunWsManEnumeratePA Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{91564CE8-81DE-4D52-9AC5-A6FB6B9AB0EB}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMWsManModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{91564CE8-81DE-4D52-9AC5-A6FB6B9AB0EB}\ProgID]
+@="RunWsManEnumeratePA.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{91564CE8-81DE-4D52-9AC5-A6FB6B9AB0EB}\VersionIndependentProgID]
+@="RunWsManEnumeratePA"
+
+[HKEY_CLASSES_ROOT\CLSID\{915E1B16-C101-4C0C-85ED-4301786AE09A}]
+@="RunGenericNTEventMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{915E1B16-C101-4C0C-85ED-4301786AE09A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{915E1B16-C101-4C0C-85ED-4301786AE09A}\ProgID]
+@="RunGenericNTEventMapperCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{915E1B16-C101-4C0C-85ED-4301786AE09A}\VersionIndependentProgID]
+@="RunGenericNTEventMapperCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{9184E8F9-6C50-47D7-987C-7CE31AD115A9}]
+@="RunIISWebApplicationDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9184E8F9-6C50-47D7-987C-7CE31AD115A9}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9184E8F9-6C50-47D7-987C-7CE31AD115A9}\ProgID]
+@="RunIISWebApplicationDiscoveryProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{9184E8F9-6C50-47D7-987C-7CE31AD115A9}\VersionIndependentProgID]
+@="RunIISWebApplicationDiscoveryProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{92A40C04-DE27-47E2-ADB3-CD960E6BD9E2}]
+@="WMIProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{92A40C04-DE27-47E2-ADB3-CD960E6BD9E2}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{92A40C04-DE27-47E2-ADB3-CD960E6BD9E2}\ProgID]
+@="WMIProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{92A40C04-DE27-47E2-ADB3-CD960E6BD9E2}\VersionIndependentProgID]
+@="WMIProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{92C599FD-6639-4A9F-90DA-E1350162A318}]
+@="RunURLProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{92C599FD-6639-4A9F-90DA-E1350162A318}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{92C599FD-6639-4A9F-90DA-E1350162A318}\ProgID]
+@="RunURLProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{92C599FD-6639-4A9F-90DA-E1350162A318}\VersionIndependentProgID]
+@="RunURLProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{92CA1E5F-C050-405E-8947-381690C6182D}]
+@="MOMRegistryDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{92CA1E5F-C050-405E-8947-381690C6182D}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{92CA1E5F-C050-405E-8947-381690C6182D}\ProgID]
+@="MOMRegistryDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{92CA1E5F-C050-405E-8947-381690C6182D}\VersionIndependentProgID]
+@="MOMRegistryDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{9614C109-D7CD-43A4-BC95-F015D9B1A224}]
+@="RunSerializeDataItem Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9614C109-D7CD-43A4-BC95-F015D9B1A224}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9614C109-D7CD-43A4-BC95-F015D9B1A224}\VersionIndependentProgID]
+@="RunSerializeDataItem"
+
+[HKEY_CLASSES_ROOT\CLSID\{97b1ef21-757c-4004-86bb-57939e2c98d8}]
+@="ClusterDiscovery Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{97b1ef21-757c-4004-86bb-57939e2c98d8}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{97b1ef21-757c-4004-86bb-57939e2c98d8}\ProgID]
+@="ClusterDiscovery.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{97b1ef21-757c-4004-86bb-57939e2c98d8}\VersionIndependentProgID]
+@="ClusterDiscovery"
+
+[HKEY_CLASSES_ROOT\CLSID\{9F96E9EF-EA39-4352-AE5B-E6E0AB20E4CA}]
+@="RunBatchResponse Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{9F96E9EF-EA39-4352-AE5B-E6E0AB20E4CA}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{9F96E9EF-EA39-4352-AE5B-E6E0AB20E4CA}\ProgID]
+@="RunBatchResponse.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{9F96E9EF-EA39-4352-AE5B-E6E0AB20E4CA}\VersionIndependentProgID]
+@="RunBatchResponse"
+
+[HKEY_CLASSES_ROOT\CLSID\{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}]
+@="CConnectorSolution Object"
+"AppID"=""
+
+[HKEY_CLASSES_ROOT\CLSID\{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\ConnectorBridge.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}\ProgID]
+@="Advisor.ConnectorBridge.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}\Programmable]
+
+[HKEY_CLASSES_ROOT\CLSID\{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}\TypeLib]
+@="{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A052BD1A-7DDC-4BB1-B9F8-CEA9F31F61E7}\VersionIndependentProgID]
+@="Advisor.ConnectorBridge"
+
+[HKEY_CLASSES_ROOT\CLSID\{A0D4D11B-7F8C-4DD2-8E7D-C5B9D0D7C413}]
+@="IISDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{A0D4D11B-7F8C-4DD2-8E7D-C5B9D0D7C413}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A0D4D11B-7F8C-4DD2-8E7D-C5B9D0D7C413}\ProgID]
+@="IISDiscoveryProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A0D4D11B-7F8C-4DD2-8E7D-C5B9D0D7C413}\VersionIndependentProgID]
+@="IISDiscoveryProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{A1260A5C-9F58-462E-82C1-1C317E5AD970}]
+@="RunBaseliningModule Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{A1260A5C-9F58-462E-82C1-1C317E5AD970}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A1260A5C-9F58-462E-82C1-1C317E5AD970}\ProgID]
+@="RunBaseliningModule.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A1260A5C-9F58-462E-82C1-1C317E5AD970}\VersionIndependentProgID]
+@="RunBaseliningModule"
+
+[HKEY_CLASSES_ROOT\CLSID\{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}]
+@="Dispatcher Class"
+"AppID"="{1E9102B9-2CD9-4196-85DD-E90A45DF986F}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\Dispatcher.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}\ProgID]
+@="Dispatcher.Dispatcher.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}\TypeLib]
+@="{0F2B2E96-C10B-4A65-991E-673A0A3449AB}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}\VersionIndependentProgID]
+@="Dispatcher.Dispatcher"
+
+[HKEY_CLASSES_ROOT\CLSID\{A29CCF51-C540-4B99-B8CA-BBB20F05C8B8}]
+@="RunCrimsonDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{A29CCF51-C540-4B99-B8CA-BBB20F05C8B8}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules2.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A29CCF51-C540-4B99-B8CA-BBB20F05C8B8}\ProgID]
+@="RunCrimsonDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A29CCF51-C540-4B99-B8CA-BBB20F05C8B8}\VersionIndependentProgID]
+@="RunCrimsonDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}]
+@="Monitor Class"
+"AppID"="{F1864C01-1E70-4B6B-BA71-45CBB98D7319}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\PerfMon64.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\ProgID]
+@="PerfMon.Monitor.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\TypeLib]
+@="{63BC625C-55DE-4F88-9575-14FFC99B02D3}"
+
+[HKEY_CLASSES_ROOT\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\VersionIndependentProgID]
+@="PerfMon.Monitor"
+
+[HKEY_CLASSES_ROOT\CLSID\{A9348597-CAFD-4E57-9A20-2BCC4E3ED9CB}]
+@="RunIISApplicationPoolDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{A9348597-CAFD-4E57-9A20-2BCC4E3ED9CB}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A9348597-CAFD-4E57-9A20-2BCC4E3ED9CB}\ProgID]
+@="RunIISApplicationPoolDiscoveryProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{A9348597-CAFD-4E57-9A20-2BCC4E3ED9CB}\VersionIndependentProgID]
+@="RunIISApplicationPoolDiscoveryProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{AA56A2C2-232D-4FDA-80FC-31067ED5607B}]
+@="RunConsecutiveSamplesThreshold Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{AA56A2C2-232D-4FDA-80FC-31067ED5607B}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{AA56A2C2-232D-4FDA-80FC-31067ED5607B}\ProgID]
+@="RunConsecutiveSamplesThreshold.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{AA56A2C2-232D-4FDA-80FC-31067ED5607B}\VersionIndependentProgID]
+@="RunConsecutiveSamplesThreshold"
+
+[HKEY_CLASSES_ROOT\CLSID\{ABCE0F22-CD3F-4F51-A686-4A168EC754C3}]
+@="HTTPErrorLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{ABCE0F22-CD3F-4F51-A686-4A168EC754C3}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{ABCE0F22-CD3F-4F51-A686-4A168EC754C3}\ProgID]
+@="HTTPErrorLogEntryDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{ABCE0F22-CD3F-4F51-A686-4A168EC754C3}\VersionIndependentProgID]
+@="HTTPErrorLogEntryDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}]
+@="MyProfiler"
+
+[HKEY_CLASSES_ROOT\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\StubProfiler64.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}\ProgID]
+@="StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}\VersionIndependentProgID]
+@="StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}"
+
+[HKEY_CLASSES_ROOT\CLSID\{AEB2011B-7AD5-4A03-910F-312228EAE0F7}]
+@="SignatureEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{AEB2011B-7AD5-4A03-910F-312228EAE0F7}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{AEB2011B-7AD5-4A03-910F-312228EAE0F7}\ProgID]
+@="SignatureEntryDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{AEB2011B-7AD5-4A03-910F-312228EAE0F7}\VersionIndependentProgID]
+@="SignatureEntryDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{AF08D207-AF2F-4A40-B0DD-6B26AD302CB2}]
+@="System Center Health Service MonitoringHost Object"
+"AppId"="{C0E953AF-5448-436c-A146-63B8AE52FD86}"
+
+[HKEY_CLASSES_ROOT\CLSID\{AF08D207-AF2F-4A40-B0DD-6B26AD302CB2}\LocalServer32]
+@="\"C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MonitoringHost.exe\""
+
+[HKEY_CLASSES_ROOT\CLSID\{AF75FC67-9061-4E54-913B-5983BAD2A4D0}]
+@="MOM2005AppLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{AF75FC67-9061-4E54-913B-5983BAD2A4D0}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{AF75FC67-9061-4E54-913B-5983BAD2A4D0}\ProgID]
+@="MOM2005AppLogDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{AF75FC67-9061-4E54-913B-5983BAD2A4D0}\VersionIndependentProgID]
+@="MOM2005AppLogDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{B000FD63-FD06-47AC-AC1F-8EE8C42CC479}]
+@="AppLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B000FD63-FD06-47AC-AC1F-8EE8C42CC479}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B000FD63-FD06-47AC-AC1F-8EE8C42CC479}\ProgID]
+@="AppLogDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B000FD63-FD06-47AC-AC1F-8EE8C42CC479}\VersionIndependentProgID]
+@="AppLogDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{B065E6F2-1B98-4DDF-B905-948573DB1AC1}]
+@="RunDeltaThreshold Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B065E6F2-1B98-4DDF-B905-948573DB1AC1}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B065E6F2-1B98-4DDF-B905-948573DB1AC1}\ProgID]
+@="RunDeltaThreshold.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B065E6F2-1B98-4DDF-B905-948573DB1AC1}\VersionIndependentProgID]
+@="RunDeltaThreshold"
+
+[HKEY_CLASSES_ROOT\CLSID\{B14B621A-B4D5-44D7-A4A2-ADE021CE68C1}]
+@="ConnectorSolution Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B14B621A-B4D5-44D7-A4A2-ADE021CE68C1}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ApmConnector\\ApmConnector.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B27EBEAC-E711-40BF-896B-714A4C02EB39}]
+@="MOM ScriptAPI Class"
+"AppID"="{647CEE06-3875-413D-BEB0-84456CEE4965}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B27EBEAC-E711-40BF-896B-714A4C02EB39}\InProcServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMScriptAPI.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B27EBEAC-E711-40BF-896B-714A4C02EB39}\ProgID]
+@="MOM.ScriptAPI.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B27EBEAC-E711-40BF-896B-714A4C02EB39}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B27EBEAC-E711-40BF-896B-714A4C02EB39}\VersionIndependentProgID]
+@="MOM.ScriptAPI"
+
+[HKEY_CLASSES_ROOT\CLSID\{B2D19FEF-965A-4733-B897-FADC8076AA04}]
+@="Starter Class"
+"AppID"="{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B2D19FEF-965A-4733-B897-FADC8076AA04}\LocalServer32]
+@="\"C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptSvc.exe\""
+
+[HKEY_CLASSES_ROOT\CLSID\{B2D19FEF-965A-4733-B897-FADC8076AA04}\ProgID]
+@="InterceptSvc.Starter.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B2D19FEF-965A-4733-B897-FADC8076AA04}\TypeLib]
+@="{800ED890-B73D-4831-AB15-E5E3BF99DBE4}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B2D19FEF-965A-4733-B897-FADC8076AA04}\VersionIndependentProgID]
+@="InterceptSvc.Starter"
+
+[HKEY_CLASSES_ROOT\CLSID\{B39686DA-52A8-484A-B1DB-ABBA594FF664}]
+@="NTPerfDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B39686DA-52A8-484A-B1DB-ABBA594FF664}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B39686DA-52A8-484A-B1DB-ABBA594FF664}\ProgID]
+@="NTPerfDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B39686DA-52A8-484A-B1DB-ABBA594FF664}\VersionIndependentProgID]
+@="NTPerfDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{B3B71AB0-4D83-4A8A-BAA8-3F07B7C3F18D}]
+@="GenericLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B3B71AB0-4D83-4A8A-BAA8-3F07B7C3F18D}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B3B71AB0-4D83-4A8A-BAA8-3F07B7C3F18D}\ProgID]
+@="GenericLogEntryDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B3B71AB0-4D83-4A8A-BAA8-3F07B7C3F18D}\VersionIndependentProgID]
+@="GenericLogEntryDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{B4BE2EB9-6D55-46C1-86CB-D87057ECFC8A}]
+@="RunSysLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B4BE2EB9-6D55-46C1-86CB-D87057ECFC8A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B4BE2EB9-6D55-46C1-86CB-D87057ECFC8A}\ProgID]
+@="RunSysLogDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B4BE2EB9-6D55-46C1-86CB-D87057ECFC8A}\VersionIndependentProgID]
+@="RunSysLogDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5A35748-86F5-46A3-9BC2-F9A494E36B25}]
+@="RunOleDbProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5A35748-86F5-46A3-9BC2-F9A494E36B25}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5A35748-86F5-46A3-9BC2-F9A494E36B25}\ProgID]
+@="RunOleDbProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5A35748-86F5-46A3-9BC2-F9A494E36B25}\VersionIndependentProgID]
+@="RunOleDbProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5F80055-46B5-446d-9C71-A8B5ED74B780}]
+@="RunMultiInstancePerfAggregation Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5F80055-46B5-446d-9C71-A8B5ED74B780}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5F80055-46B5-446d-9C71-A8B5ED74B780}\ProgID]
+@="RunMultiInstancePerfAggregation.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B5F80055-46B5-446d-9C71-A8B5ED74B780}\VersionIndependentProgID]
+@="RunMultiInstancePerfAggregation"
+
+[HKEY_CLASSES_ROOT\CLSID\{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}]
+@="ComponentManager Class"
+"AppID"="{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}\LocalServer32]
+@="\"C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptSvc.exe\""
+
+[HKEY_CLASSES_ROOT\CLSID\{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}\ProgID]
+@="InterceptSvc.ComponentManager.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}\TypeLib]
+@="{800ED890-B73D-4831-AB15-E5E3BF99DBE4}"
+
+[HKEY_CLASSES_ROOT\CLSID\{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}\VersionIndependentProgID]
+@="InterceptSvc.ComponentManager"
+
+[HKEY_CLASSES_ROOT\CLSID\{B98BD20C-3CC8-4AFE-9F68-5702C74D73DB}]
+@="RunWindowsEventDataSourceChooser Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{B98BD20C-3CC8-4AFE-9F68-5702C74D73DB}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{B98BD20C-3CC8-4AFE-9F68-5702C74D73DB}\ProgID]
+@="RunWindowsEventDataSourceChooser.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{B98BD20C-3CC8-4AFE-9F68-5702C74D73DB}\VersionIndependentProgID]
+@="RunWindowsEventDataSourceChooser"
+
+[HKEY_CLASSES_ROOT\CLSID\{C3339855-80B3-4c06-B7AB-5C5D97B59A0D}]
+@="RunSchedulerDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C3339855-80B3-4c06-B7AB-5C5D97B59A0D}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C3339855-80B3-4c06-B7AB-5C5D97B59A0D}\ProgID]
+@="RunSchedulerDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{C3339855-80B3-4c06-B7AB-5C5D97B59A0D}\VersionIndependentProgID]
+@="RunSchedulerDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{C3713D4D-B1FF-4835-A644-8EF774830FA2}]
+@="RunSnmpWalkWA Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C3713D4D-B1FF-4835-A644-8EF774830FA2}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\SnmpModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C39EC9F2-50D3-42C6-85AA-846B6505DE24}]
+@="MOMEventDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C39EC9F2-50D3-42C6-85AA-846B6505DE24}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C39EC9F2-50D3-42C6-85AA-846B6505DE24}\ProgID]
+@="MOMNTEventDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{C39EC9F2-50D3-42C6-85AA-846B6505DE24}\VersionIndependentProgID]
+@="MOMNTEventDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{C6410789-C1BB-4AF1-B818-D01A5367781D}]
+@="RunExpressionEvaluatorCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C6410789-C1BB-4AF1-B818-D01A5367781D}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C6410789-C1BB-4AF1-B818-D01A5367781D}\ProgID]
+@="RunExpressionEvaluatorCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{C6410789-C1BB-4AF1-B818-D01A5367781D}\VersionIndependentProgID]
+@="RunExpressionEvaluatorCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{C66A80D9-5130-4520-BD5A-0DDE195A72F7}]
+@="MOM2005AlertDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C66A80D9-5130-4520-BD5A-0DDE195A72F7}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C66A80D9-5130-4520-BD5A-0DDE195A72F7}\ProgID]
+@="MOM2005AlertDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{C66A80D9-5130-4520-BD5A-0DDE195A72F7}\VersionIndependentProgID]
+@="MOM2005AlertDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{C75C06DE-A537-4744-BDF9-5775E63E014A}]
+@="RunComputationModule Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{C75C06DE-A537-4744-BDF9-5775E63E014A}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{C75C06DE-A537-4744-BDF9-5775E63E014A}\ProgID]
+@="RunComputationModule.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{C75C06DE-A537-4744-BDF9-5775E63E014A}\VersionIndependentProgID]
+@="RunComputationModule"
+
+[HKEY_CLASSES_ROOT\CLSID\{CBBE09D5-8DF8-4843-87A9-DD5AED662D29}]
+@="RunGenericNTPerfMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{CBBE09D5-8DF8-4843-87A9-DD5AED662D29}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{CBBE09D5-8DF8-4843-87A9-DD5AED662D29}\ProgID]
+@="RunGenericNTPerfMapperCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{CBBE09D5-8DF8-4843-87A9-DD5AED662D29}\VersionIndependentProgID]
+@="RunGenericNTPerfMapperCondition"
+
+[HKEY_CLASSES_ROOT\CLSID\{D116EFD9-0274-4BD9-8FD5-94BB2138FA7F}]
+@="PropertyBagDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D116EFD9-0274-4BD9-8FD5-94BB2138FA7F}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D116EFD9-0274-4BD9-8FD5-94BB2138FA7F}\ProgID]
+@="PropertyBagDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{D116EFD9-0274-4BD9-8FD5-94BB2138FA7F}\VersionIndependentProgID]
+@="PropertyBagDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{D239DB52-BE8B-4373-94C2-6EE78FA58D55}]
+@="MOMWebAppDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D239DB52-BE8B-4373-94C2-6EE78FA58D55}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D239DB52-BE8B-4373-94C2-6EE78FA58D55}\ProgID]
+@="MOMWebAppDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{D239DB52-BE8B-4373-94C2-6EE78FA58D55}\VersionIndependentProgID]
+@="MOMWebAppDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{D3C8F83C-C8C6-4DD9-8D0D-CD93BB65AF11}]
+@="RunMOM2005DiscoveryDataMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D3C8F83C-C8C6-4DD9-8D0D-CD93BB65AF11}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D3C8F83C-C8C6-4DD9-8D0D-CD93BB65AF11}\ProgID]
+@="RunMOM2005DiscoveryDataMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{D3C8F83C-C8C6-4DD9-8D0D-CD93BB65AF11}\VersionIndependentProgID]
+@="RunMOM2005DiscoveryDataMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{D49D077A-9830-4512-9C1C-08A00640540E}]
+@="PSFactoryBuffer"
+
+[HKEY_CLASSES_ROOT\CLSID\{D49D077A-9830-4512-9C1C-08A00640540E}\InProcServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptScripting.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D9E9B922-6C2F-40DF-8D70-F406C0EFFBDE}]
+@="RunServiceCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{D9E9B922-6C2F-40DF-8D70-F406C0EFFBDE}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{D9E9B922-6C2F-40DF-8D70-F406C0EFFBDE}\ProgID]
+@="RunServiceCheckProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{D9E9B922-6C2F-40DF-8D70-F406C0EFFBDE}\VersionIndependentProgID]
+@="RunServiceCheckProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{DB0ACC98-3B33-4C35-8EED-6991F2D936B0}]
+@="RunScriptGeneratedPerfDataSource Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{DB0ACC98-3B33-4C35-8EED-6991F2D936B0}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{DB0ACC98-3B33-4C35-8EED-6991F2D936B0}\ProgID]
+@="RunScriptGeneratedPerfDataSource.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{DB0ACC98-3B33-4C35-8EED-6991F2D936B0}\VersionIndependentProgID]
+@="RunScriptGeneratedPerfDataSource"
+
+[HKEY_CLASSES_ROOT\CLSID\{E4B833C6-F11D-487C-A03C-BD107E5E7918}]
+@="CoTCPPortCheckDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{E4B833C6-F11D-487C-A03C-BD107E5E7918}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMNetworkModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{E4B833C6-F11D-487C-A03C-BD107E5E7918}\ProgID]
+@="CoTCPPortCheckDataType.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{E4B833C6-F11D-487C-A03C-BD107E5E7918}\VersionIndependentProgID]
+@="CoTCPPortCheckDataType"
+
+[HKEY_CLASSES_ROOT\CLSID\{E56790D9-07E7-4B4D-BD6C-1BCCB0BD82D0}]
+@="RunScriptWriteAction Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{E56790D9-07E7-4B4D-BD6C-1BCCB0BD82D0}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{E56790D9-07E7-4B4D-BD6C-1BCCB0BD82D0}\ProgID]
+@="RunScriptWriteAction.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{E56790D9-07E7-4B4D-BD6C-1BCCB0BD82D0}\VersionIndependentProgID]
+@="RunScriptWriteAction"
+
+[HKEY_CLASSES_ROOT\CLSID\{EB1EE5D9-6A74-4E30-98F8-6A9E9A255356}]
+@="DiscoveryDataItemDataType Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{EB1EE5D9-6A74-4E30-98F8-6A9E9A255356}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{EC20D35C-E55D-411F-B2BE-47069FC741D2}]
+@="System Center Operations Manager Performance Counter Snapshot Helper Class"
+"AppId"="{1543DF6F-C092-4209-85FC-DEAACDFF3881}"
+
+[HKEY_CLASSES_ROOT\CLSID\{EC20D35C-E55D-411F-B2BE-47069FC741D2}\LocalServer32]
+@="\"C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMPerfSnapshotHelper.exe\""
+
+[HKEY_CLASSES_ROOT\CLSID\{EC35BBCA-75DD-45F6-B545-CE63307C93D1}]
+@="RunEtwGenericWriteAction Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{EC35BBCA-75DD-45F6-B545-CE63307C93D1}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{EC35BBCA-75DD-45F6-B545-CE63307C93D1}\ProgID]
+@="RunEtwGenericWriteAction.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{EC35BBCA-75DD-45F6-B545-CE63307C93D1}\VersionIndependentProgID]
+@="RunEtwGenericWriteAction"
+
+[HKEY_CLASSES_ROOT\CLSID\{F180EFE1-4803-4505-9FE1-ADB3A46F8F20}]
+@="WMIRawPerfCounterProbe Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{F180EFE1-4803-4505-9FE1-ADB3A46F8F20}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{F180EFE1-4803-4505-9FE1-ADB3A46F8F20}\ProgID]
+@="WMIRawPerfCounterProbe.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{F180EFE1-4803-4505-9FE1-ADB3A46F8F20}\VersionIndependentProgID]
+@="WMIRawPerfCounterProbe"
+
+[HKEY_CLASSES_ROOT\CLSID\{F473EA49-A341-4C91-A0D2-F060F2B8794E}]
+@="PSFactoryBuffer"
+
+[HKEY_CLASSES_ROOT\CLSID\{F473EA49-A341-4C91-A0D2-F060F2B8794E}\InProcServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMPerfSnapshotHelperProxy.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{FFB4307F-F0BF-4E10-816C-3A3DCF098398}]
+@="RunMOM2005ResponseContextMapper Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{FFB4307F-F0BF-4E10-816C-3A3DCF098398}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{FFB4307F-F0BF-4E10-816C-3A3DCF098398}\ProgID]
+@="RunMOM2005ResponseContextMapper.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{FFB4307F-F0BF-4E10-816C-3A3DCF098398}\VersionIndependentProgID]
+@="RunMOM2005ResponseContextMapper"
+
+[HKEY_CLASSES_ROOT\CLSID\{c214366a-a4fc-4e05-8f7b-20ba04aef520}]
+@="ClusterGroupStateChange Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{c214366a-a4fc-4e05-8f7b-20ba04aef520}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{c214366a-a4fc-4e05-8f7b-20ba04aef520}\ProgID]
+@="ClusterGroupStateChange.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{c214366a-a4fc-4e05-8f7b-20ba04aef520}\VersionIndependentProgID]
+@="ClusterGroupStateChange"
+
+[HKEY_CLASSES_ROOT\CLSID\{eae677d0-9d4f-11d9-9669-0800200c9a66}]
+@="RunMOMEventMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\CLSID\{eae677d0-9d4f-11d9-9669-0800200c9a66}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules.dll"
+"ThreadingModel"="both"
+
+[HKEY_CLASSES_ROOT\CLSID\{eae677d0-9d4f-11d9-9669-0800200c9a66}\ProgID]
+@="RunMOMEventMapperCondition.1"
+
+[HKEY_CLASSES_ROOT\CLSID\{eae677d0-9d4f-11d9-9669-0800200c9a66}\VersionIndependentProgID]
+@="RunMOMEventMapperCondition"
+
+[HKEY_CLASSES_ROOT\CoTCPPortCheckDataType]
+@="CoTCPPortCheckDataType Class"
+
+[HKEY_CLASSES_ROOT\CoTCPPortCheckDataType\CLSID]
+@="{E4B833C6-F11D-487C-A03C-BD107E5E7918}"
+
+[HKEY_CLASSES_ROOT\CoTCPPortCheckDataType.1]
+@="CoTCPPortCheckDataType Class"
+
+[HKEY_CLASSES_ROOT\CoTCPPortCheckDataType.1\CLSID]
+@="{E4B833C6-F11D-487C-A03C-BD107E5E7918}"
+
+[HKEY_CLASSES_ROOT\ComputationDataType]
+@="ComputationDataType Class"
+
+[HKEY_CLASSES_ROOT\ComputationDataType\CLSID]
+@="{06CF61F8-55E9-42E5-A3FF-A89D1A64B6C9}"
+
+[HKEY_CLASSES_ROOT\ComputationDataType.1]
+@="ComputationDataType Class"
+
+[HKEY_CLASSES_ROOT\ComputationDataType.1\CLSID]
+@="{06CF61F8-55E9-42E5-A3FF-A89D1A64B6C9}"
+
+[HKEY_CLASSES_ROOT\ComputerVerification]
+@="ComputerVerification Class"
+
+[HKEY_CLASSES_ROOT\ComputerVerification\CLSID]
+@="{52BC4FD4-C20F-4A2E-80E7-1024C57F30ED}"
+
+[HKEY_CLASSES_ROOT\ComputerVerification.1]
+@="ComputerVerification Class"
+
+[HKEY_CLASSES_ROOT\ComputerVerification.1\CLSID]
+@="{52BC4FD4-C20F-4A2E-80E7-1024C57F30ED}"
+
+[HKEY_CLASSES_ROOT\CorrelatorDataType]
+@="CorrelatorDataType Class"
+
+[HKEY_CLASSES_ROOT\CorrelatorDataType\CLSID]
+@="{57C03BDE-8B68-4C87-902C-BF1F4F166D18}"
+
+[HKEY_CLASSES_ROOT\CorrelatorDataType.1]
+@="CorrelatorDataType Class"
+
+[HKEY_CLASSES_ROOT\CorrelatorDataType.1\CLSID]
+@="{57C03BDE-8B68-4C87-902C-BF1F4F166D18}"
+
+[HKEY_CLASSES_ROOT\CrimsonEventDataType]
+@="CrimsonEventDataType Class"
+
+[HKEY_CLASSES_ROOT\CrimsonEventDataType\CLSID]
+@="{7E57E3DA-20A9-48E8-9057-68577CD56B37}"
+
+[HKEY_CLASSES_ROOT\CrimsonEventDataType.1]
+@="CrimsonEventDataType Class"
+
+[HKEY_CLASSES_ROOT\CrimsonEventDataType.1\CLSID]
+@="{7E57E3DA-20A9-48E8-9057-68577CD56B37}"
+
+[HKEY_CLASSES_ROOT\Dispatcher.Dispatcher]
+@="Dispatcher Class"
+
+[HKEY_CLASSES_ROOT\Dispatcher.Dispatcher\CLSID]
+@="{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}"
+
+[HKEY_CLASSES_ROOT\Dispatcher.Dispatcher\CurVer]
+@="Dispatcher.Dispatcher.1"
+
+[HKEY_CLASSES_ROOT\Dispatcher.Dispatcher.1]
+@="Dispatcher Class"
+
+[HKEY_CLASSES_ROOT\Dispatcher.Dispatcher.1\CLSID]
+@="{A24B0E65-CE0B-4B8A-BDA6-6A2B5164D700}"
+
+[HKEY_CLASSES_ROOT\GenericLogEntryDataType]
+@="GenericLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\GenericLogEntryDataType\CLSID]
+@="{B3B71AB0-4D83-4A8A-BAA8-3F07B7C3F18D}"
+
+[HKEY_CLASSES_ROOT\GenericLogEntryDataType.1]
+@="GenericLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\GenericLogEntryDataType.1\CLSID]
+@="{B3B71AB0-4D83-4A8A-BAA8-3F07B7C3F18D}"
+
+[HKEY_CLASSES_ROOT\HTTPErrorLogEntryDataType]
+@="HTTPErrorLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\HTTPErrorLogEntryDataType\CLSID]
+@="{ABCE0F22-CD3F-4F51-A686-4A168EC754C3}"
+
+[HKEY_CLASSES_ROOT\HTTPErrorLogEntryDataType.1]
+@="HTTPErrorLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\HTTPErrorLogEntryDataType.1\CLSID]
+@="{ABCE0F22-CD3F-4F51-A686-4A168EC754C3}"
+
+[HKEY_CLASSES_ROOT\IISDiscoveryProbe]
+@="IISDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\IISDiscoveryProbe\CLSID]
+@="{A0D4D11B-7F8C-4DD2-8E7D-C5B9D0D7C413}"
+
+[HKEY_CLASSES_ROOT\IISDiscoveryProbe.1]
+@="IISDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\IISDiscoveryProbe.1\CLSID]
+@="{A0D4D11B-7F8C-4DD2-8E7D-C5B9D0D7C413}"
+
+[HKEY_CLASSES_ROOT\IISLogCondition]
+@="IISLogCondition Class"
+
+[HKEY_CLASSES_ROOT\IISLogCondition\CLSID]
+@="{4B5C675C-83FB-40F4-87D6-A99F3BB7E019}"
+
+[HKEY_CLASSES_ROOT\IISLogCondition.1]
+@="IISLogCondition Class"
+
+[HKEY_CLASSES_ROOT\IISLogCondition.1\CLSID]
+@="{4B5C675C-83FB-40F4-87D6-A99F3BB7E019}"
+
+[HKEY_CLASSES_ROOT\IISSiteStateDataSource]
+@="IISSiteStateDataSource Class"
+
+[HKEY_CLASSES_ROOT\IISSiteStateDataSource\CLSID]
+@="{193B7F70-1730-419F-9E3A-D06FC08145B2}"
+
+[HKEY_CLASSES_ROOT\IISSiteStateDataSource.1]
+@="IISSiteStateDataSource Class"
+
+[HKEY_CLASSES_ROOT\IISSiteStateDataSource.1\CLSID]
+@="{193B7F70-1730-419F-9E3A-D06FC08145B2}"
+
+[HKEY_CLASSES_ROOT\IISSiteStateProbe]
+@="IISSiteStateProbe Class"
+
+[HKEY_CLASSES_ROOT\IISSiteStateProbe\CLSID]
+@="{4A8BA0EA-AFE0-46A6-937D-FCE887B455D9}"
+
+[HKEY_CLASSES_ROOT\IISSiteStateProbe.1]
+@="IISSiteStateProbe Class"
+
+[HKEY_CLASSES_ROOT\IISSiteStateProbe.1\CLSID]
+@="{4A8BA0EA-AFE0-46A6-937D-FCE887B455D9}"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Executor]
+@="Executor Class"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Executor\CLSID]
+@="{32455E3E-D321-40DD-9023-82D4949D6E1B}"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Executor\CurVer]
+@="InterceptScripting.Executor.1"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Executor.1]
+@="Executor Class"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Executor.1\CLSID]
+@="{32455E3E-D321-40DD-9023-82D4949D6E1B}"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Properties]
+@="Properties Class"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Properties\CLSID]
+@="{4C1A6886-70CB-4F88-B901-C7830013C5FA}"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Properties\CurVer]
+@="InterceptScripting.Properties.1"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Properties.1]
+@="Properties Class"
+
+[HKEY_CLASSES_ROOT\InterceptScripting.Properties.1\CLSID]
+@="{4C1A6886-70CB-4F88-B901-C7830013C5FA}"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.ComponentManager]
+@="ComponentManager Class"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.ComponentManager\CLSID]
+@="{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.ComponentManager\CurVer]
+@="InterceptSvc.ComponentManager.1"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.ComponentManager.1]
+@="ComponentManager Class"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.ComponentManager.1\CLSID]
+@="{B61F43BC-A2D3-4E31-9C62-5B2FEE0B4C55}"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Context]
+@="Context Class"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Context\CLSID]
+@="{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Context\CurVer]
+@="InterceptSvc.Context.1"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Context.1]
+@="Context Class"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Context.1\CLSID]
+@="{6A1B86BB-5F6B-479C-B9E1-BF56DF61B5D1}"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Starter]
+@="Starter Class"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Starter\CLSID]
+@="{B2D19FEF-965A-4733-B897-FADC8076AA04}"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Starter\CurVer]
+@="InterceptSvc.Starter.1"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Starter.1]
+@="Starter Class"
+
+[HKEY_CLASSES_ROOT\InterceptSvc.Starter.1\CLSID]
+@="{B2D19FEF-965A-4733-B897-FADC8076AA04}"
+
+d:\before.txt: In Key [HKEY_CLASSES_ROOT\Interface] Value mismatch @="".
+
+[HKEY_CLASSES_ROOT\Interface\{067D887A-A440-42DF-BA3F-16225725377F}]
+@="IManagementGroup"
+
+[HKEY_CLASSES_ROOT\Interface\{067D887A-A440-42DF-BA3F-16225725377F}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{067D887A-A440-42DF-BA3F-16225725377F}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{067D887A-A440-42DF-BA3F-16225725377F}\TypeLib]
+@="{D0F0E165-351A-401E-869C-E1BD2289FC76}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{0A226CA6-D688-4D0D-AB32-12AA8C168C8C}]
+@="IExecutor"
+
+[HKEY_CLASSES_ROOT\Interface\{0A226CA6-D688-4D0D-AB32-12AA8C168C8C}\NumMethods]
+@="10"
+
+[HKEY_CLASSES_ROOT\Interface\{0A226CA6-D688-4D0D-AB32-12AA8C168C8C}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{0A226CA6-D688-4D0D-AB32-12AA8C168C8C}\ProxyStubClsid32]
+@="{D49D077A-9830-4512-9C1C-08A00640540E}"
+
+[HKEY_CLASSES_ROOT\Interface\{0A226CA6-D688-4D0D-AB32-12AA8C168C8C}\TypeLib]
+@="{C3809409-4B3E-46C3-87E8-5546FF14B558}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{0B6976BF-01A8-44F0-B45F-07446AB6C779}]
+@="IMOMScriptAPI"
+
+[HKEY_CLASSES_ROOT\Interface\{0B6976BF-01A8-44F0-B45F-07446AB6C779}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{0B6976BF-01A8-44F0-B45F-07446AB6C779}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{0B6976BF-01A8-44F0-B45F-07446AB6C779}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{1413EBEE-2C74-4C4E-941C-8249C5F2305E}]
+@="IComponentManager"
+
+[HKEY_CLASSES_ROOT\Interface\{1413EBEE-2C74-4C4E-941C-8249C5F2305E}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{1413EBEE-2C74-4C4E-941C-8249C5F2305E}\TypeLib]
+@="{800ED890-B73D-4831-AB15-E5E3BF99DBE4}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{21FE2ECA-B46C-4E85-BFC8-918128391398}]
+@="IMOM2005ScriptDiscoveryCollection"
+
+[HKEY_CLASSES_ROOT\Interface\{21FE2ECA-B46C-4E85-BFC8-918128391398}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{21FE2ECA-B46C-4E85-BFC8-918128391398}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{21FE2ECA-B46C-4E85-BFC8-918128391398}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{292269A9-A6AA-416D-A328-41C05C93B1DC}]
+@="IMOM2005GeneralScriptState"
+
+[HKEY_CLASSES_ROOT\Interface\{292269A9-A6AA-416D-A328-41C05C93B1DC}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{292269A9-A6AA-416D-A328-41C05C93B1DC}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{292269A9-A6AA-416D-A328-41C05C93B1DC}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{2DBC71E1-BD3A-4A33-A3FF-A70A2F48E246}]
+@="IMOM2005ScriptDiscoveryInstance"
+
+[HKEY_CLASSES_ROOT\Interface\{2DBC71E1-BD3A-4A33-A3FF-A70A2F48E246}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{2DBC71E1-BD3A-4A33-A3FF-A70A2F48E246}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{2DBC71E1-BD3A-4A33-A3FF-A70A2F48E246}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{30615C8D-7F41-4277-97A9-71847230E62E}]
+@="IMOM2005ScriptDiscoveryRelationshipInstance"
+
+[HKEY_CLASSES_ROOT\Interface\{30615C8D-7F41-4277-97A9-71847230E62E}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{30615C8D-7F41-4277-97A9-71847230E62E}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{30615C8D-7F41-4277-97A9-71847230E62E}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{3F6642B3-F15A-4F93-8B8C-3AFC917B09CC}]
+@="IMOM2005ScriptDiscoveryData"
+
+[HKEY_CLASSES_ROOT\Interface\{3F6642B3-F15A-4F93-8B8C-3AFC917B09CC}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{3F6642B3-F15A-4F93-8B8C-3AFC917B09CC}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{3F6642B3-F15A-4F93-8B8C-3AFC917B09CC}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{465B6F56-D749-4439-8A83-801F46F62B74}]
+@="ISCOMMaintenanceModeControl"
+
+[HKEY_CLASSES_ROOT\Interface\{465B6F56-D749-4439-8A83-801F46F62B74}\AsynchronousInterface]
+@="{7D4FA78B-5FC4-4B35-957E-677E3F4AD509}"
+
+[HKEY_CLASSES_ROOT\Interface\{465B6F56-D749-4439-8A83-801F46F62B74}\NumMethods]
+@="5"
+
+[HKEY_CLASSES_ROOT\Interface\{465B6F56-D749-4439-8A83-801F46F62B74}\ProxyStubClsid32]
+@="{465B6F56-D749-4439-8A83-801F46F62B74}"
+
+[HKEY_CLASSES_ROOT\Interface\{49CF325D-12BE-47eb-91C8-D74AB3479F92}]
+@="IMonitoringHostClient"
+
+[HKEY_CLASSES_ROOT\Interface\{49CF325D-12BE-47eb-91C8-D74AB3479F92}\ProxyStubCLSID32]
+@="{49CF325D-12BE-47eb-91C8-D74AB3479F92}"
+
+[HKEY_CLASSES_ROOT\Interface\{4D845E06-9E11-4C4D-AC6C-29A436B0C3A7}]
+@="IMOMDiscoveryData"
+
+[HKEY_CLASSES_ROOT\Interface\{4D845E06-9E11-4C4D-AC6C-29A436B0C3A7}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{4D845E06-9E11-4C4D-AC6C-29A436B0C3A7}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{4D845E06-9E11-4C4D-AC6C-29A436B0C3A7}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{5711DB17-4641-4449-BC10-B0FEFD26B39B}]
+@="IMOM2005ScriptEvent"
+
+[HKEY_CLASSES_ROOT\Interface\{5711DB17-4641-4449-BC10-B0FEFD26B39B}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{5711DB17-4641-4449-BC10-B0FEFD26B39B}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{5711DB17-4641-4449-BC10-B0FEFD26B39B}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}]
+@="IPMonitorDebugger"
+
+[HKEY_CLASSES_ROOT\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}\TypeLib]
+@="{63BC625C-55DE-4F88-9575-14FFC99B02D3}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{602776E2-229A-4547-A7FF-179B85E6F135}]
+@="IMOM2005ScriptDiscoveryClassInstanceID"
+
+[HKEY_CLASSES_ROOT\Interface\{602776E2-229A-4547-A7FF-179B85E6F135}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{602776E2-229A-4547-A7FF-179B85E6F135}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{602776E2-229A-4547-A7FF-179B85E6F135}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{677FCD85-1031-4D3F-AD01-5AF3D1F172E3}]
+@="IWebHostController"
+
+[HKEY_CLASSES_ROOT\Interface\{677FCD85-1031-4D3F-AD01-5AF3D1F172E3}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{677FCD85-1031-4D3F-AD01-5AF3D1F172E3}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{677FCD85-1031-4D3F-AD01-5AF3D1F172E3}\TypeLib]
+@="{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{6356B200-105F-424A-BA49-73C7868ADB85}]
+@="IManagementServiceConfiguration"
+
+[HKEY_CLASSES_ROOT\Interface\{6356B200-105F-424A-BA49-73C7868ADB85}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{6356B200-105F-424A-BA49-73C7868ADB85}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{6356B200-105F-424A-BA49-73C7868ADB85}\TypeLib]
+@="{D0F0E165-351A-401E-869C-E1BD2289FC76}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{7D4FA78B-5FC4-4B35-957E-677E3F4AD509}]
+@="AsyncISCOMMaintenanceModeControl"
+
+[HKEY_CLASSES_ROOT\Interface\{7D4FA78B-5FC4-4B35-957E-677E3F4AD509}\NumMethods]
+@="7"
+
+[HKEY_CLASSES_ROOT\Interface\{7D4FA78B-5FC4-4B35-957E-677E3F4AD509}\SynchronousInterface]
+@="{465B6F56-D749-4439-8A83-801F46F62B74}"
+
+[HKEY_CLASSES_ROOT\Interface\{80568272-6F9C-4B60-A448-0C97945EF30A}]
+@="IPerfCounter"
+
+[HKEY_CLASSES_ROOT\Interface\{80568272-6F9C-4B60-A448-0C97945EF30A}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{80568272-6F9C-4B60-A448-0C97945EF30A}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{80568272-6F9C-4B60-A448-0C97945EF30A}\TypeLib]
+@="{AC9BEE63-CD0B-45D5-975C-0868716773F7}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{8440CA64-8382-4738-AB45-348AE9FA4DF0}]
+@="_ILog"
+
+[HKEY_CLASSES_ROOT\Interface\{8440CA64-8382-4738-AB45-348AE9FA4DF0}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{8440CA64-8382-4738-AB45-348AE9FA4DF0}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{8440CA64-8382-4738-AB45-348AE9FA4DF0}\TypeLib]
+@="{0F2B2E96-C10B-4A65-991E-673A0A3449AB}"
+"Version"="3.0"
+
+[HKEY_CLASSES_ROOT\Interface\{84CB7BF8-4684-4980-84CF-2C99FD3CEFFA}]
+@="IMonitoringHost"
+
+[HKEY_CLASSES_ROOT\Interface\{84CB7BF8-4684-4980-84CF-2C99FD3CEFFA}\ProxyStubCLSID32]
+@="{84CB7BF8-4684-4980-84CF-2C99FD3CEFFA}"
+
+[HKEY_CLASSES_ROOT\Interface\{9008D27B-E4E3-4133-97EE-433B30E2AB9E}]
+@="IEventConsumer"
+
+[HKEY_CLASSES_ROOT\Interface\{9008D27B-E4E3-4133-97EE-433B30E2AB9E}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{9008D27B-E4E3-4133-97EE-433B30E2AB9E}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{9008D27B-E4E3-4133-97EE-433B30E2AB9E}\TypeLib]
+@="{0F2B2E96-C10B-4A65-991E-673A0A3449AB}"
+"Version"="3.0"
+
+[HKEY_CLASSES_ROOT\Interface\{916F8039-2466-4186-9675-CB7067FD6CA0}]
+@="IMOMPropertyBag"
+
+[HKEY_CLASSES_ROOT\Interface\{916F8039-2466-4186-9675-CB7067FD6CA0}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{916F8039-2466-4186-9675-CB7067FD6CA0}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{916F8039-2466-4186-9675-CB7067FD6CA0}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{92D4FA3E-6CB6-4E19-A656-F65E775FDA71}]
+@="IMOMClassInstance"
+
+[HKEY_CLASSES_ROOT\Interface\{92D4FA3E-6CB6-4E19-A656-F65E775FDA71}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{92D4FA3E-6CB6-4E19-A656-F65E775FDA71}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{92D4FA3E-6CB6-4E19-A656-F65E775FDA71}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{952197C8-F448-4A99-9EDC-3883752D8483}]
+@="IMOMRelationshipInstance"
+
+[HKEY_CLASSES_ROOT\Interface\{952197C8-F448-4A99-9EDC-3883752D8483}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{952197C8-F448-4A99-9EDC-3883752D8483}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{952197C8-F448-4A99-9EDC-3883752D8483}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{9F353DC8-A0A3-4D49-8542-D033C2C6C205}]
+@="IStarter"
+
+[HKEY_CLASSES_ROOT\Interface\{9F353DC8-A0A3-4D49-8542-D033C2C6C205}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{9F353DC8-A0A3-4D49-8542-D033C2C6C205}\TypeLib]
+@="{800ED890-B73D-4831-AB15-E5E3BF99DBE4}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{A25E5DC6-38A5-4186-8826-0E4F3DAFE9E7}]
+@="IMOM2005ScriptParameters"
+
+[HKEY_CLASSES_ROOT\Interface\{A25E5DC6-38A5-4186-8826-0E4F3DAFE9E7}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{A25E5DC6-38A5-4186-8826-0E4F3DAFE9E7}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{A25E5DC6-38A5-4186-8826-0E4F3DAFE9E7}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{A4E79E8A-9494-47A4-A280-8C7D35C88A2F}]
+@="ISerialize"
+
+[HKEY_CLASSES_ROOT\Interface\{A4E79E8A-9494-47A4-A280-8C7D35C88A2F}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{A4E79E8A-9494-47A4-A280-8C7D35C88A2F}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{A4E79E8A-9494-47A4-A280-8C7D35C88A2F}\TypeLib]
+@="{027CCCD0-0454-47B5-A67D-D284DF308FC0}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{BA0C2E15-9899-4C66-A1A6-66A29F44E126}]
+@="ISvcContext"
+
+[HKEY_CLASSES_ROOT\Interface\{BA0C2E15-9899-4C66-A1A6-66A29F44E126}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{BA0C2E15-9899-4C66-A1A6-66A29F44E126}\TypeLib]
+@="{800ED890-B73D-4831-AB15-E5E3BF99DBE4}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{BD3CA6B1-39B5-4DAB-BA7C-170A0946BF5B}]
+@="IMOM2005ProcessingRule"
+
+[HKEY_CLASSES_ROOT\Interface\{BD3CA6B1-39B5-4DAB-BA7C-170A0946BF5B}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{BD3CA6B1-39B5-4DAB-BA7C-170A0946BF5B}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{BD3CA6B1-39B5-4DAB-BA7C-170A0946BF5B}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{BE27656D-6FB8-4FEA-A32C-3359B35469DF}]
+@="IEventSource"
+
+[HKEY_CLASSES_ROOT\Interface\{BE27656D-6FB8-4FEA-A32C-3359B35469DF}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{BE27656D-6FB8-4FEA-A32C-3359B35469DF}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{BE27656D-6FB8-4FEA-A32C-3359B35469DF}\TypeLib]
+@="{0F2B2E96-C10B-4A65-991E-673A0A3449AB}"
+"Version"="3.0"
+
+[HKEY_CLASSES_ROOT\Interface\{CB7F0443-4108-4192-A909-2BAE36CFFA3F}]
+@="IMOM2005ScriptDiscoveryRelationshipCollection"
+
+[HKEY_CLASSES_ROOT\Interface\{CB7F0443-4108-4192-A909-2BAE36CFFA3F}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{CB7F0443-4108-4192-A909-2BAE36CFFA3F}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{CB7F0443-4108-4192-A909-2BAE36CFFA3F}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{D49D077A-9830-4512-9C1C-08A00640540E}]
+@="IProperties"
+
+[HKEY_CLASSES_ROOT\Interface\{D49D077A-9830-4512-9C1C-08A00640540E}\NumMethods]
+@="12"
+
+[HKEY_CLASSES_ROOT\Interface\{D49D077A-9830-4512-9C1C-08A00640540E}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{D49D077A-9830-4512-9C1C-08A00640540E}\ProxyStubClsid32]
+@="{D49D077A-9830-4512-9C1C-08A00640540E}"
+
+[HKEY_CLASSES_ROOT\Interface\{D49D077A-9830-4512-9C1C-08A00640540E}\TypeLib]
+@="{C3809409-4B3E-46C3-87E8-5546FF14B558}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{D6D4BBF5-413F-4BB3-ADED-59BCDBEF25C0}]
+@="IMOM2005ScriptPerfData"
+
+[HKEY_CLASSES_ROOT\Interface\{D6D4BBF5-413F-4BB3-ADED-59BCDBEF25C0}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{D6D4BBF5-413F-4BB3-ADED-59BCDBEF25C0}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{D6D4BBF5-413F-4BB3-ADED-59BCDBEF25C0}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{DE4A9EA9-DB7B-4EE8-9A09-F930F3B0F47D}]
+@="IController"
+
+[HKEY_CLASSES_ROOT\Interface\{DE4A9EA9-DB7B-4EE8-9A09-F930F3B0F47D}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{DE4A9EA9-DB7B-4EE8-9A09-F930F3B0F47D}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{DE4A9EA9-DB7B-4EE8-9A09-F930F3B0F47D}\TypeLib]
+@="{AC9BEE63-CD0B-45D5-975C-0868716773F7}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{2123A8E8-1EA9-428A-B4EB-7887415A0906}]
+@="IOMSWorkspaceCollection"
+
+[HKEY_CLASSES_ROOT\Interface\{2123A8E8-1EA9-428A-B4EB-7887415A0906}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{2123A8E8-1EA9-428A-B4EB-7887415A0906}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{2123A8E8-1EA9-428A-B4EB-7887415A0906}\TypeLib]
+@="{D0F0E165-351A-401E-869C-E1BD2289FC76}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{E80004E9-9D8C-4953-A404-F8601BE31160}]
+@="IMOM2005ScriptContext"
+
+[HKEY_CLASSES_ROOT\Interface\{E80004E9-9D8C-4953-A404-F8601BE31160}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{E80004E9-9D8C-4953-A404-F8601BE31160}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{E80004E9-9D8C-4953-A404-F8601BE31160}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{ECAA7309-3078-4133-94C0-7764059956B8}]
+@="IComponent"
+
+[HKEY_CLASSES_ROOT\Interface\{ECAA7309-3078-4133-94C0-7764059956B8}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{ECAA7309-3078-4133-94C0-7764059956B8}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{ECAA7309-3078-4133-94C0-7764059956B8}\TypeLib]
+@="{AC9BEE63-CD0B-45D5-975C-0868716773F7}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{F01766C3-EE18-42C5-8065-F162BADDFD72}]
+@="IMOM2005ScriptAlert"
+
+[HKEY_CLASSES_ROOT\Interface\{F01766C3-EE18-42C5-8065-F162BADDFD72}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{F01766C3-EE18-42C5-8065-F162BADDFD72}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Interface\{F01766C3-EE18-42C5-8065-F162BADDFD72}\TypeLib]
+@="{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Interface\{F473EA49-A341-4C91-A0D2-F060F2B8794E}]
+@="IGlobalSnapShotProv"
+
+[HKEY_CLASSES_ROOT\Interface\{F473EA49-A341-4C91-A0D2-F060F2B8794E}\NumMethods]
+@="4"
+
+[HKEY_CLASSES_ROOT\Interface\{F473EA49-A341-4C91-A0D2-F060F2B8794E}\ProxyStubClsid32]
+@="{F473EA49-A341-4C91-A0D2-F060F2B8794E}"
+
+[HKEY_CLASSES_ROOT\LogDataItemWA]
+@="LogDataItemWA Class"
+
+[HKEY_CLASSES_ROOT\LogDataItemWA\CLSID]
+@="{8b1626e2-7ec1-4cf2-8ecb-8263991e13c4}"
+
+[HKEY_CLASSES_ROOT\LogDataItemWA.1]
+@="LogDataItemWA Class"
+
+[HKEY_CLASSES_ROOT\LogDataItemWA.1\CLSID]
+@="{8b1626e2-7ec1-4cf2-8ecb-8263991e13c4}"
+
+[HKEY_CLASSES_ROOT\MOM.ScriptAPI]
+@="MOM ScriptAPI Class"
+
+[HKEY_CLASSES_ROOT\MOM.ScriptAPI\CLSID]
+@="{B27EBEAC-E711-40BF-896B-714A4C02EB39}"
+
+[HKEY_CLASSES_ROOT\MOM.ScriptAPI\CurVer]
+@="MOM.ScriptAPI.1"
+
+[HKEY_CLASSES_ROOT\MOM.ScriptAPI.1]
+@="MOM ScriptAPI Class"
+
+[HKEY_CLASSES_ROOT\MOM.ScriptAPI.1\CLSID]
+@="{B27EBEAC-E711-40BF-896B-714A4C02EB39}"
+
+[HKEY_CLASSES_ROOT\MOM2005AlertDataType]
+@="MOM2005AlertDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005AlertDataType\CLSID]
+@="{C66A80D9-5130-4520-BD5A-0DDE195A72F7}"
+
+[HKEY_CLASSES_ROOT\MOM2005AlertDataType.1]
+@="MOM2005AlertDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005AlertDataType.1\CLSID]
+@="{C66A80D9-5130-4520-BD5A-0DDE195A72F7}"
+
+[HKEY_CLASSES_ROOT\MOM2005AppLogDataSource]
+@="MOM2005AppLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\MOM2005AppLogDataSource\CLSID]
+@="{AF75FC67-9061-4E54-913B-5983BAD2A4D0}"
+
+[HKEY_CLASSES_ROOT\MOM2005AppLogDataSource.1]
+@="MOM2005AppLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\MOM2005AppLogDataSource.1\CLSID]
+@="{AF75FC67-9061-4E54-913B-5983BAD2A4D0}"
+
+[HKEY_CLASSES_ROOT\MOM2005EventDataType]
+@="MOM2005EventDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005EventDataType\CLSID]
+@="{16B61683-51F2-4210-B5BB-F89435F0F131}"
+
+[HKEY_CLASSES_ROOT\MOM2005EventDataType.1]
+@="MOM2005EventDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005EventDataType.1\CLSID]
+@="{16B61683-51F2-4210-B5BB-F89435F0F131}"
+
+[HKEY_CLASSES_ROOT\MOM2005PerfDataType]
+@="MOM2005PerfDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005PerfDataType\CLSID]
+@="{1D020D8F-6B17-4299-BBAD-64BE1F80901C}"
+
+[HKEY_CLASSES_ROOT\MOM2005PerfDataType.1]
+@="MOM2005PerfDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005PerfDataType.1\CLSID]
+@="{1D020D8F-6B17-4299-BBAD-64BE1F80901C}"
+
+[HKEY_CLASSES_ROOT\MOM2005ResponseContextDataType]
+@="MOM2005ResponseContextDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005ResponseContextDataType\CLSID]
+@="{12B8034F-EF22-448F-AA54-C2E805A88AE4}"
+
+[HKEY_CLASSES_ROOT\MOM2005ResponseContextDataType.1]
+@="MOM2005ResponseContextDataType Class"
+
+[HKEY_CLASSES_ROOT\MOM2005ResponseContextDataType.1\CLSID]
+@="{12B8034F-EF22-448F-AA54-C2E805A88AE4}"
+
+[HKEY_CLASSES_ROOT\MOMConolidatorDataType]
+@="MOMConolidatorDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMConolidatorDataType\CLSID]
+@="{89CD40BD-EBCA-41E4-B645-DCCD1434361A}"
+
+[HKEY_CLASSES_ROOT\MOMConolidatorDataType.1]
+@="MOMConolidatorDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMConolidatorDataType.1\CLSID]
+@="{89CD40BD-EBCA-41E4-B645-DCCD1434361A}"
+
+[HKEY_CLASSES_ROOT\MOMEventDataType]
+@="MOMEventDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMEventDataType\CLSID]
+@="{C39EC9F2-50D3-42C6-85AA-846B6505DE24}"
+
+[HKEY_CLASSES_ROOT\MOMEventDataType.1]
+@="MOMEventDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMEventDataType.1\CLSID]
+@="{C39EC9F2-50D3-42C6-85AA-846B6505DE24}"
+
+[HKEY_CLASSES_ROOT\MOMNTEventDataType]
+@="MOMNTEventDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMNTEventDataType\CLSID]
+@="{5904DC85-F8C6-48FF-843B-FA2688B82EA2}"
+
+[HKEY_CLASSES_ROOT\MOMNTEventDataType.1]
+@="MOMNTEventDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMNTEventDataType.1\CLSID]
+@="{5904DC85-F8C6-48FF-843B-FA2688B82EA2}"
+
+[HKEY_CLASSES_ROOT\MOMNTPerfDataType]
+@="MOMNTPerfDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMNTPerfDataType\CLSID]
+@="{398113D9-D7B4-45E1-B360-A38A75695096}"
+
+[HKEY_CLASSES_ROOT\MOMNTPerfDataType.1]
+@="MOMNTPerfDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMNTPerfDataType.1\CLSID]
+@="{398113D9-D7B4-45E1-B360-A38A75695096}"
+
+[HKEY_CLASSES_ROOT\MOMRegistryDataType]
+@="MOMRegistryDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMRegistryDataType\CLSID]
+@="{92CA1E5F-C050-405E-8947-381690C6182D}"
+
+[HKEY_CLASSES_ROOT\MOMRegistryDataType.1]
+@="MOMRegistryDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMRegistryDataType.1\CLSID]
+@="{92CA1E5F-C050-405E-8947-381690C6182D}"
+
+[HKEY_CLASSES_ROOT\MOMURLDataType]
+@="MOMURLDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMURLDataType\CLSID]
+@="{5A75A2D5-600D-48DA-91CD-2E35D4E9E7B3}"
+
+[HKEY_CLASSES_ROOT\MOMURLDataType.1]
+@="MOMURLDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMURLDataType.1\CLSID]
+@="{5A75A2D5-600D-48DA-91CD-2E35D4E9E7B3}"
+
+[HKEY_CLASSES_ROOT\MOMWebAppDataType]
+@="MOMWebAppDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMWebAppDataType\CLSID]
+@="{D239DB52-BE8B-4373-94C2-6EE78FA58D55}"
+
+[HKEY_CLASSES_ROOT\MOMWebAppDataType.1]
+@="MOMWebAppDataType Class"
+
+[HKEY_CLASSES_ROOT\MOMWebAppDataType.1\CLSID]
+@="{D239DB52-BE8B-4373-94C2-6EE78FA58D55}"
+
+[HKEY_CLASSES_ROOT\NTPerfDataType]
+@="NTPerfDataType Class"
+
+[HKEY_CLASSES_ROOT\NTPerfDataType\CLSID]
+@="{B39686DA-52A8-484A-B1DB-ABBA594FF664}"
+
+[HKEY_CLASSES_ROOT\NTPerfDataType.1]
+@="NTPerfDataType Class"
+
+[HKEY_CLASSES_ROOT\NTPerfDataType.1\CLSID]
+@="{B39686DA-52A8-484A-B1DB-ABBA594FF664}"
+
+[HKEY_CLASSES_ROOT\NTSignatureDataType]
+@="NTSignatureDataType Class"
+
+[HKEY_CLASSES_ROOT\NTSignatureDataType\CLSID]
+@="{7fd22897-9e63-4464-84be-b0b0857dfa64}"
+
+[HKEY_CLASSES_ROOT\NTSignatureDataType.1]
+@="NTSignatureDataType Class"
+
+[HKEY_CLASSES_ROOT\NTSignatureDataType.1\CLSID]
+@="{7fd22897-9e63-4464-84be-b0b0857dfa64}"
+
+[HKEY_CLASSES_ROOT\OM12Connector.ManagerBridge]
+@="CConnectorSessionCallbackBridge Object"
+
+[HKEY_CLASSES_ROOT\OM12Connector.ManagerBridge\CLSID]
+@="{4A441B28-CB75-4E38-B2B6-38FE330CA58D}"
+
+[HKEY_CLASSES_ROOT\OM12Connector.ManagerBridge\CurVer]
+@="OM12Connector.ManagerBridge.1"
+
+[HKEY_CLASSES_ROOT\OM12Connector.ManagerBridge.1]
+@="CConnectorManagerForManagementGroupBridge Object"
+
+[HKEY_CLASSES_ROOT\OM12Connector.ManagerBridge.1\CLSID]
+@="{4A441B28-CB75-4E38-B2B6-38FE330CA58D}"
+
+[HKEY_CLASSES_ROOT\OM12Connector.SessionCallbackBridge]
+@="CConnectorSessionCallbackBridge Object"
+
+[HKEY_CLASSES_ROOT\OM12Connector.SessionCallbackBridge\CLSID]
+@="{39C90EFB-6CA7-4198-995E-79447D91DB4D}"
+
+[HKEY_CLASSES_ROOT\OM12Connector.SessionCallbackBridge\CurVer]
+@="OM12Connector.SessionCallbackBridge.1"
+
+[HKEY_CLASSES_ROOT\OM12Connector.SessionCallbackBridge.1]
+@="CConnectorSessionCallbackBridge Object"
+
+[HKEY_CLASSES_ROOT\OM12Connector.SessionCallbackBridge.1\CLSID]
+@="{39C90EFB-6CA7-4198-995E-79447D91DB4D}"
+
+[HKEY_CLASSES_ROOT\OleDbDataType]
+@="OleDbDataType Class"
+
+[HKEY_CLASSES_ROOT\OleDbDataType\CLSID]
+@="{79004B60-87D8-4260-BEFA-B885F6B1EA2B}"
+
+[HKEY_CLASSES_ROOT\OleDbDataType.1]
+@="OleDbDataType Class"
+
+[HKEY_CLASSES_ROOT\OleDbDataType.1\CLSID]
+@="{79004B60-87D8-4260-BEFA-B885F6B1EA2B}"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.CounterController]
+@="CounterController Class"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.CounterController\CLSID]
+@="{24075BB8-759B-492D-B14F-C69C5600A5F3}"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.CounterController\CurVer]
+@="PerfCounterMonitor.CounterController.1"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.CounterController.1]
+@="CounterController Class"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.CounterController.1\CLSID]
+@="{24075BB8-759B-492D-B14F-C69C5600A5F3}"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.PerfCounterMonitor]
+@="PerfCounterMonitor Class"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.PerfCounterMonitor\CLSID]
+@="{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.PerfCounterMonitor\CurVer]
+@="PerfCounterMonitor.PerfCounterMonitor.1"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.PerfCounterMonitor.1]
+@="PerfCounterMonitor Class"
+
+[HKEY_CLASSES_ROOT\PerfCounterMonitor.PerfCounterMonitor.1\CLSID]
+@="{657FB77F-8C2D-4C4F-BBE9-BBFA6DA61D85}"
+
+[HKEY_CLASSES_ROOT\PerfMon.Monitor]
+@="Monitor Class"
+
+[HKEY_CLASSES_ROOT\PerfMon.Monitor\CLSID]
+@="{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}"
+
+[HKEY_CLASSES_ROOT\PerfMon.Monitor\CurVer]
+@="PerfMon.Monitor.1"
+
+[HKEY_CLASSES_ROOT\PerfMon.Monitor.1]
+@="Monitor Class"
+
+[HKEY_CLASSES_ROOT\PerfMon.Monitor.1\CLSID]
+@="{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}"
+
+[HKEY_CLASSES_ROOT\ProcessInformationProbe]
+@="ProcessInformationProbe Class"
+
+[HKEY_CLASSES_ROOT\ProcessInformationProbe\CLSID]
+@="{1dd52140-33e1-4b39-ac7b-638f21772428}"
+
+[HKEY_CLASSES_ROOT\ProcessInformationProbe.1]
+@="ProcessInformationProbe Class"
+
+[HKEY_CLASSES_ROOT\ProcessInformationProbe.1\CLSID]
+@="{1dd52140-33e1-4b39-ac7b-638f21772428}"
+
+[HKEY_CLASSES_ROOT\PropertyBagDataType]
+@="PropertyBagDataType Class"
+
+[HKEY_CLASSES_ROOT\PropertyBagDataType\CLSID]
+@="{D116EFD9-0274-4BD9-8FD5-94BB2138FA7F}"
+
+[HKEY_CLASSES_ROOT\PropertyBagDataType.1]
+@="PropertyBagDataType Class"
+
+[HKEY_CLASSES_ROOT\PropertyBagDataType.1\CLSID]
+@="{D116EFD9-0274-4BD9-8FD5-94BB2138FA7F}"
+
+[HKEY_CLASSES_ROOT\RunAverageThreshold]
+@="RunAverageThreshold Class"
+
+[HKEY_CLASSES_ROOT\RunAverageThreshold\CLSID]
+@="{05C8C114-7D2A-4159-B3AB-52BA3F40439B}"
+
+[HKEY_CLASSES_ROOT\RunAverageThreshold.1]
+@="RunAverageThreshold Class"
+
+[HKEY_CLASSES_ROOT\RunAverageThreshold.1\CLSID]
+@="{05C8C114-7D2A-4159-B3AB-52BA3F40439B}"
+
+[HKEY_CLASSES_ROOT\RunBaseliningModule]
+@="RunBaseliningModule Class"
+
+[HKEY_CLASSES_ROOT\RunBaseliningModule\CLSID]
+@="{A1260A5C-9F58-462E-82C1-1C317E5AD970}"
+
+[HKEY_CLASSES_ROOT\RunBaseliningModule.1]
+@="RunBaseliningModule Class"
+
+[HKEY_CLASSES_ROOT\RunBaseliningModule.1\CLSID]
+@="{A1260A5C-9F58-462E-82C1-1C317E5AD970}"
+
+[HKEY_CLASSES_ROOT\RunBatchResponse]
+@="RunBatchResponse Class"
+
+[HKEY_CLASSES_ROOT\RunBatchResponse\CLSID]
+@="{9F96E9EF-EA39-4352-AE5B-E6E0AB20E4CA}"
+
+[HKEY_CLASSES_ROOT\RunBatchResponse.1]
+@="RunBatchResponse Class"
+
+[HKEY_CLASSES_ROOT\RunBatchResponse.1\CLSID]
+@="{9F96E9EF-EA39-4352-AE5B-E6E0AB20E4CA}"
+
+[HKEY_CLASSES_ROOT\RunComputationModule]
+@="RunComputationModule Class"
+
+[HKEY_CLASSES_ROOT\RunComputationModule\CLSID]
+@="{C75C06DE-A537-4744-BDF9-5775E63E014A}"
+
+[HKEY_CLASSES_ROOT\RunComputationModule.1]
+@="RunComputationModule Class"
+
+[HKEY_CLASSES_ROOT\RunComputationModule.1\CLSID]
+@="{C75C06DE-A537-4744-BDF9-5775E63E014A}"
+
+[HKEY_CLASSES_ROOT\RunConsecutiveSamplesThreshold]
+@="RunConsecutiveSamplesThreshold Class"
+
+[HKEY_CLASSES_ROOT\RunConsecutiveSamplesThreshold\CLSID]
+@="{AA56A2C2-232D-4FDA-80FC-31067ED5607B}"
+
+[HKEY_CLASSES_ROOT\RunConsecutiveSamplesThreshold.1]
+@="RunConsecutiveSamplesThreshold Class"
+
+[HKEY_CLASSES_ROOT\RunConsecutiveSamplesThreshold.1\CLSID]
+@="{AA56A2C2-232D-4FDA-80FC-31067ED5607B}"
+
+[HKEY_CLASSES_ROOT\RunConsolidatorCondition]
+@="RunConsolidatorCondition Class"
+
+[HKEY_CLASSES_ROOT\RunConsolidatorCondition\CLSID]
+@="{1E06AAF5-C4E0-4F57-A4F6-2C8A6A5E8E53}"
+
+[HKEY_CLASSES_ROOT\RunConsolidatorCondition.1]
+@="RunConsolidatorCondition Class"
+
+[HKEY_CLASSES_ROOT\RunConsolidatorCondition.1\CLSID]
+@="{1E06AAF5-C4E0-4F57-A4F6-2C8A6A5E8E53}"
+
+[HKEY_CLASSES_ROOT\RunCorrelatorCondition]
+@="RunCorrelatorCondition Class"
+
+[HKEY_CLASSES_ROOT\RunCorrelatorCondition\CLSID]
+@="{6BB6ADFC-85E3-4D65-9998-2566C3C17F70}"
+
+[HKEY_CLASSES_ROOT\RunCorrelatorCondition.1]
+@="RunCorrelatorCondition Class"
+
+[HKEY_CLASSES_ROOT\RunCorrelatorCondition.1\CLSID]
+@="{6BB6ADFC-85E3-4D65-9998-2566C3C17F70}"
+
+[HKEY_CLASSES_ROOT\RunCrimsonDataSource]
+@="RunCrimsonDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunCrimsonDataSource\CLSID]
+@="{A29CCF51-C540-4B99-B8CA-BBB20F05C8B8}"
+
+[HKEY_CLASSES_ROOT\RunCrimsonDataSource.1]
+@="RunCrimsonDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunCrimsonDataSource.1\CLSID]
+@="{A29CCF51-C540-4B99-B8CA-BBB20F05C8B8}"
+
+[HKEY_CLASSES_ROOT\RunDeltaThreshold]
+@="RunDeltaThreshold Class"
+
+[HKEY_CLASSES_ROOT\RunDeltaThreshold\CLSID]
+@="{B065E6F2-1B98-4DDF-B905-948573DB1AC1}"
+
+[HKEY_CLASSES_ROOT\RunDeltaThreshold.1]
+@="RunDeltaThreshold Class"
+
+[HKEY_CLASSES_ROOT\RunDeltaThreshold.1\CLSID]
+@="{B065E6F2-1B98-4DDF-B905-948573DB1AC1}"
+
+[HKEY_CLASSES_ROOT\RunDependencyServiceCheckProbe]
+@="RunDependencyServiceCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\RunDependencyServiceCheckProbe\CLSID]
+@="{1DB91BE4-DAF4-4E49-9AA8-8E14F4985F2C}"
+
+[HKEY_CLASSES_ROOT\RunDependencyServiceCheckProbe.1]
+@="RunDependencyServiceCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\RunDependencyServiceCheckProbe.1\CLSID]
+@="{1DB91BE4-DAF4-4E49-9AA8-8E14F4985F2C}"
+
+[HKEY_CLASSES_ROOT\RunDiscoveryDataSnapshotMapper]
+@="RunDiscoveryDataSnapshotMapper Class"
+
+[HKEY_CLASSES_ROOT\RunDiscoveryDataSnapshotMapper\CLSID]
+@="{00672A0F-9FE0-4DB3-87F5-25C95A11D14A}"
+
+[HKEY_CLASSES_ROOT\RunDiscoveryDataSnapshotMapper.1]
+@="RunDiscoveryDataSnapshotMapper Class"
+
+[HKEY_CLASSES_ROOT\RunDiscoveryDataSnapshotMapper.1\CLSID]
+@="{00672A0F-9FE0-4DB3-87F5-25C95A11D14A}"
+
+[HKEY_CLASSES_ROOT\RunEtwGenericWriteAction]
+@="RunEtwGenericWriteAction Class"
+
+[HKEY_CLASSES_ROOT\RunEtwGenericWriteAction\CLSID]
+@="{EC35BBCA-75DD-45F6-B545-CE63307C93D1}"
+
+[HKEY_CLASSES_ROOT\RunEtwGenericWriteAction.1]
+@="RunEtwGenericWriteAction Class"
+
+[HKEY_CLASSES_ROOT\RunEtwGenericWriteAction.1\CLSID]
+@="{EC35BBCA-75DD-45F6-B545-CE63307C93D1}"
+
+[HKEY_CLASSES_ROOT\RunExpressionEvaluatorCondition]
+@="RunExpressionEvaluatorCondition Class"
+
+[HKEY_CLASSES_ROOT\RunExpressionEvaluatorCondition\CLSID]
+@="{C6410789-C1BB-4AF1-B818-D01A5367781D}"
+
+[HKEY_CLASSES_ROOT\RunExpressionEvaluatorCondition.1]
+@="RunExpressionEvaluatorCondition Class"
+
+[HKEY_CLASSES_ROOT\RunExpressionEvaluatorCondition.1\CLSID]
+@="{C6410789-C1BB-4AF1-B818-D01A5367781D}"
+
+[HKEY_CLASSES_ROOT\RunGenericNTEventMapperCondition]
+@="RunGenericNTEventMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunGenericNTEventMapperCondition\CLSID]
+@="{915E1B16-C101-4C0C-85ED-4301786AE09A}"
+
+[HKEY_CLASSES_ROOT\RunGenericNTEventMapperCondition.1]
+@="RunGenericNTEventMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunGenericNTEventMapperCondition.1\CLSID]
+@="{915E1B16-C101-4C0C-85ED-4301786AE09A}"
+
+[HKEY_CLASSES_ROOT\RunGenericNTPerfMapperCondition]
+@="RunGenericNTPerfMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunGenericNTPerfMapperCondition\CLSID]
+@="{CBBE09D5-8DF8-4843-87A9-DD5AED662D29}"
+
+[HKEY_CLASSES_ROOT\RunGenericNTPerfMapperCondition.1]
+@="RunGenericNTPerfMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunGenericNTPerfMapperCondition.1\CLSID]
+@="{CBBE09D5-8DF8-4843-87A9-DD5AED662D29}"
+
+[HKEY_CLASSES_ROOT\RunIISApplicationPoolDiscoveryProbe]
+@="RunIISApplicationPoolDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISApplicationPoolDiscoveryProbe\CLSID]
+@="{A9348597-CAFD-4E57-9A20-2BCC4E3ED9CB}"
+
+[HKEY_CLASSES_ROOT\RunIISApplicationPoolDiscoveryProbe.1]
+@="RunSnmpAsyncProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISApplicationPoolDiscoveryProbe.1\CLSID]
+@="{A9348597-CAFD-4E57-9A20-2BCC4E3ED9CB}"
+
+[HKEY_CLASSES_ROOT\RunIISFTPSiteDiscoveryProbe]
+@="RunIISFTPSiteDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISFTPSiteDiscoveryProbe\CLSID]
+@="{8D61C900-109A-4320-9F90-B6312DFF59F0}"
+
+[HKEY_CLASSES_ROOT\RunIISFTPSiteDiscoveryProbe.1]
+@="RunIISFTPSiteDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISFTPSiteDiscoveryProbe.1\CLSID]
+@="{8D61C900-109A-4320-9F90-B6312DFF59F0}"
+
+[HKEY_CLASSES_ROOT\RunIISStateProbe]
+@="RunIISStateProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISStateProbe\CLSID]
+@="{29D0D61F-7540-4937-97D9-D991E3E79513}"
+
+[HKEY_CLASSES_ROOT\RunIISStateProbe.1]
+@="RunIISStateProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISStateProbe.1\CLSID]
+@="{29D0D61F-7540-4937-97D9-D991E3E79513}"
+
+[HKEY_CLASSES_ROOT\RunIISWebApplicationDiscoveryProbe]
+@="RunIISWebApplicationDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISWebApplicationDiscoveryProbe\CLSID]
+@="{9184E8F9-6C50-47D7-987C-7CE31AD115A9}"
+
+[HKEY_CLASSES_ROOT\RunIISWebApplicationDiscoveryProbe.1]
+@="RunIISWebApplicationDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISWebApplicationDiscoveryProbe.1\CLSID]
+@="{9184E8F9-6C50-47D7-987C-7CE31AD115A9}"
+
+[HKEY_CLASSES_ROOT\RunIISWebSiteDiscoveryProbe]
+@="RunIISWebSiteDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISWebSiteDiscoveryProbe\CLSID]
+@="{64D5DB86-322D-4A18-AAA9-4BFE063624A5}"
+
+[HKEY_CLASSES_ROOT\RunIISWebSiteDiscoveryProbe.1]
+@="RunIISWebSiteDiscoveryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunIISWebSiteDiscoveryProbe.1\CLSID]
+@="{64D5DB86-322D-4A18-AAA9-4BFE063624A5}"
+
+[HKEY_CLASSES_ROOT\RunLDAPProbe]
+@="RunLDAPProbe Class"
+
+[HKEY_CLASSES_ROOT\RunLDAPProbe\CLSID]
+@="{0BFF64A1-4B2B-4DD5-ADB5-62C48074AB82}"
+
+[HKEY_CLASSES_ROOT\RunLDAPProbe.1]
+@="RunLDAPProbe Class"
+
+[HKEY_CLASSES_ROOT\RunLDAPProbe.1\CLSID]
+@="{0BFF64A1-4B2B-4DD5-ADB5-62C48074AB82}"
+
+[HKEY_CLASSES_ROOT\RunLearningModule]
+@="RunLearningModule Class"
+
+[HKEY_CLASSES_ROOT\RunLearningModule\CLSID]
+@="{21a13095-6fb0-4629-8152-3f4dfd1649fe}"
+
+[HKEY_CLASSES_ROOT\RunLearningModule.1]
+@="RunLearningModule Class"
+
+[HKEY_CLASSES_ROOT\RunLearningModule.1\CLSID]
+@="{21a13095-6fb0-4629-8152-3f4dfd1649fe}"
+
+[HKEY_CLASSES_ROOT\RunLinkedPerfDataMapperCondition]
+@="RunLinkedPerfDataMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunLinkedPerfDataMapperCondition\CLSID]
+@="{72175454-D77A-4548-90A2-7DE023AF6F2C}"
+
+[HKEY_CLASSES_ROOT\RunLinkedPerfDataMapperCondition.1]
+@="RunLinkedPerfDataMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunLinkedPerfDataMapperCondition.1\CLSID]
+@="{72175454-D77A-4548-90A2-7DE023AF6F2C}"
+
+[HKEY_CLASSES_ROOT\RunMOM2005DiscoveryDataMapper]
+@="RunMOM2005DiscoveryDataMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOM2005DiscoveryDataMapper\CLSID]
+@="{D3C8F83C-C8C6-4DD9-8D0D-CD93BB65AF11}"
+
+[HKEY_CLASSES_ROOT\RunMOM2005DiscoveryDataMapper.1]
+@="RunMOM2005DiscoveryDataMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOM2005DiscoveryDataMapper.1\CLSID]
+@="{D3C8F83C-C8C6-4DD9-8D0D-CD93BB65AF11}"
+
+[HKEY_CLASSES_ROOT\RunMOM2005ResponseContextMapper]
+@="RunMOM2005ResponseContextMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOM2005ResponseContextMapper\CLSID]
+@="{FFB4307F-F0BF-4E10-816C-3A3DCF098398}"
+
+[HKEY_CLASSES_ROOT\RunMOM2005ResponseContextMapper.1]
+@="RunMOM2005ResponseContextMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOM2005ResponseContextMapper.1\CLSID]
+@="{FFB4307F-F0BF-4E10-816C-3A3DCF098398}"
+
+[HKEY_CLASSES_ROOT\RunMOM2005WMIEventMapper]
+@="RunMOM2005WMIEventMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOM2005WMIEventMapper\CLSID]
+@="{8BE998E8-B943-4ABB-B3AF-8A3709044576}"
+
+[HKEY_CLASSES_ROOT\RunMOM2005WMIEventMapper.1]
+@="RunMOM2005WMIEventMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOM2005WMIEventMapper.1\CLSID]
+@="{8BE998E8-B943-4ABB-B3AF-8A3709044576}"
+
+[HKEY_CLASSES_ROOT\RunMOMEventMapperCondition]
+@="RunMOMEventMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunMOMEventMapperCondition\CLSID]
+@="{eae677d0-9d4f-11d9-9669-0800200c9a66}"
+
+[HKEY_CLASSES_ROOT\RunMOMEventMapperCondition.1]
+@="RunMOMEventMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunMOMEventMapperCondition.1\CLSID]
+@="{eae677d0-9d4f-11d9-9669-0800200c9a66}"
+
+[HKEY_CLASSES_ROOT\RunMOMNTPerfMapperCondition]
+@="RunMOMNTPerfMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunMOMNTPerfMapperCondition\CLSID]
+@="{2566BCEB-BF6B-45D6-BA1A-F99E5CACB8B2}"
+
+[HKEY_CLASSES_ROOT\RunMOMNTPerfMapperCondition.1]
+@="RunMOMNTPerfMapperCondition Class"
+
+[HKEY_CLASSES_ROOT\RunMOMNTPerfMapperCondition.1\CLSID]
+@="{2566BCEB-BF6B-45D6-BA1A-F99E5CACB8B2}"
+
+[HKEY_CLASSES_ROOT\RunMOMNTSignatureMapper]
+@="RunMOMNTSignatureMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOMNTSignatureMapper\CLSID]
+@="{71553f30-e3fb-4772-be22-3c7b3b555c40}"
+
+[HKEY_CLASSES_ROOT\RunMOMNTSignatureMapper.1]
+@="RunMOMNTSignatureMapper Class"
+
+[HKEY_CLASSES_ROOT\RunMOMNTSignatureMapper.1\CLSID]
+@="{71553f30-e3fb-4772-be22-3c7b3b555c40}"
+
+[HKEY_CLASSES_ROOT\RunMultiInstancePerfAggregation]
+@="RunMultiInstancePerfAggregation Class"
+
+[HKEY_CLASSES_ROOT\RunMultiInstancePerfAggregation\CLSID]
+@="{B5F80055-46B5-446d-9C71-A8B5ED74B780}"
+
+[HKEY_CLASSES_ROOT\RunMultiInstancePerfAggregation.1]
+@="RunMultiInstancePerfAggregation Class"
+
+[HKEY_CLASSES_ROOT\RunMultiInstancePerfAggregation.1\CLSID]
+@="{B5F80055-46B5-446d-9C71-A8B5ED74B780}"
+
+[HKEY_CLASSES_ROOT\RunNTEventLogDataSource]
+@="RunSchedulerDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunNTEventLogDataSource\CLSID]
+@="{C3339855-80B3-4c06-B7AB-5C5D97B59A0D}"
+
+[HKEY_CLASSES_ROOT\RunNTEventLogDataSource.1]
+@="RunNTEventLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunNTEventLogDataSource.1\CLSID]
+@="{009BE441-F1AD-4074-AD46-15F3BABCF0E5}"
+
+[HKEY_CLASSES_ROOT\RunOleDbProbe]
+@="RunOleDbProbe Class"
+
+[HKEY_CLASSES_ROOT\RunOleDbProbe\CLSID]
+@="{B5A35748-86F5-46A3-9BC2-F9A494E36B25}"
+
+[HKEY_CLASSES_ROOT\RunOleDbProbe.1]
+@="RunOleDbProbe Class"
+
+[HKEY_CLASSES_ROOT\RunOleDbProbe.1\CLSID]
+@="{B5A35748-86F5-46A3-9BC2-F9A494E36B25}"
+
+[HKEY_CLASSES_ROOT\RunOptimizedCollection]
+@="RunOptimizedCollection Class"
+
+[HKEY_CLASSES_ROOT\RunOptimizedCollection\CLSID]
+@="{29A5E631-EE28-44BE-A1F0-301A65381CFC}"
+
+[HKEY_CLASSES_ROOT\RunOptimizedCollection.1]
+@="RunOptimizedCollection Class"
+
+[HKEY_CLASSES_ROOT\RunOptimizedCollection.1\CLSID]
+@="{29A5E631-EE28-44BE-A1F0-301A65381CFC}"
+
+[HKEY_CLASSES_ROOT\RunPerfDataSource]
+@="RunPerfDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunPerfDataSource\CLSID]
+@="{28BE3571-7EDD-42B8-98F8-38171F52A29A}"
+
+[HKEY_CLASSES_ROOT\RunPerfDataSource.1]
+@="RunPerfDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunPerfDataSource.1\CLSID]
+@="{28BE3571-7EDD-42B8-98F8-38171F52A29A}"
+
+[HKEY_CLASSES_ROOT\RunRegistryProbe]
+@="RunRegistryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunRegistryProbe\CLSID]
+@="{472364F2-A1F0-41C0-9A8F-E00C92C2AB31}"
+
+[HKEY_CLASSES_ROOT\RunRegistryProbe.1]
+@="RunRegistryProbe Class"
+
+[HKEY_CLASSES_ROOT\RunRegistryProbe.1\CLSID]
+@="{472364F2-A1F0-41C0-9A8F-E00C92C2AB31}"
+
+[HKEY_CLASSES_ROOT\RunSchedulerCondition]
+@="RunSchedulerCondition Class"
+
+[HKEY_CLASSES_ROOT\RunSchedulerCondition\CLSID]
+@="{0D1FB777-4721-4862-A4BE-87138D56207F}"
+
+[HKEY_CLASSES_ROOT\RunSchedulerCondition.1]
+@="RunSchedulerCondition Class"
+
+[HKEY_CLASSES_ROOT\RunSchedulerCondition.1\CLSID]
+@="{0D1FB777-4721-4862-A4BE-87138D56207F}"
+
+[HKEY_CLASSES_ROOT\RunSchedulerDataSource.1]
+@="RunSchedulerDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunSchedulerDataSource.1\CLSID]
+@="{C3339855-80B3-4c06-B7AB-5C5D97B59A0D}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedAlertDataSource]
+@="RunScriptGeneratedAlertDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedAlertDataSource\CLSID]
+@="{8816FFC0-0CE4-4300-99B2-EB480001284B}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedAlertDataSource.1]
+@="RunScriptGeneratedAlertDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedAlertDataSource.1\CLSID]
+@="{8816FFC0-0CE4-4300-99B2-EB480001284B}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedEventDataSource]
+@="RunScriptGeneratedEventDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedEventDataSource\CLSID]
+@="{6D3D4B56-96BB-445A-8C7F-F7709D8A2CA7}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedEventDataSource.1]
+@="RunScriptGeneratedEventDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedEventDataSource.1\CLSID]
+@="{6D3D4B56-96BB-445A-8C7F-F7709D8A2CA7}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedPerfDataSource]
+@="RunScriptGeneratedPerfDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedPerfDataSource\CLSID]
+@="{DB0ACC98-3B33-4C35-8EED-6991F2D936B0}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedPerfDataSource.1]
+@="RunScriptGeneratedPerfDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedPerfDataSource.1\CLSID]
+@="{DB0ACC98-3B33-4C35-8EED-6991F2D936B0}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedServiceDiscoveryDataSource]
+@="RunScriptGeneratedServiceDiscoveryDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedServiceDiscoveryDataSource\CLSID]
+@="{41E122D5-B2BD-41DE-935A-F4F3451DC492}"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedServiceDiscoveryDataSource.1]
+@="RunScriptGeneratedServiceDiscoveryDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunScriptGeneratedServiceDiscoveryDataSource.1\CLSID]
+@="{41E122D5-B2BD-41DE-935A-F4F3451DC492}"
+
+[HKEY_CLASSES_ROOT\RunScriptWriteAction]
+@="RunScriptWriteAction Class"
+
+[HKEY_CLASSES_ROOT\RunScriptWriteAction\CLSID]
+@="{E56790D9-07E7-4B4D-BD6C-1BCCB0BD82D0}"
+
+[HKEY_CLASSES_ROOT\RunScriptWriteAction.1]
+@="RunScriptWriteAction Class"
+
+[HKEY_CLASSES_ROOT\RunScriptWriteAction.1\CLSID]
+@="{E56790D9-07E7-4B4D-BD6C-1BCCB0BD82D0}"
+
+[HKEY_CLASSES_ROOT\RunSerializeDataItem]
+@="RunSerializeDataItem Class"
+
+[HKEY_CLASSES_ROOT\RunSerializeDataItem\CLSID]
+@="{9614C109-D7CD-43A4-BC95-F015D9B1A224}"
+
+[HKEY_CLASSES_ROOT\RunSerializeDataItem.1]
+@="RunSerializeDataItem Class"
+
+[HKEY_CLASSES_ROOT\RunSerializeDataItem.1\CLSID]
+@="{9614C109-D7CD-43A4-BC95-F015D9B1A224}"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckDS]
+@="RunServiceCheckDS Class"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckDS\CLSID]
+@="{47AA3039-7E86-4b81-B295-67187EDFF3D7}"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckDS.1]
+@="RunServiceCheckDS Class"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckDS.1\CLSID]
+@="{47AA3039-7E86-4b81-B295-67187EDFF3D7}"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckProbe]
+@="RunServiceCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckProbe\CLSID]
+@="{D9E9B922-6C2F-40DF-8D70-F406C0EFFBDE}"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckProbe.1]
+@="RunServiceCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\RunServiceCheckProbe.1\CLSID]
+@="{D9E9B922-6C2F-40DF-8D70-F406C0EFFBDE}"
+
+[HKEY_CLASSES_ROOT\RunSysLogDataSource]
+@="RunSysLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunSysLogDataSource\CLSID]
+@="{B4BE2EB9-6D55-46C1-86CB-D87057ECFC8A}"
+
+[HKEY_CLASSES_ROOT\RunSysLogDataSource.1]
+@="RunSysLogDataSource Class"
+
+[HKEY_CLASSES_ROOT\RunSysLogDataSource.1\CLSID]
+@="{B4BE2EB9-6D55-46C1-86CB-D87057ECFC8A}"
+
+[HKEY_CLASSES_ROOT\RunTCPPortCheckProbe]
+@="RunTCPPortCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\RunTCPPortCheckProbe\CLSID]
+@="{41EB45CD-BF11-4E2A-8349-07DA48DEA806}"
+
+[HKEY_CLASSES_ROOT\RunTCPPortCheckProbe.1]
+@="RunTCPPortCheckProbe Class"
+
+[HKEY_CLASSES_ROOT\RunTCPPortCheckProbe.1\CLSID]
+@="{41EB45CD-BF11-4E2A-8349-07DA48DEA806}"
+
+[HKEY_CLASSES_ROOT\RunTimerCondition]
+@="RunTimerCondition Class"
+
+[HKEY_CLASSES_ROOT\RunTimerCondition\CLSID]
+@="{6ADE8BCE-E401-49FD-9EB3-CAF88D7E183F}"
+
+[HKEY_CLASSES_ROOT\RunTimerCondition.1]
+@="RunTimerCondition Class"
+
+[HKEY_CLASSES_ROOT\RunTimerCondition.1\CLSID]
+@="{6ADE8BCE-E401-49FD-9EB3-CAF88D7E183F}"
+
+[HKEY_CLASSES_ROOT\RunURLProbe]
+@="RunURLProbe Class"
+
+[HKEY_CLASSES_ROOT\RunURLProbe\CLSID]
+@="{92C599FD-6639-4A9F-90DA-E1350162A318}"
+
+[HKEY_CLASSES_ROOT\RunURLProbe.1]
+@="RunURLProbe Class"
+
+[HKEY_CLASSES_ROOT\RunURLProbe.1\CLSID]
+@="{92C599FD-6639-4A9F-90DA-E1350162A318}"
+
+[HKEY_CLASSES_ROOT\RunWindowsEventDataSourceChooser]
+@="RunWindowsEventDataSourceChooser Class"
+
+[HKEY_CLASSES_ROOT\RunWindowsEventDataSourceChooser\CLSID]
+@="{B98BD20C-3CC8-4AFE-9F68-5702C74D73DB}"
+
+[HKEY_CLASSES_ROOT\RunWindowsEventDataSourceChooser.1]
+@="RunWindowsEventDataSourceChooser Class"
+
+[HKEY_CLASSES_ROOT\RunWindowsEventDataSourceChooser.1\CLSID]
+@="{B98BD20C-3CC8-4AFE-9F68-5702C74D73DB}"
+
+[HKEY_CLASSES_ROOT\RunWsManEnumeratePA]
+@="RunWsManEnumeratePA Class"
+
+[HKEY_CLASSES_ROOT\RunWsManEnumeratePA\CLSID]
+@="{91564CE8-81DE-4D52-9AC5-A6FB6B9AB0EB}"
+
+[HKEY_CLASSES_ROOT\RunWsManEnumeratePA.1]
+@="RunWsManEnumeratePA Class"
+
+[HKEY_CLASSES_ROOT\RunWsManEnumeratePA.1\CLSID]
+@="{91564CE8-81DE-4D52-9AC5-A6FB6B9AB0EB}"
+
+[HKEY_CLASSES_ROOT\RunWsManGetPA]
+@="RunWsManGetPA Class"
+
+[HKEY_CLASSES_ROOT\RunWsManGetPA\CLSID]
+@="{20073FC6-F8BA-466A-BAB8-92DEF165BF6F}"
+
+[HKEY_CLASSES_ROOT\RunWsManGetPA.1]
+@="RunWsManGetPA Class"
+
+[HKEY_CLASSES_ROOT\RunWsManGetPA.1\CLSID]
+@="{20073FC6-F8BA-466A-BAB8-92DEF165BF6F}"
+
+[HKEY_CLASSES_ROOT\RunWsManInvokePA]
+@="RunWsManInvokePA Class"
+
+[HKEY_CLASSES_ROOT\RunWsManInvokePA\CLSID]
+@="{4427C733-42AE-4133-84FD-BEE4A3830EC0}"
+
+[HKEY_CLASSES_ROOT\RunWsManInvokePA.1]
+@="RunWsManInvokePA Class"
+
+[HKEY_CLASSES_ROOT\RunWsManInvokePA.1\CLSID]
+@="{4427C733-42AE-4133-84FD-BEE4A3830EC0}"
+
+[HKEY_CLASSES_ROOT\SCOMMaintenanceMode.SCOMMaintenanceMo.1]
+@="SCOMMaintenanceModeControl Class"
+
+[HKEY_CLASSES_ROOT\SCOMMaintenanceMode.SCOMMaintenanceMo.1\CLSID]
+@="{786842B8-B525-468A-B1D0-20A2E8E6283F}"
+
+[HKEY_CLASSES_ROOT\SCOMMaintenanceMode.SCOMMaintenanceMode]
+@="SCOMMaintenanceModeControl Class"
+
+[HKEY_CLASSES_ROOT\SCOMMaintenanceMode.SCOMMaintenanceMode\CLSID]
+@="{786842B8-B525-468A-B1D0-20A2E8E6283F}"
+
+[HKEY_CLASSES_ROOT\SCOMMaintenanceMode.SCOMMaintenanceMode\CurVer]
+@="SCOMMaintenanceMode.SCOMMaintenanceMo.1"
+
+[HKEY_CLASSES_ROOT\SignatureDataType]
+@="SignatureDataType Class"
+
+[HKEY_CLASSES_ROOT\SignatureDataType\CLSID]
+@="{5B44DF33-D67D-4500-85AE-7AE29CA11985}"
+
+[HKEY_CLASSES_ROOT\SignatureDataType.1]
+@="SignatureDataType Class"
+
+[HKEY_CLASSES_ROOT\SignatureDataType.1\CLSID]
+@="{5B44DF33-D67D-4500-85AE-7AE29CA11985}"
+
+[HKEY_CLASSES_ROOT\SignatureEntryDataType]
+@="SignatureEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\SignatureEntryDataType\CLSID]
+@="{AEB2011B-7AD5-4A03-910F-312228EAE0F7}"
+
+[HKEY_CLASSES_ROOT\SignatureEntryDataType.1]
+@="SignatureEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\SignatureEntryDataType.1\CLSID]
+@="{AEB2011B-7AD5-4A03-910F-312228EAE0F7}"
+
+[HKEY_CLASSES_ROOT\SoftDisableFilter]
+@="SoftDisableFilter Class"
+
+[HKEY_CLASSES_ROOT\SoftDisableFilter\CLSID]
+@="{16D53AB0-D822-4a42-B44F-1B4375EEEB4A}"
+
+[HKEY_CLASSES_ROOT\SoftDisableFilter.1]
+@="SoftDisableFilter Class"
+
+[HKEY_CLASSES_ROOT\SoftDisableFilter.1\CLSID]
+@="{16D53AB0-D822-4a42-B44F-1B4375EEEB4A}"
+
+[HKEY_CLASSES_ROOT\StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}]
+@="MyProfiler"
+
+[HKEY_CLASSES_ROOT\StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}\CLSID]
+@="{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}"
+
+[HKEY_CLASSES_ROOT\StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}\CurVer]
+@="StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}.1"
+
+[HKEY_CLASSES_ROOT\StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}.1]
+@="MyProfiler"
+
+[HKEY_CLASSES_ROOT\StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}.1\CLSID]
+@="{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}"
+
+[HKEY_CLASSES_ROOT\SysLogDataType]
+@="SysLogDataType Class"
+
+[HKEY_CLASSES_ROOT\SysLogDataType\CLSID]
+@="{3A0D9F65-8CC0-4C53-93DA-7E5E5DDB117E}"
+
+[HKEY_CLASSES_ROOT\SysLogDataType.1]
+@="SysLogDataType Class"
+
+[HKEY_CLASSES_ROOT\SysLogDataType.1\CLSID]
+@="{3A0D9F65-8CC0-4C53-93DA-7E5E5DDB117E}"
+
+[HKEY_CLASSES_ROOT\TriggerDataType]
+@="TriggerDataType Class"
+
+[HKEY_CLASSES_ROOT\TriggerDataType\CLSID]
+@="{8D17B92F-528D-4DF6-A9FA-55D59AE33AD2}"
+
+[HKEY_CLASSES_ROOT\TriggerDataType.1]
+@="TriggerDataType Class"
+
+[HKEY_CLASSES_ROOT\TriggerDataType.1\CLSID]
+@="{8D17B92F-528D-4DF6-A9FA-55D59AE33AD2}"
+
+[HKEY_CLASSES_ROOT\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0]
+@="MOMScriptAPI 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMScriptAPI.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\HELPDIR]
+@="D:\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0]
+@="SCOM ApmDispatcher 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\Dispatcher.tlb"
+
+[HKEY_CLASSES_ROOT\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0]
+@="SCOM ApmMessages 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\Messages.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\Messages64.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}\1.0]
+@="SCOM ApmAgent 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0]
+@="ConnectorBridge"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\ConnectorBridge.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0]
+@="XmlStringToDataItemModule 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\XmlStringToDataItemModule.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\HELPDIR]
+@="d:\\v3.2\\target\\debug\\i386\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0]
+@="SCOM ApmInterceptSvc 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptSvc.exe"
+
+[HKEY_CLASSES_ROOT\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0]
+@="MOMIISModules 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\HELPDIR]
+@="C:\\Program Files\\System Center Operations Manager 2007\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0]
+@="SCOM WebHostController 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\WHController.tlb"
+
+[HKEY_CLASSES_ROOT\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0]
+@="ScriptObjects 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ScriptObjects.tlb"
+
+[HKEY_CLASSES_ROOT\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\HELPDIR]
+@="D:\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0]
+@="SCOM ApmPerfCounterMonitor 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\PerfCounterMonitor.tlb"
+
+[HKEY_CLASSES_ROOT\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0]
+@="SCOM ApmScripting 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptScripting.tlb"
+
+[HKEY_CLASSES_ROOT\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0]
+@="MOMLonghornModules 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules2.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\HELPDIR]
+@="C:\\enlistments\\momv3bb\\target\\debug\\i386\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0]
+@="AgentConfigManager 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\AgentConfigManager.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\"
+
+[HKEY_CLASSES_ROOT\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}]
+
+[HKEY_CLASSES_ROOT\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0]
+@="SCOMMaintenanceMode 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\0]
+
+[HKEY_CLASSES_ROOT\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\0\win32]
+@="C:\\Program Files\\Common Files\\Microsoft Shared\\Operations Manager\\scommaintenancemode.dll"
+
+[HKEY_CLASSES_ROOT\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\HELPDIR]
+@="C:\\Program Files\\Common Files\\Microsoft Shared\\Operations Manager\\"
+
+[HKEY_CLASSES_ROOT\WHController.WebHostController]
+@="WebHostController Class"
+
+[HKEY_CLASSES_ROOT\WHController.WebHostController\CLSID]
+@="{68D7C190-7E3C-4573-A528-6AA79070F36B}"
+
+[HKEY_CLASSES_ROOT\WHController.WebHostController\CurVer]
+@="WHController.WebHostController.1"
+
+[HKEY_CLASSES_ROOT\WHController.WebHostController.1]
+@="WebHostController Class"
+
+[HKEY_CLASSES_ROOT\WHController.WebHostController.1\CLSID]
+@="{68D7C190-7E3C-4573-A528-6AA79070F36B}"
+
+[HKEY_CLASSES_ROOT\WMIEventDataSource]
+@="WMIEventDataSource Class"
+
+[HKEY_CLASSES_ROOT\WMIEventDataSource\CLSID]
+@="{51BB7C80-E68F-489F-BEBD-8BAFE3128CCE}"
+
+[HKEY_CLASSES_ROOT\WMIEventDataSource.1]
+@="WMIEventDataSource Class"
+
+[HKEY_CLASSES_ROOT\WMIEventDataSource.1\CLSID]
+@="{51BB7C80-E68F-489F-BEBD-8BAFE3128CCE}"
+
+[HKEY_CLASSES_ROOT\WMIProbe]
+@="WMIProbe Class"
+
+[HKEY_CLASSES_ROOT\WMIProbe\CLSID]
+@="{92A40C04-DE27-47E2-ADB3-CD960E6BD9E2}"
+
+[HKEY_CLASSES_ROOT\WMIProbe.1]
+@="WMIProbe Class"
+
+[HKEY_CLASSES_ROOT\WMIProbe.1\CLSID]
+@="{92A40C04-DE27-47E2-ADB3-CD960E6BD9E2}"
+
+[HKEY_CLASSES_ROOT\WMIRawPerfCounterProbe]
+@="WMIRawPerfCounterProbe Class"
+
+[HKEY_CLASSES_ROOT\WMIRawPerfCounterProbe\CLSID]
+@="{F180EFE1-4803-4505-9FE1-ADB3A46F8F20}"
+
+[HKEY_CLASSES_ROOT\WMIRawPerfCounterProbe.1]
+@="WMIRawPerfCounterProbe Class"
+
+[HKEY_CLASSES_ROOT\WMIRawPerfCounterProbe.1\CLSID]
+@="{F180EFE1-4803-4505-9FE1-ADB3A46F8F20}"
+
+[HKEY_CLASSES_ROOT\WWWTextLogProbe]
+@="ClusterDiscovery Class"
+
+[HKEY_CLASSES_ROOT\WWWTextLogProbe\CLSID]
+@="{97b1ef21-757c-4004-86bb-57939e2c98d8}"
+
+[HKEY_CLASSES_ROOT\WWWTextLogProbe.1]
+@="ClusterDiscovery Class"
+
+[HKEY_CLASSES_ROOT\WWWTextLogProbe.1\CLSID]
+@="{97b1ef21-757c-4004-86bb-57939e2c98d8}"
+
+[HKEY_CLASSES_ROOT\WebLogEntryDataType]
+@="WebLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\WebLogEntryDataType\CLSID]
+@="{059D50D5-2321-4CC1-8562-65F0D38C5497}"
+
+[HKEY_CLASSES_ROOT\WebLogEntryDataType.1]
+@="WebLogEntryDataType Class"
+
+[HKEY_CLASSES_ROOT\WebLogEntryDataType.1\CLSID]
+@="{059D50D5-2321-4CC1-8562-65F0D38C5497}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\AgentConfigManager.DLL]
+"AppID"="{28F5174A-2D3E-45FE-913B-BDD69CF0AA00}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\Dispatcher.DLL]
+"AppID"="{1E9102B9-2CD9-4196-85DD-E90A45DF986F}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\InterceptCounters.DLL]
+"AppID"="{A27071EB-F6BD-4FBC-9FC7-7AE507739D33}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\InterceptScripting.DLL]
+"AppID"="{F0EC90CF-0C9B-4C91-B8AD-5A5DA6264F5E}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\InterceptSvc.EXE]
+"AppID"="{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\Messages.DLL]
+"AppID"="{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\PerfCounterMonitor.DLL]
+"AppID"="{8CAE0BB3-EDE1-429D-8E89-301CC3B12B0E}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\PerfMon.DLL]
+"AppID"="{F1864C01-1E70-4B6B-BA71-45CBB98D7319}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\SCOMMaintenanceMode.DLL]
+"AppID"="{66DE1BFB-922B-42B6-81AD-1306564B710B}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\ScriptApi.dll]
+"AppID"="{647CEE06-3875-413D-BEB0-84456CEE4965}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\WHController.DLL]
+"AppID"="{9923CF3A-4BC6-458B-87B1-3060C0BCA37A}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{1543DF6F-C092-4209-85FC-DEAACDFF3881}]
+@="System Center Operations Manager Performance Counter Snapshot Helper"
+"LaunchPermission"=hex:01,00,04,80,70,00,00,00,80,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,5c,00,04,00,00,00,00,00,14,00,0b,00,00,00,01,01,00,00,00,00,00,\
+  02,01,00,00,00,00,00,14,00,0b,00,00,00,01,01,00,00,00,00,00,05,04,00,00,00,\
+  00,00,14,00,1f,00,00,00,01,01,00,00,00,00,00,05,12,00,00,00,00,00,18,00,1f,\
+  00,00,00,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,00,01,02,00,00,00,00,\
+  00,05,20,00,00,00,20,02,00,00,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,\
+  00
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{1E9102B9-2CD9-4196-85DD-E90A45DF986F}]
+@="Dispatcher"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{28F5174A-2D3E-45FE-913B-BDD69CF0AA00}]
+@="AgentConfigManager"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}]
+@="Messages"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{62DD1D6B-4B8F-4831-9A98-E30AEAA6C349}]
+@="InterceptSvc"
+"AccessPermission"=hex:01,00,14,80,60,00,00,00,6c,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,4c,00,03,00,00,00,00,03,18,00,1f,00,00,00,01,02,00,00,00,00,00,\
+  05,20,00,00,00,21,02,00,00,00,03,18,00,1f,00,00,00,01,02,00,00,00,00,00,05,\
+  20,00,00,00,20,02,00,00,00,03,14,00,1f,00,00,00,01,01,00,00,00,00,00,01,00,\
+  00,00,00,01,01,00,00,00,00,00,01,00,00,00,00,01,02,00,00,00,00,00,05,20,00,\
+  00,00,20,02,00,00
+"LaunchPermission"=hex:01,00,14,80,48,00,00,00,54,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,34,00,02,00,00,00,00,03,18,00,1f,00,00,00,01,02,00,00,00,00,00,\
+  05,20,00,00,00,21,02,00,00,00,03,14,00,1f,00,00,00,01,01,00,00,00,00,00,01,\
+  00,00,00,00,01,01,00,00,00,00,00,01,00,00,00,00,01,02,00,00,00,00,00,05,20,\
+  00,00,00,20,02,00,00
+"LocalService"="System Center Management APM"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{647CEE06-3875-413D-BEB0-84456CEE4965}]
+@="MOMScriptAPI"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{66DE1BFB-922B-42B6-81AD-1306564B710B}]
+@="SCOMMaintenanceMode"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{8CAE0BB3-EDE1-429D-8E89-301CC3B12B0E}]
+@="PerfCounterMonitor"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{9923CF3A-4BC6-458B-87B1-3060C0BCA37A}]
+@="WHController"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{A27071EB-F6BD-4FBC-9FC7-7AE507739D33}]
+@="InterceptCounters"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{C0E953AF-5448-436c-A146-63B8AE52FD86}]
+@="System Center Health Service Host Process"
+"LaunchPermission"=hex:01,00,04,80,30,00,00,00,4c,00,00,00,00,00,00,00,14,00,\
+  00,00,02,00,1c,00,01,00,00,00,00,00,14,00,0b,00,00,00,01,01,00,00,00,00,00,\
+  01,00,00,00,00,01,05,00,00,00,00,00,05,15,00,00,00,a0,5f,84,1f,5e,2e,6b,49,\
+  ce,12,03,03,f4,01,00,00,01,05,00,00,00,00,00,05,15,00,00,00,a0,5f,84,1f,5e,\
+  2e,6b,49,ce,12,03,03,f4,01,00,00
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{F0EC90CF-0C9B-4C91-B8AD-5A5DA6264F5E}]
+@="InterceptScripting"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\AppID\{F1864C01-1E70-4B6B-BA71-45CBB98D7319}]
+@="PerfMon"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}]
+@="Monitor Class"
+"AppID"="{F1864C01-1E70-4B6B-BA71-45CBB98D7319}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\PerfMon.dll"
+"ThreadingModel"="Free"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\ProgID]
+@="PerfMon.Monitor.1"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\TypeLib]
+@="{63BC625C-55DE-4F88-9575-14FFC99B02D3}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{A55A26F6-84F8-40D7-993E-C80AAE40F3A3}\VersionIndependentProgID]
+@="PerfMon.Monitor"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}]
+@="MyProfiler"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}\InprocServer32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\StubProfiler.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}\ProgID]
+@="StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}.1"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{AD5651A8-B5C8-46CA-A11B-E82AEC2B8E78}\VersionIndependentProgID]
+@="StubProfiler.{AD5651A8-B5C8-46ca-A11B-E82AEC2B8E78}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}]
+@="IPMonitorDebugger"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\Interface\{5F5AA7E5-DE3D-4F0D-9215-5DB4925A23AC}\TypeLib]
+@="{63BC625C-55DE-4F88-9575-14FFC99B02D3}"
+"Version"="1.0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0]
+@="MOMScriptAPI 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMScriptAPI.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{027CCCD0-0454-47B5-A67D-D284DF308FC0}\1.0\HELPDIR]
+@="D:\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0]
+@="SCOM ApmDispatcher 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\Dispatcher.tlb"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{0F2B2E96-C10B-4A65-991E-673A0A3449AB}\3.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0]
+@="SCOM ApmMessages 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\Messages.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\Messages64.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{5C75AE84-172D-4A6D-AD3F-F2067A52C6E5}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}\1.0]
+@="SCOM ApmAgent 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{63BC625C-55DE-4F88-9575-14FFC99B02D3}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\V7.2.10311.0\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0]
+@="ConnectorBridge"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\ConnectorBridge.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B137F8A-8DA4-44F9-B0BF-EFDA68743EDD}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\Advisor\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0]
+@="XmlStringToDataItemModule 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\XmlStringToDataItemModule.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{7B64A257-CA74-43F5-B690-90B8DD99C50C}\1.0\HELPDIR]
+@="d:\\v3.2\\target\\debug\\i386\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0]
+@="SCOM ApmInterceptSvc 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptSvc.exe"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{800ED890-B73D-4831-AB15-E5E3BF99DBE4}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0]
+@="MOMIISModules 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MomIISModules.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{863675D9-32B5-4DFB-A762-6FE2006312E5}\1.0\HELPDIR]
+@="C:\\Program Files\\System Center Operations Manager 2007\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0]
+@="SCOM WebHostController 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\WHController.tlb"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{87A20375-1D2E-4EAF-B305-55B2BCB4FB8F}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0]
+@="ScriptObjects 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\ScriptObjects.tlb"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{A3C4EAFA-EAC4-4F79-8872-D512F0EF20CE}\1.0\HELPDIR]
+@="D:\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0]
+@="SCOM ApmPerfCounterMonitor 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\PerfCounterMonitor.tlb"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{AC9BEE63-CD0B-45D5-975C-0868716773F7}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0]
+@="SCOM ApmScripting 1.0  Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\0\win64]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\InterceptScripting.tlb"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{C3809409-4B3E-46C3-87E8-5546FF14B558}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\APMDOTNETAgent\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0]
+@="MOMLonghornModules 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\MOMModules2.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{CF921F18-7BD4-4C18-A4A3-8C135CCC674B}\1.0\HELPDIR]
+@="C:\\enlistments\\momv3bb\\target\\debug\\i386\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0]
+@="AgentConfigManager 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\0\win32]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\AgentConfigManager.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{D0F0E165-351A-401E-869C-E1BD2289FC76}\1.0\HELPDIR]
+@="C:\\Program Files\\Microsoft Monitoring Agent\\Agent\\"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0]
+@="SCOMMaintenanceMode 1.0 Type Library"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\0]
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\0\win32]
+@="C:\\Program Files\\Common Files\\Microsoft Shared\\Operations Manager\\scommaintenancemode.dll"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\FLAGS]
+@="0"
+
+[HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{F3AFCE6C-3B22-4FF4-9251-B3D8E8E3AD7F}\1.0\HELPDIR]
+@="C:\\Program Files\\Common Files\\Microsoft Shared\\Operations Manager\\"
+
+[HKEY_CLASSES_ROOT\WsManDataType]
+@="WsManDataType Class"
+
+[HKEY_CLASSES_ROOT\WsManDataType\CLSID]
+@="{2BC378C1-7AB6-46FA-B264-62EE1B794194}"
+
+[HKEY_CLASSES_ROOT\WsManDataType.1]
+@="WsManDataType Class"
+
+[HKEY_CLASSES_ROOT\WsManDataType.1\CLSID]
+@="{2BC378C1-7AB6-46FA-B264-62EE1B794194}"

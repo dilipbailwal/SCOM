@@ -1,0 +1,209 @@
+﻿<ManagementPack xsi:noNamespaceSchemaLocation="..\..\..\sdk\server\MPInfrastructure\schema\ManagementPackSchema.xsd" ContentReadable="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Manifest>
+    <Identity>
+      <ID>Microsoft.SystemCenter.Notifications.Internal</ID>
+      <Version>7.2.11719.0</Version>
+    </Identity>
+    <Name>Microsoft System Center Notifications Library</Name>
+    <References>
+      <Reference Alias="Notification">
+        <ID>Microsoft.SystemCenter.Notifications.Library</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="System">
+        <ID>System.Library</ID>
+        <Version>7.5.8500.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SystemCenter">
+        <ID>Microsoft.SystemCenter.Library</ID>
+        <Version>7.0.8437.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <TypeDefinitions>
+    <ModuleTypes>
+      <ConditionDetectionModuleType ID="Microsoft.SystemCenter.Notification.Recipients" Accessibility="Public" Stateful="false" PassThrough="false" Batching="false">
+        <Configuration>
+          <IncludeSchemaTypes>
+            <SchemaType>Notification!Microsoft.SystemCenter.Notification.RecipientsSchema</SchemaType>
+          </IncludeSchemaTypes>
+          <xsd:element name="Recipients" type="RecipientsType" />
+        </Configuration>
+        <ModuleImplementation>
+          <Composite>
+            <MemberModules>
+              <ConditionDetection TypeID="Notification!Microsoft.SystemCenter.Notification.InlineDirectoryRecipientResolver" ID="RecipientResolver">
+                <Recipients>$Config/Recipients$</Recipients>
+                <RecipientDirectory />
+              </ConditionDetection>
+            </MemberModules>
+            <Composition>
+              <Node ID="RecipientResolver" />
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>Notification!Microsoft.SystemCenter.Notification.RecipientsData</OutputType>
+        <InputTypes>
+          <InputType>System!System.BaseData</InputType>
+        </InputTypes>
+      </ConditionDetectionModuleType>
+    </ModuleTypes>
+  </TypeDefinitions>
+  <Monitoring>
+    <Overrides>
+      <!-- Set an override for ValidateAlertSubscription to run LocalSystem on Managementservers -->
+      <SecureReferenceOverride ID="Microsoft.SystemCenter.ValidateAlertSubscriptionAccountOverride" Context="Notification!Microsoft.SystemCenter.AlertNotificationSubscriptionServer" Enforced="false" SecureReference="SystemCenter!Microsoft.SystemCenter.ValidateAlertSubscriptionActionAccount">
+        <Value>01020202020202020202020202020202020202020200000000000000000000000000000000000000</Value>
+      </SecureReferenceOverride>
+    </Overrides>
+  </Monitoring>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Notifications Internal Library</Name>
+          <Description>Microsoft System Center Notifications Library: This management pack is used to hide notification related management pack objects that are exposed directly via the API for Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="CSY">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Jazyková sada knihovny interních oznámení</Name>
+          <Description>Knihovna oznámení softwaru Microsoft System Center: Tato sada Management Pack se používá ke skrytí objektů sady Management Pack vztahujících se k oznámení, která jsou zveřejňována prostřednictvím API pro nástroj Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="DEU">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Sprachpaket für die interne Benachrichtigungsbibliothek</Name>
+          <Description>Microsoft System Center-Benachrichtigungsbibliothek: Dieses Management Pack dient zum Ausblenden benachrichtigungsbezogener Management Pack-Objekte, die direkt über die API für Operations Manager verfügbar gemacht werden.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="ESN">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Paquete de idioma de biblioteca interna de notificaciones</Name>
+          <Description>Biblioteca de notificaciones de Microsoft System Center: Este módulo de administración se usa para ocultar objetos de módulo de administración relacionados con notificaciones que se exponen directamente mediante la API de Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="FRA">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Module linguistique de la bibliothèque interne de notifications</Name>
+          <Description>Bibliothèque de notifications Microsoft System Center : Ce pack d'administration sert à masquer les objets de pack d'administration liés aux notifications et exposés directement via l'API pour Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="HUN">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Értesítések belső könyvtár nyelvi csomagja</Name>
+          <Description>Microsoft System Center Notifications Library: Ez a felügyeleti csomag az értesítésekkel kapcsolatos azon felügyeleticsomag-objektumok elrejtésére szolgál, amelyek közvetlenül az Operations Manager API-ján keresztül érhetők el.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="ITA">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Language Pack della libreria interna delle notifiche</Name>
+          <Description>Libreria notifiche di Microsoft System Center: Questo Management Pack è utilizzato per nascondere gli oggetti del Management Pack connessi alle notifiche che vengono visualizzati direttamente tramite API per Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="JPN">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>内部の通知ライブラリ用言語パック</Name>
+          <Description>Microsoft System Center 通知ライブラリ:この管理パックは、Operations Manager の API 経由で直接公開されている通知関連の管理パック オブジェクトを非表示にするために使用します。</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="KOR">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>알림 내부 라이브러리 언어 팩</Name>
+          <Description>Microsoft System Center 알림 라이브러리: 이 관리 팩은 Operations Manager용 API를 통해 직접 노출되는 알림 관련 관리 팩 개체를 숨기는 데 사용됩니다.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="NLD">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Taalpakket voor de interne bibliotheek voor meldingen</Name>
+          <Description>Meldingenbibliotheek van Microsoft System Center: Dit management pack wordt gebruikt om meldingsgerelateerde management pack-objecten te verbergen die rechtstreeks worden aangegeven via de API voor Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="PLK">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Pakiet językowy wewnętrznej biblioteki powiadomień</Name>
+          <Description>Biblioteka powiadomień programu Microsoft System Center: Ten pakiet administracyjny służy do ukrywania obiektów pakietu administracyjnego związanych z powiadomieniami, które są udostępniane bezpośrednio przez interfejs API programu Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="PTB">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Pacote de Idiomas para a Biblioteca Interna de Notificações</Name>
+          <Description>Biblioteca de Notificações do Microsoft System Center: Este pacote de gerenciamento é utilizado para ocultar objetos de pacote de gerenciamento relacionados a notificações que são expostos diretamente por meio da API do Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="PTG">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Pacote de Idiomas da Biblioteca Interna de Notificações</Name>
+          <Description>Biblioteca de Notificações do Microsoft System Center: este pacote de gestão é utilizado para ocultar os objetos do pacote de gestão relacionados com a notificação que são diretamente expostos através da API para o Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="RUS">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Языковой пакет внутренней библиотеки уведомлений</Name>
+          <Description>Библиотека уведомлений Microsoft System Center: Этот пакет управления используется для скрытия связанных с уведомлением объектов пакетов управления, которые прямо через API раскрыты для Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="SVE">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Språkpaket för meddelandenas interna bibliotek</Name>
+          <Description>Meddelandebibliotek för Microsoft System Center: Detta hanteringspaket används för att dölja meddelanderelaterade objekt i hanteringspaketet vilka är direkt exponerade via API för Operations Manager.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="TRK">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>Uyarılar İç Kitaplık Dil Paketi</Name>
+          <Description>Microsoft System Center Bildirimler Kitaplığı: Bu yönetim paketi Operations Manager için API aracılığıyla doğrudan ortaya çıkarılan uyarılarla ilgili yönetim paketi nesnelerini gizlemek için kullanılır.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="CHS">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>通知内部库语言包</Name>
+          <Description>Microsoft System Center 通知库：此管理包用于隐藏与通过 Operations Manager 的 API 直接显示的管理包对象相关的通知。</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="CHT">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.Notifications.Internal">
+          <Name>通知內部程式庫語言套件</Name>
+          <Description>Microsoft System Center 通知程式庫：此管理組件用於隱藏與通知相關的管理組件物件 (透過 Operations Manager 的 API 直接公開)。</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>

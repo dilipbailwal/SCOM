@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<Configuration xmlns='http://tempuri.org/Configuration.xsd'>
+
+    <Features>
+        <Feature Service='Microsoft.EnterpriseManagement.Mom.Internal.EventLogging.MOMEventLog, Microsoft.Mom.Common, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                 Type='Microsoft.EnterpriseManagement.Mom.Internal.EventLogging.MOMEventLog, Microsoft.Mom.Common, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+            <Parameter Name='sourceName'>OpsMgr SDK Service</Parameter>
+        </Feature>
+        
+        <Feature Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IAuthorizationFeature, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                 Type='Microsoft.EnterpriseManagement.ServiceDataLayer.PassThroughAuthorizationFeatureImplementation, Microsoft.EnterpriseManagement.OperationsManager.Serverconfiguration, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' />
+
+        <Feature Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IDataAccessFeature, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.DataAccessFeatureImplementation, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Name='OperationsManager'>
+            <Parameter Name='objectView'>OperationsManager</Parameter>
+        </Feature>
+
+        <Feature Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IDataAccessFeature, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                     Type='Microsoft.EnterpriseManagement.ServiceDataLayer.DataAccessFeatureImplementation, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                     Name='ServiceManager'>
+          <Parameter Name='objectView'>ServiceManager</Parameter>
+        </Feature>
+     
+        <Feature Service='Microsoft.EnterpriseManagement.ServiceDataLayer.ISecureStorageManagerFeature, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                 Type='Microsoft.EnterpriseManagement.ServiceDataLayer.SecureStorageManagerFeatureImplementation, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' /> 
+                 
+        <Feature Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IManagementGroupPropertiesFeature, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                 Type='Microsoft.EnterpriseManagement.ServiceDataLayer.PassThroughLicenceManagementGroupPropertiesFeatureImplementation, CAManaged, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' >
+	   <Parameter Name='licence'>
+            <SecureCookie xmlns=''>
+              <ProductSKU>1</ProductSKU>
+              <LicenseSKU>3</LicenseSKU>
+              <ExpirationDateTime>12/31/9999 23:59:59</ExpirationDateTime>
+            </SecureCookie>
+          </Parameter>
+	</Feature>
+
+      <Feature Service='Microsoft.EnterpriseManagement.ServiceDataLayer.ClientSessionManager, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ClientSessionManager, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        
+        <Parameter Name='managerConfig' /><!--
+          <Configuration xmlns='http://tempuri.org/Configuration.xsd'>
+            
+            <Component Id='QueueRegistration'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.QueueRegistrationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.QueueRegistrationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' />
+
+            <Component Id='TypeCache'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IGenericNotificationRegistry, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.TypeSpaceNotifications, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+              <Parameter Name='queueRegistrationService'>{QueueRegistration}</Parameter>
+            </Component>
+
+            <Component Id='Grooming'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IGroomingNotificationRegistry, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.GroomingInfoNotifications, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+              <Parameter Name='queueRegistrationService'>{QueueRegistration}</Parameter>
+            </Component>
+
+            <Component Id='MembershipInfo'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IGenericNotificationRegistry, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.MembershipChangeNotifications, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' />
+
+            <Component Id='ExpirationWatcher'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.ExpirationWatcher, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ExpirationWatcher, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' />
+
+            <Component Id='Diagnostics'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IClientStatusNotificationRegistry, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.JobStatusNotifications, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+              <Parameter Name='type'>DiagnosticStatus</Parameter>
+              <Parameter Name='queueRegistrationService'>{QueueRegistration}</Parameter>
+            </Component>
+            <Component Id='Tasks'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IClientStatusNotificationRegistry, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.RuntimeService.TaskStatusNotifications, Microsoft.EnterpriseManagement.RuntimeService, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+                  <Parameter Name='queueRegistrationService'>{QueueRegistration}</Parameter>
+            </Component>
+
+            <Component Id='Recoveries'
+                       Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IClientStatusNotificationRegistry, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+                       Type='Microsoft.EnterpriseManagement.ServiceDataLayer.JobStatusNotifications, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+              <Parameter Name='type'>RecoveryStatus</Parameter>
+              <Parameter Name='queueRegistrationService'>{QueueRegistration}</Parameter>
+            </Component>
+          </Configuration>
+        </Parameter>-->
+
+      </Feature>
+      
+    </Features>
+  
+   <!-- the message dispatcher service -->
+   <Component Id='DispatcherService'
+             Service='Microsoft.EnterpriseManagement.Common.Internal.IDispatcherServiceInternal, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken=31bf3856ad364e35, Version=7.0.5000.0'
+             Type='Microsoft.EnterpriseManagement.ServiceDataLayer.BasicDispatcherService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken=31bf3856ad364e35, Version=7.0.5000.0' />
+
+    <!-- context -->
+    <Component Id='ClientDataAccess'
+             Service='Microsoft.EnterpriseManagement.Common.IClientDataAccess, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+             Type='Microsoft.EnterpriseManagement.Common.IClientDataAccess, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+             Lifetime='External' />    
+    
+    <Component Id='Context'
+               Service='Microsoft.EnterpriseManagement.Common.IContext, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.Common.ContextLocalProcess, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='callback'>{ClientDataAccess}</Parameter>
+    </Component>
+
+    <!-- receiver service -->
+<!--
+<Component Id='Receiver'
+           Service='Microsoft.EnterpriseManagement.ServiceDataLayer.ReceiverService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+           Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ReceiverService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+    <Parameter Name='endpointName'>ISdkService</Parameter>
+    <Parameter Name='serviceType'>Microsoft.EnterpriseManagement.Mom.Internal.ISdkService, Microsoft.Mom.Common, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"</Parameter>
+    <Parameter Name='implementationType'>Microsoft.EnterpriseManagement.RuntimeService.SDKReceiver, Microsoft.EnterpriseManagement.RuntimeService, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"</Parameter>
+</Component>
+-->
+
+  <!-- core services -->
+    <Component Id='SessionManager'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.ISessionManagerService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.SessionManagerService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>  
+  
+    <Component Id='ProductInformation'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IProductInformationService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ProductInformationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='ManagementPack'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IManagementPackService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ManagementPackService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+        <Array Name='protectedManagementPacks'>
+            <Item>System.Library, PublicKeyToken="31bf3856ad364e35"</Item>
+        </Array>
+    </Component>
+
+    <Component Id='EntityTypes'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IEntityTypesService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.EntityTypesService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='EntityObjects'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IEntityObjectsService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.EntityObjectsService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='Presentation'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IPresentationService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.PresentationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+    
+    <Component Id='Dashboard'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IDashboardService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken=31bf3856ad364e35, Version=7.0.5000.0'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.DashboardService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken=31bf3856ad364e35, Version=7.0.5000.0'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='ConnectorFrameworkConfiguration'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IConnectorFrameworkConfigurationService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ConnectorFrameworkConfigurationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='DataWarehouse'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IDataWarehouseService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.DataWarehouseService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='Knowledge'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IKnowledgeService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.KnowledgeService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='LanguagePacks'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.ILanguagePacksService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.LanguagePacksService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='MonitoringConfiguration'
+               Service='Microsoft.EnterpriseManagement.ServiceDataLayer.IMonitoringConfigurationServiceInternal, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.MonitoringConfigurationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='NotificationSubscription'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.INotificationSubscriptionService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.NotificationSubscriptionService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='Overrides'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IOverridesService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.OverridesService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='Reporting'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IReportingService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ReportingService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='Resource'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IResourceService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ResourceService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='SecurityConfiguration'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.ISecurityConfigurationService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.SecurityConfigurationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='ServiceLevelAgreement'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IServiceLevelAgreementService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ServiceLevelAgreementService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='Templates'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.ITemplatesService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.TemplatesService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='TypeCache'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.ITypeCacheService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.TypeCacheService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='TypeDefinitions'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.ITypeDefinitionsService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.TypeDefinitionsService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+    
+    <Component Id='UserSettings'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IUserSettingsService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.UserSettingsService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+        <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+
+<Component Id='AuthorizationService'
+	     Service='Microsoft.EnterpriseManagement.Mom.Sdk.Authorization.IAuthorizationService, Microsoft.Mom.Sdk.Authorization, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' 
+	     Type='Microsoft.EnterpriseManagement.ServiceDataLayer.PassThroughAuthorizationService, Microsoft.EnterpriseManagement.OperationsManager.Serverconfiguration, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"' />
+
+    <!-- Nova services -->
+  
+    <Component Id='ConfigurationExtension'
+               Service='Microsoft.EnterpriseManagement.Configuration.IExtensionRegistrationService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ExtensionRegistrationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+
+  <!-- OM services -->
+<Component Id='TaskConfiguration'
+           Service='Microsoft.EnterpriseManagement.Common.Internal.ITaskConfigurationService, Microsoft.EnterpriseManagement.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+           Type='Microsoft.EnterpriseManagement.ServiceDataLayer.TaskConfigurationService, Microsoft.EnterpriseManagement.DataAccessService.Core, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+  <Parameter Name='context'>{Context}</Parameter>
+</Component>
+
+<!-- <Component Id='TaskRuntime'
+           Service='Microsoft.EnterpriseManagement.RuntimeService.ITaskRuntimeServiceInternal, Microsoft.EnterpriseManagement.RuntimeService, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+           Type='Microsoft.EnterpriseManagement.RuntimeService.TaskRuntimeService, Microsoft.EnterpriseManagement.RuntimeService, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+  <Parameter Name='context'>{Context}</Parameter>
+</Component> -->
+    
+<Component Id='AdministrationJobStatusHandler'
+             Service='Microsoft.EnterpriseManagement.RuntimeService.IAdministrationJobStatusHandler, Microsoft.EnterpriseManagement.RuntimeService, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+             Type='Microsoft.EnterpriseManagement.Mom.ServiceDataLayer.AdministrationJobStatusHandler, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+</Component>
+
+    <Component Id='Administration'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IAdministrationService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.AdministrationService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='AEM'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IAEMService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.AEMService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='ConnectorFramework'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IConnectorFrameworkService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.ConnectorFrameworkService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='MonitoringObjects'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IMonitoringObjectsService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.MonitoringObjectsService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+
+    <Component Id='MonitoringNotification'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IMonitoringNotificationService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.MonitoringNotificationService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>  
+
+    <Component Id='OperationalData'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IOperationalDataService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.OperationalDataService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>      
+
+    <Component Id='MonitoringDataWarehouse'
+               Service='Microsoft.EnterpriseManagement.Common.Internal.IMonitoringDataWarehouseService, Microsoft.EnterpriseManagement.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+               Type='Microsoft.EnterpriseManagement.ServiceDataLayer.MonitoringDataWarehouseService, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='context'>{Context}</Parameter>
+    </Component>
+<!--
+    <Component Id='BackcompatChannel'
+             Service='Microsoft.EnterpriseManagement.Common.BackCompat.BackcompatChannel, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'
+             Type='Microsoft.EnterpriseManagement.Common.BackCompat.BackcompatChannel, Microsoft.EnterpriseManagement.DataAccessService.OperationsManager, Culture="", PublicKeyToken="31bf3856ad364e35", Version="7.0.5000.0"'>
+      <Parameter Name='endpointName'>SdkDataAccess</Parameter>
+    </Component>
+-->
+</Configuration>

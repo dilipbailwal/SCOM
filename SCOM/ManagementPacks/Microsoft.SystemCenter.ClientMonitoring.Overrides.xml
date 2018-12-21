@@ -1,0 +1,284 @@
+﻿<ManagementPack xsi:noNamespaceSchemaLocation="..\..\..\sdk\server\MPInfrastructure\schema\ManagementPackSchema.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Manifest>
+    <Identity>
+      <ID>Microsoft.SystemCenter.ClientMonitoring.Overrides</ID>
+      <Version>7.2.11719.0</Version>
+    </Identity>
+    <Name>Client Monitoring Overrides Management Pack</Name>
+    <References>
+      <Reference Alias="AEM">
+        <ID>Microsoft.SystemCenter.ClientMonitoring.Internal</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="AEMLib">
+        <ID>Microsoft.SystemCenter.ClientMonitoring.Library</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="AEMViews">
+        <ID>Microsoft.SystemCenter.ClientMonitoring.Views.Internal</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <Monitoring>
+    <Overrides>
+      <DiscoveryPropertyOverride ID="DeleteApps_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Discovery="AEM!Microsoft.SystemCenter.CM.AEM.Internal.DeleteApps" Property="Enabled">
+        <Value>true</Value>
+      </DiscoveryPropertyOverride>
+      <DiscoveryPropertyOverride ID="DeleteErrorGroups_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Discovery="AEM!Microsoft.SystemCenter.CM.AEM.Internal.DeleteErrorGroups" Property="Enabled">
+        <Value>true</Value>
+      </DiscoveryPropertyOverride>
+      <DiscoveryPropertyOverride ID="MECollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Discovery="AEM!Microsoft.SystemCenter.CM.AEM.Internal.MECollection" Property="Enabled">
+        <Value>true</Value>
+      </DiscoveryPropertyOverride>
+      <MonitorPropertyOverride ID="FileShareHealth_Monitor" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Monitor="AEMViews!Microsoft.SystemCenter.CM.AEM.Views.Internal.FileShareHealth" Property="Enabled">
+        <Value>true</Value>
+      </MonitorPropertyOverride>
+      <RuleConfigurationOverride ID="CabAndStatusFileTrimmer_CabKeepDays" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.CabAndStatusFileTrimmer" Module="FSWA" Parameter="TrimCabsNotTouchedInDays">
+        <Value>90</Value>
+      </RuleConfigurationOverride>
+      <RuleConfigurationOverride ID="CabAndStatusFileTrimmer_StatusKeepDays" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.CabAndStatusFileTrimmer" Module="FSWA" Parameter="TrimStatusFilesNotTouchedInDays">
+        <Value>90</Value>
+      </RuleConfigurationOverride>
+      <RuleConfigurationOverride ID="DeleteApps_GroomInDays" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.DeleteApps" Module="AemMEDataForDeletionDS1" Parameter="Days">
+        <Value>14</Value>
+      </RuleConfigurationOverride>
+      <RuleConfigurationOverride ID="DeleteErrorGroups_GroomInDays" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.DeleteErrorGroups" Module="AemMEDataForDeletionDS1" Parameter="Days">
+        <Value>14</Value>
+      </RuleConfigurationOverride>
+      <RulePropertyOverride ID="AppMachineCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppMachineCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppMachineCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppMachineCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppMachineCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppMachineCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppTotalHitCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppTotalHitCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppTotalHitCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppTotalHitCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppTotalHitCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppTotalHitCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppUserCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppUserCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppUserCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppUserCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="AppUserCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.AppUserCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketMachineCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketMachineCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketMachineCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketMachineCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketMachineCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketMachineCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketTotalHitCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketTotalHitCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketTotalHitCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketTotalHitCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketTotalHitCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketTotalHitCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketUserCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketUserCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketUserCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketUserCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="BucketUserCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.BucketUserCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="CabAndStatusFileTrimmer_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.CabAndStatusFileTrimmer" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="EventCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.EventCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="EventWriterToDataWarehouse" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.EventWriterToDataWarehouse" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="MEWriterToDataWarehouse" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.MEWriterToDataWarehouse" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="ResponsePublisher_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.ResponsePublisher" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="SystemBucketMachineCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.SystemBucketMachineCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="SystemBucketTotalHitCountMonitorErrorStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.SystemBucketTotalHitCountMonitorErrorStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="SystemBucketTotalHitCountMonitorSuccessStateSetter_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.SystemBucketTotalHitCountMonitorSuccessStateSetter" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="SystemBucketTotalHitCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.SystemBucketTotalHitCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+      <RulePropertyOverride ID="SystemBucketUserCountPerfCollection_Rule" Context="AEMLib!Microsoft.SystemCenter.CM.AEM.CrashListener" Enforced="true" Rule="AEM!Microsoft.SystemCenter.CM.AEM.Internal.SystemBucketUserCountPerfCollection" Property="Enabled">
+        <Value>true</Value>
+      </RulePropertyOverride>
+    </Overrides>
+  </Monitoring>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Client Monitoring Overrides Management Pack</Name>
+          <Description>This management pack is the default location for storing all overrides related to AEM rules, tasks and monitors.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="CSY">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Jazyková sada sady Management Pack přepsání monitorování klientů</Name>
+          <Description>Tato sada Management Pack je výchozím umístěním pro uložení všech přepsání, která souvisí s pravidly, úlohami a monitorováními AEM.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="DEU">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Sprachpaket für das Management Pack für Außerkraftsetzungen der Clientüberwachung</Name>
+          <Description>Dieses Management Pack ist der Standardspeicherort für alle Außerkraftsetzungen, die mit Regeln, Tasks und Monitoren von AEM in Zusammenhang stehen.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="ESN">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Paquete de idioma de módulo de administración de invalidaciones de supervisión de cliente</Name>
+          <Description>Este módulo de administración es la ubicación predeterminada para almacenar todas las invalidaciones relacionadas con las reglas, tareas y monitores de AEM.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="FRA">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Module linguistique du pack d'administration des remplacements d'analyse client</Name>
+          <Description>Ce pack d'administration est l'emplacement de stockage par défaut de tous les remplacements relatifs aux règles, tâches et analyses AEM.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="HUN">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Ügyfélfigyelő felülbírálása felügyeleti csomagjának nyelvi csomagja</Name>
+          <Description>Ez a felügyeleti csomag az AEM-szabályokkal, -feladatokkal és -figyelésekkel kapcsolatos felülbírálások alapértelmezett elérési útvonala.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="ITA">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Language Pack del Management Pack delle sostituzioni di monitoraggio client</Name>
+          <Description>Questo Management Pack è il percorso predefinito per archiviare tutte le sostituzioni relative alle regole AEM, alle attività e ai monitoraggi.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="JPN">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>クライアント監視の上書き管理パック用言語パック</Name>
+          <Description>この管理パックは、AEM のルール、タスク、モニターに関連するすべての上書きを格納するための既定の場所です。</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="KOR">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>클라이언트 모니터링 재정의 관리 팩 언어 팩</Name>
+          <Description>이 관리 팩은 AEM 규칙, 작업 및 모니터와 관련된 모든 재정의를 저장하기 위한 기본 위치입니다.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="NLD">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Taalpakket voor het management pack Client Monitoring-onderdrukkingen</Name>
+          <Description>Dit management pack is de standaardlocatie voor de opslag van alle onderdrukingen die gerelateerd zijn aan AEM-regels, -taken en -monitors.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="PLK">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Pakiet językowy dla pakietu administracyjnego zastąpień funkcji monitorowania klientów</Name>
+          <Description>Ten pakiet administracyjny to domyślne miejsce przechowywania wszystkich zastąpień dotyczących zasad, zadań i monitorów funkcji monitorowania wyjątków aplikacji (AEM).</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="PTB">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Pacote de Idiomas para Pacote de Gerenciamento de Substituições de Monitoramento de Clientes</Name>
+          <Description>Esse pacote de gerenciamento é o local padrão para armazenar todas as substituições relacionadas às regras, tarefas e aos monitores do AEM.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="PTG">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Pacote de Idiomas do Pacote de Gestão de Substituições de Monitorização de Cliente</Name>
+          <Description>Este pacote de gestão é a localização predefinida para armazenar todas as substituições relacionadas com tarefas, monitores e regras AEM.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="RUS">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Языковой пакет пакета управления "Переопределения наблюдения за клиентами"</Name>
+          <Description>Этот пакет управления представляет собой местоположение по умолчанию для хранения всех переопределений, относящихся к правилам, задачам и мониторам безагентного отслеживания исключений.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="SVE">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>Klientövervakningen åsidosätter hanteringspaketets språkpaket</Name>
+          <Description>Detta hanteringspaket är standardplatsen för lagring av alla åsidosättanden som rör AEM-regler, -uppgifter och -övervakare.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="TRK">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>İstemci İzleme Geçersiz Kılma Yönetim Paketi Dil Paketi</Name>
+          <Description>Bu yönetim paketi AEM kuralları, görevler ve izleyiciler ile ilgili tüm geçersiz kılma işlemleri için varsayılan saklama konumdur.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="CHS">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>客户端监视替代管理包语言包</Name>
+          <Description>此管理包是存储与 AEM 规则、任务和监视器相关的所有替代的默认位置。</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+    <LanguagePack ID="CHT">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ClientMonitoring.Overrides">
+          <Name>用戶端監視覆寫管理組件語言套件</Name>
+          <Description>此管理組件是儲存所有 AEM 規則、工作及監視相關覆寫的預設位置。</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>

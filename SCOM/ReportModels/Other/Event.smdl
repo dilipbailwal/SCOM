@@ -1,0 +1,2506 @@
+﻿<SemanticModel ID="Ga7c02e61-961e-4ba4-81c8-0a56e79db684" xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Culture>en-US</Culture>
+  <Entities>
+    <Entity ID="G661dfccf-e95e-4c06-bc19-37c61011327b">
+      <Name>Class</Name>
+      <CollectionName>Classes</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G6c7340ac-f8e0-4467-94dc-04ffac67d5c7</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G33bcc62f-a811-4ea8-b318-fff5b4d644af</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Gdc088866-d6d0-49fe-9e46-a4ff78e42187</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G98d4f92b-eb73-4bde-b31b-10a3fd0db76f</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G75aac17e-6593-4fb6-a95a-fe7b0f9710a3</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G9a3c744c-20d2-4e67-8396-3c41ee16c738</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>List</InstanceSelection>
+      <Fields>
+        <Attribute ID="G9a3c744c-20d2-4e67-8396-3c41ee16c738">
+          <Name>#Classes</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G661dfccf-e95e-4c06-bc19-37c61011327b</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G98d4f92b-eb73-4bde-b31b-10a3fd0db76f">
+          <Name>Class Image</Name>
+          <DataType>Binary</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <MimeType>image/jpeg</MimeType>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ClassImage" />
+        </Attribute>
+        <Attribute ID="Gbc883958-78ce-4484-bd39-f2141c21046a">
+          <Name>Class Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ClassGuid" />
+        </Attribute>
+        <Attribute ID="G6c7340ac-f8e0-4467-94dc-04ffac67d5c7">
+          <Name>Class System Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>65</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClassSystemName" />
+        </Attribute>
+        <Attribute ID="G75aac17e-6593-4fb6-a95a-fe7b0f9710a3">
+          <Name>Class Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>48</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClassDefaultName" />
+        </Attribute>
+        <Attribute ID="G0cb1fecf-089e-4ab7-9e8a-ad64ef46865e">
+          <Name>Class Default Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ClassDefaultDescription" />
+        </Attribute>
+        <Role ID="G33bcc62f-a811-4ea8-b318-fff5b4d644af">
+          <RelatedRoleID>G6ddf79fa-6fb9-4922-8d1a-2cc7be7058f6</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Class-ManagementPack" RelationEnd="Target" />
+        </Role>
+        <Attribute ID="Ged401fba-3ab3-4a13-abd8-6cb7014d4cdd">
+          <Name>Class Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClassId" />
+        </Attribute>
+        <Role ID="G9b293b5d-3e61-4c7b-9702-2962dcd2f823">
+          <RelatedRoleID>G5975a3a1-f0b0-4d94-a9e6-ccb756f8515d</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Object-Class" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vManagedEntityType" />
+    </Entity>
+    <Entity ID="G4f80984a-fd32-40da-8b61-1aa5aa79c46a">
+      <Name>Event</Name>
+      <CollectionName>Events</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G39f032bc-c12e-4192-8b87-6eaf1394fea5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G217b2070-f89e-40e3-9e3a-9922bc4c0357</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G49aa2207-a33d-472f-acf8-a0452f22e4bc</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G9758af36-b50a-49b4-8778-4e88d61af981</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Ga2cdf20f-0f2d-4c70-81ca-966df50f040f</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G9dcc8933-bd86-4249-8e58-121009a9539c</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G7b9d2e0d-ca5d-430c-8b33-dbc98dff725c</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gee615695-7582-45e8-af76-1e0739afe00d</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G6c248788-6270-4057-8af4-10d0c05457be</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gef9738ca-0dec-426e-85c3-cf4139c24c61</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G28cf1fff-0860-4101-9c80-3bc9b3ba6e44</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G39f032bc-c12e-4192-8b87-6eaf1394fea5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G19da9bc9-41b1-4f02-b4cc-b7068ae1a377</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G631b30aa-69e1-4d40-acc7-5ded505f3cba</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G217b2070-f89e-40e3-9e3a-9922bc4c0357</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G49aa2207-a33d-472f-acf8-a0452f22e4bc</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gcbdcc5dd-febd-44ae-8217-3e2b633ea66b</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gcbdcc5dd-febd-44ae-8217-3e2b633ea66b">
+          <Name>#Events</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G4f80984a-fd32-40da-8b61-1aa5aa79c46a</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G6d2976e8-6aa2-407e-acb0-fbc20371a333">
+          <Name>Date Time</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>f</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <Variations>
+            <Attribute ID="Gbeb5a305-ebb7-4c79-8ec2-e835263582ed">
+              <Name>Time Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G6cfe03c3-bffa-4355-a032-5dea3452d36a">
+              <Name>Time Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G9dce1c54-d165-4107-9fd6-7e116fbdc550">
+              <Name>Time Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="G180c6b3d-f7f9-404c-95d1-2c6bc09bc123">
+              <Name>Time Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="Ge6ad2caf-e0e4-4e74-8302-60de7bbbb76d">
+              <Name>First Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G4ac3b218-1c63-492e-8203-45dfd63b3bef">
+              <Name>Last Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DateTime" />
+        </Attribute>
+        <Attribute ID="G39f032bc-c12e-4192-8b87-6eaf1394fea5">
+          <Name>Event Display Number</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>6</Width>
+          <Format>g</Format>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="EventDisplayNumber" />
+        </Attribute>
+        <Attribute ID="Gac255360-3328-44c0-adae-50e1067008cd">
+          <Name>Event Number</Name>
+          <DataType>Decimal</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <Format>f0</Format>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="EventNumber" />
+        </Attribute>
+        <Attribute ID="G427986e5-738b-4bb8-b36c-6f7348267805">
+          <Name>Event Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>String</DataType>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <Column Name="EventId" />
+        </Attribute>
+        <Role ID="Gee615695-7582-45e8-af76-1e0739afe00d">
+          <RelatedRoleID>Gc300436a-dcbf-4543-b2db-d361bd1b6f3b</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventSource" RelationEnd="Target" />
+        </Role>
+        <Role ID="G9758af36-b50a-49b4-8778-4e88d61af981">
+          <RelatedRoleID>Gd28e683e-1bc9-4da8-ade2-61d044536150</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventLog" RelationEnd="Target" />
+        </Role>
+        <Role ID="G9dcc8933-bd86-4249-8e58-121009a9539c">
+          <RelatedRoleID>G45779894-3e4a-45a8-b5ff-e8e71d9bdded</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventType" RelationEnd="Target" />
+        </Role>
+        <Role ID="G217b2070-f89e-40e3-9e3a-9922bc4c0357">
+          <RelatedRoleID>Gbb86332e-30b0-40ee-8e08-2f8ed702018f</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventLoggingComputer" RelationEnd="Target" />
+        </Role>
+        <Role ID="G19da9bc9-41b1-4f02-b4cc-b7068ae1a377">
+          <RelatedRoleID>G93bd260a-d8d6-42fc-936f-7617e33ba5e7</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventUser" RelationEnd="Target" />
+        </Role>
+        <Role ID="Gef9738ca-0dec-426e-85c3-cf4139c24c61">
+          <RelatedRoleID>G4de092ed-4ff9-4769-9e14-48ac00eb9bcf</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventCategory" RelationEnd="Target" />
+        </Role>
+        <Role ID="G9df3bca8-b80a-43db-aa75-5b1fdf8d0b50">
+          <RelatedRoleID>G209371d1-352d-4303-ba29-25dfdd60959f</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventParameter" RelationEnd="Source" />
+        </Role>
+        <Role ID="G47eae173-7ff0-49d2-9b94-fb51e7d469da">
+          <RelatedRoleID>G064d98ab-1e66-4fd2-a5f7-a5c88353ac7e</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Event-EventDetails" RelationEnd="Source" />
+        </Role>
+        <Role ID="Gf7799cb6-e2cc-42ef-bac8-08ba16f89838">
+          <RelatedRoleID>G6d8b2332-58ea-401d-b139-69f14d7ced79</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Event-EventRule" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEvent" />
+    </Entity>
+    <Entity ID="Ged610b83-d87d-444c-b8ed-68be8f58616d">
+      <Name>Event Category</Name>
+      <CollectionName>Event Categories</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gd6e40e51-f3e1-45da-aa9c-e93616b1810c</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G6c248788-6270-4057-8af4-10d0c05457be</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G28cf1fff-0860-4101-9c80-3bc9b3ba6e44</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G7b4d6406-8fca-4d4b-bf35-3cd85456d466</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="G7b4d6406-8fca-4d4b-bf35-3cd85456d466">
+          <Name>#Event Categories</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Ged610b83-d87d-444c-b8ed-68be8f58616d</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G70154fca-260f-4506-8519-6fc772058b90">
+          <Name>Event Category Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventCategoryId" />
+        </Attribute>
+        <Attribute ID="G28cf1fff-0860-4101-9c80-3bc9b3ba6e44">
+          <Name>Event Category Title</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventCategoryTitle" />
+        </Attribute>
+        <Role ID="Gd6e40e51-f3e1-45da-aa9c-e93616b1810c">
+          <RelatedRoleID>Gfbf9e527-3bf1-4151-8172-344efb449bf2</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="EventCategory-EventSource" RelationEnd="Target" />
+        </Role>
+        <Attribute ID="G7d2d0314-8197-4bd8-a9e9-d4a206c7f9a1">
+          <Name>Event Category Number</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventCategoryNumber" />
+        </Attribute>
+        <Role ID="G4de092ed-4ff9-4769-9e14-48ac00eb9bcf">
+          <RelatedRoleID>Gef9738ca-0dec-426e-85c3-cf4139c24c61</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventCategory" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventCategory" />
+    </Entity>
+    <Entity ID="Gcf1d101a-99ed-4deb-8af5-a0ffe77a177d">
+      <Name>Event Detail</Name>
+      <CollectionName>Event Details</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G064d98ab-1e66-4fd2-a5f7-a5c88353ac7e</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G064d98ab-1e66-4fd2-a5f7-a5c88353ac7e</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G39f032bc-c12e-4192-8b87-6eaf1394fea5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G064d98ab-1e66-4fd2-a5f7-a5c88353ac7e</RoleID>
+            </RolePathItem>
+            <RolePathItem>
+              <RoleID>G217b2070-f89e-40e3-9e3a-9922bc4c0357</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G49aa2207-a33d-472f-acf8-a0452f22e4bc</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G787b864d-443a-4617-8fc8-8d76e97588d9</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G971cb17d-1665-4d34-bcb6-cd6347cf4b64</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="G971cb17d-1665-4d34-bcb6-cd6347cf4b64">
+          <Name>#Event Details</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Gcf1d101a-99ed-4deb-8af5-a0ffe77a177d</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="Gb4b7a88c-0a38-4bab-ae7f-a46a27a4ad5e">
+          <Name>Raw Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="RawDescription" />
+        </Attribute>
+        <Attribute ID="G787b864d-443a-4617-8fc8-8d76e97588d9">
+          <Name>Rendered Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="RenderedDescription" />
+        </Attribute>
+        <Attribute ID="Gf1c00731-ac7b-4f9f-ab6f-246ec64a4ade">
+          <Name>Event Data</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="EventData" />
+        </Attribute>
+        <Role ID="G064d98ab-1e66-4fd2-a5f7-a5c88353ac7e">
+          <RelatedRoleID>G47eae173-7ff0-49d2-9b94-fb51e7d469da</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Event-EventDetails" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventDetail" />
+    </Entity>
+    <Entity ID="G3f08d670-6d9f-4a78-96c6-38621a89e2c9">
+      <Name>Event Log</Name>
+      <CollectionName>Event Logs</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Ga2cdf20f-0f2d-4c70-81ca-966df50f040f</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>Ga2cdf20f-0f2d-4c70-81ca-966df50f040f</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gd04baefe-5260-4e39-8773-423dfe4368f0</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="Gd04baefe-5260-4e39-8773-423dfe4368f0">
+          <Name>#Event Logs</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G3f08d670-6d9f-4a78-96c6-38621a89e2c9</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="Ga2cdf20f-0f2d-4c70-81ca-966df50f040f">
+          <Name>Title</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>18</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventLogTitle" />
+        </Attribute>
+        <Attribute ID="G30dc8289-7584-42f8-9a14-360f597fed3c">
+          <Name>Event Log Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventLogId" />
+        </Attribute>
+        <Role ID="Gd28e683e-1bc9-4da8-ade2-61d044536150">
+          <RelatedRoleID>G9758af36-b50a-49b4-8778-4e88d61af981</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventLog" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventChannel" />
+    </Entity>
+    <Entity ID="Ga1388965-2d63-4ec1-a98e-b1c9ccbcc576">
+      <Name>Event Logging Computer</Name>
+      <CollectionName>Event Logging Computers</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G49aa2207-a33d-472f-acf8-a0452f22e4bc</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G49aa2207-a33d-472f-acf8-a0452f22e4bc</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G22052007-6e1f-4560-af4d-d17ab6bd41ee</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="G22052007-6e1f-4560-af4d-d17ab6bd41ee">
+          <Name>#Event Logging Computers</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Ga1388965-2d63-4ec1-a98e-b1c9ccbcc576</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G49aa2207-a33d-472f-acf8-a0452f22e4bc">
+          <Name>Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ComputerName" />
+        </Attribute>
+        <Attribute ID="G9dc022a9-4286-4311-9270-9d5b705eb202">
+          <Name>Event Logging Computer Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventLoggingComputerId" />
+        </Attribute>
+        <Role ID="Gbb86332e-30b0-40ee-8e08-2f8ed702018f">
+          <RelatedRoleID>G217b2070-f89e-40e3-9e3a-9922bc4c0357</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventLoggingComputer" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventLoggingComputer" />
+    </Entity>
+    <Entity ID="Gc757cb29-569a-4e83-9db6-1da728bfed50">
+      <Name>Event Parameter</Name>
+      <CollectionName>Event Parameters</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Gb18761b9-5342-4d77-836d-00dfc10c88ce</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>Gb18761b9-5342-4d77-836d-00dfc10c88ce</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G00279bba-70df-4645-8294-1901724d1729</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G73ec1ef2-1573-4c40-815e-88e04a5fe960</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>List</InstanceSelection>
+      <Fields>
+        <Attribute ID="G73ec1ef2-1573-4c40-815e-88e04a5fe960">
+          <Name>#Event Parameters</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Gc757cb29-569a-4e83-9db6-1da728bfed50</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="Gb18761b9-5342-4d77-836d-00dfc10c88ce">
+          <Name>Parameter Index</Name>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ParameterIndex" />
+        </Attribute>
+        <Attribute ID="G00279bba-70df-4645-8294-1901724d1729">
+          <Name>Parameter Value</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>186</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ParameterValue" />
+        </Attribute>
+        <Role ID="G209371d1-352d-4303-ba29-25dfdd60959f">
+          <RelatedRoleID>G9df3bca8-b80a-43db-aa75-5b1fdf8d0b50</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Event-EventParameter" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventParameter" />
+    </Entity>
+    <Entity ID="Gee0b31e1-a39f-433a-ab78-b73e26b6dafa">
+      <Name>Event Rule</Name>
+      <CollectionName>Event Rules</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G6d8b2332-58ea-401d-b139-69f14d7ced79</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G6d2976e8-6aa2-407e-acb0-fbc20371a333</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G6d8b2332-58ea-401d-b139-69f14d7ced79</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G39f032bc-c12e-4192-8b87-6eaf1394fea5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G573b7556-92d0-463d-bdc3-49f4a1167c5b</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G7e0f7553-38e7-473c-bd80-16b8f30d2267</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1b96c684-4160-42b8-a21a-5088d274e779</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G67b42a67-f8cd-4956-b8fb-0d7ca34923c0</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1b96c684-4160-42b8-a21a-5088d274e779</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Gce402fc9-6045-4d5d-9e23-9762756688ff</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1b96c684-4160-42b8-a21a-5088d274e779</RoleID>
+            </RolePathItem>
+            <RolePathItem>
+              <RoleID>G5975a3a1-f0b0-4d94-a9e6-ccb756f8515d</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G98d4f92b-eb73-4bde-b31b-10a3fd0db76f</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1b96c684-4160-42b8-a21a-5088d274e779</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Ge0abdc9f-aed1-4f34-93d4-9e8d6397f7f5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G6d8b2332-58ea-401d-b139-69f14d7ced79</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G39f032bc-c12e-4192-8b87-6eaf1394fea5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G573b7556-92d0-463d-bdc3-49f4a1167c5b</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G0242a3cf-6360-4b12-8fcb-5dd3b3e0ede5</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gcc89d36f-cfe8-4ff4-9778-b18663fc7097</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gcc89d36f-cfe8-4ff4-9778-b18663fc7097">
+          <Name>#Event Rules</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Gee0b31e1-a39f-433a-ab78-b73e26b6dafa</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Role ID="G6d8b2332-58ea-401d-b139-69f14d7ced79">
+          <RelatedRoleID>Gf7799cb6-e2cc-42ef-bac8-08ba16f89838</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Event-EventRule" RelationEnd="Target" />
+        </Role>
+        <Role ID="G573b7556-92d0-463d-bdc3-49f4a1167c5b">
+          <RelatedRoleID>Ge5a1c5c1-af97-4a0b-b873-89865754f9d0</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="EventRule-Rule" RelationEnd="Target" />
+        </Role>
+        <Role ID="G1b96c684-4160-42b8-a21a-5088d274e779">
+          <RelatedRoleID>G5bc85b20-0d91-416a-866e-f3e96a5b37a3</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="EventRule-Object" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="Event_vEventRule" />
+    </Entity>
+    <Entity ID="Gaf40230e-c959-4696-a6a4-6b886e8b4e30">
+      <Name>Event Source</Name>
+      <CollectionName>Event Sources</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G6c248788-6270-4057-8af4-10d0c05457be</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G6c248788-6270-4057-8af4-10d0c05457be</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gb0afbd32-4b84-47b0-b72f-ca78272e48a7</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="Gb0afbd32-4b84-47b0-b72f-ca78272e48a7">
+          <Name>#Event Sources</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Gaf40230e-c959-4696-a6a4-6b886e8b4e30</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G4f3a0c4a-3d3f-4709-a155-c8ed61aa09e1">
+          <Name>Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="EventSourceGuid" />
+        </Attribute>
+        <Attribute ID="G6c248788-6270-4057-8af4-10d0c05457be">
+          <Name>Title</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>22</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventSourceTitle" />
+        </Attribute>
+        <Attribute ID="G251100df-5c4f-4d4a-9361-c960237f014d">
+          <Name>Event Source Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventSourceId" />
+        </Attribute>
+        <Role ID="Gfbf9e527-3bf1-4151-8172-344efb449bf2">
+          <RelatedRoleID>Gd6e40e51-f3e1-45da-aa9c-e93616b1810c</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="EventCategory-EventSource" RelationEnd="Source" />
+        </Role>
+        <Role ID="Gc300436a-dcbf-4543-b2db-d361bd1b6f3b">
+          <RelatedRoleID>Gee615695-7582-45e8-af76-1e0739afe00d</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventSource" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventPublisher" />
+    </Entity>
+    <Entity ID="Ga2d3fb57-1bef-4896-ab9e-8957978fe8a0">
+      <Name>Event Type</Name>
+      <CollectionName>Event Types</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G7b9d2e0d-ca5d-430c-8b33-dbc98dff725c</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G7b9d2e0d-ca5d-430c-8b33-dbc98dff725c</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G21ce7f11-9dd4-4f9f-978c-09a35c4cb481</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="G21ce7f11-9dd4-4f9f-978c-09a35c4cb481">
+          <Name>#Event Types</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Ga2d3fb57-1bef-4896-ab9e-8957978fe8a0</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G7b9d2e0d-ca5d-430c-8b33-dbc98dff725c">
+          <Name>Title</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>13</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventTypeTitle" />
+        </Attribute>
+        <Attribute ID="G59368718-9194-4025-a535-ed78ee3ff153">
+          <Name>Event Type Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventTypeId" />
+        </Attribute>
+        <Role ID="G45779894-3e4a-45a8-b5ff-e8e71d9bdded">
+          <RelatedRoleID>G9dcc8933-bd86-4249-8e58-121009a9539c</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventType" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventLevel" />
+    </Entity>
+    <Entity ID="G9df7e262-98c5-45d3-ad05-0c5aa5418c49">
+      <Name>Event User</Name>
+      <CollectionName>Event Users</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G631b30aa-69e1-4d40-acc7-5ded505f3cba</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G631b30aa-69e1-4d40-acc7-5ded505f3cba</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G36ecb293-4f19-4c1b-b94b-823b75f72d63</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <IsLookup>true</IsLookup>
+      <Fields>
+        <Attribute ID="G36ecb293-4f19-4c1b-b94b-823b75f72d63">
+          <Name>#Event Users</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G9df7e262-98c5-45d3-ad05-0c5aa5418c49</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G631b30aa-69e1-4d40-acc7-5ded505f3cba">
+          <Name>Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>3</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventUserName" />
+        </Attribute>
+        <Attribute ID="Ga27f16ef-4f25-4ba3-9b21-04677eee68d3">
+          <Name>Event User Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventUserId" />
+        </Attribute>
+        <Role ID="G93bd260a-d8d6-42fc-936f-7617e33ba5e7">
+          <RelatedRoleID>G19da9bc9-41b1-4f02-b4cc-b7068ae1a377</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Event-EventUser" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vEventUserName" />
+    </Entity>
+    <Entity ID="G4245e658-c059-4a91-9a1b-ef42b4babdb6">
+      <Name>Management Pack</Name>
+      <CollectionName>Management Packs</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Gdc088866-d6d0-49fe-9e46-a4ff78e42187</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G198684b0-c287-4323-a64b-777b528b9625</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gbadc78a9-28fc-4ed4-947f-2dc949d699c3</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Ge51f27de-e307-4bdd-ad9c-5fa79ad5c5d0</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="Ge51f27de-e307-4bdd-ad9c-5fa79ad5c5d0">
+          <Name>#Management Packs</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G4245e658-c059-4a91-9a1b-ef42b4babdb6</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G3d785536-2991-4a7c-a15e-e1a19572fdd3">
+          <Name>Management Pack Version Independent Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ManagementPackVersionIndependentGuid" />
+        </Attribute>
+        <Attribute ID="Gdc088866-d6d0-49fe-9e46-a4ff78e42187">
+          <Name>Management Pack System Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>61</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementPackSystemName" />
+        </Attribute>
+        <Attribute ID="G198684b0-c287-4323-a64b-777b528b9625">
+          <Name>Management Pack Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>44</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementPackDefaultName" />
+        </Attribute>
+        <Attribute ID="Gf51ab18f-5fc0-43b0-8409-796b3d8090e4">
+          <Name>Management Pack Default Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ManagementPackDefaultDescription" />
+        </Attribute>
+        <Attribute ID="Gbadc78a9-28fc-4ed4-947f-2dc949d699c3">
+          <Name>Sealed Indicator</Name>
+          <DataType>Boolean</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="SealedIndicator" />
+        </Attribute>
+        <Attribute ID="Gdbb6ff11-e31d-4d04-ad06-91a50961d475">
+          <Name>Management Pack Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementPackId" />
+        </Attribute>
+        <Role ID="G28aa306b-9e59-44e8-bfde-88cfd6ab6df6">
+          <RelatedRoleID>Gb1f12ba8-2f6f-4e69-91b7-13ded8a53bfe</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Rule-ManagementPack" RelationEnd="Source" />
+        </Role>
+        <Role ID="G6ddf79fa-6fb9-4922-8d1a-2cc7be7058f6">
+          <RelatedRoleID>G33bcc62f-a811-4ea8-b318-fff5b4d644af</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Class-ManagementPack" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vManagementPack" />
+    </Entity>
+    <Entity ID="G4576055d-af9f-4699-90c5-acf2ca0d2792">
+      <Name>Object</Name>
+      <CollectionName>Objects</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G67b42a67-f8cd-4956-b8fb-0d7ca34923c0</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G5975a3a1-f0b0-4d94-a9e6-ccb756f8515d</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G98d4f92b-eb73-4bde-b31b-10a3fd0db76f</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Ge0abdc9f-aed1-4f34-93d4-9e8d6397f7f5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G5d702fdc-f695-4d6c-87d8-207e9ff24b13</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gce402fc9-6045-4d5d-9e23-9762756688ff</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Ga3c3b8d0-ebc5-42bb-ba7a-aeda2335a572</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="Ga3c3b8d0-ebc5-42bb-ba7a-aeda2335a572">
+          <Name>#Objects</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G4576055d-af9f-4699-90c5-acf2ca0d2792</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G4cd0f28d-e6de-47b6-aa7e-945ce645857b">
+          <Name>Full Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="FullName" />
+        </Attribute>
+        <Attribute ID="G5d702fdc-f695-4d6c-87d8-207e9ff24b13">
+          <Name>Path</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="Path" />
+        </Attribute>
+        <Attribute ID="G1a626ab9-6dc3-49ea-b533-9fab9e4ec110">
+          <Name>Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ContextualName>Role</ContextualName>
+          <Column Name="Name" />
+        </Attribute>
+        <Attribute ID="Ge0abdc9f-aed1-4f34-93d4-9e8d6397f7f5">
+          <Name>Display Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="DisplayName" />
+        </Attribute>
+        <Attribute ID="G7005055d-2fc0-4782-9ecf-6b23fae65c8d">
+          <Name>Management Group Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <Column Name="ManagementGroupGuid" />
+        </Attribute>
+        <Attribute ID="Gce402fc9-6045-4d5d-9e23-9762756688ff">
+          <Name>Management Group Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>11</Width>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementGroupDefaultName" />
+        </Attribute>
+        <Attribute ID="G67b42a67-f8cd-4956-b8fb-0d7ca34923c0">
+          <Name>Object Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ObjectGuid" />
+        </Attribute>
+        <Attribute ID="G930ee285-40ac-4963-92dc-6de0e3cb189b">
+          <Name>Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="DefaultName" />
+        </Attribute>
+        <Attribute ID="Gb60975b8-a26b-4d65-8c09-9c6c9c196886">
+          <Name>Object Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ObjectId" />
+        </Attribute>
+        <Role ID="G2e3fa0f1-d5cf-4e36-8fb6-0b4c6b590083">
+          <RelatedRoleID>Gcdfed54d-26ff-4f8b-84ff-15b3f280d165</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Object-Object" RelationEnd="Source" />
+        </Role>
+        <Role ID="G5975a3a1-f0b0-4d94-a9e6-ccb756f8515d">
+          <RelatedRoleID>G9b293b5d-3e61-4c7b-9702-2962dcd2f823</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Object-Class" RelationEnd="Target" />
+        </Role>
+        <Role ID="Gcdfed54d-26ff-4f8b-84ff-15b3f280d165">
+          <Name>Top Level Host Object</Name>
+          <RelatedRoleID>G2e3fa0f1-d5cf-4e36-8fb6-0b4c6b590083</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Object-Object" RelationEnd="Target" />
+        </Role>
+        <Role ID="G5bc85b20-0d91-416a-866e-f3e96a5b37a3">
+          <RelatedRoleID>G1b96c684-4160-42b8-a21a-5088d274e779</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="EventRule-Object" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vManagedEntity" />
+    </Entity>
+    <Entity ID="Gc5da3385-2ec2-48fb-b6db-e462584bbbae">
+      <Name>Rule</Name>
+      <CollectionName>Rules</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G7e0f7553-38e7-473c-bd80-16b8f30d2267</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G0242a3cf-6360-4b12-8fcb-5dd3b3e0ede5</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gb1f12ba8-2f6f-4e69-91b7-13ded8a53bfe</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G198684b0-c287-4323-a64b-777b528b9625</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gf9945f3d-eba7-4255-a7f8-e97d9be9ac14</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gf9945f3d-eba7-4255-a7f8-e97d9be9ac14">
+          <Name>#Rules</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Gc5da3385-2ec2-48fb-b6db-e462584bbbae</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="Gb25643e7-4bbb-44a6-9a0b-7815d8335095">
+          <Name>Rule Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="RuleGuid" />
+        </Attribute>
+        <Attribute ID="G7e0f7553-38e7-473c-bd80-16b8f30d2267">
+          <Name>Rule System Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>130</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="RuleSystemName" />
+        </Attribute>
+        <Attribute ID="G0242a3cf-6360-4b12-8fcb-5dd3b3e0ede5">
+          <Name>Rule Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>104</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="RuleDefaultName" />
+        </Attribute>
+        <Attribute ID="Gacc83a0b-40d9-4261-bac9-70a808353f8c">
+          <Name>Rule Default Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="RuleDefaultDescription" />
+        </Attribute>
+        <Attribute ID="Gdb7e2aab-228a-4931-8faa-7fb3506d0f5a">
+          <Name>Rule Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="RuleId" />
+        </Attribute>
+        <Role ID="Gb1f12ba8-2f6f-4e69-91b7-13ded8a53bfe">
+          <RelatedRoleID>G28aa306b-9e59-44e8-bfde-88cfd6ab6df6</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Rule-ManagementPack" RelationEnd="Target" />
+        </Role>
+        <Role ID="Ge5a1c5c1-af97-4a0b-b873-89865754f9d0">
+          <RelatedRoleID>G573b7556-92d0-463d-bdc3-49f4a1167c5b</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="EventRule-Rule" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vRule" />
+    </Entity>
+  </Entities>
+  <DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+    <ID>Event</ID>
+    <Name>Event</Name>
+    <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+    <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+    <Annotations xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+        <Value>true</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+        <Value>_ALL_TABLES_</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+        <Value>1</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+        <Value>true</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+        <Value>
+          <Layouts xmlns="">
+            <Diagram>
+              <Name>_ALL_TABLES_</Name>
+              <DiagramLayout>
+                <dds>
+                  <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="64" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-897" scrolltop="-1782" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="17912" y="18203" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <font>
+                      <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+                    </font>
+                    <mouseicon>
+                      <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                    </mouseicon>
+                  </diagram>
+                  <layoutmanager>
+                    <ddsxmlobj />
+                  </layoutmanager>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Event" left="10367" top="14034" logicalid="31" controlid="1" masterid="0" hint1="0" hint2="0" width="7513" height="5564" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000591d0000bc150000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEvent" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventUser" left="20509" top="17104" logicalid="32" controlid="2" masterid="0" hint1="0" hint2="0" width="5343" height="1913" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000df14000079070000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventUserName" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventParameter" left="16709" top="21758" logicalid="33" controlid="3" masterid="0" hint1="0" hint2="0" width="6095" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000cf170000fe080000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventParameter" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventCategory" left="1308" top="19996" logicalid="34" controlid="4" masterid="0" hint1="0" hint2="0" width="6403" height="2761" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="0008000003190000c90a0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventCategory" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventDetail" left="14023" top="25251" logicalid="35" controlid="5" masterid="0" hint1="0" hint2="0" width="6332" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000bc180000a50a0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventDetail" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventSource" left="0" top="16257" logicalid="36" controlid="6" masterid="0" hint1="0" hint2="0" width="7601" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000b11d0000fe080000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventPublisher" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventLog" left="4848" top="24724" logicalid="37" controlid="7" masterid="0" hint1="0" hint2="0" width="7426" height="1949" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000021d00009d070000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventChannel" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventType" left="20442" top="13644" logicalid="38" controlid="8" masterid="0" hint1="0" hint2="0" width="4302" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000ce10000057070000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventLevel" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Object" left="10368" top="5248" logicalid="39" controlid="9" masterid="0" hint1="0" hint2="0" width="6491" height="5564" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="000800005b190000bc150000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vManagedEntity" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Class" left="19297" top="6654" logicalid="40" controlid="10" masterid="0" hint1="0" hint2="0" width="6915" height="3915" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000031b00004b0f0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vManagedEntityType" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventRule" left="2181" top="8140" logicalid="41" controlid="11" masterid="0" hint1="0" hint2="0" width="4480" height="2187" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000801100008b080000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="Event_vEventRule" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="EventLoggingComputer" left="65" top="12815" logicalid="42" controlid="12" masterid="0" hint1="0" hint2="0" width="6527" height="1729" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="000800007f190000c1060000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vEventLoggingComputer" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Rule" left="2160" top="365" logicalid="43" controlid="13" masterid="0" hint1="0" hint2="0" width="4868" height="3633" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="0008000004130000310e0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vRule" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="ManagementPack" left="15575" top="0" logicalid="44" controlid="14" masterid="0" hint1="0" hint2="0" width="7479" height="3413" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000371d0000550d0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vManagementPack" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="6292" top="13830" logicalid="46" controlid="16" masterid="0" hint1="0" hint2="0" width="4375" height="1086" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventLoggingComputer]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="1" sourceattachpoint="27" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="6592" y="14229" />
+                      <point x="8479" y="14229" />
+                      <point x="8479" y="14616" />
+                      <point x="10367" y="14616" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="17580" top="14184" logicalid="47" controlid="17" masterid="0" hint1="0" hint2="0" width="3162" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventType]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="16" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="20442" y="14583" />
+                      <point x="19161" y="14583" />
+                      <point x="19161" y="14616" />
+                      <point x="17880" y="14616" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="17580" top="17066" logicalid="48" controlid="18" masterid="0" hint1="0" hint2="0" width="3229" height="844" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventUser]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="18" destattachpoint="37" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="20509" y="17510" />
+                      <point x="19195" y="17510" />
+                      <point x="19195" y="17366" />
+                      <point x="17880" y="17366" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="10362" top="19298" logicalid="49" controlid="19" masterid="0" hint1="0" hint2="0" width="799" height="5926" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventLog]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="20" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="10761" y="24724" />
+                      <point x="10761" y="22161" />
+                      <point x="10823" y="22161" />
+                      <point x="10823" y="19598" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="1201" top="18060" logicalid="50" controlid="20" masterid="0" hint1="0" hint2="0" width="858" height="2236" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[EventCategory-EventSource]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="5" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="1600" y="18559" />
+                      <point x="1600" y="19277" />
+                      <point x="1759" y="19277" />
+                      <point x="1759" y="19996" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="7301" top="16459" logicalid="51" controlid="21" masterid="0" hint1="0" hint2="0" width="3366" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventSource]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="27" destattachpoint="34" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="7601" y="16858" />
+                      <point x="8984" y="16858" />
+                      <point x="8984" y="16816" />
+                      <point x="10367" y="16816" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="7411" top="18716" logicalid="52" controlid="22" masterid="0" hint1="0" hint2="0" width="3256" height="1960" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventCategory]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="23" destattachpoint="42" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="7711" y="20276" />
+                      <point x="9039" y="20276" />
+                      <point x="9039" y="19016" />
+                      <point x="10367" y="19016" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="6728" top="207" logicalid="53" controlid="23" masterid="0" hint1="0" hint2="0" width="9147" height="1724" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Rule-ManagementPack]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="14" destid="13" sourceattachpoint="26" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="15575" y="606" />
+                      <point x="11302" y="606" />
+                      <point x="11302" y="1631" />
+                      <point x="7028" y="1631" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="17815" top="2914" logicalid="54" controlid="24" masterid="0" hint1="0" hint2="0" width="3589" height="4040" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Class-ManagementPack]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="14" destid="10" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="18214" y="3413" />
+                      <point x="18214" y="5086" />
+                      <point x="21104" y="5086" />
+                      <point x="21104" y="6654" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="9068" top="3948" logicalid="55" controlid="25" masterid="0" hint1="0" hint2="0" width="2645" height="2832" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Object-Object]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="9" sourceattachpoint="24" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="10368" y="6380" />
+                      <point x="9368" y="6380" />
+                      <point x="9368" y="4248" />
+                      <point x="11413" y="4248" />
+                      <point x="11413" y="5248" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="16559" top="6630" logicalid="56" controlid="26" masterid="0" hint1="0" hint2="0" width="3038" height="1831" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Object-Class]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="9" sourceattachpoint="30" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="19297" y="8061" />
+                      <point x="17478" y="8061" />
+                      <point x="17478" y="6930" />
+                      <point x="16859" y="6930" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="2545" top="3499" logicalid="57" controlid="27" masterid="0" hint1="0" hint2="0" width="2176" height="4941" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[EventRule-Rule]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="11" sourceattachpoint="3" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="2944" y="3998" />
+                      <point x="2944" y="6069" />
+                      <point x="4421" y="6069" />
+                      <point x="4421" y="8140" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="6361" top="8181" logicalid="58" controlid="28" masterid="0" hint1="0" hint2="0" width="4307" height="802" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[EventRule-Object]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="11" sourceattachpoint="32" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="10368" y="8580" />
+                      <point x="8515" y="8580" />
+                      <point x="8515" y="8683" />
+                      <point x="6661" y="8683" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="16474" top="19099" logicalid="60" controlid="30" masterid="0" hint1="0" hint2="0" width="832" height="2959" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventParameter]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="23" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16873" y="19598" />
+                      <point x="16873" y="20678" />
+                      <point x="17006" y="20678" />
+                      <point x="17006" y="21758" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="14139" top="19099" logicalid="62" controlid="32" masterid="0" hint1="0" hint2="0" width="934" height="6452" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventDetails]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="15" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="14673" y="19598" />
+                      <point x="14673" y="22424" />
+                      <point x="14439" y="22424" />
+                      <point x="14439" y="25251" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="5771" top="10027" logicalid="63" controlid="33" masterid="0" hint1="0" hint2="0" width="5452" height="4507" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Event-EventRule]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="11" sourceattachpoint="0" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="10823" y="14034" />
+                      <point x="10823" y="12181" />
+                      <point x="6071" y="12181" />
+                      <point x="6071" y="10327" />
+                    </connector>
+                  </ddscontrol>
+                </dds>
+              </DiagramLayout>
+              <ShowRelationshipNames>False</ShowRelationshipNames>
+              <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+              <DiagramViewPortLeft>-897</DiagramViewPortLeft>
+              <DiagramViewPortTop>-1782</DiagramViewPortTop>
+              <DiagramBoundingLeft>0</DiagramBoundingLeft>
+              <DiagramBoundingTop>0</DiagramBoundingTop>
+              <DiagramZoom>75</DiagramZoom>
+            </Diagram>
+          </Layouts>
+        </Value>
+      </Annotation>
+    </Annotations>
+    <DataSourceID>Data Warehouse Main</DataSourceID>
+    <Schema>
+      <xs:schema id="Event" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+        <xs:element name="Event" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="b948231c-93f1-4726-b87d-6ba6d59db2e4" msprop:CompareInfo="&lt;CompareInfo&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;IgnoreCase&gt;true&lt;/IgnoreCase&gt;&lt;IgnoreKanaType&gt;true&lt;/IgnoreKanaType&gt;&lt;IgnoreWidth&gt;true&lt;/IgnoreWidth&gt;&lt;/CompareInfo&gt;">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="dbo_vEvent" msprop:QueryDefinition="SELECT     EventOriginId AS EventId, DateTime, EventPublisherRowId AS EventSourceId, EventChannelRowId AS EventLogId, &#xD;&#xA;                      EventCategoryRowId AS EventCategoryId, EventLevelId AS EventTypeId, LoggingComputerRowId AS EventLoggingComputerId, EventNumber, &#xD;&#xA;                      EventDisplayNumber, UserNameRowId AS EventUserId&#xD;&#xA;FROM         Event.vEvent" msprop:DbTableName="Event" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="Event" msprop:IsLogical="True" msprop:stats_RowCount="3209" msprop:design-time-name="84cd83a5-0c2d-4ad8-a543-fb7573f7e187" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DateTime" msdata:DateTimeMode="Utc" msprop:stats_UniqueValuePercent="97" msprop:DbColumnName="DateTime" msprop:FriendlyName="DateTime" msprop:design-time-name="e58cd317-e4c9-43e1-8261-7426cf3dd7b4" msprop:stats_UniqueValueCount="3134" type="xs:dateTime" minOccurs="0" />
+                    <xs:element name="EventDisplayNumber" msprop:stats_StDevWidth="0.1986317" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="EventDisplayNumber" msprop:design-time-name="2310cceb-5305-4a9b-92c0-294a109521c4" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="18" msprop:stats_AvgWidth="4.041134" msprop:DbColumnName="EventDisplayNumber" type="xs:int" minOccurs="0" />
+                    <xs:element name="EventNumber" msprop:stats_StDevWidth="1.718189" msprop:stats_AvgScale="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="d1a61aa2-6784-466d-b15b-ca81bc87168f" msprop:stats_StDevScale="0" msprop:stats_MaxWidth="11" msprop:stats_UniqueValueCount="18" msprop:stats_MaxScale="0" msprop:stats_AvgWidth="4.477096" msprop:DbColumnName="EventNumber" type="xs:long" minOccurs="0" />
+                    <xs:element name="EventId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="7723fba7-d8fb-4f1f-bbb5-f214bcf51473" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="3209" msprop:stats_AvgWidth="36" msprop:DbColumnName="EventId" type="xs:string" />
+                    <xs:element name="EventSourceId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="70fb9e07-03a0-40af-bf9b-7fb2d205ba41" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventSourceId" type="xs:int" minOccurs="0" />
+                    <xs:element name="EventLogId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="1221454e-5bc9-4b00-b5e3-8f04f4e1a706" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventLogId" type="xs:short" minOccurs="0" />
+                    <xs:element name="EventTypeId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="d5d82cb8-31ae-4f85-8448-f19555c626b9" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventTypeId" type="xs:unsignedByte" minOccurs="0" />
+                    <xs:element name="EventLoggingComputerId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="8d007c88-f4fc-4bcd-b388-e37755a8b212" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventLoggingComputerId" type="xs:int" minOccurs="0" />
+                    <xs:element name="EventUserId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="ac20dad2-d937-4e89-a1c5-8932d405ed8f" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventUserId" type="xs:int" minOccurs="0" />
+                    <xs:element name="EventCategoryId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="6a9670e1-b9d9-422e-acd8-27f58291d1c2" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventCategoryId" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventUserName" msprop:QueryDefinition="SELECT     EventUserNameRowId AS EventUserId, UserName AS EventUserName&#xD;&#xA;FROM         vEventUserName" msprop:DbTableName="EventUser" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="EventUser" msprop:IsLogical="True" msprop:stats_RowCount="1" msprop:design-time-name="5c15a732-7c57-4f43-a34e-9f5093130d45" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EventUserName" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="39ee021d-8330-4b9a-8549-095458e57f55" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="3" msprop:DbColumnName="EventUserName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="255" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventUserId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="8684551d-119d-4842-9e82-414016b41f2c" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventUserId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventParameter" msprop:QueryDefinition="SELECT     EventOriginId AS EventId, ParameterIndex, ParameterValue&#xD;&#xA;FROM         Event.vEventParameter" msprop:DbTableName="EventParameter" msprop:FriendlyName="EventParameter" msprop:IsLogical="True" msprop:stats_RowCount="6809" msprop:design-time-name="f5364dd3-978e-43a9-9aaf-7caef78fec9d" msprop:TableType="View" msprop:QueryBuilder="SpecificQueryBuilder">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ParameterIndex" msprop:stats_StDevWidth="0.01211876" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="ParameterIndex" msprop:design-time-name="80fc0b22-ec27-4d24-9692-fba9c4bc41ff" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="10" msprop:stats_AvgWidth="1.000147" msprop:DbColumnName="ParameterIndex" type="xs:unsignedByte" />
+                    <xs:element name="ParameterValue" msprop:stats_StDevWidth="68.10367" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ParameterValue" msprop:design-time-name="a8b818fc-6e17-4731-bde4-0e8dc79231e6" msprop:stats_MaxWidth="4584" msprop:stats_UniqueValueCount="6809" msprop:stats_AvgWidth="49.70827" msprop:DbColumnName="ParameterValue" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="47" msprop:design-time-name="438d8c5b-c28d-4042-a90a-5b0472e5afac" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="3209" msprop:stats_AvgWidth="36" msprop:DbColumnName="EventId" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventCategory" msprop:QueryDefinition="SELECT     EventCategoryRowId AS EventCategoryId, EventPublisherRowId AS EventSourceId, EventCategoryId AS EventCategoryNumber, &#xD;&#xA;                      EventCategoryTitle&#xD;&#xA;FROM         vEventCategory" msprop:DbTableName="EventCategory" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="EventCategory" msprop:IsLogical="True" msprop:stats_RowCount="5" msprop:design-time-name="5e8d2ff0-a7cb-43a1-b392-8092598c4457" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EventCategoryId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="EventCategoryId" msprop:design-time-name="ad82a400-5977-4934-a5b8-b1bac30dd65e" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventCategoryId" type="xs:int" />
+                    <xs:element name="EventCategoryTitle" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="60" msprop:FriendlyName="EventCategoryTitle" msprop:design-time-name="297bff8e-d1b0-4b8e-8edf-735919f30064" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventCategoryTitle" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="255" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventSourceId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="00e1de60-61f3-4067-8d33-c4128dc741bd" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventSourceId" type="xs:int" minOccurs="0" />
+                    <xs:element name="EventCategoryNumber" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="60" msprop:design-time-name="a7e729d5-bf89-44e5-a6f8-f07562ce99bb" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventCategoryNumber" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventDetail" msprop:QueryDefinition="SELECT     EventOriginId AS EventId, RawDescription, RenderedDescription, EventData&#xD;&#xA;FROM         Event.vEventDetail" msprop:DbTableName="EventDetail" msprop:FriendlyName="EventDetail" msprop:IsLogical="True" msprop:stats_RowCount="3209" msprop:design-time-name="d5617061-553d-4fd8-a98b-c9bc64310e90" msprop:TableType="View" msprop:QueryBuilder="SpecificQueryBuilder">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RawDescription" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="RawDescription" msprop:FriendlyName="RawDescription" msprop:design-time-name="9220aa34-a1ba-461b-aea4-cf92f1c9f286" msprop:stats_UniqueValueCount="3209" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RenderedDescription" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="RenderedDescription" msprop:FriendlyName="RenderedDescription" msprop:design-time-name="ae7067aa-a6ba-4343-8181-ce99f03053e7" msprop:stats_UniqueValueCount="3209" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventData" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="EventData" msprop:FriendlyName="EventData" msprop:design-time-name="a2d91970-0254-49ed-8fb7-2f337a1e811a" msprop:stats_UniqueValueCount="3209" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="8a52ddf3-8967-4355-9cfb-da78ea150334" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="3209" msprop:stats_AvgWidth="36" msprop:DbColumnName="EventId" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventPublisher" msprop:QueryDefinition="SELECT     EventPublisherRowId AS EventSourceId, EventPublisherGuid AS EventSourceGuid, EventPublisherName AS EventSourceTitle&#xD;&#xA;FROM         vEventPublisher" msprop:DbTableName="EventSource" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="EventSource" msprop:IsLogical="True" msprop:stats_RowCount="5" msprop:design-time-name="31622a3d-c786-4da1-af9e-7712165738af" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EventSourceGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="add98be0-0242-4ea1-87d8-24ab8b07a70f" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="36" msprop:DbColumnName="EventSourceGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="EventSourceTitle" msprop:stats_StDevWidth="3.911521" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="cae2e1fa-d834-4e85-82bc-c23c0f9ce20d" msprop:stats_MaxWidth="22" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="18.6" msprop:DbColumnName="EventSourceTitle" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="255" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventSourceId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="4653c050-12bc-4314-a2f8-9762800e6c3a" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventSourceId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventChannel" msprop:QueryDefinition="SELECT     EventChannelRowId AS EventLogId, EventChannelTitle AS EventLogTitle&#xD;&#xA;FROM         vEventChannel" msprop:DbTableName="EventLog" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="EventLog" msprop:IsLogical="True" msprop:stats_RowCount="1" msprop:design-time-name="e4ca9568-1597-48c7-8542-b734aa594cbe" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EventLogTitle" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="75696297-ad87-420e-9ee5-39d1127f54fc" msprop:stats_MaxWidth="18" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="18" msprop:DbColumnName="EventLogTitle" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="255" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventLogId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="ec8464d7-a78d-4d8e-9be3-f7898e5f5a13" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventLogId" type="xs:short" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventLevel" msprop:QueryDefinition="SELECT     EventLevelId AS EventTypeId, EventLevelTitle AS EventTypeTitle&#xD;&#xA;FROM         vEventLevel" msprop:DbTableName="EventType" msprop:FriendlyName="EventType" msprop:IsLogical="True" msprop:stats_RowCount="6" msprop:design-time-name="f4e66bf3-7122-414a-80f1-84478a75b968" msprop:TableType="View" msprop:QueryBuilder="SpecificQueryBuilder">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EventTypeTitle" msprop:stats_StDevWidth="3.265986" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="64a33d88-2297-4311-90e6-2a17d57d7d82" msprop:stats_MaxWidth="13" msprop:stats_UniqueValueCount="6" msprop:stats_AvgWidth="9.666667" msprop:DbColumnName="EventTypeTitle" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="255" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventTypeId" msprop:stats_StDevWidth="0.4082483" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="a6595d1b-6435-4c3e-a520-a2068bc79c80" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="6" msprop:stats_AvgWidth="1.166667" msprop:DbColumnName="EventTypeId" type="xs:unsignedByte" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vManagedEntity" msprop:QueryDefinition="SELECT     vManagedEntity.ManagedEntityRowId AS ObjectId, vManagedEntity.ManagedEntityGuid AS ObjectGuid, &#xD;&#xA;                      vManagedEntity.ManagedEntityTypeRowId AS ClassId, vManagedEntity.TopLevelHostManagedEntityRowId AS TopLevelHostObjectId, &#xD;&#xA;                      vManagedEntity.FullName, vManagedEntity.Path, vManagedEntity.Name, vManagedEntity.DisplayName, &#xD;&#xA;                      vManagedEntity.ManagedEntityDefaultName AS DefaultName, vManagementGroup.ManagementGroupGuid, &#xD;&#xA;                      vManagementGroup.ManagementGroupDefaultName&#xD;&#xA;FROM         vManagedEntity INNER JOIN&#xD;&#xA;                      vManagementGroup ON vManagedEntity.ManagementGroupRowId = vManagementGroup.ManagementGroupRowId" msprop:DbTableName="Object" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="Object" msprop:design-time-name="b24deb99-f9ef-498a-89d6-5600f584e930" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="61">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="FullName" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="FullName" msprop:FriendlyName="FullName" msprop:design-time-name="fbfe2b7d-468d-4110-a8ed-65021ffc7eee" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Path" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="Path" msprop:FriendlyName="Path" msprop:design-time-name="7d0f371c-2569-4173-8f17-c83c1028d30e" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Name" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="Name" msprop:FriendlyName="Name" msprop:design-time-name="1ff0785a-1945-47c5-9eb5-ae306237cf91" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="DisplayName" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="DisplayName" msprop:FriendlyName="DisplayName" msprop:design-time-name="e963cf76-21f0-4ba6-81de-526bdfeec69d" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementGroupGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="1" msprop:design-time-name="69da8662-1cda-4d03-91f1-f1c46a96d740" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="36" msprop:DbColumnName="ManagementGroupGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="ManagementGroupDefaultName" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="1" msprop:design-time-name="5ac9e846-0914-402a-a7cf-d2cca6de06d3" msprop:stats_MaxWidth="11" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="11" msprop:DbColumnName="ManagementGroupDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ObjectGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="e8efd087-34bf-4372-8aac-91147d49dca3" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="61" msprop:stats_AvgWidth="36" msprop:DbColumnName="ObjectGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="DefaultName" msprop:design-time-name="a2bf8dac-bde7-4f89-8d04-d2dc32f18cdd" msprop:DbColumnName="DefaultName" msprop:stats_UniqueValuePercent="100" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ObjectId" msprop:stats_StDevWidth="0.3575875" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="13ae7aa5-3685-45a1-9dc7-1c96a4cf4744" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="61" msprop:stats_AvgWidth="1.852459" msprop:DbColumnName="ObjectId" type="xs:int" />
+                    <xs:element name="ClassId" msprop:stats_StDevWidth="0.5253154" msprop:stats_UniqueValuePercent="75" msprop:design-time-name="a6a4cd68-d74b-4967-ba09-afadf222313e" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="46" msprop:stats_AvgWidth="2.606557" msprop:DbColumnName="ClassId" type="xs:int" minOccurs="0" />
+                    <xs:element name="TopLevelHostObjectId" msprop:stats_StDevWidth="0.502453" msprop:stats_UniqueValuePercent="59" msprop:design-time-name="f5981039-03c4-432d-8457-afa082cd8166" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="36" msprop:stats_AvgWidth="1.459016" msprop:DbColumnName="TopLevelHostObjectId" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vManagedEntityType" msprop:QueryDefinition="SELECT     vManagedEntityTypeImage.Image AS ClassImage, vManagedEntityType.ManagementPackRowId AS ManagementPackId, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeRowId AS ClassId, vManagedEntityType.ManagedEntityTypeGuid AS ClassGuid, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeSystemName AS ClassSystemName, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeDefaultName AS ClassDefaultName, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeDefaultDescription AS ClassDefaultDescription&#xD;&#xA;FROM         vManagedEntityType LEFT OUTER JOIN&#xD;&#xA;                      vManagedEntityTypeImage ON vManagedEntityType.ManagedEntityTypeRowId = vManagedEntityTypeImage.ManagedEntityTypeRowId&#xD;&#xA;WHERE     (vManagedEntityTypeImage.ImageCategory = 'u16x16Icon')" msprop:DbTableName="Class" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="Class" msprop:design-time-name="631fa246-9844-4850-80e0-9142e8dda81a" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="229">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ClassImage" msprop:design-time-name="9d5fbba1-ef96-4391-b399-6f5b1f977924" msprop:DbColumnName="ClassImage" msprop:stats_UniqueValuePercent="100" msprop:stats_UniqueValueCount="229" type="xs:base64Binary" minOccurs="0" />
+                    <xs:element name="ClassGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="c91e1c2d-c3bb-4b29-8f8a-bd38e4777f7d" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="229" msprop:stats_AvgWidth="36" msprop:DbColumnName="ClassGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="ClassSystemName" msprop:stats_StDevWidth="13.58476" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="801d01b7-15bb-4058-8123-e4128c41bb2c" msprop:stats_MaxWidth="73" msprop:stats_UniqueValueCount="229" msprop:stats_AvgWidth="37.67249" msprop:DbColumnName="ClassSystemName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClassDefaultName" msprop:stats_StDevWidth="12.84703" msprop:stats_UniqueValuePercent="96" msprop:design-time-name="01f6fb37-a208-451a-9370-b547068938da" msprop:stats_MaxWidth="67" msprop:stats_UniqueValueCount="220" msprop:stats_AvgWidth="22.28384" msprop:DbColumnName="ClassDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClassDefaultDescription" msprop:design-time-name="bf4c8140-d34b-451b-a84d-d35871b8d9c7" msprop:DbColumnName="ClassDefaultDescription" msprop:stats_UniqueValuePercent="100" msprop:stats_UniqueValueCount="229" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementPackId" msprop:stats_StDevWidth="0.368864" msprop:stats_UniqueValuePercent="10" msprop:design-time-name="fb93bf08-f372-46b7-a42e-528c3e7b89fb" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="25" msprop:stats_AvgWidth="1.838428" msprop:DbColumnName="ManagementPackId" type="xs:int" minOccurs="0" />
+                    <xs:element name="ClassId" msprop:stats_StDevWidth="0.5737897" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="2dbd4af2-bf05-44cf-b528-585a30645f8c" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="229" msprop:stats_AvgWidth="2.528384" msprop:DbColumnName="ClassId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Event_vEventRule" msprop:QueryDefinition="SELECT     EventOriginId AS EventId, RuleRowId AS RuleId, ManagedEntityRowId AS ObjectId&#xD;&#xA;FROM         Event.vEventRule" msprop:DbTableName="EventRule" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="EventRule" msprop:design-time-name="977a001b-2627-4ea6-8e35-a0a30e32646e" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="3209">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EventId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="9eb2822a-20ce-4d6f-9ff9-76bae380f7c8" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="3209" msprop:stats_AvgWidth="36" msprop:DbColumnName="EventId" type="xs:string" />
+                    <xs:element name="RuleId" msprop:stats_StDevWidth="0.2489767" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="5aef4109-a593-4fb5-bd8f-b0a5ae1082c2" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="7" msprop:stats_AvgWidth="2.066376" msprop:DbColumnName="RuleId" type="xs:int" minOccurs="0" />
+                    <xs:element name="ObjectId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="fc2d4cc4-98ff-48e4-9ed7-17a5d6166088" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="2" msprop:DbColumnName="ObjectId" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vEventLoggingComputer" msprop:QueryDefinition="SELECT     EventLoggingComputerRowId AS EventLoggingComputerId, ComputerName&#xD;&#xA;FROM         vEventLoggingComputer" msprop:DbTableName="EventLoggingComputer" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="EventLoggingComputer" msprop:design-time-name="466dca19-4956-4fe4-bd25-a6b864cebd73" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ComputerName" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ComputerName" msprop:design-time-name="84f4f30f-8cc2-4e61-9cf3-16f06d38a7ad" msprop:stats_MaxWidth="10" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="10" msprop:DbColumnName="ComputerName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="255" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventLoggingComputerId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="2439d793-9738-4e1e-acd7-aa7a8064f2b1" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="EventLoggingComputerId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vRule" msprop:QueryDefinition="SELECT     RuleRowId AS RuleId, RuleGuid, ManagementPackRowId AS ManagementPackId, RuleSystemName, RuleDefaultName, RuleDefaultDescription&#xD;&#xA;FROM         vRule" msprop:DbTableName="Rule" msprop:FriendlyName="Rule" msprop:IsLogical="True" msprop:stats_RowCount="626" msprop:design-time-name="97096306-090a-4684-8b6d-9ff90a6ee6d8" msprop:TableType="View" msprop:QueryBuilder="SpecificQueryBuilder">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RuleGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="RuleGuid" msprop:design-time-name="04c8ab87-b72e-4b1c-93af-bc7e7c466eb0" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="626" msprop:stats_AvgWidth="36" msprop:DbColumnName="RuleGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="RuleSystemName" msprop:stats_StDevWidth="25.70009" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="RuleSystemName" msprop:design-time-name="e2ff1d40-8e74-4f5f-8873-a0b92cb14885" msprop:stats_MaxWidth="228" msprop:stats_UniqueValueCount="626" msprop:stats_AvgWidth="77.78115" msprop:DbColumnName="RuleSystemName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RuleDefaultName" msprop:stats_StDevWidth="25.38119" msprop:stats_UniqueValuePercent="98" msprop:FriendlyName="RuleDefaultName" msprop:design-time-name="28c26416-9a53-4e21-a733-e790fc0a2042" msprop:stats_MaxWidth="219" msprop:stats_UniqueValueCount="614" msprop:stats_AvgWidth="52.52556" msprop:DbColumnName="RuleDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RuleDefaultDescription" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="RuleDefaultDescription" msprop:FriendlyName="RuleDefaultDescription" msprop:design-time-name="bef27dd9-44e8-4b26-b376-379de0dffbfa" msprop:stats_UniqueValueCount="626" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RuleId" msprop:stats_StDevWidth="0.414473" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="2a1596aa-77c1-4bf3-9b34-1cc9ea89d861" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="626" msprop:stats_AvgWidth="2.827476" msprop:DbColumnName="RuleId" type="xs:int" />
+                    <xs:element name="ManagementPackId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="2" msprop:design-time-name="1e39a99a-6d83-4b05-aa8f-e0929f841bd1" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="14" msprop:stats_AvgWidth="2" msprop:DbColumnName="ManagementPackId" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vManagementPack" msprop:QueryDefinition="SELECT     ManagementPackRowId AS ManagementPackId, ManagementPackVersionIndependentGuid, ManagementPackSystemName, &#xD;&#xA;                      ManagementPackDefaultName, ManagementPackDefaultDescription, CAST(SealedInd AS bit) AS SealedIndicator&#xD;&#xA;FROM         vManagementPack" msprop:DbTableName="ManagementPack" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="ManagementPack" msprop:design-time-name="8ac35ed1-80c3-46fa-ae5b-ec49ec2b7a68" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="54">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ManagementPackVersionIndependentGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ManagementPackVersionIndependentGuid" msprop:design-time-name="9f4edc7e-edd4-4442-bc99-f7f268ca3cdc" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="36" msprop:DbColumnName="ManagementPackVersionIndependentGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="ManagementPackSystemName" msprop:stats_StDevWidth="11.99815" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ManagementPackSystemName" msprop:design-time-name="b13ce88e-e769-4b97-b06b-d56354f101ea" msprop:stats_MaxWidth="64" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="36.68518" msprop:DbColumnName="ManagementPackSystemName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementPackDefaultName" msprop:stats_StDevWidth="8.022418" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ManagementPackDefaultName" msprop:design-time-name="d97fa432-8219-4bd4-ae64-1ffa60646da1" msprop:stats_MaxWidth="50" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="27.59259" msprop:DbColumnName="ManagementPackDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="1000" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementPackDefaultDescription" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="ManagementPackDefaultDescription" msprop:FriendlyName="ManagementPackDefaultDescription" msprop:design-time-name="5b0e0138-0ad2-4290-8c34-8f79b6e2e78c" msprop:stats_UniqueValueCount="54" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="SealedIndicator" msprop:design-time-name="47aed269-75ca-4a22-8169-77fcb720a518" msprop:DbColumnName="SealedIndicator" msprop:stats_UniqueValuePercent="3" msprop:stats_UniqueValueCount="2" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="ManagementPackId" msprop:stats_StDevWidth="0.3761774" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="82272adc-e285-42b6-9711-cdcd3979791a" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="1.833333" msprop:DbColumnName="ManagementPackId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+          <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEvent" />
+            <xs:field xpath="EventId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventUserName_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventUserName" />
+            <xs:field xpath="EventUserId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventParameter_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventParameter" />
+            <xs:field xpath="EventId" />
+            <xs:field xpath="ParameterIndex" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventCategory_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventCategory" />
+            <xs:field xpath="EventCategoryId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventDetail_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventDetail" />
+            <xs:field xpath="EventId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventPublisher_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventPublisher" />
+            <xs:field xpath="EventSourceId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventChannel_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventChannel" />
+            <xs:field xpath="EventLogId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventLevel_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventLevel" />
+            <xs:field xpath="EventTypeId" />
+          </xs:unique>
+          <xs:unique name="dbo_vManagedEntity_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vManagedEntity" />
+            <xs:field xpath="ObjectId" />
+          </xs:unique>
+          <xs:unique name="dbo_vManagedEntityType_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vManagedEntityType" />
+            <xs:field xpath="ClassId" />
+          </xs:unique>
+          <xs:unique name="Event_vEventRule_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//Event_vEventRule" />
+            <xs:field xpath="EventId" />
+          </xs:unique>
+          <xs:unique name="dbo_vEventLoggingComputer_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vEventLoggingComputer" />
+            <xs:field xpath="EventLoggingComputerId" />
+          </xs:unique>
+          <xs:unique name="dbo_vRule_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vRule" />
+            <xs:field xpath="RuleId" />
+          </xs:unique>
+          <xs:unique name="dbo_vManagementPack_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vManagementPack" />
+            <xs:field xpath="ManagementPackId" />
+          </xs:unique>
+        </xs:element>
+        <xs:annotation>
+          <xs:appinfo>
+            <msdata:Relationship name="Event-EventLoggingComputer" msdata:parent="dbo_vEventLoggingComputer" msdata:child="dbo_vEvent" msdata:parentkey="EventLoggingComputerId" msdata:childkey="EventLoggingComputerId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventType" msdata:parent="dbo_vEventLevel" msdata:child="dbo_vEvent" msdata:parentkey="EventTypeId" msdata:childkey="EventTypeId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventUser" msdata:parent="dbo_vEventUserName" msdata:child="dbo_vEvent" msdata:parentkey="EventUserId" msdata:childkey="EventUserId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventLog" msdata:parent="dbo_vEventChannel" msdata:child="dbo_vEvent" msdata:parentkey="EventLogId" msdata:childkey="EventLogId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="EventCategory-EventSource" msdata:parent="dbo_vEventPublisher" msdata:child="dbo_vEventCategory" msdata:parentkey="EventSourceId" msdata:childkey="EventSourceId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventSource" msdata:parent="dbo_vEventPublisher" msdata:child="dbo_vEvent" msdata:parentkey="EventSourceId" msdata:childkey="EventSourceId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventCategory" msdata:parent="dbo_vEventCategory" msdata:child="dbo_vEvent" msdata:parentkey="EventCategoryId" msdata:childkey="EventCategoryId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Rule-ManagementPack" msdata:parent="dbo_vManagementPack" msdata:child="dbo_vRule" msdata:parentkey="ManagementPackId" msdata:childkey="ManagementPackId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Class-ManagementPack" msdata:parent="dbo_vManagementPack" msdata:child="dbo_vManagedEntityType" msdata:parentkey="ManagementPackId" msdata:childkey="ManagementPackId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Object-Object" msdata:parent="dbo_vManagedEntity" msdata:child="dbo_vManagedEntity" msdata:parentkey="ObjectId" msdata:childkey="TopLevelHostObjectId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Object-Class" msdata:parent="dbo_vManagedEntityType" msdata:child="dbo_vManagedEntity" msdata:parentkey="ClassId" msdata:childkey="ClassId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="EventRule-Rule" msdata:parent="dbo_vRule" msdata:child="Event_vEventRule" msdata:parentkey="RuleId" msdata:childkey="RuleId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="EventRule-Object" msdata:parent="dbo_vManagedEntity" msdata:child="Event_vEventRule" msdata:parentkey="ObjectId" msdata:childkey="ObjectId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventParameter" msdata:parent="dbo_vEvent" msdata:child="dbo_vEventParameter" msdata:parentkey="EventId" msdata:childkey="EventId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventDetails" msdata:parent="dbo_vEvent" msdata:child="dbo_vEventDetail" msdata:parentkey="EventId" msdata:childkey="EventId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Event-EventRule" msdata:parent="dbo_vEvent" msdata:child="Event_vEventRule" msdata:parentkey="EventId" msdata:childkey="EventId" msprop:Description="" msprop:IsLogical="True" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:schema>
+    </Schema>
+  </DataSourceView>
+</SemanticModel>

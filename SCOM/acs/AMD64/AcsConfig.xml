@@ -1,0 +1,11 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<AcsCollector>
+  <Logs>
+    <Log Name='Security' Collect='yes' Priority='0' />
+    <Log Name='_acs_log' Collect='yes' Priority='0' />
+  </Logs>
+  <Groups>
+  </Groups>
+  <Machines>
+  </Machines>
+</AcsCollector>

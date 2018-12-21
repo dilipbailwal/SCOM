@@ -1,0 +1,140 @@
+//
+// AdtServer.mof: MOF File describing Subscriber Interface
+//
+//
+//
+// This file will be processed by the MOFCOMP utility to
+// register the provider with the WMI repository
+//
+
+
+#pragma autorecover
+#pragma namespace ("\\\\.\\root\\default")
+
+
+instance of __Win32Provider as $MacsEvProv
+{
+    Name = "MacsEvProv";                // Name is the key property for __Provider objects.
+                                        // vendor|provider|version is the suggested format
+                                        // to prevent name collisions.
+
+    ClsId = "{46EAAADE-9523-4235-87AD-BC82D4EFBFCC}";
+                                        // provider GUID
+
+    DefaultMachineName = NULL;          // NULL for local machine
+
+    ClientLoadableCLSID = NULL;         // reserved
+
+    ImpersonationLevel = 0;             // reserved
+
+    InitializationReentrancy = 0;       // Set of flags that provide information about serialization:
+                                        // 0 = all initialization of this provider must be serialized
+                                        // 1 = all initializations of this provider in the same namespace must be serialized
+                                        // 2 = no initialization serialization is necessary
+
+    InitializeAsAdminFirst = FALSE;     // Request to be fully initialized as "Admin" before 
+                                        // initializations begin for users
+
+    PerLocaleInitialization = FALSE;    // Indicates whether the provider is initialized for each 
+                                        // locale if a user connects to the same namespace more 
+                                        // than once using different locales.
+
+    PerUserInitialization = FALSE;      // Indicates whether the provider is initialized once for each actual 
+                                        // Windows NT/Windows 2000 NTLM user making requests of the provider. 
+                                        // If set to FALSE, the provider is initialized once for all users
+
+    Pure = TRUE;                        // A pure provider exists only to service requests from 
+                                        // applications and WMI. Most providers are pure providers
+                                        // Non-pure providers transition to the role of client after they have 
+                                        // finished servicing requests. 
+
+
+    UnloadTimeout = NULL;               // Currently ignored
+                                        // Use __CacheControl class in the root namespace to control provider unloading
+                                        // A string in the DMTF date/time format that specifies how long WMI 
+                                        // allows the provider to remain idle before it is unloaded.
+
+
+    HostingModel = "Decoupled:Com";     // Setting hosting model
+
+  //SecurityDescriptor = "";            // Initialize this property to set
+                                        // the user, who can provide instances
+                                        // for this decoupled provider.
+                                        // The string is specified in SDDL.
+                                        // An empty string means LocalSystem only.
+};
+
+
+instance of __EventProviderRegistration
+{
+    provider = $MacsEvProv;
+
+    EventQueryList = { "select * from AdtsEvent" };
+};
+
+
+//enum AuditRecordFlags
+//{
+//    arfNone         = 0x00,
+//    arfRealtime     = 0x01, // event was collected in real time, not from backlog at forwarder connect
+//    arfTruncated    = 0x02, // event strings truncated
+//    arfPseudo       = 0x04, // event is an ACS intrinsic event (e.g. gap detected), not an event log event
+//    arfUnknown      = 0x08, // no transformation information available for this event
+//    arfCorrupt      = 0x10  // event is corrupt
+//};
+
+class AdtsEvent : __ExtrinsicEvent
+{
+    uint32      EventId;
+    uint32      SequenceNo;
+    uint32      Flags;                  // Bitmask, see AuditRecordFlags enum above
+    uint32      Type;                   // success / failure / none
+    uint32      Category;               // Category Id
+    uint64      CreationTime;           // FILETIME, UTC, time audit was created
+    uint64      CollectionTime;         // FILETIME, UTC, time audit arrived at AdtServer
+    string      AgentMachine;           // name of machine that sent the event
+    string      EventMachine;           // name of machine in event header
+    string      Log;
+    string      Source;
+
+    string      HeaderSid;
+    string      HeaderUser;
+    string      HeaderDomain;
+
+    string      PrimarySid;
+    string      PrimaryUser;
+    string      PrimaryDomain;
+    uint64      PrimaryLogonId;
+
+    string      ClientSid;
+    string      ClientUser;
+    string      ClientDomain;
+    uint64      ClientLogonId;
+
+    string      TargetSid;
+    string      TargetUser;
+    string      TargetDomain;
+
+    string      String01;
+    string      String02;
+    string      String03;
+    string      String04;
+    string      String05;
+    string      String06;
+    string      String07;
+    string      String08;
+    string      String09;
+    string      String10;
+    string      String11;
+    string      String12;
+    string      String13;
+    string      String14;
+    string      String15;
+    string      String16;
+    string      String17;
+    string      String18;
+    string      String19;
+    string      String20;
+    string      String21;
+    string      String22;
+};

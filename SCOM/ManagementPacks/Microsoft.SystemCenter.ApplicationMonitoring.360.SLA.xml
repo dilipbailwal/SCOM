@@ -1,0 +1,79 @@
+﻿<ManagementPack ContentReadable="true" SchemaVersion="2.0" OriginalSchemaVersion="1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <Manifest>
+    <Identity>
+      <ID>Microsoft.SystemCenter.ApplicationMonitoring.360.SLA</ID>
+      <Version>1.0.0.0</Version>
+    </Identity>
+    <Name>asla</Name>
+    <References>
+      <Reference Alias="Health">
+        <ID>System.Health.Library</ID>
+        <Version>7.0.8437.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="DA360">
+        <ID>Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Library</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="A3TD">
+        <ID>Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Dashboards</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <Monitoring>
+    <ServiceLevelObjectives>
+      <MonitorSLO ID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationAvailability.SLO" ConfigurationGroupId="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationHealth" Target="DA360!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.3TierApplication">
+        <MonitorId>Health!System.Health.AvailabilityState</MonitorId>
+        <Goal>99</Goal>
+      </MonitorSLO>
+      <PerformanceCounterSLO ID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationResponseTime.SLO" ConfigurationGroupId="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationHealth" Target="DA360!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.3TierApplication">
+        <RuleId>A3TD!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Dashboards.CollectAvgResponseTime</RuleId>
+        <PerfCounterAggregationMethod>Average</PerfCounterAggregationMethod>
+        <Threshold>10</Threshold>
+        <DesiredObjective>UnderThreshold</DesiredObjective>
+      </PerformanceCounterSLO>
+      <PerformanceCounterSLO ID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationPerformance.SLO" ConfigurationGroupId="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationHealth" Target="DA360!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.3TierApplication">
+        <RuleId>A3TD!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Dashboards.CollectPercentagePerformanceEvents</RuleId>
+        <PerfCounterAggregationMethod>Average</PerfCounterAggregationMethod>
+        <Threshold>80</Threshold>
+        <DesiredObjective>OverThreshold</DesiredObjective>
+      </PerformanceCounterSLO>
+      <PerformanceCounterSLO ID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationReliability.SLO" ConfigurationGroupId="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationHealth" Target="DA360!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.3TierApplication">
+        <RuleId>A3TD!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Dashboards.CollectPercentageExceptionEvents</RuleId>
+        <PerfCounterAggregationMethod>Average</PerfCounterAggregationMethod>
+        <Threshold>85</Threshold>
+        <DesiredObjective>OverThreshold</DesiredObjective>
+      </PerformanceCounterSLO>
+    </ServiceLevelObjectives>
+  </Monitoring>
+  <ConfigurationGroups>
+    <ConfigurationGroup ID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationHealth" Accessibility="Public" Target="DA360!Microsoft.SystemCenter.ApplicationMonitoring.360.Template.3TierApplication" />
+  </ConfigurationGroups>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA">
+          <Name>Microsoft System Center Application Monitoring 360 SLA</Name>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationHealth">
+          <Name>Application Health SLA</Name>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationAvailability.SLO">
+          <Name>Application Availability</Name>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationResponseTime.SLO">
+          <Name>Application Response Time</Name>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationPerformance.SLO">
+          <Name>Application Performance</Name>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.ApplicationReliability.SLO">
+          <Name>Application Reliability</Name>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>

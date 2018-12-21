@@ -1,0 +1,853 @@
+﻿<ManagementPack ContentReadable="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <Manifest>
+    <Identity>
+      <ID>Microsoft.SystemCenter.NetworkDiscovery.Internal</ID>
+      <Version>7.2.11719.0</Version>
+    </Identity>
+    <Name>Microsoft System Center Network Discovery Internal</Name>
+    <References>
+      <Reference Alias="System">
+        <ID>System.Library</ID>
+        <Version>7.5.8500.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="SystemCenter">
+        <ID>Microsoft.SystemCenter.Library</ID>
+        <Version>7.0.8437.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="NetworkManagement">
+        <ID>System.NetworkManagement.Library</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="DataWarehouseLibrary">
+        <ID>Microsoft.SystemCenter.DataWarehouse.Library</ID>
+        <Version>7.0.8437.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="Windows">
+        <ID>Microsoft.Windows.Library</ID>
+        <Version>7.5.8500.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="OMLibrary">
+        <ID>Microsoft.SystemCenter.OperationsManager.Library</ID>
+        <Version>7.2.11719.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <Monitoring>
+    <Discoveries>
+      <Discovery ID="CriticalNetworkAdapter.DiscoveryRule" Enabled="true" Target="NetworkManagement!System.NetworkManagement.CriticalNetworkAdapterGroup" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes />
+        <DataSource ID="GroupPopulationDataSource" TypeID="SystemCenter!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$MPElement[Name="NetworkManagement!System.NetworkManagement.CriticalNetworkAdapterGroup"]$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="NetworkManagement!System.NetworkManagement.NetworkAdapter"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="NetworkManagement!System.NetworkManagement.CriticalNetworkAdapterGroupContainsNetworkAdapter"]$</RelationshipClass>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Property>$MPElement[Name="System!System.Entity"]/DisplayName$</Property>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value></Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+      <Discovery ID="AdvancedNetworkAdapter.DiscoveryRule" Enabled="true" Target="NetworkManagement!System.NetworkManagement.AdvancedNetworkAdapterGroup" ConfirmDelivery="false" Remotable="true" Priority="Normal">
+        <Category>Discovery</Category>
+        <DiscoveryTypes />
+        <DataSource ID="GroupPopulationDataSource" TypeID="SystemCenter!Microsoft.SystemCenter.GroupPopulator">
+          <RuleId>$MPElement$</RuleId>
+          <GroupInstanceId>$MPElement[Name="NetworkManagement!System.NetworkManagement.AdvancedNetworkAdapterGroup"]$</GroupInstanceId>
+          <MembershipRules>
+            <MembershipRule>
+              <MonitoringClass>$MPElement[Name="NetworkManagement!System.NetworkManagement.NetworkAdapter"]$</MonitoringClass>
+              <RelationshipClass>$MPElement[Name="NetworkManagement!System.NetworkManagement.AdvancedNetworkAdapterGroupContainsNetworkAdapter"]$</RelationshipClass>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <Property>$MPElement[Name="System!System.Entity"]/DisplayName$</Property>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value></Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </MembershipRule>
+          </MembershipRules>
+        </DataSource>
+      </Discovery>
+    </Discoveries>
+  </Monitoring>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Advanced Network Adapter Discovery Rule</Name>
+          <Description>Default rule for discovering members of the Advanced Network Adapters group.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Critical Network Adapter Discovery Rule</Name>
+          <Description>Default rule for discovering members of the Critical Network Adapters group.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Network Discovery Internal</Name>
+          <Description>Network Discovery Internal - Contains definitions and rules for discovering network devices</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Microsoft System Center Network Discovery Internal MP: This management pack provides discovery rules for the System.NetworkManagement.Monitoring management pack. The Critical Network Adapter discovery rule allows you to manually specify network devices to be monitored.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This discovery rule populates the Advanced Network Adapter Group by including all discovered network devices specified by the user. This management pack is unsealed so that this discovery rule can be edited. Edit the value expression element in this management pack to include the name of the network adapter you want to include in the Advanced Network Adapter Group.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This discovery rule populates the Critical Network Adapter Group by including all discovered network devices specified by the user. This management pack is unsealed so that this discovery rule can be edited. Edit the value expression element in this management pack to include the name of the network adapter you want to include in the Critical Network Adapter Group.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="CSY">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Pravidlo zjišťování rozšířených síťových adaptérů</Name>
+          <Description>Výchozí pravidlo pro zjišťování členů skupiny rozšířených síťových adaptérů.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Pravidlo zjišťování kritických síťových adaptérů</Name>
+          <Description>Výchozí pravidlo pro zjišťování členů skupiny kritických síťových adaptérů.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Jazyková sada interního zjišťování sítě</Name>
+          <Description>Interní zjišťování sítě – Obsahuje definice a pravidla pro zjišťování síťových zařízení.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Souhrn</maml:title>
+              <maml:para>Sada MP interního zjišťování sítě Microsoft System Center: Tato sada Management Pack poskytuje pravidla zjišťování pro sadu Management Pack System.NetworkManagement.Monitoring. Pravidlo zjišťování kritických síťových adaptérů vám umožní ručně specifikovat síťová zařízení, která mají být monitorována.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Souhrn</maml:title>
+              <maml:para>Toto pravidlo zjišťování naplňuje skupinu rozšířených síťových adaptérů zahrnutím všech zjištěných síťových zařízení specifikovaných uživatelem. Tato sada Management Pack je nezapečetěná, takže lze toto pravidlo zjišťování editovat. Proveďte editaci prvku výrazu hodnoty v této sadě Management Pack pro vložení názvu síťového adaptéru, který chcete zahrnout do skupiny rozšířených síťových adaptérů.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Souhrn</maml:title>
+              <maml:para>Toto pravidlo zjišťování naplňuje skupinu kritických síťových adaptérů zahrnutím všech zjištěných síťových zařízení specifikovaných uživatelem. Tato sada Management Pack je nezapečetěná, takže lze toto pravidlo zjišťování editovat. Proveďte editaci prvku výrazu hodnoty v této sadě Management Pack pro vložení názvu síťového adaptéru, který chcete zahrnout do skupiny kritických síťových adaptérů.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="DEU">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Regel zur Ermittlung erweiterter Netzwerkadapter</Name>
+          <Description>Dies ist die Standardregel, mit der die Mitglieder der Gruppe erweiterter Netzwerkadapter ermittelt werden.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Regel zur Ermittlung kritischer Netzwerkadapter</Name>
+          <Description>Dies ist die Standardregel, mit der die Mitglieder der Gruppe kritischer Netzwerkadapter ermittelt werden.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Sprachpaket für die interne Netzwerkermittlung</Name>
+          <Description>Die interne Netzwerkermittlung enthält Definitionen und Regeln für die Ermittlung von Netzwerkgeräten.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Zusammenfassung</maml:title>
+              <maml:para>Internes Microsoft System Center-Management Pack für die Netzwerkermittlung: Mit diesem Management Pack werden Ermittlungsregeln für das Management Pack "System.NetworkManagement.Monitoring" bereitgestellt. Mithilfe der Regel zur Ermittlung kritischer Netzwerkadapter können Sie die zu überwachenden Netzwerkgeräte manuell definierten.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Zusammenfassung</maml:title>
+              <maml:para>Mit dieser Ermittlungsregel wird die Gruppe erweiterter Netzwerkadapter mit allen ermittelten, vom Benutzer angegebenen Netzwerkgeräten aufgefüllt. Dieses Management Pack ist unversiegelt, sodass diese Ermittlungsregel bearbeitet werden kann. Bearbeiten Sie das Wertausdruckelement in diesem Management Pack, und geben Sie den Namen des Netzwerkadapters ein, der in die Gruppe erweiterter Netzwerkadapter aufgenommen werden soll.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Zusammenfassung</maml:title>
+              <maml:para>Mit dieser Ermittlungsregel wird die Gruppe kritischer Netzwerkadapter mit allen ermittelten, vom Benutzer angegebenen Netzwerkgeräten aufgefüllt. Dieses Management Pack ist unversiegelt, sodass diese Ermittlungsregel bearbeitet werden kann. Bearbeiten Sie das Wertausdruckelement in diesem Management Pack und geben Sie den Namen des Netzwerkadapters ein, der in die Gruppe kritischer Netzwerkadapter aufgenommen werden soll.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="ESN">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Regla de detección de adaptadores de red avanzados</Name>
+          <Description>Regla para detectar los miembros del grupo de adaptadores de red avanzados de forma predeterminada.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Regla de detección de adaptadores de red críticos</Name>
+          <Description>Regla para detectar los miembros del grupo de adaptadores de red críticos de forma predeterminada.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Paquete de idioma de detección interna de redes</Name>
+          <Description>Detección interna de redes: contiene las definiciones y reglas para detectar dispositivos de red</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumen</maml:title>
+              <maml:para>Módulo de administración interna de detección de redes de Microsoft System Center: Este módulo de administración proporciona las reglas de detección para el módulo de administración de System.NetworkManagement.Monitoring. La regla de detección de adaptadores de red críticos le permite especificar manualmente los dispositivos de red que desea supervisar.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumen</maml:title>
+              <maml:para>Esta regla de detección llena el grupo de adaptadores de red avanzados mediante la inclusión de todos los dispositivos de red que ha descubierto, especificados por el usuario. Este módulo de administración no está sellado, de modo que se puede editar esta regla de detección. Edite el elemento de expresión de valor en este módulo de administración para incluir el nombre del adaptador de red que desea incluir en el grupo de adaptadores de red avanzados.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumen</maml:title>
+              <maml:para>Esta regla de detección llena el grupo de adaptadores de red críticos mediante la inclusión de todos los dispositivos de red que ha descubierto, especificados por el usuario. Este módulo de administración no está sellado, de modo que se puede editar esta regla de detección. Editar el elemento de expresión de valor en este módulo de administración para incluir el nombre del adaptador de red que desea incluir en el grupo de adaptadores de red críticos.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="FRA">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Règle de détection de carte réseau avancée</Name>
+          <Description>Règle par défaut de détection des membres du groupe de cartes réseau avancées.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Règle de détection de carte réseau critique</Name>
+          <Description>Règle par défaut de détection des membres du groupe de cartes réseau critiques.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Module linguistique de détection de réseau interne</Name>
+          <Description>Détection de réseau interne - Contient des définitions et des règles pour la détection des périphériques réseau.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Résumé</maml:title>
+              <maml:para>Pack d'administration interne de détection de réseau Microsoft System Center : Ce pack d'administration fournit des règles de détection pour le pack d'administration System.NetworkManagement.Monitoring. La règle de détection de carte réseau critique permet de spécifier manuellement les périphériques réseau à analyser.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Résumé</maml:title>
+              <maml:para>Cette règle de détection remplit le groupe de cartes réseau avancées en incluant tous les périphériques réseau détectés spécifiés par l'utilisateur. Ce pack d'administration est non scellé afin de pouvoir modifier cette règle de détection. Modifiez l'élément d'expression de la valeur dans ce pack d'administration de manière à inclure le nom de la carte réseau souhaitée dans le groupe de cartes réseau avancées.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Résumé</maml:title>
+              <maml:para>Cette règle de détection remplit le groupe de carte réseau critique en incluant tous les périphériques réseau détectés spécifiés par l'utilisateur. Ce pack d'administration est non scellé afin de pouvoir modifier cette règle de détection. Modifiez l'élément l'expression de la valeur dans ce pack d'administration de manière à inclure le nom de la carte réseau souhaitée dans le groupe de carte réseau critique.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="HUN">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Speciális hálózati adapterek felderítésének szabálya</Name>
+          <Description>A Speciális hálózati adapterek csoport tagjainak felderítésére szolgáló alapértelmezett szabály</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Kritikus hálózati adapterek felderítési szabálya</Name>
+          <Description>A Kritikus hálózati adapterek csoport tagjainak felderítésére szolgáló alapértelmezett szabály</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Hálózatfelderítés belső nyelvi csomagja</Name>
+          <Description>Hálózatfelderítés, belső – A hálózati eszközök felderítésének definícióit és szabályait tartalmazza.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Összefoglalás</maml:title>
+              <maml:para>A Microsoft System Center belső hálózatfelderítési felügyeleti csomagja: Ez a felügyeleti csomag a System.NetworkManagement.Monitoring felügyeleti csomag felderítési szabályait tartalmazza. A kritikus hálózati adapterek felderítésének szabálya segítségével manuálisan választhatja ki a figyelni kívánt hálózati eszközöket.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Összefoglalás</maml:title>
+              <maml:para>Ez a felderítési szabály a felhasználó által kiválasztott felderített hálózati eszközökkel tölti fel a Speciális hálózati adapter csoportot. A felügyeleti csomag lezáratlan, így ez a felderítési szabály szerkeszthető. Úgy módosítsa a felügyeleti csomag értékkifejezését, hogy az a Speciális hálózati adapter csoportba felvenni kívánt hálózati adapter nevét tartalmazza.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Összefoglalás</maml:title>
+              <maml:para>Ez a felderítési szabály a felhasználó által kiválasztott felderített hálózati eszközökkel tölti fel a Kritikus hálózati adapter csoportot. A felügyeleti csomag lezáratlan, így ez a felderítési szabály szerkeszthető. Úgy módosítsa a felügyeleti csomag értékkifejezését, hogy az a Kritikus hálózati adapter csoportba felvenni kívánt hálózati adapter nevét tartalmazza.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="ITA">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Regola di individuazione della scheda di rete avanzata</Name>
+          <Description>Regola predefinita per individuare i membri del gruppo delle schede di rete avanzate.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Regola di individuazione della scheda di rete critica</Name>
+          <Description>Regola predefinita per individuare i membri del gruppo delle schede di rete critiche.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Language Pack individuazione interna della rete</Name>
+          <Description>Individuazione interna della rete - Contiene le definizioni e le regole per individuare i dispositivi di rete</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Riepilogo</maml:title>
+              <maml:para>Management Pack dell'individuazione di rete di Microsoft System Center: Questo Management Pack fornisce le regole di individuazione per il Management Pack System.NetworkManagement.Monitoring. La regola di individuazione delle schede di rete critiche permette di specificare manualmente i dispositivi di rete da monitorare.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Riepilogo</maml:title>
+              <maml:para>Questa regola di individuazione popola il gruppo delle schede di rete avanzate, includendo tutti i dispositivi di rete individuati specificati dall'utente. Questo Management Pack non è bloccato in modo da poter modificare tale regola di individuazione. Modificare l'elemento dell'espressione valore in questo Management Pack per inserire il nome della scheda di rete che si desidera includere nel gruppo delle schede di rete avanzate.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Riepilogo</maml:title>
+              <maml:para>Questa regola di individuazione popola il gruppo delle schede di rete critiche, includendo tutti i dispositivi di rete individuati specificati dall'utente. Questo Management Pack non è bloccato in modo da poter modificare tale regola di individuazione. Modificare l'elemento dell'espressione valore in questo Management Pack per inserire il nome della scheda di rete che si desidera includere nel gruppo delle schede di rete critiche.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="JPN">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>高度なネットワーク アダプター グループの検出ルール</Name>
+          <Description>高度なネットワーク アダプター グループのメンバーを検出する既定のルール</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>重要なネットワーク アダプター グループの検出ルール</Name>
+          <Description>重要なネットワーク アダプター グループのメンバーを検出する既定のルール</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>ネットワーク検出用内部管理パックの言語パック</Name>
+          <Description>ネットワーク デバイスの検出用の定義とルールが含まれています。</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>概要</maml:title>
+              <maml:para>Microsoft System Center ネットワーク検出用内部 MP:この管理パックには、System.NetworkManagement.Monitoring 管理パック用の検出ルールが含まれています。重要なネットワーク アダプターの検出ルールでは、監視するネットワーク デバイスを手動で指定できます。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>概要</maml:title>
+              <maml:para>この検出ルールは、ユーザーによって指定された、検出されたすべてのネットワーク デバイスを高度なネットワーク アダプター グループに含めます。この管理パックは、検出ルールを編集できるように封印されていません。この管理パックにある値の式を編集して、高度なネットワーク アダプター グループに含めるネットワーク アダプターの名前を指定することができます。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>概要</maml:title>
+              <maml:para>この検出ルールは、ユーザーによって指定された、検出されたすべてのネットワーク デバイスを重要なネットワーク アダプター グループに含めます。この管理パックは、検出ルールを編集できるように封印されていません。この管理パックにある値の式を編集して、重要なネットワーク アダプター グループに含めたいネットワーク アダプターの名前を指定することができます。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="KOR">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>고급 네트워크 어댑터 검색 규칙</Name>
+          <Description>고급 네트워크 어댑터 그룹의 구성원을 검색하는 기본 규칙</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>중요 네트워크 어댑터 검색 규칙</Name>
+          <Description>중요 네트워크 어댑터 그룹의 구성원을 검색하는 기본 규칙입니다.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>네트워크 검색 내부 언어 팩</Name>
+          <Description>네트워크 검색 내부 - 네트워크 장치를 검색하는 정의 및 규칙을 포함합니다.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>요약</maml:title>
+              <maml:para>Microsoft System Center 네트워크 검색 내부 MP: 이 관리 팩은 System.NetworkManagement.Monitoring 관리 팩에 대한 검색 규칙을 제공합니다. 중요 네트워크 어댑터 검색 규칙을 사용하면 모니터링할 네트워크 장치를 수동으로 지정할 수 있습니다.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>요약</maml:title>
+              <maml:para>이 검색 규칙은 사용자가 지정한 검색된 모든 네트워크 장치를 포함하여 고급 네트워크 어댑터 그룹을 채웁니다. 이 관리 팩은 봉인되지 않았으므로 이 검색 규칙을 편집할 수 있습니다. 고급 네트워크 어댑터 그룹에 포함할 네트워크 어댑터의 이름을 포함하도록 이 관리 팩의 값 표현식 요소를 편집합니다.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>요약</maml:title>
+              <maml:para>이 검색 규칙은 사용자가 지정한 검색된 모든 네트워크 장치를 비롯하여 중요한 네트워크 어댑터 그룹을 채웁니다. 이 관리 팩은 봉인되지 않았으므로 이 검색 규칙을 편집할 수 있습니다. 중요 네트워크 어댑터 그룹에 네트워크 어댑터를 포함하려면 해당 네트워크 어댑터 이름을 포함하도록 이 관리 팩에서 값 식 요소를 편집하면 됩니다.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="NLD">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Detectieregel voor geavanceerde netwerkadapters</Name>
+          <Description>Standaardregel voor de detectie van leden van de groep Geavanceerde netwerkadapters.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Detectieregel voor kritieke netwerkadapters</Name>
+          <Description>Standaardregel voor de detectie van leden van de groep Kritieke netwerkadapters.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Taalpakket voor Netwerkdetectie intern</Name>
+          <Description>Netwerkdetectie intern - bevat definities en regels voor het detecteren van netwerkapparaten</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Samenvatting</maml:title>
+              <maml:para>Management pack voor Netwerkdetectie intern van Microsoft System Center: Dit management pack bevat detectieregels voor het management pack System.NetworkManagement.Monitoring. Met de detectieregel voor kritieke netwerkadapters kunt u handmatig te bewaken netwerkapparaten opgeven.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Samenvatting</maml:title>
+              <maml:para>Met deze detectieregel wordt de groep Geavanceerde netwerkadapters gevuld door alle gedetecteerde netwerkapparaten op te nemen die zijn gedefinieerd door de gebruiker. Dit management pack is niet verzegeld, zodat deze detectieregel kan worden bewerkt. U kunt het waarde-expressie-element in dit management pack bewerken door de naam op te nemen van de netwerkadapter die u wilt opnemen in de groep Geavanceerde netwerkadapters.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Samenvatting</maml:title>
+              <maml:para>Met deze detectieregel wordt de groep Kritieke netwerkadapters gevuld door alle gedetecteerde netwerkapparaten op te nemen die zijn gedefinieerd door de gebruiker. Dit management pack is niet verzegeld, zodat deze detectieregel kan worden bewerkt. U kunt het waarde-expressie-element in dit management pack bewerken door de naam op te nemen van de netwerkadapter die u wilt opnemen in de groep Kritieke netwerkadapters.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="PLK">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Zasada odnajdywania zaawansowanych kart sieciowych</Name>
+          <Description>Domyślna zasada odnajdywania członków grupy zaawansowanych kart sieciowych.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Zasada odnajdywania krytycznych kart sieciowych</Name>
+          <Description>Domyślna zasada odnajdywania członków grupy krytycznych kart sieciowych.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Pakiet językowy wewnętrznego odnajdywania sieci</Name>
+          <Description>Wewnętrzne odnajdywanie sieci — zawiera definicje i szablony służące do odnajdywania urządzeń sieciowych</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Podsumowanie</maml:title>
+              <maml:para>Pakiet administracyjny wewnętrznego odnajdywania sieci programu Microsoft System Center: Ten pakiet administracyjny zawiera reguły odnajdywania pakietu administracyjnego System.NetworkManagement.Monitoring. Zasada odnajdywania krytycznych kart sieciowych umożliwia ręczne wskazanie urządzeń sieciowych do monitorowania.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Podsumowanie</maml:title>
+              <maml:para>Ta zasada odnajdywania wypełnia grupę zaawansowanych kart sieciowych, umieszczając w niej wszystkie odnalezione urządzenia sieciowe określone przez użytkownika. Ten pakiet administracyjny jest niezapieczętowany, co umożliwia edytowanie zasady odnajdywania. Edytuj element wyrażenia wartości w tym pakiecie administracyjnym, aby zawierał on nazwę karty sieciowej, która ma znaleźć się w grupie zaawansowanych kart sieciowych.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Podsumowanie</maml:title>
+              <maml:para>Ta zasada odnajdywania wypełnia grupę krytycznych kart sieciowych, umieszczając w niej wszystkie odnalezione urządzenia sieciowe określone przez użytkownika. Ten pakiet administracyjny jest niezapieczętowany, co umożliwia edytowanie zasady odnajdywania. Edytuj element wyrażenia wartości w tym pakiecie administracyjnym, aby zawierał on nazwę karty sieciowej, która ma znaleźć się w grupie krytycznych kart sieciowych.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="PTB">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Regra de Descoberta de Adaptador de Rede Avançado</Name>
+          <Description>Regra padrão para a descoberta de membros do grupo de Adaptadores de Rede Avançados.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Regra de Descoberta de Adaptadores de Rede Críticos</Name>
+          <Description>Regra padrão para a descoberta de membros do grupo de Adaptadores de Rede Críticos.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Pacote de Idiomas para Descoberta de Rede (Interno)</Name>
+          <Description>Descoberta de Rede (Interno) - Contém definições e regras referentes à descoberta de dispositivos de rede</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumo</maml:title>
+              <maml:para>Pacote de Gerenciamento Interno para Descoberta de Rede do Microsoft System Center: Este pacote de gerenciamento fornece regras de descoberta para o pacote de gerenciamento System.NetworkManagement.Monitoring. A regra de descoberta de Adaptadores de Rede Críticos permite especificar manualmente os dispositivos de rede que devem ser monitorados.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumo</maml:title>
+              <maml:para>Essa regra de descoberta popula o Grupo de Adaptadores de Rede Avançados com a inclusão de todos os dispositivos de rede descobertos especificados pelo usuário. Como se trata de um pacote de gerenciamento sem lacre, essa regra de descoberta pode ser editada. Edite o elemento de expressão de valor neste pacote de gerenciamento de forma a incluir o nome do adaptador de rede que você deseja acrescentar ao Grupo de Adaptadores de Rede Avançados.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumo</maml:title>
+              <maml:para>Essa regra de descoberta popula o Grupo de Adaptadores de Rede Críticos com a inclusão de todos os dispositivos de rede descobertos especificados pelo usuário. Como se trata de um pacote de gerenciamento sem lacre, essa regra de descoberta pode ser editada. Edite o elemento de expressão de valor neste pacote de gerenciamento de forma a incluir o nome do adaptador de rede que você deseja acrescentar ao Grupo de Adaptadores de Rede Críticos.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="PTG">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Regra de Deteção da Placa de Rede Avançada</Name>
+          <Description>Regra predefinida para detetar os membros do grupo de Placas de Rede Avançadas.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Regra de Deteção da Placa de Rede Crítica</Name>
+          <Description>Regra predefinida para detetar os membros do grupo de Placas de Rede Críticas.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Pacote de Idiomas da Deteção de Rede Interna</Name>
+          <Description>Deteção de Rede Interna - Contém definições e regras para a deteção de dispositivos de rede</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumo</maml:title>
+              <maml:para>PG de Deteção de Rede Interna do Microsoft System Center: este pacote de gestão disponibiliza regras de deteção para o pacote de gestão System.NetworkManagement.Monitoring. A regra de deteção da Placa de Rede Crítica permite-lhe especificar manualmente os dispositivos de rede a serem monitorizados.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumo</maml:title>
+              <maml:para>Esta regra de deteção preenche o Grupo de Placa de Rede Avançada, incluindo todos os dispositivos de rede detetados especificados pelo utilizador. Este é um pacote de gestão não selado para que esta regra de deteção possa ser editada. Edite o elemento de expressão do valor neste pacote de gestão para poder incluir o nome da placa de rede que pretende incluir no Grupo de Placa de Rede Avançada.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resumo</maml:title>
+              <maml:para>Esta regra de deteção preenche o Grupo de Placa de Rede Crítica, incluindo todos os dispositivos de rede detetados especificados pelo utilizador. Este é um pacote de gestão não selado para que esta regra de deteção possa ser editada. Edite o elemento de expressão do valor neste pacote de gestão para poder incluir o nome da placa de rede que pretende incluir no Grupo de Placa de Rede Crítica.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="RUS">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Правило обнаружения расширенных сетевых адаптеров</Name>
+          <Description>Правило по умолчанию для обнаружения участников группы "Расширенные сетевые адаптеры".</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Правило обнаружения критических сетевых адаптеров</Name>
+          <Description>Правило по умолчанию для обнаружения членов группы "Критические сетевые адаптеры".</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Языковой пакет для внутреннего сетевого обнаружения</Name>
+          <Description>Сетевое обнаружение (внутреннее): содержит определения и правила для обнаружения сетевых устройств.</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Сводка</maml:title>
+              <maml:para>Пакет управления внутреннего сетевого обнаружения Microsoft System Center: этот пакет управления содержит правила обнаружения для пакета управления System.NetworkManagement.Monitoring. Правило обнаружения критических сетевых адаптеров позволяет вручную указать отслеживаемые сетевые устройства.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Сводка</maml:title>
+              <maml:para>Это правило обнаружения заполняет группу "Расширенные сетевые адаптеры", включая в нее все обнаруженные сетевые устройства, заданные пользователем. Этот пакет управления не запечатан, что позволяет вносить изменения в правило обнаружения. Изменив элемент выражения значения в этом пакете управления, можно включить имя сетевого адаптера, который требуется добавить в группу расширенных сетевых адаптеров.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Сводка</maml:title>
+              <maml:para>Это правило обнаружения заполняет группу "Критические сетевые адаптеры", включая в нее все обнаруженные сетевые устройства, заданные пользователем. Этот пакет управления не запечатан, что позволяет вносить изменения в правило обнаружения. Изменив элемент выражения значения в этом пакете управления, можно включить имена сетевых адаптеров, которые требуется добавить в группу критических сетевых адаптеров.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="SVE">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Identifieringsregel för avancerat nätverkskort</Name>
+          <Description>Standardregel för identifiering av medlemmar i gruppen Avancerade nätverkskort.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Identifieringsregel för kritiskt nätverkskort</Name>
+          <Description>Standardregel för identifiering av medlemmar i gruppen Kritiska nätverkskort.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Språkpaket för nätverksidentifiering internt</Name>
+          <Description>Nätverksidentifiering internt - Innehåller definitioner och regler för identifiering av nätverksenheter</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Sammanfattning</maml:title>
+              <maml:para>Hanteringspaket till Microsoft System Centers nätverksidentifiering internt: Detta hanteringspaket tillhandahåller identifieringsregler till hanteringspaketet System.NetworkManagement.Monitoring. Med identifieringsregeln Kritiskt nätverkskort kan du manuellt ange vilka nätverksenheter som ska övervakas.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Sammanfattning</maml:title>
+              <maml:para>Denna identifieringsregel fyller på gruppen Avancerade nätverkskort genom att inkludera alla identifierade nätverksenheter som har angetts av användaren. Detta hanteringspaket är icke förseglat, vilket betyder att identifieringsregeln kan redigeras. Redigera värdeuttryckselementet i hanteringspaketet om du vill inkludera namnet på det nätverkskort som du vill ha med i gruppen Avancerade nätverkskort.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Sammanfattning</maml:title>
+              <maml:para>Denna identifieringsregel fyller på gruppen Kritiska nätverkskort genom att inkludera alla identifierade nätverksenheter som har angetts av användaren. Detta hanteringspaket är icke förseglat, vilket betyder att identifieringsregeln kan redigeras. Redigera värdeuttryckselementet i hanteringspaketet om du vill inkludera namnet på det nätverkskort som du vill ha med i gruppen Kritiska nätverkskort.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="TRK">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>Gelişmiş Ağ Bağdaştırıcısı Bulma Kuralı</Name>
+          <Description>Gelişmiş Ağ Bağdaştırıcıları grubunun üyelerini bulmak için kullanılan varsayılan kural.</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>Kritik Ağ Bağdaştırıcısı Bulma Kuralı</Name>
+          <Description>Kritik Ağ Bağdaştırıcıları grubunun üyelerini bulmak için kullanılan varsayılan kural.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>Ağ Bulma İç Dil Paketi</Name>
+          <Description>Ağ Bulma İç - Ağ aygıtlarını bulmak için kullanılan tanımları ve kuralları içerir</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Özet</maml:title>
+              <maml:para>Microsoft System Center Ağ Bulma İç MP: Bu yönetim paketi System.NetworkManagement.Monitoring yönetim paketi için bulma kuralları sağlar. Kritik Ağ Bağdaştırıcısı bulma kuralı, izlenecek ağ aygıtlarını el ile belirleyebilmenizi sağlar.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Özet</maml:title>
+              <maml:para>Bu bulma kuralı kullanıcı tarafından belirtilen bulunan tüm ağ aygıtlarını dahil ederek Gelişmiş Ağ Bağdaştırıcısı Grubu'nu doldurur. Bu yönetim paketi korumasız olduğundan bu bulma kuralı düzenlenebilir. Bu yönetim paketindeki değer ifadesi öğesini, Gelişmiş Ağ Bağdaştırıcısı Grubu'na dahil etmek istediğiniz ağ bağdaştırıcısının adını ekleyerek düzenleyin.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Özet</maml:title>
+              <maml:para>Bu bulma kuralı kullanıcı tarafından belirtilen bulunan tüm ağ aygıtlarını dahil ederek Kritik Ağ Bağdaştırıcısı Grubu'nu doldurur. Bu yönetim paketi korumasız olduğundan bu bulma kuralı düzenlenebilir. Bu yönetim paketindeki değer ifadesi öğesini, Kritik Ağ Bağdaştırıcısı Grubu'na dahil etmek istediğiniz ağ bağdaştırıcısının adını ekleyerek düzenleyin.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="CHS">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>高级网络适配器发现规则</Name>
+          <Description>用于发现高级网络适配器组的成员的默认规则。</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>关键网络适配器发现规则</Name>
+          <Description>用于发现关键网络适配器组的成员的默认规则。</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>内部网络发现语言包</Name>
+          <Description>内部网络发现 - 包含用于发现网络设备的定义和规则</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>摘要</maml:title>
+              <maml:para>Microsoft System Center 网络发现内部 MP：此管理包为 System.NetworkManagement.Monitoring 管理包提供发现规则。“关键网络适配器”发现规则允许你手动指定要监视的网络设备。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>摘要</maml:title>
+              <maml:para>此发现规则通过包括用户指定的所有发现的网络设备，从而填充高级网络适配器组。此管理包未密封，以便可以编辑此发现规则。编辑此管理包中的值表达式元素，以包括要包括在高级网络适配器组中的网络适配器的名称。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>摘要</maml:title>
+              <maml:para>此发现规则通过包括用户指定的所有发现的网络设备，从而填充关键网络适配器组。此管理包未密封，以便可以编辑此发现规则。编辑此管理包中的值表达式元素，以包括想要包括在关键网络适配器组中的网络适配器的名称。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+    <LanguagePack ID="CHT">
+      <DisplayStrings>
+        <DisplayString ElementID="AdvancedNetworkAdapter.DiscoveryRule">
+          <Name>進階網路介面卡探索規則</Name>
+          <Description>用來探索「進階網路介面卡」群組成員的預設規則。</Description>
+        </DisplayString>
+        <DisplayString ElementID="CriticalNetworkAdapter.DiscoveryRule">
+          <Name>重要網路介面卡探索規則</Name>
+          <Description>用來探索「重要網路介面卡」群組成員的預設規則。</Description>
+        </DisplayString>
+        <DisplayString ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal">
+          <Name>網路探索內部語言套件</Name>
+          <Description>網路探索內部 - 包含用來探索網路裝置的定義和規則</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Microsoft.SystemCenter.NetworkDiscovery.Internal" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>摘要</maml:title>
+              <maml:para>Microsoft System Center 網路探索內部管理組件 (MP)：此管理組件提供適用於 System.NetworkManagement.Monitoring 管理組件的探索規則。「重要網路介面卡」探索規則可讓您手動指定要監視的網路裝置。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AdvancedNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>摘要</maml:title>
+              <maml:para>此探索規則會加入使用者指定的所有探索到的網路裝置，以填入「進階網路介面卡群組」。此管理組件未密封，因此可以編輯這個探索規則。請編輯此管理組件中的值運算式元素，以加入要包含在「進階網路介面卡群組」中的網路介面卡名稱。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="CriticalNetworkAdapter.DiscoveryRule" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>摘要</maml:title>
+              <maml:para>此探索規則會加入使用者指定的所有探索到的網路裝置，以填入「重要網路介面卡群組」。此管理組件未密封，因此可以編輯這個探索規則。請編輯此管理組件中的值運算式元素，以加入要包含在「重要網路介面卡群組」中的網路介面卡名稱。</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>

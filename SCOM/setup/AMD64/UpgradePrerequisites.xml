@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Prerequisites>
+  <!-- Component Titles are not needed since this is merely appended to the existing XML-->
+
+  <!-- If the management group has already been upgraded, put that at the top. -->
+  <Check Order="100">
+    <Id>7E4B5587-DA96-4C68-9DA5-4B0544D6D5B5</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>MGAlreadyUpgradedTitle</Title>
+    <PassedDescription>MGAlreadyUpgradedPassed</PassedDescription>
+    <FailedDescription>MGAlreadyUpgradedFailed</FailedDescription>
+    <Resolution>MGAlreadyUpgradedResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="MGAlreadyUpgraded"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="R2ManagementPackCheck">Microsoft.SystemCenter.Library,7.0.0.0,65535.65535.65535.65535,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+  
+  <!-- Version check on Management Group Components -->
+  
+  <Check Order="101">
+    <Id>FDE41E49-68F0-4002-B698-C3CEB6A44194</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>UpgradeRMSSDKRunningTitle</Title>
+    <PassedDescription>UpgradeRMSSDKRunningPassed</PassedDescription>
+    <FailedDescription>UpgradeRMSSDKRunningFailed</FailedDescription>
+    <Resolution>UpgradeRMSSDKRunningResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsSdkRunningCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="IsSdkRunningCheck"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+  
+  <Check Order="102">
+    <Id>11B89530-409B-4DB2-8BCB-A176D6E24123</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>UpgradeAllSecondaryServersUpgradedTitle</Title>
+    <PassedDescription>UpgradeAllSecondaryServersUpgradedPassed</PassedDescription>
+    <FailedDescription>UpgradeAllSecondaryServersUpgradedFailed</FailedDescription>
+    <Resolution>UpgradeAllSecondaryServersUpgradedResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="OldManagementServersInstalled"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="NoOldManagementServersInstalled">6.1.7222.0,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="103">
+    <Id>40D6798C-7371-4DAB-8EAE-887F46EF78A1</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>UpgradeAllGatewaysCheckTitle</Title>
+    <PassedDescription>UpgradeAllGatewaysCheckPassed</PassedDescription>
+    <FailedDescription>UpgradeAllGatewaysCheckFailed</FailedDescription>
+    <Resolution>UpgradeAllGatewaysCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="OldGatewaysInstalledCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="NoOldGatewaysInstalled">6.1.7222.0,1</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="104">
+    <Id>E0300889-B4C8-4627-A288-9EB950E2AAB8</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>UpgradeAllAgentsCheckTitle</Title>
+    <PassedDescription>UpgradeAllAgentsCheckPassed</PassedDescription>
+    <FailedDescription>UpgradeAllAgentsCheckFailed</FailedDescription>
+    <Resolution>UpgradeAllAgentsCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="OldAgentsInstalledCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="NoOldAgentsInstalled">6.1.7222.0,1</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="105">
+    <Id>77686613-C3C3-4BEF-9176-93C031B9A53E</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>RMSTopologyCheckTitle</Title>
+    <PassedDescription>RMSTopologyCheckPassed</PassedDescription>
+    <FailedDescription>RMSTopologyCheckFailed</FailedDescription>
+    <Resolution>RMSTopologyCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="RMSNotPartOfMOMTopologyCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="RMSNotPartOfMOMTopologyCheck"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <!-- Sql Checks -->
+  
+  <Check Order="110">
+    <Id>52E3A4CC-9A5A-4663-B2BE-BE8F4830938A</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <!--<Component>OMCONFIGUREDATABASE</Component>-->
+    </Components>
+    <Title>OMDBSqlVersionCheckTitle</Title>
+    <PassedDescription>OMDBSqlVersionCheckPassed</PassedDescription>
+    <FailedDescription>OMDBSqlVersionCheckFailed</FailedDescription>
+    <Resolution>OMDBSqlVersionCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidOMDBSQLVersionCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="IsValidSQLVersionCheck">SqlServerInstance</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="111">
+    <Id>2B781195-DA11-4F39-8899-4D1B2A4A926F</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>OMDWSqlVersionCheckTitle</Title>
+    <PassedDescription>OMDWSqlVersionCheckPassed</PassedDescription>
+    <FailedDescription>OMDWSqlVersionCheckFailed</FailedDescription>
+    <Resolution>OMDWSqlVersionCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidOMDWSQLVersionCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="IsValidSQLVersionCheck">DWSqlServerInstance</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="112">
+    <Id>6F2390B7-2909-4B63-B3FF-693296C3CF3C</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <!--<Component>OMCONFIGUREDATABASE</Component>-->
+    </Components>
+    <Title>OMDBSqlFullTextCheckTitle</Title>
+    <PassedDescription>OMDBSqlFullTextCheckPassed</PassedDescription>
+    <FailedDescription>OMDBSqlFullTextCheckFailed</FailedDescription>
+    <Resolution>OMDBSqlFullTextCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidOMDBSQLFullTextSearchCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="SQLFullTextSearchEnabledCheck">SqlServerInstance,SqlInstancePort</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="113">
+    <Id>ABE7DF39-9DE9-441C-8652-A1A64EE6A9DD</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>OMDWSqlFullTextCheckTitle</Title>
+    <PassedDescription>OMDWSqlFullTextCheckPassed</PassedDescription>
+    <FailedDescription>OMDWSqlFullTextCheckFailed</FailedDescription>
+    <Resolution>OMDWSqlFullTextCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidOMDWSQLFullTextSearchCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="SQLFullTextSearchEnabledCheck">DWSqlServerInstance,DWSqlInstancePort</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+
+  <Check Order="114">
+    <Id>435C5B75-CAE3-4067-8BD8-1F722C2A7553</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>DBSqlCollationCheckTitle</Title>
+    <PassedDescription>DBSqlCollationCheckPassed</PassedDescription>
+    <FailedDescription>DBSqlCollationCheckFailed</FailedDescription>
+    <Resolution>DBSqlCollationCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidDBSqlCollationCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="IsValidSqlCollationCheck">SqlServerInstance,SqlInstancePort</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="115">
+    <Id>DD91EC65-643E-4967-B6D6-11ECF0B952B3</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>DWSqlCollationCheckTitle</Title>
+    <PassedDescription>DWSqlCollationCheckPassed</PassedDescription>
+    <FailedDescription>DWSqlCollationCheckFailed</FailedDescription>
+    <Resolution>DWSqlCollationCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidDWSqlCollationCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="IsValidSqlCollationCheck">DWSqlServerInstance,DWSqlInstancePort</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="116">
+    <Id>D32BBB46-E64A-4604-936E-FDE56D04F678</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>UserDbAdminRightsCheckTitle</Title>
+    <PassedDescription>UserDbAdminRightsCheckPassed</PassedDescription>
+    <FailedDescription>UserDbAdminRightsCheckFailed</FailedDescription>
+    <Resolution>UserDbAdminRightsCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="DoesUserHaveAdminRights"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="DoesUserHaveAdminRights">SqlServerInstance,SqlInstancePort</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <!-- SRS Checks -->
+  
+  <Check Order="120">
+    <Id>F06B952D-A7CD-48A6-91CA-5DA4DEDF00ED</Id>
+    <Components>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>IsSSRSValidCheckTitle</Title>
+    <PassedDescription>IsSSRSValidCheckPassed</PassedDescription>
+    <FailedDescription>IsSSRSValidCheckFailed</FailedDescription>
+    <Resolution>IsSSRSValidCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsSSRSValidCheck"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.HelperClasses.OMPrequisiteChecks,SetupChainerUI"
+                     DelegateName="IsSSRSValidCheck"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="121">
+    <Id>E7654AE0-63E4-4A66-950D-DBA61BF374E7</Id>
+    <Components>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>OMSRSSqlVersionCheckTitle</Title>
+    <PassedDescription>OMSRSSqlVersionCheckPassed</PassedDescription>
+    <FailedDescription>OMSRSSqlVersionCheckFailed</FailedDescription>
+    <Resolution>OMSRSSqlVersionCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsValidSRSSQLVersionCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="IsValidSSRSVersionCheck">SRSInstance</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="122">
+    <Id>E6EFC361-368D-4FAC-87F2-D5A85FDC8C88</Id>
+    <Components>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>SQLAgentRunningCheckTitle</Title>
+    <PassedDescription>SQLAgentRunningCheckPassed</PassedDescription>
+    <FailedDescription>SQLAgentRunningCheckFailed</FailedDescription>
+    <Resolution>SQLAgentRunningCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="SQLAgentRunningCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.SetupFramework.PrerequisiteChecks.SQLPrerequisiteChecks,SetupChainerUI"
+                     DelegateName="SQLAgentRunningCheck">2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+  
+  <!-- Misc Upgrade Checks -->
+
+  <Check Order="130">
+    <Id>2663F7BC-5CDA-4621-8209-F4BA75960235</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>IsNonOMConnectorPresentCheckTitle</Title>
+    <PassedDescription>IsNonOMConnectorPresentCheckPassed</PassedDescription>
+    <FailedDescription>IsNonOMConnectorPresentCheckFailed</FailedDescription>
+    <Resolution>IsNonOMConnectorPresentCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsNonOMConnectorPresentCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="IsNonOMConnectorPresentCheck">1</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="131">
+    <Id>0347B23B-765D-4494-B235-C57860E693EB</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>SecureKeysRestoredCheckTitle</Title>
+    <PassedDescription>SecureKeysRestoredCheckPassed</PassedDescription>
+    <FailedDescription>SecureKeysRestoredCheckFailed</FailedDescription>
+    <Resolution>SecureKeysRestoredCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="AreSecureKeysRestoredCheckCheck"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.HelperClasses.OMPrequisiteChecks,SetupChainerUI"
+                     DelegateName="AreSecureKeysRestoredCheck"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+ 
+  <Check Order="132">
+    <Id>58E23424-66F0-4DE9-BE66-A3EB7C4D9C54</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>RMSAgentAssignmentCheckTitle</Title>
+    <PassedDescription>RMSAgentAssignmentCheckPassed</PassedDescription>
+    <FailedDescription>RMSAgentAssignmentCheckFailed</FailedDescription>
+    <Resolution>RMSAgentAssignmentCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="RMSAgentAssignmentCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="RMSAgentAssignmentCheck"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="133">
+    <Id>0FE127CA-4772-44BB-A5ED-07736C2F6E39</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>AVIcodeMPCheckTitle</Title>
+    <PassedDescription>AVIcodeMPCheckPassed</PassedDescription>
+    <FailedDescription>AVIcodeMPCheckFailed</FailedDescription>
+    <Resolution>AVIcodeMPCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="NotUpgradingManagementGroup"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="NotUpgradingManagementGroup" />
+      <LogicDelegate LogicType="or"
+                     DelegateId="R2ManagementPackCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="R2ManagementPackCheck">AVIcode.DotNet.SystemCenter.Enterprise.Monitoring,0,0,1</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="134">
+    <Id>480819B0-3D18-4A13-BFB7-5B28FC95F30F</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>MinimumCUCheckTitle</Title>
+    <PassedDescription>MinimumCUCheckPassed</PassedDescription>
+    <FailedDescription>MinimumCUCheckFailed</FailedDescription>
+    <Resolution>MinimumCUCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="MinimumCUCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="R2ManagementPackCheck">Microsoft.SystemCenter.Library,0.0.0.0,6.1.7221.60,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <!-- Unix agent version check -->
+
+  <Check Order="150">
+    <Id>924F5180-55F8-4FFC-BF3B-286C30D33245</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>UnixAgentCheckTitle</Title>
+    <PassedDescription>UnixAgentCheckPassed</PassedDescription>
+    <FailedDescription>UnixAgentCheckFailed</FailedDescription>
+    <Resolution>UnixAgentCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="UnixAgentVersionCheck"
+                     DelegateNameSpace="Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites.MOMR2SDKClientHelper,Microsoft.EnterpriseManagement.OperationsManager.Setup.Prerequisites"
+                     DelegateName="UnixAgentVersionCheck">1.0.5.764 ,1</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+    
+</Prerequisites>

@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DB Audit">
+      <DataSourceReference>DB Audit</DataSourceReference>
+      <rd:DataSourceID>0f119a3f-5331-4507-a0cd-00028a7cd686</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>0.5in</BottomMargin>
+  <ReportParameters>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(-1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Left>0.25in</Left>
+        <Top>1in</Top>
+        <ZIndex>4</ZIndex>
+        <Width>8in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>18pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:Watermark</Name>
+            <Value>Click to add title</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <CanGrow>true</CanGrow>
+        <Height>0.375in</Height>
+        <Value>Account Locked</Value>
+      </Textbox>
+      <Table Name="table">
+        <Left>0.25in</Left>
+        <DataSetName>dataSet</DataSetName>
+        <Top>2in</Top>
+        <TableGroups>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!DateTime.Value, Nothing)</SortExpression>
+                <Direction>Descending</Direction>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_DateTime">
+              <GroupExpressions>
+                <GroupExpression>=Fields!DateTime.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!Domain.Value, Nothing)</SortExpression>
+                <Direction>Ascending</Direction>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_Domain">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Domain.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!UserAccount.Value, Nothing)</SortExpression>
+                <Direction>Ascending</Direction>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_UserAccount">
+              <GroupExpressions>
+                <GroupExpression>=Fields!UserAccount.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <ZIndex>3</ZIndex>
+        <Width>4.625in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LogonTime_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <HideDuplicates>table_DateTime</HideDuplicates>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>=Iif( RowNumber("table_DateTime") = CountRows("table_DateTime"), "Solid", Nothing)</Bottom>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DateTime.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Domain_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <HideDuplicates>table_Domain</HideDuplicates>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>=Iif( RowNumber("table_Domain") = CountRows("table_Domain"), "Solid", Nothing)</Bottom>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Domain.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TargetUser_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <HideDuplicates>table_UserAccount</HideDuplicates>
+                      <Style>
+                        <BorderStyle>
+                          <Bottom>=Iif( RowNumber("table_UserAccount") = CountRows("table_UserAccount"), "Solid", Nothing)</Bottom>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!UserAccount.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Grouping Name="table_UserAccountDetails">
+            <GroupExpressions>
+              <GroupExpression>=Fields!UserAccount.Value</GroupExpression>
+            </GroupExpressions>
+          </Grouping>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=Fields!UserAccount.Value</SortExpression>
+              <Direction>Ascending</Direction>
+            </SortBy>
+          </Sorting>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LogonTime_Header">
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!DateTime.Value</SortExpression>
+                        <SortExpressionScope>table_DateTime</SortExpressionScope>
+                      </UserSort>
+                      <Value>Date/Time</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Domain_Header">
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Domain.Value</SortExpression>
+                        <SortExpressionScope>table_Domain</SortExpressionScope>
+                      </UserSort>
+                      <Value>Domain</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TargetUser_Header">
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!UserAccount.Value</SortExpression>
+                        <SortExpressionScope>table_UserAccount</SortExpressionScope>
+                      </UserSort>
+                      <Value>User Account</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <FixedHeader>true</FixedHeader>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.25in</Width>
+            <Visibility>
+              <Hidden>=Fields!DateTime.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.5in</Width>
+            <Visibility>
+              <Hidden>=Fields!Domain.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.875in</Width>
+            <Visibility>
+              <Hidden>=Fields!UserAccount.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.5in</Height>
+      </Table>
+      <Textbox Name="TotalRows">
+        <Left>0.25in</Left>
+        <Top>3.75in</Top>
+        <ZIndex>2</ZIndex>
+        <Width>6.5in</Width>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>TotalRows</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <CanGrow>true</CanGrow>
+        <Value>=String.Format("Total rows" &amp; Chr(58) &amp; " {0}", COUNTROWS("dataSet"))</Value>
+      </Textbox>
+      <Textbox Name="textbox">
+        <Left>0.25in</Left>
+        <Top>1.375in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>8in</Width>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.5in</Height>
+        <Value>On Windows Server 2000 &amp; 2003, events 539 and 644 indicate an account was locked.  On Windows Server 2008, event 4740 and 6279 indicate an account was locked.
+This report details all account lock events.</Value>
+      </Textbox>
+      <Image Name="banner_image">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.11042in</Top>
+        <Width>8.05in</Width>
+        <MIMEType />
+        <Source>External</Source>
+        <Style />
+        <Left>0.15in</Left>
+        <Height>0.58958in</Height>
+        <Value>../banner_portrait.jpg</Value>
+      </Image>
+    </ReportItems>
+    <Height>4in</Height>
+  </Body>
+  <rd:ReportID>8ec13932-2781-42a3-9a88-e91789a5afb8</rd:ReportID>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <CommandText>SELECT     CreationTime AS DateTime, TargetDomain AS Domain, TargetUser AS UserAccount
+FROM         AdtServer.dvAll
+WHERE     (EventId = 539 OR
+                      EventId = 644 OR
+                      EventId = 4740 OR
+                      EventId = 6279) AND (CreationTime &gt;= @StartDate) AND (CreationTime &lt;= @EndDate)</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@StartDate">
+            <Value>=Parameters!StartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EndDate">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>DB Audit</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DateTime">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DateTime</DataField>
+        </Field>
+        <Field Name="Domain">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Domain</DataField>
+        </Field>
+        <Field Name="UserAccount">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>UserAccount</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>8.5in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>0.5in</TopMargin>
+</Report>

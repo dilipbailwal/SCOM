@@ -1,0 +1,1197 @@
+﻿<SemanticModel ID="Gce7f6506-3fae-4e34-80fc-3e0b8fc412dd" xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Culture>en-US</Culture>
+  <Entities>
+    <Entity ID="G84916cb4-85b5-4a29-97cf-249b0b43b9f4">
+      <Name>Audit Data</Name>
+      <CollectionName>Dv Alls</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Ge94da650-87be-438d-889d-d9584df072ce</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G2289dcc1-290c-44db-bc63-042a56848931</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G9b3954f6-b6e3-484c-aa18-93e4a1dbef9a</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G6cc4d8e1-f3ba-409f-baf4-e69b3011dfe8</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G42ed4ccb-23b5-49de-ac6b-3352faaa95b4</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+      <Fields>
+        <Attribute ID="G42ed4ccb-23b5-49de-ac6b-3352faaa95b4">
+          <Name>#Dv Alls</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G84916cb4-85b5-4a29-97cf-249b0b43b9f4</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G6cc4d8e1-f3ba-409f-baf4-e69b3011dfe8">
+          <Name>Id</Name>
+          <DataType>Decimal</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>6</Width>
+          <Format>g0</Format>
+          <Column Name="Id" />
+        </Attribute>
+        <Attribute ID="G0cf3dc6b-6fde-4030-bb0d-5d25e7f60419">
+          <Name>Event Id</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>5</Width>
+          <Format>g</Format>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventId" />
+        </Attribute>
+        <Attribute ID="Gce312c1d-32b6-440e-873d-3ddc3d4cad45">
+          <Name>Sequence No</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>8</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <DefaultAggregateAttributeID>G7fe592a8-f96b-410d-ab33-e63a13292c1e</DefaultAggregateAttributeID>
+          <Variations>
+            <Attribute ID="G7fe592a8-f96b-410d-ab33-e63a13292c1e">
+              <Name>Total Sequence No</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Sum</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G2e74a6f0-94c4-4670-b888-92a551addfd7">
+              <Name>Avg Sequence No</Name>
+              <DataType>Decimal</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Avg</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gc4a0b759-0d5a-4990-9afc-604f72faf42f">
+              <Name>Min Sequence No</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G34f57827-7179-41bd-8008-fd390dfd8015">
+              <Name>Max Sequence No</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="SequenceNo" />
+        </Attribute>
+        <Attribute ID="G45ce05f5-9160-41bf-9d37-2ca64d8458aa">
+          <Name>S/F</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="S/F" />
+        </Attribute>
+        <Attribute ID="Gad4a4b65-5b4e-4e6c-98bd-1e4b47e4057e">
+          <Name>Category</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>18</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Category" />
+        </Attribute>
+        <Attribute ID="G432cfb7f-4dce-4e31-8aaf-5db534bdec6d">
+          <Name>Logon Time</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <Variations>
+            <Attribute ID="G2cff2dd5-dabb-4b7d-853b-a8b7cf40012e">
+              <Name>Creation Time Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gf9e1999a-2283-4d0f-8646-0a0bbb6ee897">
+              <Name>Creation Time Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gbd81ca36-3585-447d-9255-d3329073e962">
+              <Name>Creation Time Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Gc0032c3f-7edc-4cf8-b56d-7211493d44f5">
+              <Name>Creation Time Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G522523f0-a837-431d-9f75-6506a0e1d96a">
+              <Name>First Creation Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G18240856-ebdf-465f-9e67-3128b2773047">
+              <Name>Last Creation Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="CreationTime" />
+        </Attribute>
+        <Attribute ID="G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7">
+          <Name>Collection Time</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <Variations>
+            <Attribute ID="G050c598e-c67a-4009-99d7-827af18b6003">
+              <Name>Collection Time Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gf1d71a82-33d5-49a4-a382-247c9469c1da">
+              <Name>Collection Time Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G597d40dd-d73e-4c08-8860-f9a0599c341b">
+              <Name>Collection Time Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Gcbdf9009-2b7a-40a9-8742-56b4e12236f0">
+              <Name>Collection Time Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G8a9818a3-e2ff-4c58-8a23-c354a3d1a250">
+              <Name>First Collection Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G99072b0f-12ba-458c-9f5c-ff03ea97d26b">
+              <Name>Last Collection Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="CollectionTime" />
+        </Attribute>
+        <Attribute ID="Ge81718a8-9978-43e6-b0e7-f56d44dbdb84">
+          <Name>Computer</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>12</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="AgentMachine" />
+        </Attribute>
+        <Attribute ID="Gd81289ed-1b2f-4914-973e-ae952739341f">
+          <Name>Event Machine</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EventMachine" />
+        </Attribute>
+        <Attribute ID="G2f7c1375-43a6-4799-a55c-208e852e3309">
+          <Name>Source</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Source" />
+        </Attribute>
+        <Attribute ID="Gc4891503-a8a6-4b75-8fb8-f6aa07017dea">
+          <Name>Header Sid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>40</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="HeaderSid" />
+        </Attribute>
+        <Attribute ID="Gf591951c-d1b4-4d96-9d03-8ed6996e4811">
+          <Name>Header User</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>16</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="HeaderUser" />
+        </Attribute>
+        <Attribute ID="G8ca111f4-a645-4ae0-934a-42b40715f0fc">
+          <Name>Header Domain</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>12</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="HeaderDomain" />
+        </Attribute>
+        <Attribute ID="G2eef97d0-cde1-4ff3-a37b-573cc80e54e7">
+          <Name>Primary Security ID</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>31</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PrimarySid" />
+        </Attribute>
+        <Attribute ID="G76697799-fe6c-40cf-b52b-4ebb034177f0">
+          <Name>Primary User</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PrimaryUser" />
+        </Attribute>
+        <Attribute ID="G2167c320-2317-49a0-b305-3b5cbc6162ad">
+          <Name>Primary Domain</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>6</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PrimaryDomain" />
+        </Attribute>
+        <Attribute ID="Gfc7f23a3-0c67-45aa-a0b4-b3e9c64a03f0">
+          <Name>Primary Logon Id</Name>
+          <DataType>Decimal</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>8</Width>
+          <Format>g0</Format>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="PrimaryLogonId" />
+        </Attribute>
+        <Attribute ID="G9aead967-696a-4f6c-b473-c4f33e090d10">
+          <Name>Client Sid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>37</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ClientSid" />
+        </Attribute>
+        <Attribute ID="G5878d591-0322-4161-955c-c69b8a37a21d">
+          <Name>Client User</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ClientUser" />
+        </Attribute>
+        <Attribute ID="Gc6de7d0d-c076-493b-a8f7-2d2eef98f574">
+          <Name>Client Domain</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>7</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ClientDomain" />
+        </Attribute>
+        <Attribute ID="G3cd6ec8b-8f74-4a0a-aa1a-4991ea6d3b31">
+          <Name>Client Logon Id</Name>
+          <DataType>Decimal</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>9</Width>
+          <Format>g0</Format>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClientLogonId" />
+        </Attribute>
+        <Attribute ID="G1f282ca7-b2e4-4622-927b-3cb5d20b8e74">
+          <Name>Target Sid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>14</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="TargetSid" />
+        </Attribute>
+        <Attribute ID="Gd2278cd8-ca70-448a-b39b-e08854e5aa1a">
+          <Name>Target User</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="TargetUser" />
+        </Attribute>
+        <Attribute ID="G645dfd4e-13dc-4ba6-8a24-593488538923">
+          <Name>Target Domain</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>4</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="TargetDomain" />
+        </Attribute>
+        <Attribute ID="Gda80c798-aa22-4ddc-97db-7f7c8deb9e43">
+          <Name>String 01</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>333</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="String01" />
+        </Attribute>
+        <Attribute ID="Ge94da650-87be-438d-889d-d9584df072ce">
+          <Name>String 02</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>115</Width>
+          <Column Name="String02" />
+        </Attribute>
+        <Attribute ID="G9b3954f6-b6e3-484c-aa18-93e4a1dbef9a">
+          <Name>String 03</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>317</Width>
+          <Column Name="String03" />
+        </Attribute>
+        <Attribute ID="G2289dcc1-290c-44db-bc63-042a56848931">
+          <Name>String 04</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>246</Width>
+          <Column Name="String04" />
+        </Attribute>
+        <Attribute ID="Gc23bb7ee-de74-4e78-ad16-204a495be99c">
+          <Name>String 05</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>21</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String05" />
+        </Attribute>
+        <Attribute ID="G6aa2db4f-f38e-4602-97c0-beb608d001a2">
+          <Name>String 06</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String06" />
+        </Attribute>
+        <Attribute ID="G7bc91a42-2b3f-49b4-bbcb-40a965c62908">
+          <Name>String 07</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String07" />
+        </Attribute>
+        <Attribute ID="G49a7a3b0-804d-4f78-9809-1b1447892908">
+          <Name>String 08</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String08" />
+        </Attribute>
+        <Attribute ID="G9150f22c-31e2-435c-8bd2-8ddaad2ddf4d">
+          <Name>String 09</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String09" />
+        </Attribute>
+        <Attribute ID="G9b945575-c7da-4d09-a102-e7bcc777e734">
+          <Name>String 10</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String10" />
+        </Attribute>
+        <Attribute ID="Gfc1b9da7-87be-4c8c-8af1-33866efe0711">
+          <Name>String 11</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String11" />
+        </Attribute>
+        <Attribute ID="G2c94ccdb-80c0-4570-871d-da39b64fcab1">
+          <Name>String 12</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String12" />
+        </Attribute>
+        <Attribute ID="G5bfd344f-da8e-478c-9a72-4236453903f9">
+          <Name>String 13</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String13" />
+        </Attribute>
+        <Attribute ID="G39da3b27-cce5-4dc7-a059-876c9be0f927">
+          <Name>String 14</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String14" />
+        </Attribute>
+        <Attribute ID="Gdf7ea34d-098b-4e21-8bed-0caa22e9d1ae">
+          <Name>String 15</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String15" />
+        </Attribute>
+        <Attribute ID="G9bc126ee-389d-49f7-adeb-af0ce8f96d4b">
+          <Name>String 16</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String16" />
+        </Attribute>
+        <Attribute ID="G03535874-4d0a-4af0-9aea-6c44a126805b">
+          <Name>String 17</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String17" />
+        </Attribute>
+        <Attribute ID="G619e768f-3886-4241-acc0-d4500e773f36">
+          <Name>String 18</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String18" />
+        </Attribute>
+        <Attribute ID="G95fc86f8-f0e1-4d37-914f-7e132f8ef00d">
+          <Name>String 19</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String19" />
+        </Attribute>
+        <Attribute ID="G2d511263-f1b7-4832-b46c-0e25b42330c8">
+          <Name>String 20</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String20" />
+        </Attribute>
+        <Attribute ID="Ga815672a-61c4-44a3-9870-a63188745e4d">
+          <Name>String 21</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String21" />
+        </Attribute>
+        <Attribute ID="G9b0c684e-51df-4631-a2d9-8c49a01681d4">
+          <Name>String 22</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="String22" />
+        </Attribute>
+      </Fields>
+      <Table Name="AdtServer_dvAll" />
+    </Entity>
+    <EntityFolder ID="G48e3afe6-1995-45b6-9075-e653576b9bb5">
+      <Name>NewFolder</Name>
+    </EntityFolder>
+  </Entities>
+  <Perspectives>
+    <Perspective ID="Gec16ba0a-00cb-442f-96bd-262267a3e2ad">
+      <Name>NewPerspective</Name>
+      <ModelItems>
+        <ModelItemID>G84916cb4-85b5-4a29-97cf-249b0b43b9f4</ModelItemID>
+        <ModelItemID>G0cf3dc6b-6fde-4030-bb0d-5d25e7f60419</ModelItemID>
+        <ModelItemID>Gce312c1d-32b6-440e-873d-3ddc3d4cad45</ModelItemID>
+        <ModelItemID>G432cfb7f-4dce-4e31-8aaf-5db534bdec6d</ModelItemID>
+        <ModelItemID>G8034c58b-08a2-4c5f-83ff-0a1d5aab23d7</ModelItemID>
+        <ModelItemID>Ge81718a8-9978-43e6-b0e7-f56d44dbdb84</ModelItemID>
+        <ModelItemID>G76697799-fe6c-40cf-b52b-4ebb034177f0</ModelItemID>
+        <ModelItemID>G2167c320-2317-49a0-b305-3b5cbc6162ad</ModelItemID>
+        <ModelItemID>G5878d591-0322-4161-955c-c69b8a37a21d</ModelItemID>
+        <ModelItemID>Gc6de7d0d-c076-493b-a8f7-2d2eef98f574</ModelItemID>
+        <ModelItemID>Gda80c798-aa22-4ddc-97db-7f7c8deb9e43</ModelItemID>
+      </ModelItems>
+    </Perspective>
+  </Perspectives>
+  <DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+    <ID>Audit</ID>
+    <Name>Audit</Name>
+    <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+    <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+    <Annotations xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+        <Value>true</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+        <Value>_ALL_TABLES_</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+        <Value>true</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+        <Value>
+          <Layouts xmlns="">
+            <Diagram>
+              <Name>_ALL_TABLES_</Name>
+              <DiagramLayout>
+                <dds>
+                  <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2720" scrolltop="-134" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="27649" y="22437" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <font>
+                      <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                    </font>
+                    <mouseicon>
+                      <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                    </mouseicon>
+                  </diagram>
+                  <layoutmanager>
+                    <ddsxmlobj />
+                  </layoutmanager>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="dvAll" left="0" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4049" height="20346" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000d10f00007a4f0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="AdtServer_dvAll" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                </dds>
+              </DiagramLayout>
+              <ShowRelationshipNames>False</ShowRelationshipNames>
+              <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+              <DiagramViewPortLeft>-2720</DiagramViewPortLeft>
+              <DiagramViewPortTop>-134</DiagramViewPortTop>
+              <DiagramBoundingLeft>0</DiagramBoundingLeft>
+              <DiagramBoundingTop>0</DiagramBoundingTop>
+              <DiagramZoom>100</DiagramZoom>
+            </Diagram>
+          </Layouts>
+        </Value>
+      </Annotation>
+    </Annotations>
+    <DataSourceID>Db Audit</DataSourceID>
+    <Schema>
+      <xs:schema id="Audit" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+        <xs:element name="Audit" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="f0a35b3f-e3dd-4029-86d4-e9d1dd6a12ca" msprop:CompareInfo="&lt;CompareInfo&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;IgnoreCase&gt;true&lt;/IgnoreCase&gt;&lt;IgnoreKanaType&gt;true&lt;/IgnoreKanaType&gt;&lt;IgnoreWidth&gt;true&lt;/IgnoreWidth&gt;&lt;/CompareInfo&gt;">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="AdtServer_dvAll" msprop:QueryDefinition="SELECT     Id, EventId, SequenceNo, [S/F], Category, CreationTime, CollectionTime, AgentMachine, EventMachine, Source, HeaderSid, HeaderUser, &#xD;&#xA;                      HeaderDomain, PrimarySid, PrimaryUser, PrimaryDomain, PrimaryLogonId, ClientSid, ClientUser, ClientDomain, ClientLogonId, TargetSid, TargetUser, &#xD;&#xA;                      TargetDomain, String01, String02, String03, String04, String05, String06, String07, String08, String09, String10, String11, String12, String13, String14, &#xD;&#xA;                      String15, String16, String17, String18, String19, String20, String21, String22&#xD;&#xA;FROM AdtServer.dvAll WITH (nolock)" msprop:DbTableName="dvAll" msprop:FriendlyName="dvAll" msprop:IsLogical="True" msprop:stats_RowCount="10264" msprop:design-time-name="c84e9197-c14b-4ce0-9f52-e83edd41c010" msprop:TableType="View" msprop:QueryBuilder="SpecificQueryBuilder">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Id" msprop:stats_StDevWidth="0.6020668" msprop:stats_AvgScale="0" msprop:stats_UniqueValuePercent="23" msprop:FriendlyName="Id" msprop:design-time-name="1dafe298-fe38-460a-b39e-26aa9a5668b3" msprop:stats_StDevScale="0" msprop:stats_MaxWidth="4" msprop:stats_UniqueValueCount="2384" msprop:stats_MaxScale="0" msprop:stats_AvgWidth="3.460737" msprop:DbColumnName="Id" type="xs:long" />
+                    <xs:element name="EventId" msprop:stats_StDevWidth="0.7990275" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="EventId" msprop:design-time-name="4509d57a-38d4-46cb-bfdf-48476d79b286" msprop:stats_MaxWidth="4" msprop:stats_UniqueValueCount="17" msprop:stats_AvgWidth="2.605222" msprop:DbColumnName="EventId" type="xs:int" minOccurs="0" />
+                    <xs:element name="SequenceNo" msprop:stats_StDevWidth="1.199444" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="SequenceNo" msprop:design-time-name="a58a2751-a121-47ff-96fd-028a2540a9c2" msprop:stats_MaxWidth="7" msprop:stats_UniqueValueCount="10264" msprop:stats_AvgWidth="6.400818" msprop:DbColumnName="SequenceNo" type="xs:int" minOccurs="0" />
+                    <xs:element name="S_x002F_F" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="S/F" msprop:design-time-name="707e0af2-ef9c-45fb-b620-9b78274ce810" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="1" msprop:DbColumnName="S/F" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="1" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Category" msprop:stats_StDevWidth="3.70397" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="Category" msprop:design-time-name="0f63dfce-8641-4ce3-a0bc-d475dc50337b" msprop:stats_MaxWidth="18" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="10.28926" msprop:DbColumnName="Category" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="64" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="CreationTime" msprop:FriendlyName="CreationTime" msprop:DbColumnName="CreationTime" msprop:stats_UniqueValuePercent="70" msprop:design-time-name="096fdcfd-60b4-4e27-bd44-7f5e5124f5cc" msprop:stats_UniqueValueCount="7263" type="xs:dateTime" minOccurs="0" />
+                    <xs:element name="CollectionTime" msprop:FriendlyName="CollectionTime" msprop:DbColumnName="CollectionTime" msprop:stats_UniqueValuePercent="68" msprop:design-time-name="00973ae9-7263-456e-94d1-16cfff966a5e" msprop:stats_UniqueValueCount="7066" type="xs:dateTime" minOccurs="0" />
+                    <xs:element name="AgentMachine" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="AgentMachine" msprop:design-time-name="f5129ccc-7fc8-47d1-894c-9593e0df21ae" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="12" msprop:DbColumnName="AgentMachine" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="EventMachine" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="EventMachine" msprop:design-time-name="c7ec520a-165e-4914-a8b1-18d85f5df850" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="EventMachine" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Source" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="Source" msprop:design-time-name="c8ac5ee4-7550-4769-acc5-440455551cce" msprop:stats_MaxWidth="8" msprop:stats_UniqueValueCount="2" msprop:stats_AvgWidth="8" msprop:DbColumnName="Source" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="64" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="HeaderSid" msprop:stats_StDevWidth="13.84177" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="HeaderSid" msprop:design-time-name="c1f3bbe0-0c10-4cb4-9264-2b9eb2f9b189" msprop:stats_MaxWidth="49" msprop:stats_UniqueValueCount="36" msprop:stats_AvgWidth="12.15764" msprop:DbColumnName="HeaderSid" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="180" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="HeaderUser" msprop:stats_StDevWidth="5.014252" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="HeaderUser" msprop:design-time-name="07040d63-c9e4-4055-9980-c925af6bbb75" msprop:stats_MaxWidth="16" msprop:stats_UniqueValueCount="36" msprop:stats_AvgWidth="11.38562" msprop:DbColumnName="HeaderUser" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="HeaderDomain" msprop:stats_StDevWidth="3.657529" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="HeaderDomain" msprop:design-time-name="e6e533ff-6ce1-4307-96ea-f704480b18d7" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="9.576774" msprop:DbColumnName="HeaderDomain" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PrimarySid" msprop:stats_StDevWidth="11.95932" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="PrimarySid" msprop:design-time-name="c4c73bb4-db0d-4f0f-9834-2c46c89ef689" msprop:stats_MaxWidth="49" msprop:stats_UniqueValueCount="40" msprop:stats_AvgWidth="6.479248" msprop:DbColumnName="PrimarySid" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="180" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PrimaryUser" msprop:stats_StDevWidth="1.968568" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="PrimaryUser" msprop:design-time-name="cd3892d8-ee59-4ed8-a9c9-48053a1547f6" msprop:stats_MaxWidth="20" msprop:stats_UniqueValueCount="40" msprop:stats_AvgWidth="3.485288" msprop:DbColumnName="PrimaryUser" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PrimaryDomain" msprop:stats_StDevWidth="1.076473" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="PrimaryDomain" msprop:design-time-name="3cd6cbdb-3066-4a88-a9e7-846dc82a9d8b" msprop:stats_MaxWidth="8" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="3.281664" msprop:DbColumnName="PrimaryDomain" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PrimaryLogonId" msprop:stats_StDevWidth="2.051122" msprop:stats_AvgScale="0" msprop:stats_UniqueValuePercent="7" msprop:FriendlyName="PrimaryLogonId" msprop:design-time-name="b32d7bbe-34a0-41c9-9659-a2c155e9b130" msprop:stats_StDevScale="0" msprop:stats_MaxWidth="9" msprop:stats_UniqueValueCount="727" msprop:stats_MaxScale="0" msprop:stats_AvgWidth="1.565861" msprop:DbColumnName="PrimaryLogonId" type="xs:long" minOccurs="0" />
+                    <xs:element name="ClientSid" msprop:stats_StDevWidth="14.16019" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="ClientSid" msprop:design-time-name="f0d8857c-0bb6-4ac6-9670-0a57001d0db8" msprop:stats_MaxWidth="49" msprop:stats_UniqueValueCount="36" msprop:stats_AvgWidth="8.000292" msprop:DbColumnName="ClientSid" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="180" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClientUser" msprop:stats_StDevWidth="2.04276" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="ClientUser" msprop:design-time-name="38096a80-a8ab-466e-a6f2-cf9ad4c521b8" msprop:stats_MaxWidth="16" msprop:stats_UniqueValueCount="36" msprop:stats_AvgWidth="3.480612" msprop:DbColumnName="ClientUser" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClientDomain" msprop:stats_StDevWidth="1.434805" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="ClientDomain" msprop:design-time-name="5da484bd-4cb7-45c7-9e08-26aa12f3c18d" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="6" msprop:stats_AvgWidth="3.297252" msprop:DbColumnName="ClientDomain" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClientLogonId" msprop:stats_StDevWidth="2.476238" msprop:stats_AvgScale="0" msprop:stats_UniqueValuePercent="7" msprop:FriendlyName="ClientLogonId" msprop:design-time-name="1f36006e-b2a2-4460-9f86-576e826f6ef3" msprop:stats_StDevScale="0" msprop:stats_MaxWidth="9" msprop:stats_UniqueValueCount="728" msprop:stats_MaxScale="0" msprop:stats_AvgWidth="1.885815" msprop:DbColumnName="ClientLogonId" type="xs:long" minOccurs="0" />
+                    <xs:element name="TargetSid" msprop:stats_StDevWidth="4.844156" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="TargetSid" msprop:design-time-name="e2af29e7-cd7b-4b0a-a10d-adf69dbd0223" msprop:stats_MaxWidth="46" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="3.565472" msprop:DbColumnName="TargetSid" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="180" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="TargetUser" msprop:stats_StDevWidth="3.131336" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="TargetUser" msprop:design-time-name="e9aefa5f-a553-4bc1-8b48-36f17501d03a" msprop:stats_MaxWidth="31" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="3.355417" msprop:DbColumnName="TargetUser" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="TargetDomain" msprop:stats_StDevWidth="0.2303526" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="TargetDomain" msprop:design-time-name="b017f975-36fa-4d2d-b306-6774e7ef0a21" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="3.02689" msprop:DbColumnName="TargetDomain" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String01" msprop:stats_StDevWidth="135.3162" msprop:stats_UniqueValuePercent="2" msprop:FriendlyName="String01" msprop:design-time-name="4b70fa09-4201-4101-9e2f-4d40fe40417d" msprop:stats_MaxWidth="333" msprop:stats_UniqueValueCount="220" msprop:stats_AvgWidth="111.5007" msprop:DbColumnName="String01" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String02" msprop:stats_StDevWidth="39.89914" msprop:stats_UniqueValuePercent="24" msprop:FriendlyName="String02" msprop:design-time-name="98978067-a9c8-4b62-810c-8051dcc15a01" msprop:stats_MaxWidth="313" msprop:stats_UniqueValueCount="2515" msprop:stats_AvgWidth="35.14663" msprop:DbColumnName="String02" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String03" msprop:stats_StDevWidth="139.0455" msprop:stats_UniqueValuePercent="22" msprop:FriendlyName="String03" msprop:design-time-name="982432a9-d17a-4d7a-818f-4ed87547720a" msprop:stats_MaxWidth="317" msprop:stats_UniqueValueCount="2291" msprop:stats_AvgWidth="101.3387" msprop:DbColumnName="String03" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String04" msprop:stats_StDevWidth="100.054" msprop:stats_UniqueValuePercent="24" msprop:FriendlyName="String04" msprop:design-time-name="86e6d923-1499-4ec1-8551-d3aac79572d4" msprop:stats_MaxWidth="246" msprop:stats_UniqueValueCount="2481" msprop:stats_AvgWidth="66.32073" msprop:DbColumnName="String04" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String05" msprop:stats_StDevWidth="6.909397" msprop:stats_UniqueValuePercent="1" msprop:FriendlyName="String05" msprop:design-time-name="16b9e5de-c851-4787-bd31-4c5e528a98af" msprop:stats_MaxWidth="38" msprop:stats_UniqueValueCount="145" msprop:stats_AvgWidth="6.389711" msprop:DbColumnName="String05" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String06" msprop:stats_StDevWidth="1.168798" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String06" msprop:design-time-name="be06a3f1-d82e-45d3-a31e-d6844b734593" msprop:stats_MaxWidth="61" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="4.727202" msprop:DbColumnName="String06" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String07" msprop:stats_StDevWidth="1.030763" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String07" msprop:design-time-name="5273d1b2-f82a-46ab-b962-132871a49727" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="4.713952" msprop:DbColumnName="String07" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String08" msprop:stats_StDevWidth="1.48029" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String08" msprop:design-time-name="e2320350-1bbc-4b80-9f68-cd5147265d5f" msprop:stats_MaxWidth="14" msprop:stats_UniqueValueCount="30" msprop:stats_AvgWidth="5.026306" msprop:DbColumnName="String08" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String09" msprop:stats_StDevWidth="0.9933549" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String09" msprop:design-time-name="cf2499f3-0e7c-4ca3-87fe-8a5cccb3cde2" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="44" msprop:stats_AvgWidth="4.731684" msprop:DbColumnName="String09" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String10" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String10" msprop:design-time-name="b313b65b-2cf0-403e-9606-1b99b09b88b9" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String10" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String11" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String11" msprop:design-time-name="add081fe-1228-4b9d-98d8-699e4e37f436" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String11" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String12" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String12" msprop:design-time-name="ebb66b41-c8b4-43a1-a229-2fec66f9eeef" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String12" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String13" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String13" msprop:design-time-name="17799444-b28b-4583-aac3-70a77dabe2f3" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String13" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String14" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String14" msprop:design-time-name="2ad41781-4c9e-4365-8cef-559a66656c89" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String14" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String15" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String15" msprop:design-time-name="e90fd4f3-bf81-4ef3-be81-794b0b5c9055" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String15" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String16" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String16" msprop:design-time-name="d31ffab6-e11a-4665-86ca-804aec5c530b" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String16" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String17" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String17" msprop:design-time-name="e3b7fb46-51d3-42a1-8602-5bd09d4b8d25" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String17" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String18" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String18" msprop:design-time-name="305b0971-370e-46fc-ad91-cc096a657e43" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String18" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String19" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String19" msprop:design-time-name="a98adf86-fda0-4dbe-8d22-f77c22265a83" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String19" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String20" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String20" msprop:design-time-name="3cf63b98-5088-4c57-8d45-0c3c22d36755" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String20" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String21" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String21" msprop:design-time-name="bef54015-db63-498f-9d26-7cb65a917838" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String21" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="String22" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="String22" msprop:design-time-name="622e4917-a15f-428e-81f0-f44e4dd48634" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="5" msprop:DbColumnName="String22" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="448" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+          <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//AdtServer_dvAll" />
+            <xs:field xpath="Id" />
+          </xs:unique>
+        </xs:element>
+      </xs:schema>
+    </Schema>
+  </DataSourceView>
+</SemanticModel>

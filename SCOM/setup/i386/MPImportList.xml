@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ManagementPacksToImport>
+  <ManagementPack Name="System Library">System.Library.mp</ManagementPack>
+  <ManagementPack Name="System Health Library">System.Health.Library.mp</ManagementPack>
+  <ManagementPack Name="System SNMP Library">System.Snmp.Library.mp</ManagementPack>
+  <ManagementPack Name="System ApplicationLog Library">System.ApplicationLog.Library.mp</ManagementPack>
+  <ManagementPack Name="System Performance Library">System.Performance.Library.mp</ManagementPack>
+  <ManagementPack Name="System BaseliningTasks Library">System.BaseliningTasks.Library.mp</ManagementPack>
+  <ManagementPack Name="System Image Library">System.Image.Library.mp</ManagementPack>
+  <ManagementPack Name="System AdminItem Library">System.AdminItem.Library.mp</ManagementPack>
+  <ManagementPack Name="System Software Library">System.Software.Library.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft Windows Library">Microsoft.Windows.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft Windows Image Library">Microsoft.Windows.Image.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter Library">Microsoft.SystemCenter.Library.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter InstanceGroup Library">Microsoft.SystemCenter.InstanceGroup.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ServiceDesigner Library">Microsoft.SystemCenter.ServiceDesigner.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter Internal">Microsoft.SystemCenter.Internal.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter DataWarehouse Library">Microsoft.SystemCenter.DataWarehouse.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ProcessMonitoring Library">Microsoft.SystemCenter.ProcessMonitoring.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter NTService Library">Microsoft.SystemCenter.NTService.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ClientMonitoring Library">Microsoft.SystemCenter.ClientMonitoring.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager Library">Microsoft.SystemCenter.OperationsManager.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter Image Library">Microsoft.SystemCenter.Image.Library.mp</ManagementPack>
+  <ManagementPack Name="System Health Internal">System.Health.Internal.mp</ManagementPack>
+  <ManagementPack Name="System Hardware Library">System.Hardware.Library.mp</ManagementPack>  
+
+  <!--MPs required for registering cubes MP extensions-->
+  <ManagementPack Name="Microsoft SystemCenter Datawarehouse OLAP Base">Microsoft.SystemCenter.Datawarehouse.OLAP.Base.mp</ManagementPack>
+  <!--MPs required for registering cubes MP extensions-->
+  
+  <ManagementPack Name="Microsoft System Center Visualization">Microsoft.SystemCenter.Visualization.Library.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft System Center Visualization Internal">Microsoft.SystemCenter.Visualization.Internal.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft System Center Data Providers" >Microsoft.SystemCenter.DataProviders.Library.mpb</ManagementPack>
+
+
+  <ManagementPack Name="Microsoft SystemCenter 2007">Microsoft.SystemCenter.2007.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager Internal">Microsoft.SystemCenter.OperationsManager.Internal.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ACS Internal">Microsoft.SystemCenter.ACS.Internal.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager 2007">Microsoft.SystemCenter.OperationsManager.2007.mp</ManagementPack>
+
+  <ManagementPack Name="System Network Management" >System.NetworkManagement.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter NetworkDevice Library">Microsoft.SystemCenter.NetworkDevice.Library.mp</ManagementPack>
+  <ManagementPack Name="System Network Management Monitoring" >System.NetworkManagement.Monitoring.mp</ManagementPack>
+
+
+
+  <ManagementPack Name="Microsoft SystemCenter WebApplication Library">Microsoft.SystemCenter.WebApplication.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft Windows Cluster Library">Microsoft.Windows.Cluster.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter SyntheticTransactions Library">Microsoft.SystemCenter.SyntheticTransactions.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter DataWarehouse Report Library">Microsoft.SystemCenter.DataWarehouse.Report.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ClientMonitoring Views Internal">Microsoft.SystemCenter.ClientMonitoring.Views.Internal.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ClientMonitoring Internal">Microsoft.SystemCenter.ClientMonitoring.Internal.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter Notifications Library">Microsoft.SystemCenter.Notifications.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager DefaultUser" ImportCondition="CleanInstall">Microsoft.SystemCenter.OperationsManager.DefaultUser.xml</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter RuleTemplates">Microsoft.SystemCenter.RuleTemplates.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter TaskTemplates">Microsoft.SystemCenter.TaskTemplates.mp</ManagementPack>  
+  <ManagementPack Name="Microsoft SystemCenter Internal UI Tasks">Microsoft.SystemCenter.Internal.UI.Tasks.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager AM DR 2007">Microsoft.SystemCenter.OperationsManager.AM.DR.2007.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter Notifications Internal" ImportCondition="CleanInstall">Microsoft.SystemCenter.Notifications.Internal.xml</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter WSManagement Library">Microsoft.SystemCenter.WsManagement.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ClientMonitoring Overrides" ImportCondition="CleanInstall">Microsoft.SystemCenter.ClientMonitoring.Overrides.xml</ManagementPack>
+  <ManagementPack Name="System Virtualization Library">System.Virtualization.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter WorkflowFoundation Library">Microsoft.SystemCenter.WorkflowFoundation.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter WebApplicationTest Library">Microsoft.SystemCenter.WebApplicationTest.Library.mp</ManagementPack>
+  <ManagementPack Name="Management Pack Recommendations">Microsoft.SystemCenter.ManagementPack.Recommendations.mp</ManagementPack>
+
+  <!--Network Monitoring MP Start-->
+  <!-- Uncomment to import P2 workflows
+  <ManagementPack Name="System.NetworkManagement.Monitoring.Peripheral.mp" >System.NetworkManagement.Monitoring.Peripheral.mp</ManagementPack>-->
+  <ManagementPack Name="System Network Management Templates" >System.NetworkManagement.Templates.mp</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.NetworkDiscovery.Internal.xml" ImportCondition="SkipForIMUpgrade">Microsoft.SystemCenter.NetworkDiscovery.Internal.xml</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.Visualization.Network.Library.mp" >Microsoft.SystemCenter.Visualization.Network.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.Visualization.Network.Dashboard.mp" >Microsoft.SystemCenter.Visualization.Network.Dashboard.mp</ManagementPack>
+  <!-- <ManagementPack Name="Microsoft.SystemCenter.Visualization.ApplicationMonitoring.mp" >Microsoft.SystemCenter.Visualization.ApplicationMonitoring.mp</ManagementPack> -->
+  <ManagementPack Name="Microsoft.SystemCenter.Visualization.Configuration.Library.mp" >Microsoft.SystemCenter.Visualization.Configuration.Library.mp</ManagementPack>
+  <!--Network Monitoring MP Ends-->
+  <!--Application Monitoring MP Start-->
+  <!--
+  <ManagementPack Name="System ASM Library">System.ASM.Library.mp</ManagementPack>
+  <ManagementPack Name="System WebServices">System.WebServices.mp</ManagementPack>
+  <ManagementPack Name="Microsoft ApplicationMonitoring Internal">Microsoft.ApplicationMonitoring.Internal.mp</ManagementPack>
+  <ManagementPack Name="Microsoft WebServices WCF">Microsoft.WebServices.WCF.mp</ManagementPack>
+  <ManagementPack Name="Microsoft WebServices ASPNET">Microsoft.WebServices.ASPNET.mp</ManagementPack>
+  <ManagementPack Name="Microsoft ASM IntelliTrace">Microsoft.ASM.IntelliTrace.mp</ManagementPack>
+  <ManagementPack Name="Microsoft ASP NET Application">Microsoft.ASP.NET.Application.mp</ManagementPack>
+  <ManagementPack Name="Microsoft Windows LOB Monitoring">Microsoft.Windows.LOB.Monitoring.mp</ManagementPack>
+  -->
+  <ManagementPack Name="Microsoft.SystemCenter.ApplicationMonitoring.Library" >Microsoft.SystemCenter.ApplicationMonitoring.Library.mpb</ManagementPack>
+  <!--Application Monitoring MP End-->
+
+   <!-- UNIX/Linux Libraries Start-->
+   <ManagementPack Name="Microsoft Unix Library">Microsoft.Unix.Library.mp</ManagementPack>
+   <ManagementPack Name="Microsoft Unix Logfile Library">Microsoft.Unix.Logfile.Library.mpb</ManagementPack>
+   <ManagementPack Name="UNIX/Linux Process Monitoring Library">Microsoft.Unix.Process.Library.mpb</ManagementPack>
+   <ManagementPack Name="UNIX/Linux Shell Command Library">Microsoft.Unix.ShellCommand.Library.mpb</ManagementPack>
+   <ManagementPack Name="Microsoft Unix Views">Microsoft.Unix.Views.mp</ManagementPack>
+   <ManagementPack Name="Microsoft Unix Image Library">Microsoft.Unix.Image.Library.mp</ManagementPack>
+   <ManagementPack Name="UNIX/Linux Console Library">Microsoft.Unix.ConsoleLibrary.mp</ManagementPack>
+   <!-- UNIX/Linux Libraries End-->
+
+   <!-- Depends on APM MPs start -->
+  <ManagementPack Name="Microsoft SystemCenter WebApplicationSolutions Library">Microsoft.SystemCenter.WebApplicationSolutions.Library.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter ApplicationMonitoring 360 Template Library">Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Library.mp</ManagementPack>
+  <!-- Depends on APM MPs end -->
+
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager Data Access Service">Microsoft.SystemCenter.OperationsManager.DataAccessService.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager Infra">Microsoft.SystemCenter.OperationsManager.Infra.mp</ManagementPack>
+  <ManagementPack Name="Microsoft SystemCenter OperationsManager Summary Dashboard">Microsoft.SystemCenter.OperationsManager.SummaryDashboard.mp</ManagementPack>
+
+  <!-- UNIX/Linux MP Starts-->
+  <ManagementPack Name="Microsoft Unix Service Library" ImportCondition="UpgradeIfPresent">Microsoft.Unix.Service.Library.mp</ManagementPack>
+  <ManagementPack Name="AIX Operating System Library" ImportCondition="UpgradeIfPresent">Microsoft.AIX.Library.mp</ManagementPack>
+  <ManagementPack Name="AIX 6.1 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.AIX.6.1.mpb</ManagementPack>
+  <ManagementPack Name="AIX 7 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.AIX.7.mpb</ManagementPack>
+  <ManagementPack Name="HPUX Operating System Library" ImportCondition="UpgradeIfPresent">Microsoft.HPUX.Library.mp</ManagementPack>
+  <ManagementPack Name="HPUX 11iv3 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.HPUX.11iv3.mpb</ManagementPack>
+  <ManagementPack Name="Linux Operating System Library" ImportCondition="UpgradeIfPresent">Microsoft.Linux.Library.mp</ManagementPack>
+  <ManagementPack Name="Red Hat Linux Operating System Library" ImportCondition="UpgradeIfPresent">Microsoft.Linux.RedHat.Library.mp</ManagementPack>
+  <ManagementPack Name="SUSE Linux Enterprise Operating System Library" ImportCondition="UpgradeIfPresent">Microsoft.Linux.SUSE.Library.mp</ManagementPack>
+  <ManagementPack Name="Red Hat Enterprise Linux Server 5 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Linux.RHEL.5.mpb</ManagementPack>
+  <ManagementPack Name="Red Hat Enterprise Linux Server 6 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Linux.RHEL.6.mpb</ManagementPack>
+  <ManagementPack Name="Red Hat Enterprise Linux Server 7 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Linux.RHEL.7.mpb</ManagementPack>
+  <ManagementPack Name="Linux SUSE Linux Enterprise Server 10 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Linux.SLES.10.mpb</ManagementPack>
+  <ManagementPack Name="Linux SUSE Linux Enterprise Server 11 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Linux.SLES.11.mpb</ManagementPack>
+  <ManagementPack Name="Linux SUSE Linux Enterprise Server 12 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Linux.SLES.12.mpb</ManagementPack>
+  <ManagementPack Name="Solaris Operating System Library" ImportCondition="UpgradeIfPresent">Microsoft.Solaris.Library.mp</ManagementPack>
+  <ManagementPack Name="Solaris 10 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Solaris.10.mpb</ManagementPack>
+  <ManagementPack Name="Solaris 11 Operating System" ImportCondition="UpgradeIfPresent">Microsoft.Solaris.11.mpb</ManagementPack>
+  <ManagementPack Name="ACS Modules Library for Unix/Linux Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Unix.Library.mp</ManagementPack>
+  <ManagementPack Name="ACS (AIX 6.1) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.AIX.6.1.mp</ManagementPack>
+  <ManagementPack Name="ACS (AIX 7) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.AIX.7.mp</ManagementPack>
+  <ManagementPack Name="ACS (HP 11iv3) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.HPUX.11iv3.mp</ManagementPack>
+  <ManagementPack Name="ACS (RedHat 5.x) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.RHEL.5.mp</ManagementPack>
+  <ManagementPack Name="ACS (RedHat 6.x) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.RHEL.6.mp</ManagementPack>
+  <ManagementPack Name="ACS (RedHat 7.x) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.RHEL.7.mp</ManagementPack>
+  <ManagementPack Name="ACS (SLES 10) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.SLES.10.mp</ManagementPack>
+  <ManagementPack Name="ACS (SLES 11) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.SLES.11.mp</ManagementPack>
+  <ManagementPack Name="ACS (SLES 12) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.SLES.12.mp</ManagementPack>
+  <ManagementPack Name="ACS (Solaris 11) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Solaris.11.mp</ManagementPack>
+  <ManagementPack Name="ACS (Solaris 10) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Solaris.10.mp</ManagementPack>
+  <ManagementPack Name="ACS (Universal) Modules Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.ACS.Linux.Universal.mp</ManagementPack>
+  <ManagementPack Name="Linux (Universal) Library Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.Linux.Universal.Library.mp</ManagementPack>
+  <ManagementPack Name="Linux (Universal) Monitoring Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.Linux.Universal.Monitoring.mp</ManagementPack>
+  <ManagementPack Name="Linux (Universal) DEB Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.Linux.UniversalD.1.mpb</ManagementPack>
+  <ManagementPack Name="Linux (Universal) RPM Management Pack" ImportCondition="UpgradeIfPresent">Microsoft.Linux.UniversalR.1.mpb</ManagementPack>
+  
+  
+  
+  <!-- UNIX/Linux MP Ends-->
+
+  <!-- Network Port Stiching MPs Starts-->
+  <ManagementPack Name="Windows Server Library Management Pack" >Microsoft.Windows.Server.Library.mp</ManagementPack>
+  <ManagementPack Name="Windows Client Library Management Pack" >Microsoft.Windows.Client.Library.mp</ManagementPack>
+  <ManagementPack Name="Windows Server Network Discovery Management Pack" >Microsoft.Windows.Server.NetworkDiscovery.mp</ManagementPack>
+  <ManagementPack Name="Windows Client Network Discovery Management Pack" >Microsoft.Windows.Client.NetworkDiscovery.mp</ManagementPack>
+  <!-- Network Port Stiching MPs Ends-->
+
+  <!-- GTM Tool MPs Start-->
+  <ManagementPack Name="GTM Summary Management Pack" >Microsoft.SystemCenter.GTM.Summary.Dashboard.Template.mp</ManagementPack>
+  <!-- GTM Tool MPs End-->  
+  
+  <ManagementPack Name="Microsoft System Center Visualization ServiceLevelComponents" >Microsoft.SystemCenter.Visualization.ServiceLevelComponents.mpb</ManagementPack>
+
+  <!-- 360 Dashboard MP Start -->
+  <ManagementPack Name="Microsoft System Center Visualization Component Library">Microsoft.SystemCenter.Visualization.Component.Library.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft System Center Application Monitoring 360 Library">Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft System Center Application Monitoring 360 Dashboards">Microsoft.SystemCenter.ApplicationMonitoring.360.Template.Dashboards.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft System Center Application Monitoring 360 SLA">Microsoft.SystemCenter.ApplicationMonitoring.360.SLA.xml</ManagementPack>
+  <!-- 360 Dashboard MP End -->
+  
+  <!-- Advisor MPs -->
+  <ManagementPack Name="Microsoft System Center Advisor Internal">Microsoft.SystemCenter.Advisor.Internal.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft System Center Advisor">Microsoft.SystemCenter.Advisor.mpb</ManagementPack>
+  <!-- Advisor MPs (end) -->
+
+</ManagementPacksToImport>

@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Prerequisites>
+  <ComponentTitles>
+    <ComponentTitle Id="OMSERVER">OMSERVER</ComponentTitle>
+    <ComponentTitle Id="OMCONSOLE">OMCONSOLE</ComponentTitle>
+    <ComponentTitle Id="OMWEBCONSOLE">OMWEBCONSOLE</ComponentTitle>
+    <ComponentTitle Id="OMREPORTING">OMREPORTING</ComponentTitle>
+  </ComponentTitles>
+  
+  <!-- Memory Checks-->
+  <Check Order="1">
+    <Id>8C032EE7-C5FE-4E7D-9214-D2941D7BC86F</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMCONSOLE</Component>
+    </Components>
+    <Title>memoryCheckTitle</Title>
+    <PassedDescription>serverMemCheckPassed</PassedDescription>
+    <FailedDescription>serverMemCheckFailed</FailedDescription>
+    <Resolution>serverMemCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="MemoryCheck-2gbFail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="SystemMemoryCheck">2000,1</LogicDelegate>
+      <LogicDelegate LogicType="and"
+                     DelegateId="MemoryCheck-4gbWarn"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="SystemMemoryCheck">4000,1</LogicDelegate>
+
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="2">
+    <Id>D3F505CB-0FD1-4857-97FB-C55AFB973686</Id>
+    <Components>
+      <Component>OMREPORTING</Component>
+      <Component>OMWEBCONSOLE</Component>
+    </Components>
+    <Title>memoryCheckTitle</Title>
+    <PassedDescription>ReportingMemCheckPassed</PassedDescription>
+    <FailedDescription>ReportingMemCheckFailed</FailedDescription>
+    <Resolution>ReportingMemCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="MemoryCheck-1gbFail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="SystemMemoryCheck">1000,1</LogicDelegate>
+      <LogicDelegate LogicType="and"
+                     DelegateId="MemoryCheck-2gbWarn"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="SystemMemoryCheck">2000,1</LogicDelegate>
+
+    </LogicDelegates>
+  </Check>
+
+  <!-- Disk Space Checks-->
+
+  <Check Order="10">
+    <Id>0ECA371C-43AB-40CA-900E-96ADACD83943</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMCONSOLE</Component>
+      <Component>OMWEBCONSOLE</Component>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>ntfsCheckTitle</Title>
+    <PassedDescription>ntfsCheckPassed</PassedDescription>
+    <FailedDescription>ntfsCheckFailed</FailedDescription>
+    <Resolution>ntfsCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="NTFSDrive-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="DriveFormatCheck">%windir%,ntfs,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="11">
+    <Id>EDE77171-4748-45F8-BA09-39BFFFB7A850</Id>
+    <Components>
+      <Component>OMCONSOLE</Component>
+    </Components>
+    <Title>DriveSpaceCheckTitle</Title>
+    <PassedDescription>ConsoleDriveSpaceCheckPassed</PassedDescription>
+    <FailedDescription>ConsoleDriveSpaceCheckFailed</FailedDescription>
+    <Resolution>ConsoleDriveSpaceCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="UIDriveSpaceCheck-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="DriveFreeSpaceCheck">%windir%,512,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="12">
+    <Id>1209433F-B86B-4AE2-BB15-B3870AC06EAE</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>DriveSpaceCheckTitle</Title>
+    <PassedDescription>ServerDriveSpaceCheckPassed</PassedDescription>
+    <FailedDescription>ServerDriveSpaceCheckFailed</FailedDescription>
+    <Resolution>ServerDriveSpaceCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="DriveSpaceCheck-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="DriveFreeSpaceCheck">%windir%,1024,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+  
+
+  <!-- Operating System Checks-->
+  <Check Order="30">
+    <Id>04D72EE0-CD9B-488F-B996-FFB9DD6339C4</Id>
+    <!-- If the OS is a server OS, verify that it falls within valid build numbers -->
+    <Components>
+      <Component>OMCONSOLE</Component>      
+    </Components>
+    <Title>OSVersionCheckTitle</Title>
+    <PassedDescription>OSVersionCheckPassed</PassedDescription>
+    <FailedDescription>OSVersionCheckFailedConsole</FailedDescription>
+    <Resolution>OSVersionCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="or"
+                     DelegateId="OSVersion-w2k8-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="RequiredOperatingSystem">
+        6.1.7601.0,65535.65535.65535,Win32NT,,2
+      </LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="31">
+    <Id>72DA1075-5F1E-4780-8529-0DB09EA05A13</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMWEBCONSOLE</Component>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>OSVersionCheckTitle</Title>
+    <PassedDescription>OSVersionCheckPassed</PassedDescription>
+    <FailedDescription>OSVersionCheckFailedServer</FailedDescription>
+    <Resolution>OSVersionCheckResolution</Resolution>
+    <LogicDelegates>
+      <!-- Should be blocked for Console OS, but not Domain Controllers or Servers -->
+      <LogicDelegate LogicType="or"
+                     DelegateId="OSVersion-w2k8R2-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="RequiredOperatingSystem">
+		     6.3.9600.0,65535.65535.65535.65535,Win32NT,LanmanNT,2
+      </LogicDelegate>
+      <LogicDelegate LogicType="or"
+                     DelegateId="OSVersion-w2k8R2-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="RequiredOperatingSystem">
+		     6.3.9600.0,65535.65535.65535.65535,Win32NT,ServerNT,2
+      </LogicDelegate>
+      <LogicDelegate LogicType="and"
+                     DelegateId="ArchitectureIs64Check-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="ArchitectureIs64Check">
+      </LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <!-- Powershell Check -->
+  <Check Order="40">
+    <Id>55CCFA29-2216-42CD-937F-CB13855E6885</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMCONSOLE</Component>
+    </Components>
+    <Title>PowershellCheckTitle</Title>
+    <PassedDescription>PowershellCheckPassed</PassedDescription>
+    <FailedDescription>PowerShellCheckFailed</FailedDescription>
+    <Resolution>PowerShellCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+		     DelegateId="PowerShell2-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="PowerShellVersionCheck">2.0</LogicDelegate>    
+    </LogicDelegates>
+  </Check>
+
+    <!-- Miscellaneous Checks -->
+    <Check Order="50">
+        <Id>823929EC-52DE-4EF0-9944-316812A3D546</Id>
+        <Components>
+            <Component>OMSERVER</Component>
+        </Components>
+        <Title>DomainControllerCheckTitle</Title>
+        <PassedDescription>DomainControllerCheckPassed</PassedDescription>
+        <FailedDescription>DomainControllerCheckFailed</FailedDescription>
+        <Resolution>DomainControllerCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="or"
+                           DelegateId="OSVersion-notWorkstation-warn"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RequiredOperatingSystem">
+                0.0,65535.65535.65535.65535,Win32NT,WinNT,1
+            </LogicDelegate>
+            <LogicDelegate LogicType="or"
+                           DelegateId="OSVersion-notServer-warn"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RequiredOperatingSystem">
+                0.0,65535.65535.65535.65535,Win32NT,ServerNT,1
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="51">
+        <Id>06B41036-7B7A-4A51-B37B-BF9846F11A1E</Id>
+        <Components>
+            <Component>OMSERVER</Component>
+            <Component>OMCONSOLE</Component>
+            <Component>OMWEBCONSOLE</Component>
+            <Component>OMREPORTING</Component>
+        </Components>
+        <Title>WindowsInstallerCheckTitle</Title>
+        <PassedDescription>WindowsInstallerCheckPassed</PassedDescription>
+        <FailedDescription>WindowsInstallerCheckFailed</FailedDescription>
+        <Resolution>WindowsInstallerCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="WindowsInstallerVersionCheckDelegate-v31"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="WindowsInstallerVersionCheckDelegate">3.1</LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="52">
+        <Id>364B8134-8EE4-40BA-9888-85F964D9FA9C</Id>
+        <Components>
+            <Component>OMSERVER</Component>
+            <Component>OMCONSOLE</Component>
+            <Component>OMWEBCONSOLE</Component>
+            <Component>OMREPORTING</Component>
+        </Components>
+        <Title>PendingRebootCheckTitle</Title>
+        <PassedDescription>PendingRebootCheckPassed</PassedDescription>
+        <FailedDescription>PendingRebootCheckFailed</FailedDescription>
+        <Resolution>PendingRebootCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="PendingReboot-Fail"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager' Name='PendingFileRenameOperations' KeyType='string' Value=' ' ComparisonType="notexist" FailedReturn="1" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="53">
+        <Id>D877E1F6-840C-4422-80BC-E62E04DEAA42</Id>
+        <Components>
+            <Component>OMSERVER</Component>
+        </Components>
+        <Title>WinRMCheckTitle</Title>
+        <PassedDescription>WinRMCheckPassed</PassedDescription>
+        <FailedDescription>WinRMCheckFailed</FailedDescription>
+        <Resolution>WinRMCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="ServiceCheck-WinRM"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="ServiceInstalledEnabledAndRunningCheckDelegate">WinRM</LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="54">
+        <Id>EAC28916-24EC-4CEE-B0D1-487E7D37DA11</Id>
+        <Components>
+            <Component>OMSERVER</Component>
+            <Component>OMREPORTING</Component>
+        </Components>
+        <Title>RemoteRegistryCheckTitle</Title>
+        <PassedDescription>RemoteRegistryCheckPassed</PassedDescription>
+        <FailedDescription>RemoteRegistryCheckFailed</FailedDescription>
+        <Resolution>RemoteRegistryCheckResolution</Resolution>
+        <LogicDelegates>
+			      <LogicDelegate LogicType="and"
+								           DelegateId="PassIfWin8Anything"
+								           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+								           DelegateName="RequiredOperatingSystem">
+								           6.2.0000.0,65535.65535.65535.65535,Win32NT,,2
+            </LogicDelegate>
+            <LogicDelegate LogicType="and"
+                           DelegateId="ServiceCheck-WinRM-enabled"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="ServiceInstalledAndEnabledCheckDelegate">RemoteRegistry</LogicDelegate>          
+            <LogicDelegate LogicType="or"
+                           DelegateId="ServiceCheck-WinRM-running"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="ServiceInstalledEnabledAndRunningCheckDelegate">RemoteRegistry</LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+   <Check Order="55">
+      <Id>3CA3C48D-1A84-458E-A61E-95162FE015D3</Id>
+      <Components>
+        <Component>OMCONSOLE</Component>
+        <Component>OMWEBCONSOLE</Component>
+      </Components>
+      <Title>ReportViewerCheckTitle</Title>
+      <PassedDescription>ReportViewerCheckPassed</PassedDescription>
+      <FailedDescription>ReportViewerCheckFailed</FailedDescription>
+      <Resolution>ReportViewerCheckResolution</Resolution>
+      <LogicDelegates>
+        <LogicDelegate LogicType="and"
+                       DelegateId="ReportViewer"
+                       DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                       DelegateName="MSIPresenceCheck">{01DC360F-E770-4E85-8A6D-F830AF364372},12.0.0.0,12.65535.65535.65535,2</LogicDelegate>
+      </LogicDelegates>
+    </Check>
+
+    <!-- Sanity check to make sure that this machine is not clustered ... which can cause problems for OM10 and beyond -->
+    <Check Order="56">
+      <Id>F8299171-9C79-4E55-9B3F-5EF1DCAFCF7C</Id>
+      <Components>
+        <Component>OMSERVER</Component>
+      </Components>
+    <Title>ClusteredServerCheckTitle</Title>
+    <PassedDescription>ClusteredServerCheckPassed</PassedDescription>
+    <FailedDescription>ClusteredServerCheckFailed</FailedDescription>
+    <Resolution>ClusteredServerCheckResolution</Resolution>
+      <LogicDelegates>
+        <LogicDelegate LogicType="and"
+                       DelegateId="ClusteredMachineCheck"
+                       DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                       DelegateName="RegistryCheckDelegate">
+          <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft Operations Manager\3.0\'
+                     Name='HealthServiceVirtualHost'
+                     KeyType='string'
+                     Value=' '
+                     ComparisonType="notexist"
+                     FailedReturn="2" />]]>
+        </LogicDelegate>
+      </LogicDelegates>
+    </Check>
+
+  <Check Order="57">
+    <Id>0ACC3CB4-85EA-49C8-BF97-586D3E410A1C</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMWEBCONSOLE</Component>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>ActiveDirectoryCheckTitle</Title>
+    <PassedDescription>ActiveDirectoryCheckPassed</PassedDescription>
+    <FailedDescription>ActiveDirectoryCheckFailed</FailedDescription>
+    <Resolution>ActiveDirectoryCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="ADCheck-Fail"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.HelperClasses.OMPrequisiteChecks,SetupChainerUI"
+                     DelegateName="ActiveDirectoryCheck"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="58">
+    <Id>B362B210-9F12-42F5-BE01-7EFEB6A5D549</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+      <Component>OMWEBCONSOLE</Component>
+      <Component>OMREPORTING</Component>
+    </Components>
+    <Title>IsComputerNameValidTitle</Title>
+    <PassedDescription>IsComputerNameValidPassed</PassedDescription>
+    <FailedDescription>IsComputerNameValidFailed</FailedDescription>
+    <Resolution>IsComputerNameValidResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsComputerNameValid"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="IsComputerNameValid">2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <!-- AVICode component check-->
+  <Check Order="60">
+    <Id>CA1F5F1D-429E-4BAD-8551-A86296AFD939</Id>
+    <Components>
+      <Component>OMWEBCONSOLE</Component>
+    </Components>
+    <Title>SEViewerInstalledCheck</Title>
+    <PassedDescription>SeViewerInstalledCheckPassed</PassedDescription>
+    <FailedDescription>SeViewerInstalledCheckFailed</FailedDescription>
+    <Resolution>SeViewerInstalledCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+         DelegateId="Se-ViewerInstalled-x86"
+             DelegateNameSpace = "Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates, Microsoft.SystemCenter.Essentials.SetupFramework"
+             DelegateName ="RegistryCheckDelegate">
+        <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\AVIcode\Intercept\SEViewer' 
+                          Name='InstallPath' 
+                          KeyType='string' 
+                          Value='.' 
+                          ComparisonType="notexist" 
+                          FailedReturn="2" />]]>
+        </LogicDelegate>
+      <LogicDelegate LogicType="and"
+         DelegateId="Se-ViewerInstalled-x64"
+             DelegateNameSpace = "Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates, Microsoft.SystemCenter.Essentials.SetupFramework"
+             DelegateName ="RegistryCheckDelegate">
+        <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Wow6432Node\AVIcode\Intercept\SEViewer' 
+                          Name='InstallPath' 
+                          KeyType='string' 
+                          Value='.' 
+                          ComparisonType="notexist" 
+                          FailedReturn="2" />]]>
+      </LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="61">
+  <Id>C8873FAD-E9FD-495D-BD4B-BDFF0F61F7BA</Id>
+  <Components>
+    <Component>OMSERVER</Component>
+    <Component>OMCONSOLE</Component>
+    <Component>OMWEBCONSOLE</Component>
+    <Component>OMREPORTING</Component>
+  </Components>
+  <Title>AVIcodeAgentCheck</Title>
+  <PassedDescription>AVICodeAgentCheckPassed</PassedDescription>
+  <FailedDescription>AVICodeAgentCheckFailed</FailedDescription>
+  <Resolution>AVICodeAgentCheckResolution</Resolution>
+  <LogicDelegates>
+    <LogicDelegate LogicType="and"
+   DelegateId="AvicodeAgentInstalled-x86"
+               DelegateNameSpace = "Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates, Microsoft.SystemCenter.Essentials.SetupFramework"
+               DelegateName ="RegistryCheckDelegate">
+      <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\AVIcode\Intercept\ServerAgent' 
+                          Name='InstallPath' 
+                          KeyType='string' 
+                          Value='.' 
+                          ComparisonType="notexist"
+                          FailedReturn="2" />]]>
+    </LogicDelegate>
+    <LogicDelegate LogicType="and"
+   DelegateId="AvicodeAgentInstalled-x64"
+               DelegateNameSpace = "Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates, Microsoft.SystemCenter.Essentials.SetupFramework"
+               DelegateName ="RegistryCheckDelegate">
+      <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Wow6432Node\AVIcode\Intercept\ServerAgent' 
+                          Name='InstallPath' 
+                          KeyType='string' 
+                          Value='.' 
+                          ComparisonType="notexist"
+                          FailedReturn="2" />]]>
+    </LogicDelegate>
+  </LogicDelegates>
+  </Check>
+  
+  <!-- Block setup if MOMASPAgent is installed-->
+  <Check Order="62">
+    <Id>78AF509B-AC0F-4764-A299-E5B75B65D2A8</Id>
+    <Components>
+      <Component>OMSERVER</Component>
+    </Components>
+    <Title>MOMASPAgentInstalledCheck</Title>
+    <PassedDescription>MOMASPAgentCheckPassed</PassedDescription>
+    <FailedDescription>MOMASPAgentCheckFailed</FailedDescription>
+    <Resolution>MOMASPAgentResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                  DelegateId="MOMASPAgent"
+                  DelegateNameSpace = "Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates, Microsoft.SystemCenter.Essentials.SetupFramework"
+                  DelegateName ="CheckRules">Rules/ManagementServerInstallationRules.xaml,2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <!-- Web console checks -->
+    <Check Order="80">
+        <Id>5A0403B3-75D6-4B53-806C-3CAB64CF0B00</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>IISCheckTitle</Title>
+        <PassedDescription>IISCheckPassed</PassedDescription>
+        <FailedDescription>IISCheckFailed</FailedDescription>
+        <Resolution>IISCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="W3SVC"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='W3SVC'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="81">
+        <Id>D85218AB-EFD2-404A-A38F-8CF338299068</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>IISMetabaseCheckTitle</Title>
+        <PassedDescription>IISMetabaseCheckPassed</PassedDescription>
+        <FailedDescription>IISMetabaseCheckFailed</FailedDescription>
+        <Resolution>IISMetabaseCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="Metabase"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='Metabase'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="82">
+        <Id>E25AD235-584C-44E6-94CC-976F1772D390</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>AspNetCheckTitle</Title>
+        <PassedDescription>AspNetCheckPassed</PassedDescription>
+        <FailedDescription>AspNetCheckFailed</FailedDescription>
+        <Resolution>AspNetCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="ASPNET"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='ASPNET'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="83">
+        <Id>D304ED6C-0032-4E2A-90BF-FCE5A470EF03</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>WindowsAuthRoleCheckTitle</Title>
+        <PassedDescription>WindowsAuthRoleCheckPassed</PassedDescription>
+        <FailedDescription>WindowsAuthRoleCheckFailed</FailedDescription>
+        <Resolution>WindowsAuthRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="WindowsAuthentication"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='WindowsAuthentication'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="84">
+        <Id>DA862073-47FF-497B-BA3D-87A9EF22517E</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>StaticContentRoleCheckTitle</Title>
+        <PassedDescription>StaticContentRoleCheckPassed</PassedDescription>
+        <FailedDescription>StaticContentRoleCheckFailed</FailedDescription>
+        <Resolution>StaticContentRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="StaticContent"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='StaticContent'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="85">
+        <Id>C3696F1E-4B94-4A97-AFDE-575A4598BEE7</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>DefaultDocumentRoleCheckTitle</Title>
+        <PassedDescription>DefaultDocumentRoleCheckPassed</PassedDescription>
+        <FailedDescription>DefaultDocumentRoleCheckFailed</FailedDescription>
+        <Resolution>DefaultDocumentRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="DefaultDocument"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='DefaultDocument'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="86">
+        <Id>20602E06-DF84-432E-8C08-B76282B05358</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>DirectoryBrowsingRoleCheckTitle</Title>
+        <PassedDescription>DirectoryBrowsingRoleCheckPassed</PassedDescription>
+        <FailedDescription>DirectoryBrowsingRoleCheckFailed</FailedDescription>
+        <Resolution>DirectoryBrowsingRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="DirectoryBrowse"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='DirectoryBrowse'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="87">
+        <Id>2F110BF9-D07C-4D06-81E4-ED6177D83DCB</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>HttpErrorsRoleCheckTitle</Title>
+        <PassedDescription>HttpErrorsRoleCheckPassed</PassedDescription>
+        <FailedDescription>HttpErrorsRoleCheckFailed</FailedDescription>
+        <Resolution>HttpErrorsRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="HttpErrors"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='HttpErrors'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="88">
+        <Id>56799E14-B6F6-4423-A130-2FBFB511B874</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>HttpLoggingRoleCheckTitle</Title>
+        <PassedDescription>HttpLoggingRoleCheckPassed</PassedDescription>
+        <FailedDescription>HttpLoggingRoleCheckFailed</FailedDescription>
+        <Resolution>HttpLoggingRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="HttpLogging"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='HttpLogging'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="89">
+        <Id>2B02759C-5540-4C2F-99F5-4DD7D8F77E5A</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>RequestMonitorRoleCheckTitle</Title>
+        <PassedDescription>RequestMonitorRoleCheckPassed</PassedDescription>
+        <FailedDescription>RequestMonitorRoleCheckFailed</FailedDescription>
+        <Resolution>RequestMonitorRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="RequestMonitor"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='RequestMonitor'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="90">
+        <Id>5A385D1E-D209-4D6A-8982-282FE7DBBA8E</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>RequestFilterRoleCheckTitle</Title>
+        <PassedDescription>RequestFilterRoleCheckPassed</PassedDescription>
+        <FailedDescription>RequestFilterRoleCheckFailed</FailedDescription>
+        <Resolution>RequestFilterRoleCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="RequestFiltering"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='RequestFiltering'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+    <Check Order="91">
+        <Id>8BC6700E-208D-4AC1-9614-33BE4738C124</Id>
+        <Components>
+            <Component>OMWEBCONSOLE</Component>
+        </Components>
+        <Title>StaticContentCheckTitle</Title>
+        <PassedDescription>StaticContentCheckPassed</PassedDescription>
+        <FailedDescription>StaticContentCheckFailed</FailedDescription>
+        <Resolution>StaticContentCheckResolution</Resolution>
+        <LogicDelegates>
+            <LogicDelegate LogicType="and"
+                           DelegateId="HttpCompressionStatic"
+                           DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                           DelegateName="RegistryCheckDelegate">
+                <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\Software\Microsoft\InetStp\Components\'
+                         Name='HttpCompressionStatic'
+                         Type='dword'
+                         Value='1'
+                         ComparisonType="exist"
+                         FailedReturn="2" />]]>
+            </LogicDelegate>
+        </LogicDelegates>
+    </Check>
+
+
+  <Check Order="94">
+    <Id>48A2762E-9AAF-4252-A18D-13FE5373CEDF</Id>
+    <Components>
+      <Component>OMWEBCONSOLE</Component>
+    </Components>
+    <Title>IsapiAllowedCheckTitle</Title>
+    <PassedDescription>IsapiAllowedCheckPassed</PassedDescription>
+    <FailedDescription>IsapiAllowedCheckFailed</FailedDescription>
+    <Resolution>IsapiAllowedCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsapiCgiAllowed"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="IsapiCgiAllowed"></LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="95">
+    <Id>C41190AE-7C14-447D-BFC0-565459A91FB4</Id>
+    <Components>
+      <Component>OMWEBCONSOLE</Component>
+    </Components>
+    <Title>IsAspNetIntegratedHandlerInstalledTitle</Title>
+    <PassedDescription>IsAspNetIntegratedHandlerInstalledPassed</PassedDescription>
+    <FailedDescription>IsAspNetIntegratedHandlerInstalledFailed</FailedDescription>
+    <Resolution>IsAspNetIntegratedHandlerInstalledResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="and"
+                     DelegateId="IsAspNetIntegratedHandlerInstalled"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="IsAspNetIntegratedHandlerInstalled">2</LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="96">
+    <!--Windows Server 2008 Check for HTTP Activation-->
+    <Id>69985AC6-7598-4D06-9101-FDEA0F0B69FA</Id>
+    <Components>
+      <Component>OMWEBCONSOLE</Component>
+    </Components>
+    <Title>HttpActivationCheckTitle</Title>
+    <PassedDescription>HttpActivationCheckPassed</PassedDescription>
+    <FailedDescription>HttpActivationCheckFailed</FailedDescription>
+    <Resolution>HttpActivationCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="or"
+                     DelegateId="HttpAuthorizationCheck"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="RegistryCheckDelegate">
+        <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\software\microsoft\net framework setup\ndp\v3.0\setup\windows communication foundation\httpactivation'
+                         ComparisonType="keyexist"
+                         FailedReturn="2" />]]>
+      </LogicDelegate>
+      <!--Pass if the OS is newer than Win 2k8R2, or the reg key is present -->
+      <LogicDelegate LogicType="or"
+                     DelegateId="OSVersion-NewerThan2k8R2"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="RequiredOperatingSystem">
+        6.2.0000.0,65535.65535.65535,Win32NT,,2
+      </LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+  <Check Order="97">
+    <!--Windows Server 2012 Check for HTTP Activation-->
+    <Id>0D934869-1A6B-4EAF-8B2E-F08CA0208202</Id>
+    <Components>
+      <Component>OMWEBCONSOLE</Component>
+    </Components>
+    <Title>HttpActivationCheckTitle</Title>
+    <PassedDescription>HttpActivation45RoleCheckPassed</PassedDescription>
+    <FailedDescription>HttpActivation45RoleCheckFailed</FailedDescription>
+    <Resolution>HttpActivation45RoleCheckResolution</Resolution>
+    <LogicDelegates>
+      <LogicDelegate LogicType="or"
+                     DelegateId="HttpAuthorizationCheck"
+                     DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+                     DelegateName="RegistryCheckDelegate">
+        <![CDATA[<RegistryKeyData Key='HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManager\ServicingStorage\ServerComponentCache\NET-WCF-HTTP-Activation45'
+                         Name='InstallState'
+                         KeyType='dword'
+                         Value='1'
+                         ComparisonType="equal"
+                         FailedReturn="2" />]]>
+      </LogicDelegate>
+      <!--Pass if the OS is older than WinSvr 2012, or the reg key is present -->
+      <LogicDelegate LogicType="or"
+               DelegateId="OSVersion-w2k12-Fail"
+               DelegateNameSpace="Microsoft.SystemCenter.Essentials.SetupFramework.BuiltInDelegates,Microsoft.SystemCenter.Essentials.SetupFramework"
+               DelegateName="RequiredOperatingSystem">
+        0.0.0000.0,6.2.0000.0,Win32NT,,2
+      </LogicDelegate>
+    </LogicDelegates>
+  </Check>
+
+    <!-- End web console checks -->
+ 
+  <!-- Hotfix Checks -->
+
+</Prerequisites>

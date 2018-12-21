@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Language>en-US</Language>
+  <BottomMargin>0.5in</BottomMargin>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <DataSourceName>dataSource1</DataSourceName>
+        <CommandText>&lt;SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign"&gt;
+  &lt;Hierarchies&gt;
+    &lt;Hierarchy&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Audit Data--&gt;
+        &lt;EntityID&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Groupings&gt;
+        &lt;Grouping Name="Computer"&gt;
+          &lt;Expression Name="Computer"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Computer--&gt;
+              &lt;AttributeID&gt;Ge81718a8-9978-43e6-b0e7-f56d44dbdb84&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="Domain"&gt;
+          &lt;Expression Name="Domain"&gt;
+            &lt;AttributeRef&gt;
+              &lt;AttributeName&gt;expr5&lt;/AttributeName&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="User"&gt;
+          &lt;Expression Name="User"&gt;
+            &lt;AttributeRef&gt;
+              &lt;AttributeName&gt;expr4&lt;/AttributeName&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="Event Machine"&gt;
+          &lt;Expression Name="Event Machine"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Event Machine--&gt;
+              &lt;AttributeID&gt;Gd81289ed-1b2f-4914-973e-ae952739341f&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="Date"&gt;
+          &lt;Expression Name="Date"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Logon Time--&gt;
+              &lt;AttributeID&gt;G432cfb7f-4dce-4e31-8aaf-5db534bdec6d&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+      &lt;/Groupings&gt;
+      &lt;Filter&gt;
+        &lt;Expression Name="expr1"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;Function&gt;
+                  &lt;FunctionName&gt;GreaterThanOrEquals&lt;/FunctionName&gt;
+                  &lt;Arguments&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;Date&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;AttributeRef&gt;
+                              &lt;AttributeName&gt;expr2&lt;/AttributeName&gt;
+                            &lt;/AttributeRef&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                    &lt;/Expression&gt;
+                    &lt;Expression&gt;
+                      &lt;ParameterRef&gt;
+                        &lt;ParameterName&gt;Start Date&lt;/ParameterName&gt;
+                      &lt;/ParameterRef&gt;
+                    &lt;/Expression&gt;
+                  &lt;/Arguments&gt;
+                &lt;/Function&gt;
+                &lt;CustomProperties&gt;
+                  &lt;CustomProperty Name="qd:FilterCondition" /&gt;
+                &lt;/CustomProperties&gt;
+              &lt;/Expression&gt;
+              &lt;Expression&gt;
+                &lt;Function&gt;
+                  &lt;FunctionName&gt;LessThanOrEquals&lt;/FunctionName&gt;
+                  &lt;Arguments&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;Date&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;AttributeRef&gt;
+                              &lt;AttributeName&gt;expr3&lt;/AttributeName&gt;
+                            &lt;/AttributeRef&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                    &lt;/Expression&gt;
+                    &lt;Expression&gt;
+                      &lt;ParameterRef&gt;
+                        &lt;ParameterName&gt;End Date&lt;/ParameterName&gt;
+                      &lt;/ParameterRef&gt;
+                    &lt;/Expression&gt;
+                  &lt;/Arguments&gt;
+                &lt;/Function&gt;
+                &lt;CustomProperties&gt;
+                  &lt;CustomProperty Name="qd:FilterCondition" /&gt;
+                &lt;/CustomProperties&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Filter" /&gt;
+            &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:AutoChangeBaseEntity" /&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;expr6&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Filter&gt;
+    &lt;/Hierarchy&gt;
+  &lt;/Hierarchies&gt;
+  &lt;CalculatedAttributes&gt;
+    &lt;Expression Name="expr2"&gt;
+      &lt;AttributeRef&gt;
+        &lt;!--Logon Time--&gt;
+        &lt;AttributeID&gt;G432cfb7f-4dce-4e31-8aaf-5db534bdec6d&lt;/AttributeID&gt;
+      &lt;/AttributeRef&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Start Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr3"&gt;
+      &lt;AttributeRef&gt;
+        &lt;!--Logon Time--&gt;
+        &lt;AttributeID&gt;G432cfb7f-4dce-4e31-8aaf-5db534bdec6d&lt;/AttributeID&gt;
+      &lt;/AttributeRef&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;End Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr4"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;If&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;AttributeRef&gt;
+                    &lt;!--Client Logon Id--&gt;
+                    &lt;AttributeID&gt;G3cd6ec8b-8f74-4a0a-aa1a-4991ea6d3b31&lt;/AttributeID&gt;
+                  &lt;/AttributeRef&gt;
+                &lt;/Expression&gt;
+                &lt;Expression&gt;
+                  &lt;Literal&gt;
+                    &lt;DataType&gt;Integer&lt;/DataType&gt;
+                    &lt;Value&gt;0&lt;/Value&gt;
+                  &lt;/Literal&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Primary User--&gt;
+              &lt;AttributeID&gt;G76697799-fe6c-40cf-b52b-4ebb034177f0&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Client User--&gt;
+              &lt;AttributeID&gt;G5878d591-0322-4161-955c-c69b8a37a21d&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;User&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr5"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;If&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;AttributeRef&gt;
+                    &lt;!--Client Logon Id--&gt;
+                    &lt;AttributeID&gt;G3cd6ec8b-8f74-4a0a-aa1a-4991ea6d3b31&lt;/AttributeID&gt;
+                  &lt;/AttributeRef&gt;
+                &lt;/Expression&gt;
+                &lt;Expression&gt;
+                  &lt;Literal&gt;
+                    &lt;DataType&gt;Integer&lt;/DataType&gt;
+                    &lt;Value&gt;0&lt;/Value&gt;
+                  &lt;/Literal&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Primary Domain--&gt;
+              &lt;AttributeID&gt;G2167c320-2317-49a0-b305-3b5cbc6162ad&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Client Domain--&gt;
+              &lt;AttributeID&gt;Gc6de7d0d-c076-493b-a8f7-2d2eef98f574&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Domain&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="Start Date_DefaultValue"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;DateAdd&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Literal&gt;
+              &lt;DataType&gt;String&lt;/DataType&gt;
+              &lt;Value&gt;Day&lt;/Value&gt;
+            &lt;/Literal&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Negate&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;Literal&gt;
+                    &lt;DataType&gt;Integer&lt;/DataType&gt;
+                    &lt;Value&gt;1&lt;/Value&gt;
+                  &lt;/Literal&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Today&lt;/FunctionName&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:ParameterDefaultValue"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Start Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="End Date_DefaultValue"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;DateAdd&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Literal&gt;
+              &lt;DataType&gt;String&lt;/DataType&gt;
+              &lt;Value&gt;Day&lt;/Value&gt;
+            &lt;/Literal&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Literal&gt;
+              &lt;DataType&gt;Integer&lt;/DataType&gt;
+              &lt;Value&gt;1&lt;/Value&gt;
+            &lt;/Literal&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Today&lt;/FunctionName&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:ParameterDefaultValue"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;End Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+  &lt;/CalculatedAttributes&gt;
+  &lt;Parameters&gt;
+    &lt;Parameter Name="Start Date"&gt;
+      &lt;DataType&gt;DateTime&lt;/DataType&gt;
+      &lt;Nullable&gt;true&lt;/Nullable&gt;
+    &lt;/Parameter&gt;
+    &lt;Parameter Name="End Date"&gt;
+      &lt;DataType&gt;DateTime&lt;/DataType&gt;
+      &lt;Nullable&gt;true&lt;/Nullable&gt;
+    &lt;/Parameter&gt;
+  &lt;/Parameters&gt;
+&lt;/SemanticQuery&gt;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Start Date">
+            <Value>=Parameters!StartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="End Date">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="Computer">
+          <DataField>Computer</DataField>
+        </Field>
+        <Field Name="Domain">
+          <DataField>Domain</DataField>
+        </Field>
+        <Field Name="User">
+          <DataField>User</DataField>
+        </Field>
+        <Field Name="EventMachine">
+          <DataField>Event Machine</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <DataSources>
+    <DataSource Name="dataSource1">
+      <DataSourceReference>/Audit Reports/Audit</DataSourceReference>
+      <rd:DataSourceID>5999126c-f388-4eae-a5bf-cf5ee380a6d5</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <PageHeight>11in</PageHeight>
+  <ReportParameters>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(-1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <TopMargin>0.5in</TopMargin>
+  <Width>8.5in</Width>
+  <Body>
+    <Height>0in</Height>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Left>0.25in</Left>
+        <Top>1in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>8in</Width>
+        <Value />
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>18pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:Watermark</Name>
+            <Value>Click to add title</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Height>0.375in</Height>
+      </Textbox>
+      <Table Name="table">
+        <Top>1.875in</Top>
+        <TableGroups>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!Computer.Value, Nothing)</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_Computer">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Computer.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!Domain.Value, Nothing)</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_Domain">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Domain.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!User.Value, Nothing)</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_User">
+              <GroupExpressions>
+                <GroupExpression>=Fields!User.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+          <TableGroup>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!EventMachine.Value, Nothing)</SortExpression>
+              </SortBy>
+            </Sorting>
+            <Grouping Name="table_EventMachine">
+              <GroupExpressions>
+                <GroupExpression>=Fields!EventMachine.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Computer_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <CanGrow>true</CanGrow>
+                      <HideDuplicates>table_Computer</HideDuplicates>
+                      <Value>=Fields!Computer.Value</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Bottom>=Iif( RowNumber("table_Computer") = CountRows("table_Computer"), "Solid", Nothing)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Normal</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Domain_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <CanGrow>true</CanGrow>
+                      <HideDuplicates>table_Domain</HideDuplicates>
+                      <Value>=Fields!Domain.Value</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Bottom>=Iif( RowNumber("table_Domain") = CountRows("table_Domain"), "Solid", Nothing)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Normal</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="User_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <CanGrow>true</CanGrow>
+                      <HideDuplicates>table_User</HideDuplicates>
+                      <Value>=Fields!User.Value</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Bottom>=Iif( RowNumber("table_User") = CountRows("table_User"), "Solid", Nothing)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Normal</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="EventMachine_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <CanGrow>true</CanGrow>
+                      <HideDuplicates>table_EventMachine</HideDuplicates>
+                      <Value>=Fields!EventMachine.Value</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Bottom>=Iif( RowNumber("table_EventMachine") = CountRows("table_EventMachine"), "Solid", Nothing)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Normal</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LogonTime_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Date.Value</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Bottom>Solid</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Normal</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Grouping Name="table_Date">
+            <GroupExpressions>
+              <GroupExpression>=Fields!Date.Value</GroupExpression>
+            </GroupExpressions>
+          </Grouping>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!Date.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+          </Sorting>
+        </Details>
+        <Style />
+        <Width>0in</Width>
+        <Height>0in</Height>
+        <DataSetName>dataSet</DataSetName>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.01751in</Width>
+            <Visibility>
+              <Hidden>=Fields!Computer.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.89371in</Width>
+            <Visibility>
+              <Hidden>=Fields!Domain.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.77228in</Width>
+            <Visibility>
+              <Hidden>=Fields!User.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.2899in</Width>
+            <Visibility>
+              <Hidden>=Fields!EventMachine.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.11824in</Width>
+            <Visibility>
+              <Hidden>=Fields!Date.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Computer_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Computer.Value</SortExpression>
+                        <SortExpressionScope>table_Computer</SortExpressionScope>
+                      </UserSort>
+                      <Value>Computer</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Domain_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Domain.Value</SortExpression>
+                        <SortExpressionScope>table_Domain</SortExpressionScope>
+                      </UserSort>
+                      <Value>Domain</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="User_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!User.Value</SortExpression>
+                        <SortExpressionScope>table_User</SortExpressionScope>
+                      </UserSort>
+                      <Value>User</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="EventMachine_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!EventMachine.Value</SortExpression>
+                        <SortExpressionScope>table_EventMachine</SortExpressionScope>
+                      </UserSort>
+                      <Value>Event Machine</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LogonTime_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Date.Value</SortExpression>
+                        <SortExpressionScope>table_Date</SortExpressionScope>
+                      </UserSort>
+                      <Value>Date</Value>
+                      <Style>
+                        <Language>en-US</Language>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>Bold</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <FixedHeader>true</FixedHeader>
+        </Header>
+        <Left>0.25in</Left>
+      </Table>
+      <Textbox Name="TotalRows">
+        <Left>0.25in</Left>
+        <Top>3in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>8in</Width>
+        <Value>=String.Format("Total rows" &amp; Chr(58) &amp; " {0}", COUNTROWS("dataSet"))</Value>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>TotalRows</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Height>0.25in</Height>
+      </Textbox>
+      <Textbox Name="FilterDescription">
+        <Left>0.25in</Left>
+        <Top>3.25in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>8in</Width>
+        <Value>Filter: Dv Alls with: All of (Start Date on or after (prompted), End Date on or before (prompted))</Value>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>FilterDescription</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Height>0.25in</Height>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <Left>0.25in</Left>
+        <Top>1.375in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>8in</Width>
+        <Value />
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <Height>0.375in</Height>
+      </Textbox>
+      <Image Name="banner_image">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.11042in</Top>
+        <Width>8.05in</Width>
+        <MIMEType />
+        <Source>External</Source>
+        <Style />
+        <Left>0.15in</Left>
+        <Height>0.58958in</Height>
+        <Value>../banner_portrait.jpg</Value>
+      </Image>
+    </ReportItems>
+    <Style />
+  </Body>
+  <PageWidth>8.5in</PageWidth>
+</Report>

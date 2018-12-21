@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DB Audit">
+      <DataSourceReference>DB Audit</DataSourceReference>
+      <rd:DataSourceID>0f119a3f-5331-4507-a0cd-00028a7cd686</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>0.5in</BottomMargin>
+  <ReportParameters>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(-1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Left>0.25in</Left>
+        <Top>1in</Top>
+        <ZIndex>4</ZIndex>
+        <Width>8in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>18pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:Watermark</Name>
+            <Value>Click to add title</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <CanGrow>true</CanGrow>
+        <Height>0.375in</Height>
+        <Value>Account Policy Changed</Value>
+      </Textbox>
+      <Table Name="table">
+        <Left>0.25in</Left>
+        <DataSetName>dataSet</DataSetName>
+        <Top>2in</Top>
+        <ZIndex>3</ZIndex>
+        <Width>6.5in</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="LogonTime_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!DateTime.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Domain_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <Format>g</Format>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!TargetDomain.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ChangeType_Value">
+                      <DataElementOutput>Output</DataElementOutput>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ChangeType.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ChangedAttribute.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=Fields!DateTime.Value</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+          </Sorting>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="DateTime_Header">
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Date/Time</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Domain_Header">
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Domain</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ChangeType_Header">
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <Language>en-US</Language>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Change Type</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>8pt</FontSize>
+                        <BorderColor>
+                          <Default>LightGrey</Default>
+                        </BorderColor>
+                        <BackgroundColor>#333333</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Changed Attributes</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <FixedHeader>true</FixedHeader>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.25in</Width>
+            <Visibility>
+              <Hidden>=Fields!DateTime.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.5in</Width>
+            <Visibility>
+              <Hidden>=Fields!TargetDomain.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.875in</Width>
+            <Visibility>
+              <Hidden>=Fields!ChangeType.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.875in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.5in</Height>
+      </Table>
+      <Textbox Name="TotalRows">
+        <Left>0.25in</Left>
+        <Top>3.75in</Top>
+        <ZIndex>2</ZIndex>
+        <Width>6.5in</Width>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>TotalRows</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <CanGrow>true</CanGrow>
+        <Value>=String.Format("Total rows" &amp; Chr(58) &amp; " {0}", COUNTROWS("dataSet"))</Value>
+      </Textbox>
+      <Textbox Name="textbox">
+        <Left>0.25in</Left>
+        <Top>1.375in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>8in</Width>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.5in</Height>
+        <Value>On Windows Server 2000 &amp; 2003, events 643 indicates an account policy change.  On Windows Server 2008, event 4739 indicates an account policy change.
+This report details all account policy change events.</Value>
+      </Textbox>
+      <Image Name="banner_image">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.11042in</Top>
+        <Width>8.05in</Width>
+        <MIMEType />
+        <Source>External</Source>
+        <Style />
+        <Left>0.15in</Left>
+        <Height>0.58958in</Height>
+        <Value>../banner_portrait.jpg</Value>
+      </Image>
+    </ReportItems>
+    <Height>4in</Height>
+  </Body>
+  <rd:ReportID>8ec13932-2781-42a3-9a88-e91789a5afb8</rd:ReportID>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <CommandText>SELECT     CreationTime AS DateTime, String01 AS ChangeType, PrimaryDomain AS TargetDomain, 
+                      CASE WHEN String05 != '-' THEN 'Min. Password Age - ' + String05 + ';' ELSE '' END + CASE WHEN String06 != '-' THEN 'Max. Password Age - ' + String06
+                       + ';' ELSE '' END + CASE WHEN String07 != '-' THEN 'Force Logoff - ' + String07 + ';' ELSE '' END + CASE WHEN String08 != '-' THEN 'Lockout Threshold - '
+                       + String08 + ';' ELSE '' END + CASE WHEN String09 != '-' THEN 'Lockout Observation Window - ' + String09 + ';' ELSE '' END + CASE WHEN String10 != '-'
+                       THEN 'Lockout Duration - ' + String10 + ';' ELSE '' END + CASE WHEN String11 != '-' THEN 'Password Properties - ' + String11 + ';' ELSE '' END + CASE WHEN
+                       String12 != '-' THEN 'Min. Password Length - ' + String12 + ';' ELSE '' END + CASE WHEN String13 != '-' THEN 'Password History Length - ' + String13 + ';'
+                       ELSE '' END + CASE WHEN String14 != '-' THEN 'Machine Account Quota - ' + String14 + ';' ELSE '' END + CASE WHEN String15 != '-' THEN 'Mixed Domain Mode - '
+                       + String15 + ';' ELSE '' END + CASE WHEN String16 != '-' THEN 'Domain Behavior Version - ' + String16 + ';' ELSE '' END AS ChangedAttribute
+FROM         AdtServer.dvAll
+WHERE     (EventId = 643 OR
+                      EventId = 4739) AND (CreationTime &gt;= @StartDate) AND (CreationTime &lt;= @EndDate)</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@StartDate">
+            <Value>=Parameters!StartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EndDate">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>DB Audit</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DateTime">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DateTime</DataField>
+        </Field>
+        <Field Name="ChangeType">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChangeType</DataField>
+        </Field>
+        <Field Name="TargetDomain">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TargetDomain</DataField>
+        </Field>
+        <Field Name="ChangedAttribute">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ChangedAttribute</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>8.5in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>0.5in</TopMargin>
+</Report>

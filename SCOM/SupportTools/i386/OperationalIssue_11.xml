@@ -1,0 +1,441 @@
+﻿<!-- Operational Issue Work Item Type for Dev11 -->
+<WITD application="Work item type editor" version="1.0">
+  <WORKITEMTYPE name="Operational Issue">
+    <DESCRIPTION>Operational Issue work item type is used for tracking Alerts from Microsoft System Center Operations Manager with Microsoft Team Foundation Server</DESCRIPTION>
+    <FIELDS>
+      <FIELD name="Resolved By" refname="Microsoft.VSTS.Common.ResolvedBy" type="String" syncnamechanges="true" reportable="dimension">
+        <HELPTEXT>Name of the team member who resolved the issue</HELPTEXT>
+        <ALLOWEXISTINGVALUE />
+        <VALIDUSER />
+      </FIELD>
+      <FIELD name="Assigned To" refname="System.AssignedTo" type="String" syncnamechanges="true" reportable="dimension">
+        <ALLOWEXISTINGVALUE />
+        <VALIDUSER />
+      </FIELD>
+      <FIELD name="Closed Date" refname="Microsoft.VSTS.Common.ClosedDate" type="DateTime" reportable="dimension">
+        <HELPTEXT>Date and time when the work item was closed</HELPTEXT>
+      </FIELD>
+      <FIELD name="Resolved Date" refname="Microsoft.VSTS.Common.ResolvedDate" type="DateTime" reportable="dimension">
+        <HELPTEXT>Date and time when the work item was resolved</HELPTEXT>
+      </FIELD>
+      <FIELD name="Closed By" refname="Microsoft.VSTS.Common.ClosedBy" type="String" syncnamechanges="true" reportable="dimension">
+        <HELPTEXT>Name of the team member who closed the work issue</HELPTEXT>
+        <ALLOWEXISTINGVALUE />
+        <VALIDUSER />
+      </FIELD>
+      <FIELD name="Severity" refname="Microsoft.VSTS.Common.Severity" type="String" reportable="dimension">
+        <HELPTEXT>The business or technical impact associated with the work item</HELPTEXT>
+        <ALLOWEDVALUES expanditems="true">
+          <LISTITEM value="1 - Critical" />
+          <LISTITEM value="2 - High" />
+          <LISTITEM value="3 - Medium" />
+          <LISTITEM value="4 - Low" />
+        </ALLOWEDVALUES>
+      </FIELD>
+      <FIELD name="Priority" refname="Microsoft.VSTS.Common.Priority" type="Integer" reportable="dimension">
+        <HELPTEXT>The priority associated with the work item</HELPTEXT>
+        <ALLOWEDVALUES expanditems="true">
+          <LISTITEM value="1" />
+          <LISTITEM value="2" />
+          <LISTITEM value="3" />
+        </ALLOWEDVALUES>
+      </FIELD>
+      <FIELD name="Description" refname="System.Description" type="HTML" />
+      <FIELD name="Issue AlertID" refname="Microsoft.SystemCenter.OperationalIssue.AlertID" type="String">
+        <HELPTEXT>The GUID used to identify the alert</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField1" refname="Microsoft.SystemCenter.OperationalIssue.CustomField1" type="String">
+        <HELPTEXT>The first user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField2" refname="Microsoft.SystemCenter.OperationalIssue.CustomField2" type="String">
+        <HELPTEXT>The second user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField3" refname="Microsoft.SystemCenter.OperationalIssue.CustomField3" type="String">
+        <HELPTEXT>The third user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField4" refname="Microsoft.SystemCenter.OperationalIssue.CustomField4" type="String">
+        <HELPTEXT>The fourth user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField5" refname="Microsoft.SystemCenter.OperationalIssue.CustomField5" type="String">
+        <HELPTEXT>The fifth user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField6" refname="Microsoft.SystemCenter.OperationalIssue.CustomField6" type="String">
+        <HELPTEXT>The sixth user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField7" refname="Microsoft.SystemCenter.OperationalIssue.CustomField7" type="String">
+        <HELPTEXT>The seventh user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField8" refname="Microsoft.SystemCenter.OperationalIssue.CustomField8" type="String">
+        <HELPTEXT>The eighth user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField9" refname="Microsoft.SystemCenter.OperationalIssue.CustomField9" type="String">
+        <HELPTEXT>The ninth user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue CustomField10" refname="Microsoft.SystemCenter.OperationalIssue.CustomField10" type="String">
+        <HELPTEXT>The tenth user-defined field</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue RepeatCount" refname="Microsoft.SystemCenter.OperationalIssue.RepeatCount" type="Integer">
+        <HELPTEXT>For consolidated events, the RepeatCount field is the number of repeat occurrences</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue ResolutionState" refname="Microsoft.SystemCenter.OperationalIssue.ResolutionState" type="String">
+        <HELPTEXT>The state of the alert</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue Aspect" refname="Microsoft.SystemCenter.OperationalIssue.Aspect" type="String">
+        <HELPTEXT>The name of the Aspect</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue TimeRaised" refname="Microsoft.SystemCenter.OperationalIssue.TimeRaised" type="DateTime">
+        <HELPTEXT>The time when the alert was raised</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue Computer" refname="Microsoft.SystemCenter.OperationalIssue.Computer" type="String">
+        <HELPTEXT>Gets the principal name of the computer that the alert was created for</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue ProductKnowledge" refname="Microsoft.SystemCenter.OperationalIssue.ProductKnowledge" type="HTML">
+        <HELPTEXT>Product Knowledge for the Alert</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue ProblemHash" refname="Microsoft.SystemCenter.OperationalIssue.ProblemHash" type="String">
+        <HELPTEXT>Event consolidation hash which is the same for the same issue types</HELPTEXT>
+      </FIELD>
+      <FIELD name="Issue Resolution Notes" refname="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes" type="String">
+        <HELPTEXT>Description of the action taken to resolve the work item</HELPTEXT>
+      </FIELD>
+    </FIELDS>
+    <WORKFLOW>
+      <STATES>
+        <STATE value="Accepted">
+          <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.Priority">
+              <REQUIRED />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.Severity">
+              <REQUIRED />
+            </FIELD>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <EMPTY />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Resolved">
+          <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
+              <COPY from="clock" />
+            </FIELD>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <REQUIRED />
+            </FIELD>
+            <FIELD refname="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes">
+              <REQUIRED />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ResolvedBy">
+              <COPY from="currentuser" />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Closed">
+          <FIELDS>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedDate">
+              <COPY from="clock" />
+            </FIELD>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <READONLY />
+            </FIELD>
+            <FIELD refname="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes">
+              <READONLY />
+            </FIELD>
+            <FIELD refname="Microsoft.VSTS.Common.ClosedBy">
+              <COPY from="currentuser" />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="New">
+          <FIELDS>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <EMPTY />
+            </FIELD>
+            <FIELD refname="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes">
+              <EMPTY />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Assigned">
+          <FIELDS>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <REQUIRED />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Work in progress">
+          <FIELDS>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <READONLY />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Awaiting evidence">
+          <FIELDS>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <READONLY />
+            </FIELD>
+            <FIELD refname="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes">
+              <REQUIRED />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Scheduled">
+          <FIELDS>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <READONLY />
+            </FIELD>
+            <FIELD refname="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes">
+              <REQUIRED />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+        <STATE value="Suspended">
+          <FIELDS>
+            <FIELD refname="System.AssignedTo">
+              <ALLOWEXISTINGVALUE />
+              <READONLY />
+            </FIELD>
+          </FIELDS>
+        </STATE>
+      </STATES>
+      <TRANSITIONS>
+        <TRANSITION from="" to="New">
+          <REASONS>
+            <DEFAULTREASON value="Work item created" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="New" to="Accepted">
+          <REASONS>
+            <DEFAULTREASON value="Incident is acknowledged" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="New" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Accepted" to="Assigned">
+          <REASONS>
+            <DEFAULTREASON value="Assigned for review" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Accepted" to="Resolved">
+          <REASONS>
+            <DEFAULTREASON value="Incident is resolved" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Accepted" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Assigned" to="Work in progress">
+          <REASONS>
+            <DEFAULTREASON value="Action is under way" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Assigned" to="Suspended">
+          <REASONS>
+            <DEFAULTREASON value="Action has been halted" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Assigned" to="Awaiting evidence">
+          <REASONS>
+            <DEFAULTREASON value="Additional evidence required" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Assigned" to="Resolved">
+          <REASONS>
+            <DEFAULTREASON value="Incident is resolved" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Assigned" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Work in progress" to="Assigned">
+          <REASONS>
+            <DEFAULTREASON value="Reassigned" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Work in progress" to="Awaiting evidence">
+          <REASONS>
+            <DEFAULTREASON value="Additional evidence required" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Work in progress" to="Suspended">
+          <REASONS>
+            <DEFAULTREASON value="Action has been halted" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Work in progress" to="Resolved">
+          <REASONS>
+            <DEFAULTREASON value="Incident is resolved" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Work in progress" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Awaiting evidence" to="Assigned">
+          <REASONS>
+            <DEFAULTREASON value="Reassigned" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Awaiting evidence" to="Work in progress">
+          <REASONS>
+            <DEFAULTREASON value="Action is under way" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Awaiting evidence" to="Suspended">
+          <REASONS>
+            <DEFAULTREASON value="Action has been halted" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Awaiting evidence" to="Resolved">
+          <REASONS>
+            <DEFAULTREASON value="Incident is resolved" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Awaiting evidence" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Scheduled" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Suspended" to="Assigned">
+          <REASONS>
+            <DEFAULTREASON value="Reassigned" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Suspended" to="Work in progress">
+          <REASONS>
+            <DEFAULTREASON value="Action is under way" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Suspended" to="Awaiting evidence">
+          <REASONS>
+            <DEFAULTREASON value="Additional evidence required" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Suspended" to="Resolved">
+          <REASONS>
+            <DEFAULTREASON value="Incident is resolved" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Suspended" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Resolved" to="Assigned">
+          <REASONS>
+            <DEFAULTREASON value="Resolution was not confirmed" />
+            <REASON value="Reassigned" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Resolved" to="Scheduled">
+          <REASONS>
+            <DEFAULTREASON value="Release scheduled" />
+          </REASONS>
+        </TRANSITION>
+        <TRANSITION from="Resolved" to="Closed">
+          <REASONS>
+            <DEFAULTREASON value="Resolution verified" />
+          </REASONS>
+        </TRANSITION>
+      </TRANSITIONS>
+    </WORKFLOW>
+    <FORM>
+      <Layout HideReadOnlyEmptyFields="true" HideControlBorders="true">
+        <Group>
+          <Column PercentWidth="100">
+            <Control Type="FieldControl" FieldName="System.Title" Label="Title" LabelPosition="Left" ReadOnly="False" />
+          </Column>
+        </Group>
+        <Group>
+          <Column PercentWidth="50">
+            <Group>
+              <Column PercentWidth="100">
+                <Group Label="Classification">
+                  <Column PercentWidth="100">
+                    <Control Type="WorkItemClassificationControl" FieldName="System.AreaPath" Label="&amp;Area" LabelPosition="Left" />
+                    <Control Type="WorkItemClassificationControl" FieldName="System.IterationPath" Label="Ite&amp;ration" LabelPosition="Left" />
+                  </Column>
+                </Group>
+                <Group Label="Operational Information">
+                  <Column PercentWidth="100">
+                    <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.Computer" Label="Computer" ReadOnly="True" />
+                    <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.Aspect" Label="Aspect" ReadOnly="True" />
+                    <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.RepeatCount" Label="Repeat Count" ReadOnly="True" />
+                    <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.TimeRaised" Label="Time raised" ReadOnly="True" />
+                  </Column>
+                </Group>
+              </Column>
+            </Group>
+          </Column>
+          <Column PercentWidth="50">
+            <Group Label="Status">
+              <Column PercentWidth="100">
+                <Control Type="FieldControl" FieldName="System.State" Label="Stat&amp;e" LabelPosition="Left" />
+                <Control Type="FieldControl" FieldName="System.Reason" Label="Reason" LabelPosition="Left" />
+                <Control Type="FieldControl" FieldName="System.AssignedTo" Label="Assi&amp;gned To" LabelPosition="Left" />
+                <Control Type="FieldControl" FieldName="Microsoft.VSTS.Common.Priority" Label="Priority" LabelPosition="Left" />
+                <Control Type="FieldControl" FieldName="Microsoft.VSTS.Common.Severity" Label="Severity" LabelPosition="Left" />
+                <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.ResolutionNotes" Label="Resolution Notes" LabelPosition="Left" />
+              </Column>
+            </Group>
+          </Column>
+        </Group>
+        <TabGroup>
+          <Tab Label="Properties">
+            <Group>
+              <Column PercentWidth="100">
+                <Control Type="HtmlFieldControl" FieldName="System.Description" Label="Description" LabelPosition="Top" Dock="Fill" ReadOnly="False" />
+              </Column>
+            </Group>
+          </Tab>
+          <Tab Label="Custom Properties">
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField1" Label="Alert CustomField1" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField2" Label="Alert CustomField2" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField3" Label="Alert CustomField3" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField4" Label="Alert CustomField4" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField5" Label="Alert CustomField5" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField6" Label="Alert CustomField6" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField7" Label="Alert CustomField7" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField8" Label="Alert CustomField8" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField9" Label="Alert CustomField9" />
+            <Control Type="FieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.CustomField10" Label="Alert CustomField10" />
+          </Tab>
+          <Tab Label="Product Knowledge">
+            <Control Type="HtmlFieldControl" FieldName="Microsoft.SystemCenter.OperationalIssue.ProductKnowledge" Label="Product Knowledge" LabelPosition="Top" Dock="Fill" ReadOnly="True" />
+          </Tab>
+          <Tab Label="History">
+            <Control Type="WorkItemLogControl" FieldName="System.History" Label="Histor&amp;y" LabelPosition="Top" Dock="Fill" />
+          </Tab>
+          <Tab Label="Links">
+            <Control Type="LinksControl" Dock="Fill" />
+          </Tab>
+          <Tab Label="Attachments">
+            <Control Type="AttachmentsControl" Dock="Fill" />
+          </Tab>
+        </TabGroup>
+      </Layout>
+    </FORM>
+  </WORKITEMTYPE>
+</WITD>

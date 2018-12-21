@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigSettings>
+  <ConfigSetting Name="DALRetryLimit" Value="10"/>
+  <ConfigSetting Name="DALRetryBackoffWaitMilliseconds" Value="60000"/>
+  <ConfigSetting Name="DALAllowErrorLogging" Value="true"/>
+  <ConfigSetting Name="DALRetryWaitMilliseconds" Value="1000"/>
+</ConfigSettings>

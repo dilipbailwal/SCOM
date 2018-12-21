@@ -1,0 +1,28 @@
+<ManagementPacksToImport>
+	<ManagementPack Name="Microsoft SystemCenter DataWarehouse Internal" >Microsoft.SystemCenter.DataWarehouse.Internal.mp</ManagementPack>
+	<ManagementPack Name="Microsoft SystemCenter DataWarehouse ServiceLevel Report Library" >Microsoft.SystemCenter.DataWarehouse.ServiceLevel.Report.Library.mp</ManagementPack>
+	<ManagementPack Name="Microsoft SystemCenter DataWarehouse Reports" >Microsoft.SystemCenter.DataWarehouse.Reports.MP</ManagementPack>
+<!-- APM mps start-->
+  <!--
+   <ManagementPack Name="Microsoft SystemCenter ApplicationMonitoring Library" >Microsoft.SystemCenter.ApplicationMonitoring.Library.mp</ManagementPack>
+   Moved to MPImportList
+  -->
+  <ManagementPack Name="Operations Manager APM Infrastructure">Microsoft.SystemCenter.Apm.Infrastructure.mpb</ManagementPack>
+  <ManagementPack Name="Operations Manager APM Reports Library">Microsoft.SystemCenter.DataWarehouse.ApmReports.Library.mp</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.Apm.Library">Microsoft.SystemCenter.Apm.Library.mpb</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.Apm.Infrastructure.Monitoring">Microsoft.SystemCenter.Apm.Infrastructure.Monitoring.mp</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.Apm.Web">Microsoft.SystemCenter.Apm.Web.mpb</ManagementPack>
+  <ManagementPack Name="Operations Manager APM Wcf Library">Microsoft.SystemCenter.Apm.Wcf.mpb</ManagementPack>  
+  <ManagementPack Name="Operations Manager APM Windows Service Library">Microsoft.SystemCenter.Apm.NTServices.mpb</ManagementPack>  
+  <ManagementPack Name="Operations Manager APM Web IIS 7" ImportCondition="UpgradeIfPresent">Microsoft.SystemCenter.Apm.Web.IIS7.mp</ManagementPack>
+  <ManagementPack Name="Operations Manager APM Web IIS 8" ImportCondition="UpgradeIfPresent">Microsoft.SystemCenter.Apm.Web.IIS8.mp</ManagementPack>
+  <ManagementPack Name="Operations Manager APM Web IIS 10" ImportCondition="UpgradeIfPresent">Microsoft.SystemCenter.Apm.Web.IIS10.mp</ManagementPack>
+  <!-- APM mps end -->
+
+    <!--Reporting MPs-->
+    <ManagementPack Name="ReportsDeploymentMP" ImportCondition="ReportingIsInstalled">Microsoft.SystemCenter.Reports.Deployment.mp</ManagementPack>
+    <ManagementPack Name="ODR.mp" ImportCondition="UpgradeIfPresent">ODR.mp</ManagementPack>
+    <ManagementPack Name="System.NetworkManagement.Reports.MP" ImportCondition="ReportingIsInstalled">System.NetworkManagement.Reports.MP</ManagementPack>
+    <ManagementPack Name="Microsoft.SystemCenter.OperationsManager.Reports.2007.MP" ImportCondition="ReportingIsInstalled">Microsoft.SystemCenter.OperationsManager.Reports.2007.MP</ManagementPack>
+
+</ManagementPacksToImport>

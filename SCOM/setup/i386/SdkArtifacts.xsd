@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Robert Hutchison (Microsoft) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="SDKArtifacts">
+    <xs:annotation>
+      <xs:documentation>Comment describing your root element</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="Security" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Operations" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Operation" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="NumericID" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="ScopeBy">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Scope" maxOccurs="unbounded">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:enumeration value="None" />
+                                      <xs:enumeration value="Group" />
+                                      <xs:enumeration value="Type" />
+                                      <xs:enumeration value="View" />
+                                      <xs:enumeration value="Task" />
+                                      <xs:enumeration value="ConsoleTask" />
+                                      <xs:enumeration value="Template" />
+                                      <xs:enumeration value="DashboardReference" />
+                                      <xs:enumeration value="Report" />
+                                      <xs:enumeration value="Implicit" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Profiles" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Profile" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="DisplayName" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="Abstract" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="IsServerProfile" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="IsDatawarehouseProfile" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="HasSingleUserRole" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="IsImplicitProfile" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="RelationshipTypeId" type="xs:string" minOccurs="0" />
+                          <xs:element name="EndPointTypeId" type="xs:string" minOccurs="0" />
+                          <xs:element name="IsImplicitEndPointSource" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="ParentProfileNames" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>The operations defined in these profiles are included in this profile.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ParentProfileName" type="xs:string" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element ref="OperationReferences" minOccurs="0" />
+                          <xs:element ref="ImplicitViews" minOccurs="0" />
+                          <xs:element ref="ImplicitTasks" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                      <xs:key name="ProfileOperationKey">
+                        <xs:selector xpath="OperationReferenceIDs/OperationID" />
+                        <xs:field xpath="." />
+                      </xs:key>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="UserRoles" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="UserRole" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="DisplayName" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="Abstract" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="ProfileName" type="xs:string" maxOccurs="unbounded" />
+                          <xs:element name="IsServerUserRole" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="IsDatawarehouseUserRole" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="IsSystem" type="xs:boolean" minOccurs="0" />
+                          <xs:element name="IsScopeFixed" type="xs:boolean" minOccurs="0" />
+                          <xs:element ref="UserRoleScope" minOccurs="0" />
+                          <xs:element ref="UserRoleAssignments" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+          <xs:key name="OperationKey">
+            <xs:selector xpath="Operations/Operation" />
+            <xs:field xpath="Name" />
+          </xs:key>
+          <xs:key name="OperationIDKey">
+            <xs:selector xpath="Operations/Operation" />
+            <xs:field xpath="ID" />
+          </xs:key>
+          <xs:key name="OperationNumericIDKey">
+            <xs:selector xpath="Operations/Operation" />
+            <xs:field xpath="NumericID" />
+          </xs:key>
+          <xs:key name="ProfileKey">
+            <xs:selector xpath="Profiles/Profile" />
+            <xs:field xpath="Name" />
+          </xs:key>
+          <xs:key name="ProfileIDKey">
+            <xs:selector xpath="Profiles/Profile" />
+            <xs:field xpath="ID" />
+          </xs:key>
+          <xs:key name="UserRoleKey">
+            <xs:selector xpath="UserRoles/UserRole" />
+            <xs:field xpath="Name" />
+          </xs:key>
+          <xs:key name="UserRoleIDKey">
+            <xs:selector xpath="UserRoles/UserRole" />
+            <xs:field xpath="ID" />
+          </xs:key>
+          <xs:keyref name="ProfileOperationKeyRef" refer="OperationKey">
+            <xs:selector xpath="Profiles/Profile/OperationReferences/OperationReference" />
+            <xs:field xpath="OperationName" />
+          </xs:keyref>
+        </xs:element>
+        <xs:element name="Specification" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Specifications" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Spec" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="Link" type="xs:string" />
+                          <xs:element name="Scenarios" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Scenario" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RelatedRequirementIDs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="RelatedRequirementID" type="xs:string" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="ScenarioSteps" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="ScenarioStep" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Name" type="xs:string" />
+                                                  <xs:element name="Description" minOccurs="0" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Requirements" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Requirement" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Area" type="RequirementAreaEnumType" />
+                                      <xs:element name="SubArea" type="xs:string" minOccurs="0" />
+                                      <xs:element name="SubSubArea" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Priority" type="PriorityEnumType" minOccurs="0" />
+                                      <xs:element name="Milestone" type="MilestoneEnumType" minOccurs="0" />
+                                      <xs:element name="RelatedBugs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="RelatedBug" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" type="xs:string" />
+                                                  <xs:element name="Link" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="RequiredOperationIDs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="RequiredOperationID" type="xs:string" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="RequiredObjectTypeIDs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="RequiredObjectTypeID" type="xs:string" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="RequiredPropertyTypeIDs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="RequiredPropertyTypeID" type="xs:string" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="RequiredRelationshipTypeIDs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="RequiredRelationshipTypeID" type="xs:string" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SDK" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Client" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ClientClass" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Namespace" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Properties" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Property" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Name" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Methods" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Method" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Name" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Implemented" type="xs:boolean" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Server" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ServerMethods" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ServerMethod" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="xs:string" />
+                                <xs:element name="Name" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CoreModel" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Operations" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Operation" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="AssociatedVerbID" type="xs:string" />
+                          <xs:choice>
+                            <xs:element name="TargetObjectTypeID" type="xs:string" />
+                            <xs:element name="TargetPropertyTypeID" type="xs:string" />
+                            <xs:element name="TargetRelationshipTypeID" type="xs:string" />
+                          </xs:choice>
+                          <xs:element name="Parameters" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element ref="Parameter" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SDKServerMethodIDs" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SDKServerMethodID" type="xs:string" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ObjectTypes" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ObjectType" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="ParentObjectTypeID" type="xs:string" minOccurs="0" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="PropertyTypes" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PropertyType" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Required" type="xs:boolean" minOccurs="0" />
+                                      <xs:element name="Operations" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Operation" maxOccurs="unbounded">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ID" type="xs:string" />
+                                                  <xs:element name="Name" type="xs:string" />
+                                                  <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="AssociatedVerbID" type="xs:string" />
+                                                  <xs:element name="Parameters" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element ref="Parameter" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="SDKServerMethodIDs" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="SDKServerMethodID" type="xs:string" maxOccurs="unbounded" />
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Operations" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Operation" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                      <xs:element name="AssociatedVerbID" type="xs:string" />
+                                      <xs:element name="Parameters" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element ref="Parameter" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="SDKServerMethodIDs" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="SDKServerMethodID" type="xs:string" maxOccurs="unbounded" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RelationshipTypes" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RelationshipType" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="SourceRole">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ObjectTypeID" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="TargetRole">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ObjectTypeID" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Verbs" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Verb" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Monad" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tasks" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Task" maxOccurs="unbounded">
+                      <xs:annotation>
+                        <xs:documentation>1.	What is your task going to accomplish? How many steps are involved in that process? Is it only one atomic operation? If not, does it make sense to split it into multiple smaller tasks and aggregate them in a complex task? If this is going to be a complex task, are there any existing tasks that you could reuse? If it’s a simple task, is there a task that you could derive from? For example, if you are implementing a ConfigObject-related task, you should be inheriting from one of the base Set/Get/Add/RemoveObjectTask  tasks to get most of the behavior for free.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="Category" type="xs:string" />
+                          <xs:element name="Frequency" type="MonadTaskFrequencyEnumType" minOccurs="0" />
+                          <xs:element name="SkillLevel" type="MonadTaskSkillLevelEnumType" minOccurs="0" />
+                          <xs:element name="Priority" type="PriorityEnumType" minOccurs="0" />
+                          <xs:element name="UndoTaskID" type="xs:string" minOccurs="0" />
+                          <xs:element name="HelpText" type="xs:string" minOccurs="0" />
+                          <xs:element name="Parameters" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>2.	What are the parameters for your task? What are their types? Can these types be converted to and from string? For example, the task to create a mailbox should include the user account name as a mandatory parameter, in the form “domain\user”. Optional parameters could be: the mailbox store where the mailbox should be created, the policy for this mailbox etc. A common mistake is to require too many mandatory parameters. Try to minimize the number of mandatory parameters while offering flexibility using a set of optional parameters. Also note that it is acceptable not to have parameters, for example for an immediate reboot task. </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Parameter" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Required" type="xs:boolean" minOccurs="0" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element ref="OperationReferenceNames" minOccurs="0" />
+                          <xs:element name="RelatedTaskIDs" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="RelatedTaskID" type="xs:string" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Preconditions" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>3.	In order to run, does your task require certain conditions to be met? For example, in order to create a mailbox, the user should exist and not already have a mailbox. If the answer is yes, you need to have validation code, usually in the form of preconditions, to assert the expectations of this task. A common mistake is to exaggerate preconditions (example: “a DC can be contacted” pre-condition for a create mailbox task). Stick to what preconditions are truly specific to your task. In very few cases, it is acceptable not to have preconditions, for example if your task simply finds data.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Precondition" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Postconditions" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>4.	Does your task make a configuration change, produce a persistent outcome or have side effects? For example, after creating a mailbox, one obvious outcome is to have a mailbox created for the specified user. If the answer is yes, you should use postconditions to assert the changes made by the task. Task invariants should not be treated as postconditions (example: “user still exists” is not a valid post-condition for a create mailbox task)</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Postcondition" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="xs:string" />
+                                      <xs:element name="Name" type="xs:string" />
+                                      <xs:element name="Description" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Verbs" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Verb" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="xs:string" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+    <xs:unique name="OperationID">
+      <xs:selector xpath="Operations/Operation" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="OperationNumericID">
+      <xs:selector xpath="Operations/Operation" />
+      <xs:field xpath="NumericID" />
+    </xs:unique>
+    <xs:unique name="ObjectTypeOperationID">
+      <xs:selector xpath="CoreModel/ObjectTypes/ObjectType/Operations/Operation" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="PropertyTypeOperationID">
+      <xs:selector xpath="CoreModel/ObjectTypes/ObjectType/PropertyTypes/PropertyType/Operations/Operation" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ObjectTypeID">
+      <xs:selector xpath="CoreModel/ObjectTypes/ObjectType" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="PropertyTypeID">
+      <xs:selector xpath="CoreModel/ObjectTypes/ObjectType/PropertyTypes/PropertyType" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="RelationTypeID">
+      <xs:selector xpath="CoreModel/RelationshipTypes/RelationshipType" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:key name="VerbID">
+      <xs:selector xpath="CoreModel/Verbs/Verb" />
+      <xs:field xpath="ID" />
+    </xs:key>
+    <xs:unique name="SecurityProfileID">
+      <xs:selector xpath="Security/Profiles/Profile" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:keyref name="ParentProfileIDKeyRef" refer="SecurityProfileID">
+      <xs:selector xpath="Security/Profiles/Profile/ParentProfileID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:unique name="RequirementID">
+      <xs:selector xpath="Specification/Specifications/Spec/Requirements/Requirement" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ScenarioID">
+      <xs:selector xpath="Specification/Specifications/Spec/Scenarios/Scenario" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:keyref name="ScenarioRelatedRequirementIDKeyRef" refer="RequirementID">
+      <xs:selector xpath="Specification/Specifications/Spec/Scenarios/Scenario/RelatedRequirementIDs/RelatedRequirementID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:unique name="SDKMethodID">
+      <xs:selector xpath="SDK/Server/ServerMethods/ServerMethod" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="MonadTaskID">
+      <xs:selector xpath="Monad/Tasks/Task" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:keyref name="MonadTaskObjectTypeOperationIDKeyRef" refer="ObjectTypeOperationID">
+      <xs:selector xpath="Monad/Tasks/Task/OperationReferenceIDs/ObjectTypeOperationID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="MonadTaskPropertyTypeOperationIDKeyRef" refer="PropertyTypeOperationID">
+      <xs:selector xpath="Monad/Tasks/Task/OperationReferenceIDs/PropertyTypeOperationID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="MonadTaskRelatedTaskIDKeyRef" refer="MonadTaskID">
+      <xs:selector xpath="Monad/Tasks/Task/ID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="OperationVerbIDKeyRef" refer="VerbID">
+      <xs:selector xpath="CoreModel/Operations/Operation/AssociatedVerbID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="ObjectTypeOperationVerbIDKeyRef" refer="VerbID">
+      <xs:selector xpath="CoreModel/ObjectTypes/ObjectType/Operations/Operation/AssociatedVerbID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="OperationObjectTypeIDKeyRef" refer="ObjectTypeID">
+      <xs:selector xpath="CoreModel/Operations/Operation/TargetObjectTypeID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="OperationServerMethodIDKeyRef" refer="SDKMethodID">
+      <xs:selector xpath="CoreModel/Operations/Operation/SDKServerMethodIDs/SDKServerMethodID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="SourceRoleObjectTypeIDKeyRef" refer="ObjectTypeID">
+      <xs:selector xpath="CoreModel/RelationshipTypes/RelationshipType/SourceRole/ObjectTypeID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="TargetRoleObjectTypeIDKeyRef" refer="ObjectTypeID">
+      <xs:selector xpath="CoreModel/RelationshipTypes/RelationshipType/TargetRole/ObjectTypeID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="ProfileObjectTypeOperationIDKeyRef" refer="ObjectTypeOperationID">
+      <xs:selector xpath="Security/Profiles/Profile/OperationReferenceIDs/ObjectTypeOperationID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+    <xs:keyref name="ProfilePropertyTypeOperationIDKeyRef" refer="PropertyTypeOperationID">
+      <xs:selector xpath="Security/Profiles/Profile/OperationReferenceIDs/PropertyTypeOperationID" />
+      <xs:field xpath="." />
+    </xs:keyref>
+  </xs:element>
+  <xs:simpleType name="PriorityEnumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="P1" />
+      <xs:enumeration value="P2" />
+      <xs:enumeration value="P3" />
+      <xs:enumeration value="Cut" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MilestoneEnumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="M0" />
+      <xs:enumeration value="M1" />
+      <xs:enumeration value="Beta1" />
+      <xs:enumeration value="Beta2" />
+      <xs:enumeration value="RC1" />
+      <xs:enumeration value="RTM" />
+      <xs:enumeration value="SP1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RequirementAreaEnumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ProgrammingModel" />
+      <xs:enumeration value="Operational" />
+      <xs:enumeration value="Configuration" />
+      <xs:enumeration value="Administration" />
+      <xs:enumeration value="MCF" />
+      <xs:enumeration value="Misc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MonadTaskFrequencyEnumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Daily" />
+      <xs:enumeration value="Weekly" />
+      <xs:enumeration value="Monthly" />
+      <xs:enumeration value="Rare" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MonadTaskSkillLevelEnumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Novice" />
+      <xs:enumeration value="Intermediate" />
+      <xs:enumeration value="Expert" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Parameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ID" type="xs:string" />
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="Description" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationReferenceNames">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="OperationName" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="OperationReferences">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="OperationReference" minOccurs="0" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ImplicitViews">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ViewId" type="xs:string" minOccurs ="0" />
+        <xs:element name="ViewTypeId" type="xs:string" minOccurs ="0" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ImplicitTasks">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TaskId" type="xs:string" minOccurs ="0" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="OperationReference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="OperationName" type="xs:string" minOccurs ="1" maxOccurs="1" />
+        <xs:element ref="ImplicitScopes" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ImplicitScopes">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="ImplicitScope" minOccurs="0" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ImplicitScope">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TypeId" type="xs:string" minOccurs ="1" maxOccurs="1" />
+        <xs:element name="PropertyId" type="xs:string" minOccurs ="0" maxOccurs="1" />
+        <xs:element name="RelationshipTypeId" type="xs:string" minOccurs ="0" maxOccurs="1" />
+        <xs:element name="RelationshipEndpointRole" minOccurs="0"  maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="2" />
+              <xs:enumeration value="4" />
+              <xs:enumeration value="8" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="UserRoleScope">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Objects" minOccurs="0" />
+        <xs:element ref="Classes" minOccurs="0" />
+        <xs:element ref="Views" minOccurs="0" />
+        <xs:element ref="Tasks" minOccurs="0" />
+        <xs:element ref="ConsoleTasks" minOccurs="0" />
+        <xs:element ref="Templates" minOccurs="0" />
+        <xs:element ref="DashboardReferences" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Objects">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Classes">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Views">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Tasks">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsoleTasks">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Templates">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DashboardReferences">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="ID" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="UserRoleAssignments">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="User" type="xs:string" maxOccurs="unbounded" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

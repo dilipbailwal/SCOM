@@ -1,0 +1,47 @@
+﻿<RuleGroup
+    x:Uid="UpgradeRulesForSCOMSetup"
+    xmlns="http://schemas.microsoft.com/EnterpriseManagement/Setup/RuleEngine"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Name="Upgrade rules for SCOM setup." BooleanOperator="Or">
+
+    <RuleGroup Name="UpgradeRulesForAllSKUs" BooleanOperator="Or">
+
+        <!--
+            Enabling below upgrade paths:        
+            Blue RTM (7.1.10226 for all languages) -> Threshold M2 (current build)                 
+            -->
+        <RuleGroup Name="BlueUpgradeRules" BooleanOperator="Or">
+            <Rule x:Uid="OM12R2RTMServerShouldBeInstalledOnTheMachine" BlockReason="OM12 R2 RTM Server is not installed on this machine">
+                <ProductCheck Type="Exists" Name="OM12R2RTMServer" UpgradeCode="{}{17058653-A628-4C03-8F80-5E2B179ECD55}" MinVersion="7.1.10226.0" MaxVersion="7.1.10226.0" />
+            </Rule>
+            <Rule x:Uid="OM12R2RTMConsoleShouldBeInstalledOnTheMachine" BlockReason="OM12 R2 RTM Console is not installed on this machine">
+                <ProductCheck Type="Exists" Name="OM12R2RTMConsole" UpgradeCode="{}{E15AFD04-F88F-47CA-8E2F-9B09237D6EFA}" MinVersion="7.1.10226.0" MaxVersion="7.1.10226.0" />
+            </Rule>
+            <Rule x:Uid="OM12R2RTMWebConsoleShouldBeInstalledOnTheMachine" BlockReason="OM12 R2 RTM WebConsole is not installed on this machine">
+                <ProductCheck Type="Exists" Name="OM12R2RTMWebConsole" UpgradeCode="{}{D0C3934E-3A77-495f-A681-14C465BAB058}" MinVersion="7.1.10226.0" MaxVersion="7.1.10226.0" />
+            </Rule>
+            <Rule x:Uid="OM12R2RTMReportingShouldBeInstalledOnTheMachine" BlockReason="OM12 R2 RTM Reporting is not installed on this machine">
+                <ProductCheck Type="Exists" Name="OM12R2RTMReporting" UpgradeCode="{}{C8A2CFFE-99A2-4A0E-A477-0B606D150C36}" MinVersion="7.1.10226.0" MaxVersion="7.1.10226.0" />
+            </Rule>
+
+          <Rule x:Uid="2016PP2ServerShouldBeInstalledOnTheMachine" BlockReason="2016 PP2 Server is not installed on this machine">
+            <ProductCheck Type="Exists" Name="2016PP2Server" UpgradeCode="{}{17058653-A628-4C03-8F80-5E2B179ECD55}" MinVersion="7.2.11469.0" MaxVersion="7.2.11469.0" />
+          </Rule>
+          <Rule x:Uid="2016PP2ConsoleShouldBeInstalledOnTheMachine" BlockReason="2016 PP2 Console is not installed on this machine">
+            <ProductCheck Type="Exists" Name="2016PP2Console" UpgradeCode="{}{E15AFD04-F88F-47CA-8E2F-9B09237D6EFA}" MinVersion="7.2.11469.0" MaxVersion="7.2.11469.0" />
+          </Rule>
+          <Rule x:Uid="2016PP2WebConsoleShouldBeInstalledOnTheMachine" BlockReason="2016 PP2 RTM WebConsole is not installed on this machine">
+            <ProductCheck Type="Exists" Name="2016PP2WebConsole" UpgradeCode="{}{D0C3934E-3A77-495f-A681-14C465BAB058}" MinVersion="7.2.11469.0" MaxVersion="7.2.11469.0" />
+          </Rule>
+          <Rule x:Uid="2016PP2ReportingShouldBeInstalledOnTheMachine" BlockReason="2016 PP2 Reporting is not installed on this machine">
+            <ProductCheck Type="Exists" Name="2016PP2Reporting" UpgradeCode="{}{C8A2CFFE-99A2-4A0E-A477-0B606D150C36}" MinVersion="7.2.11469.0" MaxVersion="7.2.11469.0" />
+          </Rule>
+          
+            <RuleGroup.Action x:Uid="SetUpgradePathProperty">
+                <PropertyAction Id="AddRTMUpgradePathProperty" Type="Add" PropertyName="RTMUpgrade" PropertyValue="1"/>
+              </RuleGroup.Action>
+        </RuleGroup>
+
+    </RuleGroup>
+
+</RuleGroup>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Providers>
+    <Provider>
+      <Type>Microsoft.SystemCenter.Instrumentation.TelemetryProvider.UtcTelemetryProvider</Type>
+      <Name>TelemetryProvider</Name>
+      <Consumes>
+        <EventType>Telemetry</EventType>
+      </Consumes>
+      <Enable>false</Enable>
+    </Provider>
+    <Provider>
+      <Type>Microsoft.SystemCenter.Instrumentation.TelemetryProvider.CSVTelemetryProvider</Type>
+      <Name>CsvTelemetryProvider</Name>
+      <Consumes>
+        <EventType>Telemetry</EventType>
+      </Consumes>
+      <Enable>false</Enable>
+    </Provider>
+  </Providers>
+</Configuration>

@@ -1,0 +1,6 @@
+<ManagementPacksToImport>
+  <ManagementPack Name="ReportsDeploymentMP" >Microsoft.SystemCenter.Reports.Deployment.mp</ManagementPack>
+  <ManagementPack Name="ODR.mp" >ODR.mp</ManagementPack>
+  <ManagementPack Name="Microsoft.SystemCenter.OperationsManager.Reports.2007.MP" >Microsoft.SystemCenter.OperationsManager.Reports.2007.MP</ManagementPack>
+  <ManagementPack Name="System.NetworkManagement.Reports.MP" >System.NetworkManagement.Reports.MP</ManagementPack>
+</ManagementPacksToImport>

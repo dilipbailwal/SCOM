@@ -1,0 +1,2473 @@
+﻿<SemanticModel ID="Geaab9da7-6249-4427-939d-15ede5d62dda" xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Culture>en-US</Culture>
+  <Entities>
+    <Entity ID="Gfeed5b4e-26e2-4db1-8d72-cc7fbbc2a6ac">
+      <Name>Class</Name>
+      <CollectionName>Classes</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G4a334e69-5a06-4340-8a08-eee9d1751730</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G75c47109-eaf8-479f-933f-7619ae748248</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gd7171a72-7823-4d6f-8e42-0d0d5195891e</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gfedffb2f-cd82-4888-85fb-fec4e7cc3de2</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>List</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gfedffb2f-cd82-4888-85fb-fec4e7cc3de2">
+          <Name>#Classes</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Gfeed5b4e-26e2-4db1-8d72-cc7fbbc2a6ac</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G75c47109-eaf8-479f-933f-7619ae748248">
+          <Name>Class Image</Name>
+          <DataType>Binary</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <MimeType>image/jpeg</MimeType>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ClassImage" />
+        </Attribute>
+        <Attribute ID="G23852c2c-e579-4f87-85f8-5c3c9bcd6279">
+          <Name>Class Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ClassGuid" />
+        </Attribute>
+        <Attribute ID="G4a334e69-5a06-4340-8a08-eee9d1751730">
+          <Name>Class System Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>65</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClassSystemName" />
+        </Attribute>
+        <Attribute ID="Gd7171a72-7823-4d6f-8e42-0d0d5195891e">
+          <Name>Class Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>48</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClassDefaultName" />
+        </Attribute>
+        <Attribute ID="G07834eb5-1967-4e75-a5a0-967546f7e39a">
+          <Name>Class Default Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ClassDefaultDescription" />
+        </Attribute>
+        <Role ID="Gd70f7069-0b8e-4b85-9fd9-b845ca0b6558">
+          <RelatedRoleID>Gcdefecfb-20fa-4aec-b9cc-af4891939f46</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="Class-ManagementPack" RelationEnd="Target" />
+        </Role>
+        <Attribute ID="G50824dfb-4d04-4f4a-9624-efdeddc9255c">
+          <Name>Class Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="ClassId" />
+        </Attribute>
+        <Role ID="Gdadd2a8b-5d28-48af-a12c-54b01f57478c">
+          <RelatedRoleID>G1a94ace9-b666-4836-aa35-70ca1b2d1d71</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Object-Class" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vManagedEntityType1" />
+    </Entity>
+    <Entity ID="G8501a08b-b2ea-48e1-bf12-3eeba2ea0300">
+      <Name>Management Pack</Name>
+      <CollectionName>Management Packs</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Gd441f25d-0db3-4e59-acd7-4f1e4fefa71d</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G36059889-15f9-43c8-9946-5610027a6f71</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G4e961f6f-4501-493b-87e2-7636e9d276fa</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G7b0ba85c-f588-4016-b751-0f243c9e1844</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="G7b0ba85c-f588-4016-b751-0f243c9e1844">
+          <Name>#Management Packs</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G8501a08b-b2ea-48e1-bf12-3eeba2ea0300</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="Gf07fc051-9cf1-4c46-8f4e-aa406163060e">
+          <Name>Management Pack Version Independent Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ManagementPackVersionIndependentGuid" />
+        </Attribute>
+        <Attribute ID="Gd441f25d-0db3-4e59-acd7-4f1e4fefa71d">
+          <Name>Management Pack System Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>61</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementPackSystemName" />
+        </Attribute>
+        <Attribute ID="G36059889-15f9-43c8-9946-5610027a6f71">
+          <Name>Management Pack Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>44</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementPackDefaultName" />
+        </Attribute>
+        <Attribute ID="Gd137cf9a-f93d-4527-997b-55d3c5a2ed51">
+          <Name>Management Pack Default Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ManagementPackDefaultDescription" />
+        </Attribute>
+        <Attribute ID="G4e961f6f-4501-493b-87e2-7636e9d276fa">
+          <Name>Sealed Indicator</Name>
+          <DataType>Boolean</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="SealedIndicator" />
+        </Attribute>
+        <Attribute ID="G839b6c74-2b20-415a-a2e6-5bdb787a4f5a">
+          <Name>Management Pack Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementPackId" />
+        </Attribute>
+        <Role ID="Gcdefecfb-20fa-4aec-b9cc-af4891939f46">
+          <RelatedRoleID>Gd70f7069-0b8e-4b85-9fd9-b845ca0b6558</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Class-ManagementPack" RelationEnd="Source" />
+        </Role>
+        <Role ID="G85170247-e9a7-430a-a527-7e5f820cf7d7">
+          <RelatedRoleID>Gc4cf5721-d269-43a7-be38-725f1d85fe20</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceRule-ManagementPack" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vManagementPack" />
+    </Entity>
+    <Entity ID="G0f07d2e0-311b-414f-ae22-db6c9fdc5f59">
+      <Name>Object</Name>
+      <CollectionName>Objects</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Gc5488a8a-57bf-481d-8d67-295dae4cb58e</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1a94ace9-b666-4836-aa35-70ca1b2d1d71</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G75c47109-eaf8-479f-933f-7619ae748248</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gdf8f8758-ed9a-4e32-a9ca-b394b3376533</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G4f760818-986f-406b-80f8-92d39951aa17</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G3fa051e5-a19a-46dc-8920-6025f1d20fbe</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Ge1b6cb73-ee58-497e-86c4-2ec3a4c904f7</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="Ge1b6cb73-ee58-497e-86c4-2ec3a4c904f7">
+          <Name>#Objects</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G0f07d2e0-311b-414f-ae22-db6c9fdc5f59</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G54581a69-24f1-44c2-9133-affacb3e47e8">
+          <Name>Full Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="FullName" />
+        </Attribute>
+        <Attribute ID="G4f760818-986f-406b-80f8-92d39951aa17">
+          <Name>Path</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="Path" />
+        </Attribute>
+        <Attribute ID="G06a1e5c5-62ea-4eda-ad76-87a6d6fb5ce8">
+          <Name>Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ContextualName>Role</ContextualName>
+          <Column Name="Name" />
+        </Attribute>
+        <Attribute ID="Gdf8f8758-ed9a-4e32-a9ca-b394b3376533">
+          <Name>Display Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="DisplayName" />
+        </Attribute>
+        <Attribute ID="G0acc3030-11ff-4337-b07e-d047cc23ee15">
+          <Name>Management Group Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <Column Name="ManagementGroupGuid" />
+        </Attribute>
+        <Attribute ID="G3fa051e5-a19a-46dc-8920-6025f1d20fbe">
+          <Name>Management Group Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>11</Width>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ManagementGroupDefaultName" />
+        </Attribute>
+        <Attribute ID="Gc5488a8a-57bf-481d-8d67-295dae4cb58e">
+          <Name>Object Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="ObjectGuid" />
+        </Attribute>
+        <Attribute ID="Gf380e3d9-2154-4d9c-807d-786c112004a0">
+          <Name>Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="DefaultName" />
+        </Attribute>
+        <Attribute ID="G26de6b00-94eb-4305-a002-b8570b234bc7">
+          <Name>Object Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="ObjectId" />
+        </Attribute>
+        <Role ID="Gef7305ae-da52-433a-aaa8-0885226c6dc4">
+          <RelatedRoleID>G3172e922-b0e9-404f-8f2b-676473b86e3c</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="Object-Object" RelationEnd="Source" />
+        </Role>
+        <Role ID="G1a94ace9-b666-4836-aa35-70ca1b2d1d71">
+          <RelatedRoleID>Gdadd2a8b-5d28-48af-a12c-54b01f57478c</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Object-Class" RelationEnd="Target" />
+        </Role>
+        <Role ID="G3172e922-b0e9-404f-8f2b-676473b86e3c">
+          <Name>Top Level Host Object</Name>
+          <RelatedRoleID>Gef7305ae-da52-433a-aaa8-0885226c6dc4</RelatedRoleID>
+          <Cardinality>OptionalOne</Cardinality>
+          <Relation Name="Object-Object" RelationEnd="Target" />
+        </Role>
+        <Role ID="G434676ef-2def-4642-9946-b456a9293a5d">
+          <RelatedRoleID>Gc0d0c26d-6c28-4ad9-90ae-f789805f54f1</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceDataHourly-Object" RelationEnd="Source" />
+        </Role>
+        <Role ID="Gbf171e08-c900-4ca1-b3af-7229ab69fe6e">
+          <RelatedRoleID>G37ee2b3c-5e04-4018-a6b7-2c10d5740318</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceDataDaily-Object" RelationEnd="Source" />
+        </Role>
+        <Role ID="Gc253335c-4355-4f7b-b8c8-a5c9c162c0ef">
+          <RelatedRoleID>G91e267c1-331c-4728-88da-26dfb19e4c5e</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceDataRaw-Object" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vManagedEntity" />
+    </Entity>
+    <Entity ID="Ge9b86021-58ba-4ff6-aa87-21b43df9af2e">
+      <Name>Performance Data Daily</Name>
+      <CollectionName>Performance Data Dailies</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G37ee2b3c-5e04-4018-a6b7-2c10d5740318</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Gc5488a8a-57bf-481d-8d67-295dae4cb58e</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1cf4bd30-644a-49e9-a1b5-7047e9e5788f</RoleID>
+            </RolePathItem>
+            <RolePathItem>
+              <RoleID>Gafc0dc93-fd0d-4afb-b22e-e308b24ef2fa</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G706a52af-2fc5-4f4f-9256-60a562bb50a1</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G1cf4bd30-644a-49e9-a1b5-7047e9e5788f</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G683a11c2-06f9-492a-aa6b-534487c04f8b</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gadf3cb5e-e744-4100-8263-f10cc9c08819</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gaff0b3d7-1870-4da6-9ad7-d2d8f2e4d868</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G05332cc3-1846-4123-b2b0-04d93d525f19</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gf45e339f-a949-4ac9-a48f-65d532cbd8d6</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gc698c327-0781-428f-bb96-e4fb3abfcefe</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gc698c327-0781-428f-bb96-e4fb3abfcefe">
+          <Name>#Performance Data Dailies</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>Ge9b86021-58ba-4ff6-aa87-21b43df9af2e</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16">
+          <Name>Date Time</Name>
+          <DataType>DateTime</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="G847209f9-cf15-452f-8671-6a7e3cd1de40">
+              <Name>Time Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G641cb65e-b95c-4376-988b-c0959c400030">
+              <Name>Time Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G0a44fc04-ff26-47ec-b113-7ac534d7835e">
+              <Name>Time Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="G9fe3c46e-19b9-415e-8ab8-7654964b8599">
+              <Name>Time Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G54192ecd-5c3a-4e2b-9d86-c84088424a18">
+              <Name>First Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gfd6a5c27-677e-404e-9f00-dc71fd8781cb">
+              <Name>Last Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gc3fcd2b4-5de7-4d62-8d0e-546e8c2b6c16</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DateTime" />
+        </Attribute>
+        <Attribute ID="Gedb88e62-b348-40fc-8320-b0540e38798e">
+          <Name>Sample Count</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DefaultAggregateAttributeID>G0de945df-65ff-4841-b935-d242bf9bf35f</DefaultAggregateAttributeID>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="G0de945df-65ff-4841-b935-d242bf9bf35f">
+              <Name>Total Sample Count</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Sum</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G9cfc188e-5596-4413-ac7e-f81976d3ebae">
+              <Name>Avg Sample Count</Name>
+              <DataType>Decimal</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Avg</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gea1528b4-c80f-490a-88b6-86a72856ab9e">
+              <Name>Min Sample Count</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gae0232cd-0d4b-45b6-9c0e-01085b7d13fd">
+              <Name>Max Sample Count</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="SampleCount" />
+        </Attribute>
+        <Attribute ID="Gaff0b3d7-1870-4da6-9ad7-d2d8f2e4d868">
+          <Name>Average Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>10</Width>
+          <Format>f3</Format>
+          <Variations>
+            <Attribute ID="Gc8a8a059-37b8-49e1-8ecb-0f654c9e3588">
+              <Name>Avg Average Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Divide</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <Function>
+                        <FunctionName>Sum</FunctionName>
+                        <Arguments>
+                          <Expression>
+                            <Function>
+                              <FunctionName>Multiply</FunctionName>
+                              <Arguments>
+                                <Expression>
+                                  <AttributeRef>
+                                    <AttributeID>Gaff0b3d7-1870-4da6-9ad7-d2d8f2e4d868</AttributeID>
+                                  </AttributeRef>
+                                </Expression>
+                                <Expression>
+                                  <AttributeRef>
+                                    <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+                                  </AttributeRef>
+                                </Expression>
+                              </Arguments>
+                            </Function>
+                          </Expression>
+                        </Arguments>
+                      </Function>
+                    </Expression>
+                    <Expression>
+                      <Function>
+                        <FunctionName>Sum</FunctionName>
+                        <Arguments>
+                          <Expression>
+                            <AttributeRef>
+                              <AttributeID>Gedb88e62-b348-40fc-8320-b0540e38798e</AttributeID>
+                            </AttributeRef>
+                          </Expression>
+                        </Arguments>
+                      </Function>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="AverageValue" />
+        </Attribute>
+        <Attribute ID="Gadf3cb5e-e744-4100-8263-f10cc9c08819">
+          <Name>Min Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>10</Width>
+          <Format>f2</Format>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="G6134c107-fca9-49f8-9663-2a21e901c8df">
+              <Name>Min Min Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gadf3cb5e-e744-4100-8263-f10cc9c08819</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="MinValue" />
+        </Attribute>
+        <Attribute ID="G05332cc3-1846-4123-b2b0-04d93d525f19">
+          <Name>Max Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>10</Width>
+          <Format>f2</Format>
+          <Variations>
+            <Attribute ID="G1f51b475-554a-4976-aebf-e5549e17a598">
+              <Name>Max Max Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G05332cc3-1846-4123-b2b0-04d93d525f19</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="MaxValue" />
+        </Attribute>
+        <Attribute ID="Gf45e339f-a949-4ac9-a48f-65d532cbd8d6">
+          <Name>Standard Deviation</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>8</Width>
+          <Format>f3</Format>
+          <Column Name="StandardDeviation" />
+        </Attribute>
+        <Role ID="G1cf4bd30-644a-49e9-a1b5-7047e9e5788f">
+          <RelatedRoleID>Gd33864af-9660-4899-8349-d05f614fb4d2</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceDataDaily-PerformanceRuleInstance" RelationEnd="Target" />
+        </Role>
+        <Role ID="G37ee2b3c-5e04-4018-a6b7-2c10d5740318">
+          <RelatedRoleID>Gbf171e08-c900-4ca1-b3af-7229ab69fe6e</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceDataDaily-Object" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="Perf_vPerfDaily" />
+    </Entity>
+    <Entity ID="G65182cf1-0767-4639-8416-18b3dc113c0a">
+      <Name>Performance Data Hourly</Name>
+      <CollectionName>Performance Data Hourlies</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gc0d0c26d-6c28-4ad9-90ae-f789805f54f1</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Gc5488a8a-57bf-481d-8d67-295dae4cb58e</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gbbd4e0da-8255-4c23-8af4-87df5bf8eca5</RoleID>
+            </RolePathItem>
+            <RolePathItem>
+              <RoleID>Gafc0dc93-fd0d-4afb-b22e-e308b24ef2fa</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G706a52af-2fc5-4f4f-9256-60a562bb50a1</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gbbd4e0da-8255-4c23-8af4-87df5bf8eca5</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G683a11c2-06f9-492a-aa6b-534487c04f8b</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G5b7eb9af-abc1-43ec-90d2-d9ac95408e96</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gbe427ad8-48da-4062-af85-4854d4c273ec</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Gfb102278-51da-486b-b4a2-1523df1469ee</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Ga9db66d2-9932-4de6-9b39-f55f9c0ce468</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G67a5f1b3-ae72-4530-b57f-1498a08b0494</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+      <Fields>
+        <Attribute ID="G67a5f1b3-ae72-4530-b57f-1498a08b0494">
+          <Name>#Performance Data Hourlies</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G65182cf1-0767-4639-8416-18b3dc113c0a</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G5426266a-d51b-4d3f-bcab-db1603d6e435">
+          <Name>Date Time</Name>
+          <DataType>DateTime</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Format>f</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="Gf3493656-5e33-4b3e-9a4b-b205921155fb">
+              <Name>Time Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gcbbb34be-25ca-493d-8dce-12ef3f0cb7a1">
+              <Name>Time Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gd94765ba-f1e5-40ae-b117-ba103892f978">
+              <Name>Time Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Gffae36e2-8fed-437d-aca6-2e8be303947b">
+              <Name>Time Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G0b54f8e7-0570-460b-8840-b3d5b75bb747">
+              <Name>First Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G193a1f9e-f6e1-4365-80c3-294f35116d41">
+              <Name>Last Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5426266a-d51b-4d3f-bcab-db1603d6e435</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DateTime" />
+        </Attribute>
+        <Attribute ID="G07bd73b8-43e0-42e7-8d99-2a44c35c1720">
+          <Name>Sample Count</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>3</Width>
+          <Format>g</Format>
+          <DefaultAggregateAttributeID>G6bbc64d0-c8ca-4fb6-bcd7-7eb1f7783de0</DefaultAggregateAttributeID>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="G6bbc64d0-c8ca-4fb6-bcd7-7eb1f7783de0">
+              <Name>Total Sample Count</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Sum</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G6326b99a-8f1d-4d5c-b968-feb9416e9f7b">
+              <Name>Avg Sample Count</Name>
+              <DataType>Decimal</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Avg</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G7b746b92-3944-460b-b011-a82f2c808073">
+              <Name>Min Sample Count</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gec8b5ffa-70be-4230-a815-d12acfc0f6e1">
+              <Name>Max Sample Count</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="SampleCount" />
+        </Attribute>
+        <Attribute ID="Gbe427ad8-48da-4062-af85-4854d4c273ec">
+          <Name>Average Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>10</Width>
+          <Format>f2</Format>
+          <Variations>
+            <Attribute ID="G0ba5c7cc-9106-4544-9ca3-6584b807311a">
+              <Name>Avg Average Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Divide</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <Function>
+                        <FunctionName>Sum</FunctionName>
+                        <Arguments>
+                          <Expression>
+                            <Function>
+                              <FunctionName>Multiply</FunctionName>
+                              <Arguments>
+                                <Expression>
+                                  <AttributeRef>
+                                    <AttributeID>Gbe427ad8-48da-4062-af85-4854d4c273ec</AttributeID>
+                                  </AttributeRef>
+                                </Expression>
+                                <Expression>
+                                  <AttributeRef>
+                                    <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+                                  </AttributeRef>
+                                </Expression>
+                              </Arguments>
+                            </Function>
+                          </Expression>
+                        </Arguments>
+                      </Function>
+                    </Expression>
+                    <Expression>
+                      <Function>
+                        <FunctionName>Sum</FunctionName>
+                        <Arguments>
+                          <Expression>
+                            <AttributeRef>
+                              <AttributeID>G07bd73b8-43e0-42e7-8d99-2a44c35c1720</AttributeID>
+                            </AttributeRef>
+                          </Expression>
+                        </Arguments>
+                      </Function>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="AverageValue" />
+        </Attribute>
+        <Attribute ID="G5b7eb9af-abc1-43ec-90d2-d9ac95408e96">
+          <Name>Min Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>9</Width>
+          <Format>f2</Format>
+          <Variations>
+            <Attribute ID="G9d57aa75-e57f-474a-b5d7-03a0a1559415">
+              <Name>Min Min Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G5b7eb9af-abc1-43ec-90d2-d9ac95408e96</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="MinValue" />
+        </Attribute>
+        <Attribute ID="Gfb102278-51da-486b-b4a2-1523df1469ee">
+          <Name>Max Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>10</Width>
+          <Format>f2</Format>
+          <Variations>
+            <Attribute ID="G3bf85103-469f-4071-849b-d857337f0761">
+              <Name>Max Max Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>Gfb102278-51da-486b-b4a2-1523df1469ee</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="MaxValue" />
+        </Attribute>
+        <Attribute ID="Ga9db66d2-9932-4de6-9b39-f55f9c0ce468">
+          <Name>Standard Deviation</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>8</Width>
+          <Format>f3</Format>
+          <Column Name="StandardDeviation" />
+        </Attribute>
+        <Role ID="Gbbd4e0da-8255-4c23-8af4-87df5bf8eca5">
+          <RelatedRoleID>Gb045a7bf-4854-471b-95e9-69906d267363</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceDataHourly-PerformanceRuleInstance" RelationEnd="Target" />
+        </Role>
+        <Role ID="Gc0d0c26d-6c28-4ad9-90ae-f789805f54f1">
+          <RelatedRoleID>G434676ef-2def-4642-9946-b456a9293a5d</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceDataHourly-Object" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="Perf_vPerfHourly" />
+    </Entity>
+    <Entity ID="G0c7a21da-d150-4aa7-bd1a-7445cf0656d0">
+      <Name>Performance Data Raw</Name>
+      <CollectionName>Performance Data Raws</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G91e267c1-331c-4728-88da-26dfb19e4c5e</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>Gc5488a8a-57bf-481d-8d67-295dae4cb58e</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G7aea171a-a515-42ee-bdf0-b6c966449ddb</RoleID>
+            </RolePathItem>
+            <RolePathItem>
+              <RoleID>Gafc0dc93-fd0d-4afb-b22e-e308b24ef2fa</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G706a52af-2fc5-4f4f-9256-60a562bb50a1</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>G7aea171a-a515-42ee-bdf0-b6c966449ddb</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G683a11c2-06f9-492a-aa6b-534487c04f8b</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G3a7c5a01-b541-44d3-8eb1-6c35985ae933</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gbeb1225a-6282-44b3-8dd0-495c85c8c566</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gbeb1225a-6282-44b3-8dd0-495c85c8c566">
+          <Name>#Performance Data Raws</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G0c7a21da-d150-4aa7-bd1a-7445cf0656d0</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G8fe7e802-2be4-42c0-9868-e4d7eaae13cf">
+          <Name>Date Time</Name>
+          <DataType>DateTime</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Format>f</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <Variations>
+            <Attribute ID="G49ba7645-2bc2-4249-8e11-c25b1ff8efca">
+              <Name>Time Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G6e73e710-d071-4c53-833b-eba558ee9c41">
+              <Name>Time Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G12638362-a5fb-46c7-bfa0-0a312cffba30">
+              <Name>Time Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="G5be36c3d-96e2-4311-ba83-63f743c56bd5">
+              <Name>Time Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G0febd9ad-ab21-4c12-9ef6-c8ac8b8f77e1">
+              <Name>First Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Ga9018890-360c-442c-b612-993b50d0b55a">
+              <Name>Last Date Time</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G8fe7e802-2be4-42c0-9868-e4d7eaae13cf</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DateTime" />
+        </Attribute>
+        <Attribute ID="G3a7c5a01-b541-44d3-8eb1-6c35985ae933">
+          <Name>Sample Value</Name>
+          <DataType>Float</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>10</Width>
+          <Format>f3</Format>
+          <DefaultAggregateAttributeID>G7d3f8f16-14f8-4698-9cd5-656ddb2d81e3</DefaultAggregateAttributeID>
+          <Variations>
+            <Attribute ID="G7d3f8f16-14f8-4698-9cd5-656ddb2d81e3">
+              <Name>Total Sample Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Sum</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G3a7c5a01-b541-44d3-8eb1-6c35985ae933</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G76e67669-2215-4e9f-a5bd-745260ff681b">
+              <Name>Avg Sample Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Avg</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G3a7c5a01-b541-44d3-8eb1-6c35985ae933</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G0633413f-305d-4251-80fd-29b9876c3881">
+              <Name>Min Sample Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G3a7c5a01-b541-44d3-8eb1-6c35985ae933</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G06a6682b-0613-4c5f-8e04-49138c85fab5">
+              <Name>Max Sample Value</Name>
+              <DataType>Float</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <AttributeID>G3a7c5a01-b541-44d3-8eb1-6c35985ae933</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="SampleValue" />
+        </Attribute>
+        <Role ID="G7aea171a-a515-42ee-bdf0-b6c966449ddb">
+          <RelatedRoleID>G762f4585-9197-4de2-94e8-c7676bcf15e0</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceDataRaw-PerformanceRuleInstance" RelationEnd="Target" />
+        </Role>
+        <Role ID="G91e267c1-331c-4728-88da-26dfb19e4c5e">
+          <RelatedRoleID>Gc253335c-4355-4f7b-b8c8-a5c9c162c0ef</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceDataRaw-Object" RelationEnd="Target" />
+        </Role>
+      </Fields>
+      <Table Name="Perf_vPerfRaw" />
+    </Entity>
+    <Entity ID="G807df689-395a-467d-8ceb-6770e394a8fc">
+      <Name>Performance Rule</Name>
+      <CollectionName>Performance Rules</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <AttributeID>G706a52af-2fc5-4f4f-9256-60a562bb50a1</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>Gb22386d1-5afd-40c7-ac8b-0ac30f4d5a0e</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G5e881f1e-cf07-4ec5-8bd3-dd46c2754e84</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>Geb55b43d-7283-481d-a27c-63522fe6c7a5</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>Gbd756572-5236-4171-a50b-af9ce458d550</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="Gbd756572-5236-4171-a50b-af9ce458d550">
+          <Name>#Performance Rules</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G807df689-395a-467d-8ceb-6770e394a8fc</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G542f7926-0962-43a0-8a2c-c703864c2a62">
+          <Name>Rule Guid</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>36</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="RuleGuid" />
+        </Attribute>
+        <Attribute ID="G706a52af-2fc5-4f4f-9256-60a562bb50a1">
+          <Name>Rule System Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>109</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="RuleSystemName" />
+        </Attribute>
+        <Attribute ID="Gb22386d1-5afd-40c7-ac8b-0ac30f4d5a0e">
+          <Name>Rule Default Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>84</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="RuleDefaultName" />
+        </Attribute>
+        <Attribute ID="Gd4a878fa-dbb3-4312-8fa3-7503a593cff6">
+          <Name>Rule Default Description</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <Column Name="RuleDefaultDescription" />
+        </Attribute>
+        <Attribute ID="Gaef5c080-453e-4371-93ee-f29f49be756c">
+          <Name>Multi Instance Indicator</Name>
+          <DataType>Boolean</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="MultiInstanceIndicator" />
+        </Attribute>
+        <Attribute ID="G6d76afc3-c4a6-48f2-a0f1-09ecaf57dd43">
+          <Name>Performance Rule Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PerformanceRuleId" />
+        </Attribute>
+        <Role ID="Gc4cf5721-d269-43a7-be38-725f1d85fe20">
+          <RelatedRoleID>G85170247-e9a7-430a-a527-7e5f820cf7d7</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceRule-ManagementPack" RelationEnd="Target" />
+        </Role>
+        <Attribute ID="G5e881f1e-cf07-4ec5-8bd3-dd46c2754e84">
+          <Name>Performance Object Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>38</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PerformanceObjectName" />
+        </Attribute>
+        <Attribute ID="Geb55b43d-7283-481d-a27c-63522fe6c7a5">
+          <Name>Performance Counter Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>32</Width>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PerformanceCounterName" />
+        </Attribute>
+        <Role ID="G577698da-7148-41c2-ba79-87759498b521">
+          <RelatedRoleID>Gafc0dc93-fd0d-4afb-b22e-e308b24ef2fa</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceRuleInstance-PerformanceRule" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vRule" />
+    </Entity>
+    <Entity ID="G1a7abba9-40e6-44ad-a63c-061843dc161f">
+      <Name>Performance Rule Instance</Name>
+      <CollectionName>Performance Rule Instances</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <Path>
+            <RolePathItem>
+              <RoleID>Gafc0dc93-fd0d-4afb-b22e-e308b24ef2fa</RoleID>
+            </RolePathItem>
+          </Path>
+          <AttributeID>G706a52af-2fc5-4f4f-9256-60a562bb50a1</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <AttributeID>G683a11c2-06f9-492a-aa6b-534487c04f8b</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <AttributeID>G683a11c2-06f9-492a-aa6b-534487c04f8b</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <AttributeID>G5e578d19-9c83-4e8e-a822-b5834b5e4b6f</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>Dropdown</InstanceSelection>
+      <Fields>
+        <Attribute ID="G5e578d19-9c83-4e8e-a822-b5834b5e4b6f">
+          <Name>#Performance Rule Instances</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <EntityID>G1a7abba9-40e6-44ad-a63c-061843dc161f</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G683a11c2-06f9-492a-aa6b-534487c04f8b">
+          <Name>Instance Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>26</Width>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="InstanceName" />
+        </Attribute>
+        <Attribute ID="Gb1a3e5f4-6ddc-470d-b19b-480c21df371c">
+          <Name>Performance Rule Instance Id</Name>
+          <Hidden>true</Hidden>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="PerformanceRuleInstanceId" />
+        </Attribute>
+        <Role ID="Gafc0dc93-fd0d-4afb-b22e-e308b24ef2fa">
+          <RelatedRoleID>G577698da-7148-41c2-ba79-87759498b521</RelatedRoleID>
+          <Cardinality>One</Cardinality>
+          <Relation Name="PerformanceRuleInstance-PerformanceRule" RelationEnd="Target" />
+        </Role>
+        <Role ID="G762f4585-9197-4de2-94e8-c7676bcf15e0">
+          <RelatedRoleID>G7aea171a-a515-42ee-bdf0-b6c966449ddb</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceDataRaw-PerformanceRuleInstance" RelationEnd="Source" />
+        </Role>
+        <Role ID="Gd33864af-9660-4899-8349-d05f614fb4d2">
+          <RelatedRoleID>G1cf4bd30-644a-49e9-a1b5-7047e9e5788f</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceDataDaily-PerformanceRuleInstance" RelationEnd="Source" />
+        </Role>
+        <Role ID="Gb045a7bf-4854-471b-95e9-69906d267363">
+          <RelatedRoleID>Gbbd4e0da-8255-4c23-8af4-87df5bf8eca5</RelatedRoleID>
+          <Cardinality>OptionalMany</Cardinality>
+          <Relation Name="PerformanceDataHourly-PerformanceRuleInstance" RelationEnd="Source" />
+        </Role>
+      </Fields>
+      <Table Name="dbo_vPerformanceRuleInstance" />
+    </Entity>
+  </Entities>
+  <DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+    <ID>Performance</ID>
+    <Name>Performance</Name>
+    <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+    <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+    <Annotations xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+        <Value>true</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+        <Value>_ALL_TABLES_</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+        <Value>true</Value>
+      </Annotation>
+      <Annotation>
+        <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+        <Value>
+          <Layouts xmlns="">
+            <Diagram>
+              <Name>_ALL_TABLES_</Name>
+              <DiagramLayout>
+                <dds>
+                  <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="53" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="3657" scrolltop="-1490" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="21246" y="18203" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <font>
+                      <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+                    </font>
+                    <mouseicon>
+                      <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                    </mouseicon>
+                  </diagram>
+                  <layoutmanager>
+                    <ddsxmlobj />
+                  </layoutmanager>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Object" left="9492" top="2773" logicalid="20" controlid="1" masterid="0" hint1="0" hint2="0" width="7099" height="6375" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000bb1b0000e7180000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vManagedEntity" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="PerformanceRule" left="9929" top="15934" logicalid="21" controlid="2" masterid="0" hint1="0" hint2="0" width="7797" height="4806" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000751e0000c6120000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vRule" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="PerformanceRuleInstance" left="9947" top="10568" logicalid="22" controlid="3" masterid="0" hint1="0" hint2="0" width="6314" height="2576" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000aa180000100a0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vPerformanceRuleInstance" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Class" left="135" top="7580" logicalid="24" controlid="5" masterid="0" hint1="0" hint2="0" width="6915" height="4127" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000031b00001f100000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vManagedEntityType1" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="ManagementPack" left="0" top="12896" logicalid="25" controlid="6" masterid="0" hint1="0" hint2="0" width="7479" height="3343" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="00080000371d00000f0d0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dbo_vManagementPack" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="PerformanceDataHourly" left="18724" top="0" logicalid="28" controlid="9" masterid="0" hint1="0" hint2="0" width="5961" height="4480" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="000800004917000080110000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="Perf_vPerfHourly" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="PerformanceDataDaily" left="22774" top="5638" logicalid="30" controlid="11" masterid="0" hint1="0" hint2="0" width="5961" height="4480" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="000800004917000080110000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="Perf_vPerfDaily" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="PerformanceDataRaw" left="23069" top="12339" logicalid="32" controlid="13" masterid="0" hint1="0" hint2="0" width="5961" height="2787" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobjectstreaminitwrapper binary="0008000049170000e30a0000" />
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="Perf_vPerfRaw" vartype="8" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <shape groupshapeid="0" groupnode="0" />
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="1690" top="11407" logicalid="41" controlid="22" masterid="0" hint1="0" hint2="0" width="2202" height="1989" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Class-ManagementPack]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="6" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="2089" y="12896" />
+                      <point x="2089" y="12302" />
+                      <point x="3592" y="12302" />
+                      <point x="3592" y="11707" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="7179" top="15268" logicalid="43" controlid="24" masterid="0" hint1="0" hint2="0" width="3050" height="1169" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceRule-ManagementPack]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="2" sourceattachpoint="35" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="7479" y="15667" />
+                      <point x="8704" y="15667" />
+                      <point x="8704" y="16137" />
+                      <point x="9929" y="16137" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="10054" top="12844" logicalid="44" controlid="25" masterid="0" hint1="0" hint2="0" width="873" height="3590" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceRuleInstance-PerformanceRule]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="0" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="10527" y="15934" />
+                      <point x="10527" y="14539" />
+                      <point x="10354" y="14539" />
+                      <point x="10354" y="13144" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="15961" top="12007" logicalid="45" controlid="26" masterid="0" hint1="0" hint2="0" width="7408" height="1475" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceDataRaw-PerformanceRuleInstance]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="13" sourceattachpoint="29" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16261" y="12406" />
+                      <point x="19665" y="12406" />
+                      <point x="19665" y="13182" />
+                      <point x="23069" y="13182" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="15961" top="9228" logicalid="46" controlid="27" masterid="0" hint1="0" hint2="0" width="7113" height="1928" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceDataDaily-PerformanceRuleInstance]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="11" sourceattachpoint="23" destattachpoint="34" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16261" y="10756" />
+                      <point x="19517" y="10756" />
+                      <point x="19517" y="9528" />
+                      <point x="22774" y="9528" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="15961" top="4180" logicalid="47" controlid="28" masterid="0" hint1="0" hint2="0" width="3293" height="7526" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceDataHourly-PerformanceRuleInstance]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="9" sourceattachpoint="25" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16261" y="11306" />
+                      <point x="18954" y="11306" />
+                      <point x="18954" y="4480" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="8192" top="1473" logicalid="48" controlid="29" masterid="0" hint1="0" hint2="0" width="2399" height="2687" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Object-Object]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="1" sourceattachpoint="28" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="9492" y="3760" />
+                      <point x="8492" y="3760" />
+                      <point x="8492" y="1773" />
+                      <point x="10291" y="1773" />
+                      <point x="10291" y="2773" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="6750" top="7594" logicalid="49" controlid="30" masterid="0" hint1="0" hint2="0" width="3042" height="866" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[Object-Class]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="27" destattachpoint="44" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="7050" y="7993" />
+                      <point x="8271" y="7993" />
+                      <point x="8271" y="8160" />
+                      <point x="9492" y="8160" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="16291" top="2811" logicalid="50" controlid="31" masterid="0" hint1="0" hint2="0" width="2733" height="829" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceDataHourly-Object]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="9" sourceattachpoint="27" destattachpoint="32" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16591" y="3210" />
+                      <point x="17657" y="3210" />
+                      <point x="17657" y="3340" />
+                      <point x="18724" y="3340" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="16291" top="5561" logicalid="51" controlid="32" masterid="0" hint1="0" hint2="0" width="6783" height="967" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceDataDaily-Object]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="11" sourceattachpoint="37" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16591" y="5960" />
+                      <point x="19682" y="5960" />
+                      <point x="19682" y="6228" />
+                      <point x="22774" y="6228" />
+                    </connector>
+                  </ddscontrol>
+                  <ddscontrol controlprogid="MSDDS.Polyline" left="16291" top="8311" logicalid="52" controlid="33" masterid="0" hint1="0" hint2="0" width="7078" height="4621" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <control>
+                      <ddsxmlobj>
+                        <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      </ddsxmlobj>
+                    </control>
+                    <layoutobject>
+                      <ddsxmlobj>
+                        <property name="LogicalObject" value="dataSet.Relations[PerformanceDataRaw-Object]" vartype="8" />
+                        <property name="Virtual" value="0" vartype="11" />
+                        <property name="VisibleAP" value="0" vartype="3" />
+                      </ddsxmlobj>
+                    </layoutobject>
+                    <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="13" sourceattachpoint="47" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                      <point x="16591" y="8710" />
+                      <point x="21206" y="8710" />
+                      <point x="21206" y="12632" />
+                      <point x="23069" y="12632" />
+                    </connector>
+                  </ddscontrol>
+                </dds>
+              </DiagramLayout>
+              <ShowRelationshipNames>False</ShowRelationshipNames>
+              <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+              <DiagramViewPortLeft>3657</DiagramViewPortLeft>
+              <DiagramViewPortTop>-1490</DiagramViewPortTop>
+              <DiagramBoundingLeft>0</DiagramBoundingLeft>
+              <DiagramBoundingTop>0</DiagramBoundingTop>
+              <DiagramZoom>75</DiagramZoom>
+            </Diagram>
+          </Layouts>
+        </Value>
+      </Annotation>
+    </Annotations>
+    <DataSourceID>Data Warehouse Main</DataSourceID>
+    <Schema>
+      <xs:schema id="Performance" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+        <xs:element name="Performance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a1d6c134-4a66-46e3-af23-eb0fd68538dd" msprop:CompareInfo="&lt;CompareInfo&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;IgnoreCase&gt;true&lt;/IgnoreCase&gt;&lt;IgnoreKanaType&gt;true&lt;/IgnoreKanaType&gt;&lt;IgnoreWidth&gt;true&lt;/IgnoreWidth&gt;&lt;/CompareInfo&gt;">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="dbo_vManagedEntity" msprop:QueryDefinition="SELECT     vManagedEntity.ManagedEntityRowId AS ObjectId, vManagedEntity.ManagedEntityGuid AS ObjectGuid, &#xD;&#xA;                      vManagedEntity.ManagedEntityTypeRowId AS ClassId, vManagedEntity.TopLevelHostManagedEntityRowId AS TopLevelHostObjectId, &#xD;&#xA;                      vManagedEntity.FullName, vManagedEntity.Path, vManagedEntity.Name, vManagedEntity.DisplayName, &#xD;&#xA;                      vManagedEntity.ManagedEntityDefaultName AS DefaultName, vManagementGroup.ManagementGroupGuid, &#xD;&#xA;                      vManagementGroup.ManagementGroupDefaultName&#xD;&#xA;FROM         vManagedEntity INNER JOIN&#xD;&#xA;                      vManagementGroup ON vManagedEntity.ManagementGroupRowId = vManagementGroup.ManagementGroupRowId" msprop:DbTableName="Object" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="Object" msprop:IsLogical="True" msprop:stats_RowCount="61" msprop:design-time-name="304861a7-3b9a-4419-bd2d-529984b3b51e" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="FullName" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="FullName" msprop:FriendlyName="FullName" msprop:design-time-name="96a6b495-cccb-46f1-bc91-1584b9d62604" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Path" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="Path" msprop:FriendlyName="Path" msprop:design-time-name="6ddfff2f-083a-4094-8ff2-fe9060fa360c" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Name" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="Name" msprop:FriendlyName="Name" msprop:design-time-name="283ef97e-fe51-4832-aa4a-7f8f22153e26" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="DisplayName" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="DisplayName" msprop:FriendlyName="DisplayName" msprop:design-time-name="a5d8126f-2492-4b3e-a690-eae9fe0d47a4" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementGroupGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="1" msprop:design-time-name="3d9c7073-09fa-4bbf-a860-215acc346a99" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="36" msprop:DbColumnName="ManagementGroupGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="ManagementGroupDefaultName" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="1" msprop:design-time-name="1016a1ee-a7c3-495c-bd72-4c7b7ea4ae10" msprop:stats_MaxWidth="11" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="11" msprop:DbColumnName="ManagementGroupDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ObjectGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="3afd98c5-b947-4cd9-a3da-e2e734f43665" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="61" msprop:stats_AvgWidth="36" msprop:DbColumnName="ObjectGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="DefaultName" msprop:design-time-name="6996df9c-a101-4733-aa02-ae46c2fe1fd2" msprop:DbColumnName="DefaultName" msprop:stats_UniqueValuePercent="100" msprop:stats_UniqueValueCount="61" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ObjectId" msprop:stats_StDevWidth="0.3575875" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="105c1758-1f50-4b5b-853d-882b19ba8d7d" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="61" msprop:stats_AvgWidth="1.852459" msprop:DbColumnName="ObjectId" type="xs:int" />
+                    <xs:element name="ClassId" msprop:stats_StDevWidth="0.5253154" msprop:stats_UniqueValuePercent="75" msprop:design-time-name="16b9f7e2-26f8-45f8-a289-bc02e6f07889" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="46" msprop:stats_AvgWidth="2.606557" msprop:DbColumnName="ClassId" type="xs:int" minOccurs="0" />
+                    <xs:element name="TopLevelHostObjectId" msprop:stats_StDevWidth="0.502453" msprop:stats_UniqueValuePercent="59" msprop:design-time-name="405e98bb-4fad-4931-8e38-c67d5b10e33b" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="36" msprop:stats_AvgWidth="1.459016" msprop:DbColumnName="TopLevelHostObjectId" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vRule" msprop:QueryDefinition="SELECT     vRule.RuleRowId AS PerformanceRuleId, vRule.RuleGuid, vRule.ManagementPackRowId AS ManagementPackId, vRule.RuleSystemName, &#xD;&#xA;                      vRule.RuleDefaultName, vRule.RuleDefaultDescription, vPerformanceRule.ObjectName AS PerformanceObjectName, &#xD;&#xA;                      vPerformanceRule.CounterName AS PerformanceCounterName, CAST(vPerformanceRule.MultiInstanceInd AS bit) AS MultiInstanceIndicator&#xD;&#xA;FROM         vRule INNER JOIN&#xD;&#xA;                      vPerformanceRule ON vRule.RuleRowId = vPerformanceRule.RuleRowId" msprop:DbTableName="PerformanceRule" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="PerformanceRule" msprop:IsLogical="True" msprop:stats_RowCount="67" msprop:design-time-name="d2e0e455-19f3-454c-a528-176cb9f169ae" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RuleGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="RuleGuid" msprop:design-time-name="c0a2e79d-1f5d-4a43-8148-045bb7dfdb9c" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="67" msprop:stats_AvgWidth="36" msprop:DbColumnName="RuleGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="RuleSystemName" msprop:stats_StDevWidth="18.29235" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="RuleSystemName" msprop:design-time-name="9b4cb291-0c2d-4130-8b78-d60b9db399d6" msprop:stats_MaxWidth="109" msprop:stats_UniqueValueCount="67" msprop:stats_AvgWidth="80.10448" msprop:DbColumnName="RuleSystemName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RuleDefaultName" msprop:stats_StDevWidth="16.51863" msprop:stats_UniqueValuePercent="98" msprop:FriendlyName="RuleDefaultName" msprop:design-time-name="57918982-25a9-4f3e-bf30-09308ba0980c" msprop:stats_MaxWidth="84" msprop:stats_UniqueValueCount="66" msprop:stats_AvgWidth="54.65672" msprop:DbColumnName="RuleDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RuleDefaultDescription" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="RuleDefaultDescription" msprop:FriendlyName="RuleDefaultDescription" msprop:design-time-name="40d59bf0-809c-4fd7-9975-69c27dd7c234" msprop:stats_UniqueValueCount="67" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="MultiInstanceIndicator" msprop:design-time-name="9d0d6673-e5b2-437e-bb1e-7e6a0a7c611c" msprop:DbColumnName="MultiInstanceIndicator" msprop:stats_UniqueValuePercent="2" msprop:stats_UniqueValueCount="2" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="PerformanceRuleId" msprop:stats_StDevWidth="0.2083729" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="f8a8eab1-3f95-4941-963d-9f7b06275f33" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="67" msprop:stats_AvgWidth="2.955224" msprop:DbColumnName="PerformanceRuleId" type="xs:int" />
+                    <xs:element name="ManagementPackId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="7" msprop:design-time-name="122077ae-67b2-48c3-9464-8d88bb782161" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="2" msprop:DbColumnName="ManagementPackId" type="xs:int" minOccurs="0" />
+                    <xs:element name="PerformanceObjectName" msprop:stats_StDevWidth="6.812073" msprop:stats_UniqueValuePercent="35" msprop:design-time-name="195fb4b7-1759-4e93-9941-5c7607fdb9b9" msprop:stats_MaxWidth="38" msprop:stats_UniqueValueCount="24" msprop:stats_AvgWidth="24.74627" msprop:DbColumnName="PerformanceObjectName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PerformanceCounterName" msprop:stats_StDevWidth="6.476866" msprop:stats_UniqueValuePercent="88" msprop:design-time-name="3e21542f-cb3f-4480-8867-b1a574935c46" msprop:stats_MaxWidth="35" msprop:stats_UniqueValueCount="59" msprop:stats_AvgWidth="18.74627" msprop:DbColumnName="PerformanceCounterName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vPerformanceRuleInstance" msprop:QueryDefinition="SELECT     PerformanceRuleInstanceRowId AS PerformanceRuleInstanceId, RuleRowId AS PerformanceRuleId, InstanceName&#xD;&#xA;FROM         vPerformanceRuleInstance" msprop:DbTableName="PerformanceRuleInstance" msprop:FriendlyName="PerformanceRuleInstance" msprop:IsLogical="True" msprop:stats_RowCount="181" msprop:design-time-name="70ecee79-0c30-4b37-a82f-73131678ee5b" msprop:TableType="View" msprop:QueryBuilder="SpecificQueryBuilder">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="InstanceName" msprop:stats_StDevWidth="7.282787" msprop:stats_UniqueValuePercent="18" msprop:FriendlyName="InstanceName" msprop:design-time-name="883157b6-7a6d-4b1d-879f-ac826b34aac2" msprop:stats_MaxWidth="31" msprop:stats_UniqueValueCount="34" msprop:stats_AvgWidth="10.53591" msprop:DbColumnName="InstanceName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PerformanceRuleInstanceId" msprop:stats_StDevWidth="0.5847982" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="2bbbb135-69a5-4290-9673-3e91f16fb3f1" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="181" msprop:stats_AvgWidth="2.403315" msprop:DbColumnName="PerformanceRuleInstanceId" type="xs:int" />
+                    <xs:element name="PerformanceRuleId" msprop:stats_StDevWidth="0.1280251" msprop:stats_UniqueValuePercent="37" msprop:design-time-name="f8306e3c-581b-4afe-b096-4b5734d5774d" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="67" msprop:stats_AvgWidth="2.983425" msprop:DbColumnName="PerformanceRuleId" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vManagedEntityType1" msprop:QueryDefinition="SELECT     vManagedEntityTypeImage.Image AS ClassImage, vManagedEntityType.ManagementPackRowId AS ManagementPackId, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeRowId AS ClassId, vManagedEntityType.ManagedEntityTypeGuid AS ClassGuid, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeSystemName AS ClassSystemName, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeDefaultName AS ClassDefaultName, &#xD;&#xA;                      vManagedEntityType.ManagedEntityTypeDefaultDescription AS ClassDefaultDescription&#xD;&#xA;FROM         vManagedEntityType LEFT OUTER JOIN&#xD;&#xA;                      vManagedEntityTypeImage ON vManagedEntityType.ManagedEntityTypeRowId = vManagedEntityTypeImage.ManagedEntityTypeRowId&#xD;&#xA;WHERE     (vManagedEntityTypeImage.ImageCategory = 'u16x16Icon')" msprop:DbTableName="Class" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="Class" msprop:design-time-name="b6eeef8c-346d-4ff7-a4c6-ce882a9ce659" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="229">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ClassImage" msprop:design-time-name="19ca0ef5-bac3-4044-b760-b98f0f9e6370" msprop:DbColumnName="ClassImage" msprop:stats_UniqueValuePercent="100" msprop:stats_UniqueValueCount="229" type="xs:base64Binary" minOccurs="0" />
+                    <xs:element name="ClassGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="28604c2a-0f6c-4b62-acaf-49b78c5d25b2" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="229" msprop:stats_AvgWidth="36" msprop:DbColumnName="ClassGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="ClassSystemName" msprop:stats_StDevWidth="13.58476" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="c6c01720-e4ef-4f7f-88ba-b9bab7eb200a" msprop:stats_MaxWidth="73" msprop:stats_UniqueValueCount="229" msprop:stats_AvgWidth="37.67249" msprop:DbColumnName="ClassSystemName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClassDefaultName" msprop:stats_StDevWidth="12.84703" msprop:stats_UniqueValuePercent="96" msprop:design-time-name="932f0164-3dbc-4235-8cf1-5483ab77a051" msprop:stats_MaxWidth="67" msprop:stats_UniqueValueCount="220" msprop:stats_AvgWidth="22.28384" msprop:DbColumnName="ClassDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ClassDefaultDescription" msprop:design-time-name="47307b2e-8331-4d20-ba5b-faf61fb3b593" msprop:DbColumnName="ClassDefaultDescription" msprop:stats_UniqueValuePercent="100" msprop:stats_UniqueValueCount="229" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementPackId" msprop:stats_StDevWidth="0.368864" msprop:stats_UniqueValuePercent="10" msprop:design-time-name="aec1566a-f871-4fb6-a519-150f914a2ce7" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="25" msprop:stats_AvgWidth="1.838428" msprop:DbColumnName="ManagementPackId" type="xs:int" minOccurs="0" />
+                    <xs:element name="ClassId" msprop:stats_StDevWidth="0.5737897" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="661a2fc2-ba8a-461c-8a62-068ee1b9beb9" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="229" msprop:stats_AvgWidth="2.528384" msprop:DbColumnName="ClassId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dbo_vManagementPack" msprop:QueryDefinition="SELECT     ManagementPackRowId AS ManagementPackId, ManagementPackVersionIndependentGuid, ManagementPackSystemName, &#xD;&#xA;                      ManagementPackDefaultName, ManagementPackDefaultDescription, CAST(SealedInd AS bit) AS SealedIndicator&#xD;&#xA;FROM         vManagementPack" msprop:DbTableName="ManagementPack" msprop:TableType="View" msprop:IsLogical="True" msprop:FriendlyName="ManagementPack" msprop:design-time-name="635c1bf0-50a3-44f9-ac65-beb957f6c628" msprop:QueryBuilder="SpecificQueryBuilder" msprop:stats_RowCount="54">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ManagementPackVersionIndependentGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ManagementPackVersionIndependentGuid" msprop:design-time-name="d98897d8-b2dd-43b8-a6a5-695747f05b47" msprop:stats_MaxWidth="36" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="36" msprop:DbColumnName="ManagementPackVersionIndependentGuid" type="xs:string" minOccurs="0" />
+                    <xs:element name="ManagementPackSystemName" msprop:stats_StDevWidth="11.99815" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ManagementPackSystemName" msprop:design-time-name="d203ee8e-c4b5-4501-89fb-255679cf8055" msprop:stats_MaxWidth="64" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="36.68518" msprop:DbColumnName="ManagementPackSystemName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="256" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementPackDefaultName" msprop:stats_StDevWidth="8.022418" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="ManagementPackDefaultName" msprop:design-time-name="bd2fe2d8-a5ae-4315-b8bb-23bcb8455e29" msprop:stats_MaxWidth="50" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="27.59259" msprop:DbColumnName="ManagementPackDefaultName" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="1000" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ManagementPackDefaultDescription" msprop:stats_UniqueValuePercent="100" msprop:DbColumnName="ManagementPackDefaultDescription" msprop:FriendlyName="ManagementPackDefaultDescription" msprop:design-time-name="c29442ff-7cd2-4cce-ac15-068703cedd96" msprop:stats_UniqueValueCount="54" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2147483647" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="SealedIndicator" msprop:design-time-name="130e5bae-0221-460f-aa99-21571f3570cb" msprop:DbColumnName="SealedIndicator" msprop:stats_UniqueValuePercent="3" msprop:stats_UniqueValueCount="2" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="ManagementPackId" msprop:stats_StDevWidth="0.3761774" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="9ecf91d0-7201-47d7-9ce0-1c9e02e660e0" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="54" msprop:stats_AvgWidth="1.833333" msprop:DbColumnName="ManagementPackId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Perf_vPerfHourly" msprop:QueryDefinition="SELECT     DateTime, PerformanceRuleInstanceRowId AS PerformanceRuleInstanceId, ManagedEntityRowId AS ObjectId, SampleCount, AverageValue, MinValue, &#xD;&#xA;                      MaxValue, StandardDeviation&#xD;&#xA;FROM         Perf.vPerfHourly" msprop:DbTableName="PerformanceDataHourly" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="PerformanceDataHourly" msprop:IsLogical="True" msprop:stats_RowCount="146539" msprop:design-time-name="0de055c2-354b-4ad9-917e-7c885105e8ef" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DateTime" msdata:DateTimeMode="Utc" msprop:stats_UniqueValuePercent="0" msprop:DbColumnName="DateTime" msprop:FriendlyName="DateTime" msprop:design-time-name="beb216f1-5ded-472c-b34f-8209fa5e9edc" msprop:stats_UniqueValueCount="613" type="xs:dateTime" />
+                    <xs:element name="SampleCount" msprop:stats_StDevWidth="0.3754589" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="SampleCount" msprop:design-time-name="24008733-8661-42d7-b186-d1efaa0ae9d4" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="22" msprop:stats_AvgWidth="1.1698" msprop:DbColumnName="SampleCount" type="xs:int" minOccurs="0" />
+                    <xs:element name="AverageValue" msprop:stats_StDevWidth="0.8991441" msprop:stats_AvgScale="1.96696" msprop:stats_UniqueValuePercent="19" msprop:FriendlyName="AverageValue" msprop:design-time-name="a4241289-d83f-481e-9fe0-77e2b1cb0f46" msprop:stats_StDevScale="3.001523" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="19259" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.21732" msprop:DbColumnName="AverageValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="MinValue" msprop:stats_StDevWidth="0.8811675" msprop:stats_AvgScale="1.26401" msprop:stats_UniqueValuePercent="9" msprop:FriendlyName="MinValue" msprop:design-time-name="9b6ce61a-29f9-49c8-bb15-e2192804c4a1" msprop:stats_StDevScale="2.560206" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="9180" msprop:stats_MaxScale="9" msprop:stats_AvgWidth="1.19108" msprop:DbColumnName="MinValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="MaxValue" msprop:stats_StDevWidth="0.9247286" msprop:stats_AvgScale="1.6631" msprop:stats_UniqueValuePercent="12" msprop:FriendlyName="MaxValue" msprop:design-time-name="e46873e9-93ac-408b-b762-7e4a09528245" msprop:stats_StDevScale="2.855461" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="12851" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.25394" msprop:DbColumnName="MaxValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="StandardDeviation" msprop:stats_StDevWidth="0.3225136" msprop:stats_AvgScale="2.15245" msprop:stats_UniqueValuePercent="18" msprop:FriendlyName="StandardDeviation" msprop:design-time-name="e46fd98a-b0c7-4dfe-9a5a-a25f9dbd50ce" msprop:stats_StDevScale="3.625739" msprop:stats_MaxWidth="6" msprop:stats_UniqueValueCount="18720" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.04986" msprop:DbColumnName="StandardDeviation" type="xs:double" minOccurs="0" />
+                    <xs:element name="PerformanceRuleInstanceId" msprop:stats_StDevWidth="0.5713773" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="4b11cc20-fb46-4d0f-acba-b53d1a8565e7" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="181" msprop:stats_AvgWidth="2.36154" msprop:DbColumnName="PerformanceRuleInstanceId" type="xs:int" />
+                    <xs:element name="ObjectId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="e70148f3-5341-457a-b20e-947ce3a8b775" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="17" msprop:stats_AvgWidth="2" msprop:DbColumnName="ObjectId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Perf_vPerfDaily" msprop:QueryDefinition="SELECT     DateTime, PerformanceRuleInstanceRowId AS PerformanceRuleInstanceId, ManagedEntityRowId AS ObjectId, SampleCount, AverageValue, MinValue, &#xD;&#xA;                      MaxValue, StandardDeviation&#xD;&#xA;FROM         Perf.vPerfDaily" msprop:DbTableName="PerformanceDataDaily" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="PerformanceDataDaily" msprop:IsLogical="True" msprop:stats_RowCount="6271" msprop:design-time-name="1afb5c9f-cf66-4b4d-abd2-21711017525b" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DateTime" msdata:DateTimeMode="Utc" msprop:stats_UniqueValuePercent="0" msprop:DbColumnName="DateTime" msprop:FriendlyName="DateTime" msprop:design-time-name="8775e3ee-98f8-4f93-b2dd-6df074109bc1" msprop:stats_UniqueValueCount="37" type="xs:dateTime" />
+                    <xs:element name="SampleCount" msprop:stats_StDevWidth="0.404711" msprop:stats_UniqueValuePercent="3" msprop:FriendlyName="SampleCount" msprop:design-time-name="3508fc83-979f-4cec-8437-45a82763dbba" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="221" msprop:stats_AvgWidth="2.157232" msprop:DbColumnName="SampleCount" type="xs:int" minOccurs="0" />
+                    <xs:element name="AverageValue" msprop:stats_StDevWidth="0.9326956" msprop:stats_AvgScale="2.418115" msprop:stats_UniqueValuePercent="27" msprop:FriendlyName="AverageValue" msprop:design-time-name="7ea74861-8313-478a-a515-03021653d4a9" msprop:stats_StDevScale="3.254679" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="1724" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.240791" msprop:DbColumnName="AverageValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="MinValue" msprop:stats_StDevWidth="0.9067177" msprop:stats_AvgScale="1.242067" msprop:stats_UniqueValuePercent="12" msprop:FriendlyName="MinValue" msprop:design-time-name="1e105528-c8a1-4bf0-b5bf-44aa73879e96" msprop:stats_StDevScale="2.555806" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="785" msprop:stats_MaxScale="9" msprop:stats_AvgWidth="1.212885" msprop:DbColumnName="MinValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="MaxValue" msprop:stats_StDevWidth="0.9823929" msprop:stats_AvgScale="1.865093" msprop:stats_UniqueValuePercent="20" msprop:FriendlyName="MaxValue" msprop:design-time-name="de2b8a75-2933-48e4-9165-97d74bfd215d" msprop:stats_StDevScale="2.956567" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="1263" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.302504" msprop:DbColumnName="MaxValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="StandardDeviation" msprop:stats_StDevWidth="0.4078832" msprop:stats_AvgScale="2.526391" msprop:stats_UniqueValuePercent="27" msprop:FriendlyName="StandardDeviation" msprop:design-time-name="679bfe13-99ca-4655-9b97-c0d5f9aca849" msprop:stats_StDevScale="3.718598" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="1708" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.072397" msprop:DbColumnName="StandardDeviation" type="xs:double" minOccurs="0" />
+                    <xs:element name="PerformanceRuleInstanceId" msprop:stats_StDevWidth="0.5808855" msprop:stats_UniqueValuePercent="2" msprop:design-time-name="eb548e80-3690-4b4b-88a1-1c06a57e7d83" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="181" msprop:stats_AvgWidth="2.362781" msprop:DbColumnName="PerformanceRuleInstanceId" type="xs:int" />
+                    <xs:element name="ObjectId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="e77b6299-08d6-477c-95ed-b9a7f8bc7b13" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="17" msprop:stats_AvgWidth="2" msprop:DbColumnName="ObjectId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Perf_vPerfRaw" msprop:QueryDefinition="SELECT     DateTime, PerformanceRuleInstanceRowId AS PerformanceRuleInstanceId, ManagedEntityRowId AS ObjectId, SampleValue&#xD;&#xA;FROM         Perf.vPerfRaw" msprop:DbTableName="PerformanceDataRaw" msprop:QueryBuilder="SpecificQueryBuilder" msprop:FriendlyName="PerformanceDataRaw" msprop:IsLogical="True" msprop:stats_RowCount="218733" msprop:design-time-name="699e84a3-98fa-492d-99e0-4e6291daf493" msprop:TableType="View">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DateTime" msdata:DateTimeMode="Utc" msprop:stats_UniqueValuePercent="19" msprop:DbColumnName="DateTime" msprop:FriendlyName="DateTime" msprop:design-time-name="9ee18fec-8d8a-4c59-8e34-8813e453feb7" msprop:stats_UniqueValueCount="19452" type="xs:dateTime" />
+                    <xs:element name="SampleValue" msprop:stats_StDevWidth="1.285203" msprop:stats_AvgScale="2.59665" msprop:stats_UniqueValuePercent="24" msprop:FriendlyName="SampleValue" msprop:design-time-name="cd9789d2-a993-4469-8dde-1bb1f1cf92b4" msprop:stats_StDevScale="3.25433" msprop:stats_MaxWidth="12" msprop:stats_UniqueValueCount="24468" msprop:stats_MaxScale="12" msprop:stats_AvgWidth="1.2652" msprop:DbColumnName="SampleValue" type="xs:double" minOccurs="0" />
+                    <xs:element name="PerformanceRuleInstanceId" msprop:stats_StDevWidth="0.6008496" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="a7ce1545-012c-40d7-8f15-c0d3c70216b0" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="181" msprop:stats_AvgWidth="2.24634" msprop:DbColumnName="PerformanceRuleInstanceId" type="xs:int" />
+                    <xs:element name="ObjectId" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="2cf67166-8c9f-44a6-98f0-b31e671371a7" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="17" msprop:stats_AvgWidth="2" msprop:DbColumnName="ObjectId" type="xs:int" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+          <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vManagedEntity" />
+            <xs:field xpath="ObjectId" />
+          </xs:unique>
+          <xs:unique name="dbo_vRule_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vRule" />
+            <xs:field xpath="PerformanceRuleId" />
+          </xs:unique>
+          <xs:unique name="dbo_vPerformanceRuleInstance_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vPerformanceRuleInstance" />
+            <xs:field xpath="PerformanceRuleInstanceId" />
+          </xs:unique>
+          <xs:unique name="dbo_vManagedEntityType1_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vManagedEntityType1" />
+            <xs:field xpath="ClassId" />
+          </xs:unique>
+          <xs:unique name="dbo_vManagementPack_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//dbo_vManagementPack" />
+            <xs:field xpath="ManagementPackId" />
+          </xs:unique>
+          <xs:unique name="Perf_vPerfHourly_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//Perf_vPerfHourly" />
+            <xs:field xpath="PerformanceRuleInstanceId" />
+            <xs:field xpath="ObjectId" />
+            <xs:field xpath="DateTime" />
+          </xs:unique>
+          <xs:unique name="Perf_vPerfDaily_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//Perf_vPerfDaily" />
+            <xs:field xpath="DateTime" />
+            <xs:field xpath="PerformanceRuleInstanceId" />
+            <xs:field xpath="ObjectId" />
+          </xs:unique>
+          <xs:unique name="Perf_vPerfRaw_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//Perf_vPerfRaw" />
+            <xs:field xpath="ObjectId" />
+            <xs:field xpath="DateTime" />
+            <xs:field xpath="PerformanceRuleInstanceId" />
+          </xs:unique>
+        </xs:element>
+        <xs:annotation>
+          <xs:appinfo>
+            <msdata:Relationship name="Class-ManagementPack" msdata:parent="dbo_vManagementPack" msdata:child="dbo_vManagedEntityType1" msdata:parentkey="ManagementPackId" msdata:childkey="ManagementPackId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceRule-ManagementPack" msdata:parent="dbo_vManagementPack" msdata:child="dbo_vRule" msdata:parentkey="ManagementPackId" msdata:childkey="ManagementPackId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceRuleInstance-PerformanceRule" msdata:parent="dbo_vRule" msdata:child="dbo_vPerformanceRuleInstance" msdata:parentkey="PerformanceRuleId" msdata:childkey="PerformanceRuleId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceDataRaw-PerformanceRuleInstance" msdata:parent="dbo_vPerformanceRuleInstance" msdata:child="Perf_vPerfRaw" msdata:parentkey="PerformanceRuleInstanceId" msdata:childkey="PerformanceRuleInstanceId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceDataDaily-PerformanceRuleInstance" msdata:parent="dbo_vPerformanceRuleInstance" msdata:child="Perf_vPerfDaily" msdata:parentkey="PerformanceRuleInstanceId" msdata:childkey="PerformanceRuleInstanceId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceDataHourly-PerformanceRuleInstance" msdata:parent="dbo_vPerformanceRuleInstance" msdata:child="Perf_vPerfHourly" msdata:parentkey="PerformanceRuleInstanceId" msdata:childkey="PerformanceRuleInstanceId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Object-Object" msdata:parent="dbo_vManagedEntity" msdata:child="dbo_vManagedEntity" msdata:parentkey="ObjectId" msdata:childkey="TopLevelHostObjectId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="Object-Class" msdata:parent="dbo_vManagedEntityType1" msdata:child="dbo_vManagedEntity" msdata:parentkey="ClassId" msdata:childkey="ClassId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceDataHourly-Object" msdata:parent="dbo_vManagedEntity" msdata:child="Perf_vPerfHourly" msdata:parentkey="ObjectId" msdata:childkey="ObjectId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceDataDaily-Object" msdata:parent="dbo_vManagedEntity" msdata:child="Perf_vPerfDaily" msdata:parentkey="ObjectId" msdata:childkey="ObjectId" msprop:Description="" msprop:IsLogical="True" />
+            <msdata:Relationship name="PerformanceDataRaw-Object" msdata:parent="dbo_vManagedEntity" msdata:child="Perf_vPerfRaw" msdata:parentkey="ObjectId" msdata:childkey="ObjectId" msprop:Description="" msprop:IsLogical="True" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:schema>
+    </Schema>
+  </DataSourceView>
+</SemanticModel>

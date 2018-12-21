@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Language>en-US</Language>
+  <BottomMargin>0.2in</BottomMargin>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <DataSourceName>dataSource1</DataSourceName>
+        <CommandText>&lt;SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign"&gt;
+  &lt;Hierarchies&gt;
+    &lt;Hierarchy&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Audit Data--&gt;
+        &lt;EntityID&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Groupings&gt;
+        &lt;Grouping Name="Hour"&gt;
+          &lt;Expression Name="Hour"&gt;
+            &lt;AttributeRef&gt;
+              &lt;AttributeName&gt;expr5&lt;/AttributeName&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+      &lt;/Groupings&gt;
+      &lt;Filter&gt;
+        &lt;Expression Name="expr1"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;Function&gt;
+                  &lt;FunctionName&gt;GreaterThanOrEquals&lt;/FunctionName&gt;
+                  &lt;Arguments&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;Date&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;AttributeRef&gt;
+                              &lt;AttributeName&gt;expr2&lt;/AttributeName&gt;
+                            &lt;/AttributeRef&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                    &lt;/Expression&gt;
+                    &lt;Expression&gt;
+                      &lt;ParameterRef&gt;
+                        &lt;ParameterName&gt;Start Date&lt;/ParameterName&gt;
+                      &lt;/ParameterRef&gt;
+                    &lt;/Expression&gt;
+                  &lt;/Arguments&gt;
+                &lt;/Function&gt;
+                &lt;CustomProperties&gt;
+                  &lt;CustomProperty Name="qd:FilterCondition" /&gt;
+                &lt;/CustomProperties&gt;
+              &lt;/Expression&gt;
+              &lt;Expression&gt;
+                &lt;Function&gt;
+                  &lt;FunctionName&gt;LessThanOrEquals&lt;/FunctionName&gt;
+                  &lt;Arguments&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;Date&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;AttributeRef&gt;
+                              &lt;AttributeName&gt;expr3&lt;/AttributeName&gt;
+                            &lt;/AttributeRef&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                    &lt;/Expression&gt;
+                    &lt;Expression&gt;
+                      &lt;ParameterRef&gt;
+                        &lt;ParameterName&gt;End Date&lt;/ParameterName&gt;
+                      &lt;/ParameterRef&gt;
+                    &lt;/Expression&gt;
+                  &lt;/Arguments&gt;
+                &lt;/Function&gt;
+                &lt;CustomProperties&gt;
+                  &lt;CustomProperty Name="qd:FilterCondition" /&gt;
+                &lt;/CustomProperties&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Filter" /&gt;
+            &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:AutoChangeBaseEntity" /&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;expr4&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Filter&gt;
+    &lt;/Hierarchy&gt;
+  &lt;/Hierarchies&gt;
+  &lt;MeasureGroups&gt;
+    &lt;MeasureGroup&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Audit Data--&gt;
+        &lt;EntityID&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Measures&gt;
+        &lt;Expression Name="Count"&gt;
+          &lt;AttributeRef&gt;
+            &lt;AttributeName&gt;expr6&lt;/AttributeName&gt;
+          &lt;/AttributeRef&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Measures&gt;
+    &lt;/MeasureGroup&gt;
+  &lt;/MeasureGroups&gt;
+  &lt;CalculatedAttributes&gt;
+    &lt;Expression Name="expr2"&gt;
+      &lt;AttributeRef&gt;
+        &lt;!--Logon Time--&gt;
+        &lt;AttributeID&gt;G432cfb7f-4dce-4e31-8aaf-5db534bdec6d&lt;/AttributeID&gt;
+      &lt;/AttributeRef&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Start Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr3"&gt;
+      &lt;AttributeRef&gt;
+        &lt;!--Logon Time--&gt;
+        &lt;AttributeID&gt;G432cfb7f-4dce-4e31-8aaf-5db534bdec6d&lt;/AttributeID&gt;
+      &lt;/AttributeRef&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;End Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr6"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;Divide&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Count&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;AttributeRef&gt;
+                    &lt;!--Event Id--&gt;
+                    &lt;AttributeID&gt;G0cf3dc6b-6fde-4030-bb0d-5d25e7f60419&lt;/AttributeID&gt;
+                  &lt;/AttributeRef&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;CountDistinct&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;AttributeRef&gt;
+                    &lt;!--Creation Time Day--&gt;
+                    &lt;AttributeID&gt;G2cff2dd5-dabb-4b7d-853b-a8b7cf40012e&lt;/AttributeID&gt;
+                  &lt;/AttributeRef&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Count&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr5"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;Hour&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Logon Time--&gt;
+              &lt;AttributeID&gt;G432cfb7f-4dce-4e31-8aaf-5db534bdec6d&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Hour&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G84916cb4-85b5-4a29-97cf-249b0b43b9f4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="Start Date_DefaultValue"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;DateAdd&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Literal&gt;
+              &lt;DataType&gt;String&lt;/DataType&gt;
+              &lt;Value&gt;Day&lt;/Value&gt;
+            &lt;/Literal&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Negate&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;Literal&gt;
+                    &lt;DataType&gt;Integer&lt;/DataType&gt;
+                    &lt;Value&gt;1&lt;/Value&gt;
+                  &lt;/Literal&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Today&lt;/FunctionName&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:ParameterDefaultValue"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Start Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="End Date_DefaultValue"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;DateAdd&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Literal&gt;
+              &lt;DataType&gt;String&lt;/DataType&gt;
+              &lt;Value&gt;Day&lt;/Value&gt;
+            &lt;/Literal&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Literal&gt;
+              &lt;DataType&gt;Integer&lt;/DataType&gt;
+              &lt;Value&gt;1&lt;/Value&gt;
+            &lt;/Literal&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Today&lt;/FunctionName&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:ParameterDefaultValue"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;End Date&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+  &lt;/CalculatedAttributes&gt;
+  &lt;Parameters&gt;
+    &lt;Parameter Name="Start Date"&gt;
+      &lt;DataType&gt;DateTime&lt;/DataType&gt;
+      &lt;Nullable&gt;true&lt;/Nullable&gt;
+    &lt;/Parameter&gt;
+    &lt;Parameter Name="End Date"&gt;
+      &lt;DataType&gt;DateTime&lt;/DataType&gt;
+      &lt;Nullable&gt;true&lt;/Nullable&gt;
+    &lt;/Parameter&gt;
+  &lt;/Parameters&gt;
+&lt;/SemanticQuery&gt;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Start Date">
+            <Value>=Parameters!StartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="End Date">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="Hour">
+          <DataField>Hour</DataField>
+        </Field>
+        <Field Name="Count">
+          <DataField>Count</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <DataSources>
+    <DataSource Name="dataSource1">
+      <DataSourceReference>/Audit Reports/Audit5</DataSourceReference>
+      <rd:DataSourceID>d6bce22d-8eb9-4cfd-a18e-59bbd44aade9</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <PageHeight>8.5in</PageHeight>
+  <ReportParameters>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(-1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Start Date</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <Nullable>false</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=DateTime.Today.AddDays(1)</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>End Date</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <TopMargin>0.5in</TopMargin>
+  <Width>11in</Width>
+  <Body>
+    <Height>8.5in</Height>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Left>0.25in</Left>
+        <Top>1in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>10.5in</Width>
+        <Value>Hourly Event Distribution</Value>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>18pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:Watermark</Name>
+            <Value>Click to add title</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Height>0.375in</Height>
+      </Textbox>
+      <Chart Name="chart">
+        <ValueAxis>
+          <Axis>
+            <Title>
+              <Caption>Event Count</Caption>
+              <Style>
+                <FontWeight>Normal</FontWeight>
+              </Style>
+            </Title>
+            <Style>
+              <FontWeight>Normal</FontWeight>
+            </Style>
+            <MajorGridLines>
+              <ShowGridLines>true</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <FontWeight>Normal</FontWeight>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <FontWeight>Normal</FontWeight>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Margin>true</Margin>
+            <Visible>true</Visible>
+            <Scalar>true</Scalar>
+          </Axis>
+        </ValueAxis>
+        <Palette>Default</Palette>
+        <Top>2in</Top>
+        <CategoryGroupings>
+          <CategoryGrouping>
+            <DynamicCategories>
+              <Grouping Name="chart_Hour">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Hour.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label>=Fields!Hour.Value</Label>
+            </DynamicCategories>
+          </CategoryGrouping>
+        </CategoryGroupings>
+        <PlotArea>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <FontWeight>Normal</FontWeight>
+            <BackgroundColor>White</BackgroundColor>
+          </Style>
+        </PlotArea>
+        <ChartData>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=AGGREGATE(Fields!Count.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+                  <Style>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </DataLabel>
+                <Action>
+                  <Drillthrough>
+                    <ReportName>=DataSources!dataSource1.DataSourceReference</ReportName>
+                    <Parameters>
+                      <Parameter Name="rs:EntityID">
+                        <Value>G84916cb4-85b5-4a29-97cf-249b0b43b9f4</Value>
+                      </Parameter>
+                      <Parameter Name="rs:DrillType">
+                        <Value>List</Value>
+                      </Parameter>
+                      <Parameter Name="rs:Command">
+                        <Value>Drillthrough</Value>
+                      </Parameter>
+                      <Parameter Name="DrillthroughSourceQuery">
+                        <Value>=DataSets!dataSet.RewrittenCommandText</Value>
+                      </Parameter>
+                      <Parameter Name="DrillthroughContext">
+                        <Value>=CreateDrillthroughContext()</Value>
+                      </Parameter>
+                    </Parameters>
+                  </Drillthrough>
+                </Action>
+                <DataElementOutput>NoOutput</DataElementOutput>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+        </ChartData>
+        <Title>
+          <Style>
+            <FontFamily>Ariel</FontFamily>
+            <FontWeight>Normal</FontWeight>
+            <FontSize>16pt</FontSize>
+          </Style>
+        </Title>
+        <Legend>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <FontWeight>Normal</FontWeight>
+          </Style>
+          <Position>RightCenter</Position>
+        </Legend>
+        <Style>
+          <FontWeight>Normal</FontWeight>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+        <Type>Line</Type>
+        <Width>10.5in</Width>
+        <Subtype>Plain</Subtype>
+        <Height>5.375in</Height>
+        <DataSetName>dataSet</DataSetName>
+        <SeriesGroupings>
+          <SeriesGrouping>
+            <StaticSeries>
+              <StaticMember>
+                <Label>Count</Label>
+              </StaticMember>
+            </StaticSeries>
+          </SeriesGrouping>
+        </SeriesGroupings>
+        <CategoryAxis>
+          <Axis>
+            <Title>
+              <Caption>Hour</Caption>
+              <Style>
+                <FontWeight>Normal</FontWeight>
+              </Style>
+            </Title>
+            <Style>
+              <FontWeight>Normal</FontWeight>
+              <FontSize>8pt</FontSize>
+              <Format>g</Format>
+            </Style>
+            <MajorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <FontWeight>Normal</FontWeight>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <FontWeight>Normal</FontWeight>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Visible>true</Visible>
+          </Axis>
+        </CategoryAxis>
+        <ThreeDProperties>
+          <Rotation>30</Rotation>
+          <Inclination>30</Inclination>
+          <Shading>Simple</Shading>
+          <WallThickness>50</WallThickness>
+        </ThreeDProperties>
+        <Left>0.25in</Left>
+      </Chart>
+      <Textbox Name="FilterDescription">
+        <Left>0.25in</Left>
+        <Top>7.375in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>10.5in</Width>
+        <Value>Filter: Dv Alls with: All of (Start Date on or after (prompted), End Date on or before (prompted))</Value>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>FilterDescription</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Height>0.25in</Height>
+      </Textbox>
+      <Textbox Name="textbox">
+        <Left>0.25in</Left>
+        <Top>1.375in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>10.5in</Width>
+        <Value>This report display the event distribution group by the hour, averaged by the number of days.
+It is useful for capacity planning around the audit collection.</Value>
+        <Style>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingBottom>3pt</PaddingBottom>
+          <FontWeight>Normal</FontWeight>
+          <FontSize>8pt</FontSize>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+        </Style>
+        <Height>0.5in</Height>
+      </Textbox>
+      <Image Name="banner_image">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.1in</Top>
+        <Width>10.55208in</Width>
+        <MIMEType />
+        <Source>External</Source>
+        <Style />
+        <ZIndex>6</ZIndex>
+        <Left>0.15in</Left>
+        <Height>0.64583in</Height>
+        <Value>../banner_landscape.jpg</Value>
+      </Image>
+    </ReportItems>
+    <Style />
+  </Body>
+  <PageWidth>11in</PageWidth>
+</Report>
